@@ -13,10 +13,15 @@
 ## Prequisites
 
 ```
-sudo apt install virtualenv build-essential python3-dev  gtkwave
+sudo apt install virtualenv build-essential python3-dev gtkwave
 ```
 verilator
 iverilog -> icarus
+
+## Testing
+http://hpca23.cse.tamu.edu/cbp2016/
+
+https://www.jilp.org/cbp2016/
 
 ## Credits
 - https://github.com/black-parrot/black-parrot
