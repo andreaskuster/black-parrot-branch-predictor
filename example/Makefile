@@ -45,9 +45,9 @@ endif
 PYTHONPATH := $(WPWD):$(PYTHONPATH)
 
 ifeq ($(TOPLEVEL_LANG), verilog)
-    VERILOG_SOURCES = $(WPWD)/rtl/adder.sv
+    VERILOG_SOURCES = $(WPWD)/rtl/*
 else ifeq ($(TOPLEVEL_LANG),vhdl)
-    VHDL_SOURCES = $(WPWD)/rtl/adder.vhdl
+    VHDL_SOURCES = $(WPWD)/rtl/*
 else
     $(error "A valid value (verilog or vhdl) was not provided for TOPLEVEL_LANG=$(TOPLEVEL_LANG)")
 endif
