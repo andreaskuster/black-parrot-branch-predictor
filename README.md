@@ -32,9 +32,9 @@ https://www.jilp.org/cbp2016/
 
 Test file sizes (#branches):
 - short_mobile_1.trace: 16'662'268 
-- long_mobile_1.trace: 29'269'647
+- long_mobile_1.trace:  29'269'647
 - short_server_1.trace: 230'692'528
-- long_server_1.trace: 149'246'445
+- long_server_1.trace:  149'246'445
 
 
 ## Credits
