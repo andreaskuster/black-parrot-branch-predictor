@@ -3,7 +3,7 @@
 
 
 ## Simulation
-```cd build & make ```
+```cd testbench_NAME & make ```
 
 ## Wave Form Viewer
 
