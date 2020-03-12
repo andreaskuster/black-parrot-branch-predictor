@@ -1,6 +1,8 @@
 import cocotb
-from cocotb.triggers import Timer, RisingEdge, ReadOnly
+
+from cocotb.triggers import Timer, RisingEdge
 from cocotb.result import TestFailure
+
 from adder_model import adder_model
 
 clock_period = 1000
