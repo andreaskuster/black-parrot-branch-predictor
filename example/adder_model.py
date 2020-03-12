@@ -1,3 +1,8 @@
 def adder_model(a, b):
-    """ model of adder """
+    """
+    Adder model.
+    :param a: first summand
+    :param b: second summand
+    :return: sum
+    """
     return a + b
