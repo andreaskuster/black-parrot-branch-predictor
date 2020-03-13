@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name="results">
+  <testsuite name="all" package="all" tests="0">
+    <property name="random_seed" value="1584062056" />
+    <testcase classname="testbench_test" name="branch_predictor_basic" ratio_time="116.26252003434259" sim_time_ns="287.502" time="2.4728691577911377" />
+  </testsuite>
+</testsuites>
