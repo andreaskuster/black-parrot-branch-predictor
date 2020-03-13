@@ -21,11 +21,6 @@ module bp_fe_bp_gshare
 
   // branch history table
   logic [els_lp-1:0][bp_cnt_sat_bits_p-1:0] bht;
-  logic [1:0] c0, c1, c2, c3;
-  assign c0 = bht[0];
-  assign c1 = bht[1];
-  assign c2 = bht[2];
-  assign c3 = bht[3];
 
   // helper signals: taken prediction, count up condition, count down condition, taken feedback hw
   logic taken_pred, count_up_cond, count_down_cond, taken_actual;
@@ -75,13 +70,5 @@ module bp_fe_bp_gshare
   // taken: (2^N-1) .. (2^N)
   // not taken: 0 .. (2^N-1)-1
   assign predict_o = r_v_i ? (bht[idx_r] > saturation_size_half_lp) : 1'b0;
-
-`ifndef VERILATOR
-  // dump waves
-  initial begin
-    $dumpfile("dump_bp_fe_bp_bimodal.vcd");
-    $dumpvars(1, adder);
-  end
-`endif
 
 endmodule
