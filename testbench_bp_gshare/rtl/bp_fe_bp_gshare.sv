@@ -3,7 +3,7 @@
 */
 module bp_fe_bp_gshare
   #( parameter bht_idx_width_p          = "inv"
-   , parameter bp_cnt_sat_bits_p        = 2
+   , parameter bp_cnt_sat_bits_p        = "inv"
    , localparam els_lp                  = 2**bht_idx_width_p
    , localparam saturation_size_half_lp = ((2** (bp_cnt_sat_bits_p-1))-1) // highest value of the lower half
   )
