@@ -1,8 +1,6 @@
 import os
 import argparse
 
-from concurrent.futures import ThreadPoolExecutor
-
 
 class ShiftRegister:
 
@@ -116,7 +114,7 @@ if __name__ == "__main__":
             bp.update(address, correct)
 
     elif args.gridsearch:
-
+        from concurrent.futures import ThreadPoolExecutor
         with ThreadPoolExecutor(max_workers=4) as executor:
             for sat_bits in [1, 2, 3, 4, 5]:
                 for addr_bits in [3, 6, 9, 12, 15]:
