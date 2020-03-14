@@ -27,7 +27,7 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ###############################################################################
 
-TESTS := testbench_example testbench_bp_bimodal testbench_bp_gshare
+TESTS := testbench_example testbench_bp_bimodal testbench_bp_gshare testbench_bp_gselect
 
 .PHONY: $(TESTS)
 
