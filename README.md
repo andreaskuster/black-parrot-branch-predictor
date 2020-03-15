@@ -32,18 +32,20 @@ https://www.jilp.org/cbp2016/
 
 Test file sizes (#branches):
 - short_mobile_1.trace: 16'662'268 
-- long_mobile_1.trace:  29'269'647
+- long_mobile_1.trace: 29'269'647
 - short_server_1.trace: 230'692'528
-- long_server_1.trace:  149'246'445
+- long_server_1.trace: 149'246'445
 
 
 ## Roadmap
+- Perceptron:
+    - https://www.cs.utexas.edu/~lin/papers/hpca01.pdf
+    - http://hpca23.cse.tamu.edu/taco/pdfs/hpca7_dist.pdf
 
+- TAGE:
+    - http://www.irisa.fr/caps/people/seznec/JILP-COTTAGE.pdf
+    - https://pharm.ece.wisc.edu/papers/badgr_iccd16.pdf
 
-TAGE: http://www.irisa.fr/caps/people/seznec/JILP-COTTAGE.pdf
-https://pharm.ece.wisc.edu/papers/badgr_iccd16.pdf
-Perceptron: https://www.cs.utexas.edu/~lin/papers/hpca01.pdf
-http://hpca23.cse.tamu.edu/taco/pdfs/hpca7_dist.pdf
 
 ## Credits
 - https://github.com/black-parrot/black-parrot
