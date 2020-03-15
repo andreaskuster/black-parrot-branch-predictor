@@ -108,20 +108,24 @@ if __name__ == "__main__":
     parser.add_argument("--gridsearch", action='store_true')
     args = parser.parse_args()
 
-    _SAT_CNT_BITS = 2
-    _BHT_ADDR_BITS = 6
-    _N_HIST = 6
-
     if args.debug:
+
+        # params
+        _SAT_CNT_BITS = 2
+        _BHT_ADDR_BITS = 6
+        _N_HIST = 6
+
         tr = TraceReader("../evaluation/traces/dummy.trace")
         bp = BranchPredictorGselect(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS, n_hist=_N_HIST)
 
         for address, taken in tr.read():
             # remove upper bits
             address = address % (2**_BHT_ADDR_BITS)
-
+            # predict branch
             prediction = bp.predict(address)
+            # determine if prediction was correct
             correct = prediction == taken
+            # update internal state
             bp.update(address, correct)
 
     else:
