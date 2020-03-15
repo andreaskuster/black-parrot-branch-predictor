@@ -105,10 +105,16 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.debug:
+
+        _SAT_CNT_BITS = 2
+        _BHT_ADDR_BITS = 1
+
         tr = TraceReader("../evaluation/traces/dummy.trace")
-        bp = BranchPredictorBimodal(sat_cnt_bits=2, bht_addr_bits=1)
+        bp = BranchPredictorBimodal(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS)
 
         for address, taken in tr.read():
+            # remove upper bits
+            address = address % (2**_BHT_ADDR_BITS)
             prediction = bp.predict(address)
             correct = prediction == taken
             bp.update(address, correct)
