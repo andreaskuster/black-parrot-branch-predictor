@@ -37,8 +37,8 @@ module testbench
 `ifndef VERILATOR
   // dump waves
   initial begin
-    $dumpfile("dump_testbench.vcd");
-    $dumpvars(1, adder);
+    $dumpfile("dump.vcd");
+    $dumpvars(1, testbench);
   end
 `endif
 
