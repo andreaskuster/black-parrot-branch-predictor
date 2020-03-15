@@ -1,1 +1,5 @@
 cocotb
+networkx
+matplotlib
+pydot
+graphviz
