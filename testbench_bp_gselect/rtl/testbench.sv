@@ -2,6 +2,7 @@
 module testbench
   #( parameter bht_idx_width_p   = 9
   ,  parameter bp_cnt_sat_bits_p = 2
+  ,  parameter bp_n_hist         = 6
   )
   ( input                       clk_i
   , input                       reset_i
@@ -18,7 +19,8 @@ module testbench
 
 bp_fe_bp_gselect
     #(.bht_idx_width_p(bht_idx_width_p),
-      .bp_cnt_sat_bits_p(bp_cnt_sat_bits_p)
+      .bp_cnt_sat_bits_p(bp_cnt_sat_bits_p),
+      .bp_n_hist(bp_n_hist)
     ) bp
     ( .clk_i(clk_i)
     , .reset_i(reset_i)
