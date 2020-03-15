@@ -29,7 +29,6 @@
 
 TOPLEVEL_LANG ?= verilog
 
-#SIM ?= icarus
 SIM ?= verilator
 VERILATOR_TRACE=1
 
