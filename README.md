@@ -37,8 +37,19 @@ Test file sizes (#branches):
 - long_server_1.trace:  149'246'445
 
 
+## Roadmap
+
+
+TAGE: http://www.irisa.fr/caps/people/seznec/JILP-COTTAGE.pdf
+https://pharm.ece.wisc.edu/papers/badgr_iccd16.pdf
+Perceptron: https://www.cs.utexas.edu/~lin/papers/hpca01.pdf
+http://hpca23.cse.tamu.edu/taco/pdfs/hpca7_dist.pdf
+
 ## Credits
 - https://github.com/black-parrot/black-parrot
 - https://cocotb.readthedocs.io/en/latest/index.html
 - https://www.veripool.org/wiki/verilator
 - https://github.com/antmicro/cocotb-verilator-build
+- https://web.engr.oregonstate.edu/~benl/Projects/branch_pred/#l3
+- https://en.wikipedia.org/wiki/Branch_predictor#Local_branch_prediction
+- http://people.cs.pitt.edu/~childers/CS2410/slides/lect-branch-prediction.pdf
