@@ -1,3 +1,5 @@
+import argparse
+
 class ShiftRegister:
 
     def __init__(self, size, init_val=0):
@@ -101,12 +103,16 @@ def evaluate(sat_bits, addr_bits, n_hist, trace):
 
 if __name__ == "__main__":
 
-    _DEBUG = False
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--debug", action='store_true')
+    parser.add_argument("--gridsearch", action='store_true')
+    args = parser.parse_args()
+
     _SAT_CNT_BITS = 2
     _BHT_ADDR_BITS = 6
     _N_HIST = 6
 
-    if _DEBUG:
+    if args.debug:
         tr = TraceReader("../evaluation/traces/dummy.trace")
         bp = BranchPredictorGselect(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS, n_hist=_N_HIST)
 
