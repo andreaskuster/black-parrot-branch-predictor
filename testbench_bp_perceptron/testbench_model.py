@@ -109,15 +109,25 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.debug:
+
+        # params
+        _BHT_ADDR_BITS = 1
+        _N_HIST = 1
+
         tr = TraceReader("../evaluation/traces/dummy.trace")
-        bp = BranchPredictorPerceptron(bht_addr_bits=1, n_hist=1)
+        bp = BranchPredictorPerceptron(bht_addr_bits=_BHT_ADDR_BITS, n_hist=_N_HIST)
 
         for address, taken in tr.read():
+            # remove upper bits
+            address = address % (2**_BHT_ADDR_BITS)
+            # predict branch
             prediction = bp.predict(address)
+            # determine if prediction was correct
             correct = prediction == taken
+            # update internal state
             bp.update(address, correct)
 
-    elif args.gridsearch:
+    if args.gridsearch:
         from multiprocessing import Pool
         tasks = list()
         with Pool(processes=64) as pool:
@@ -128,7 +138,7 @@ if __name__ == "__main__":
             results = list()
             for task in tasks:
                 results.append(task.get())
-            with open("res.txt", "w") as file:
+            with open("gridsearch_perceptron.txt", "w") as file:
                 for result in results:
                     file.write(str(result) + "\n")
         print("done")
