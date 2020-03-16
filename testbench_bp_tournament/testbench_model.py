@@ -159,20 +159,24 @@ if __name__ == "__main__":
     parser.add_argument("--gridsearch", action='store_true')
     args = parser.parse_args()
 
-    _SAT_CNT_BITS = 2
-    _BHT_ADDR_BITS = 2
-    _N_HIST = 2
-
     if args.debug:
+
+        # params
+        _SAT_CNT_BITS = 2
+        _BHT_ADDR_BITS = 2
+        _N_HIST = 2
+
         tr = TraceReader("../evaluation/traces/dummy.trace")
         bp = BranchPredictorTournament(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS, n_hist=_N_HIST)
 
         for address, taken in tr.read():
             # remove upper bits
             address = address % (2 ** _BHT_ADDR_BITS)
-
+            # predict branch
             prediction = bp.predict(address)
+            # determine if prediction was correct
             correct = prediction == taken
+            # update internal state
             bp.update(address, correct)
 
     if args.gridsearch:
@@ -188,7 +192,7 @@ if __name__ == "__main__":
             results = list()
             for task in tasks:
                 results.append(task.get())
-            with open("res.txt", "w") as file:
+            with open("gridsearch_tournament.txt", "w") as file:
                 for result in results:
                     file.write(result + "\n")
         print("done")
