@@ -19,17 +19,6 @@ module bp_fe_bp_tournament
   , output                      predict_o
   );
 
-  // DEBUG
-  logic [bp_cnt_sat_bits_p-1:0] l0, l1, l2, l3, g0, g1, g2, g3;
-  assign l0 = bht_local[0];
-  assign l1 = bht_local[1];
-  assign l2 = bht_local[2];
-  assign l3 = bht_local[3];
-  assign g0 = bht_global[0];
-  assign g1 = bht_global[1];
-  assign g2 = bht_global[2];
-  assign g3 = bht_global[3];
-
   //
   // LOCAL BRANCH PREDICTOR 0
   // branch history table
