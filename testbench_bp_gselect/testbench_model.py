@@ -128,7 +128,7 @@ if __name__ == "__main__":
             # update internal state
             bp.update(address, correct)
 
-    else:
+    if args.gridsearch:
 
         from concurrent.futures import ThreadPoolExecutor
 
