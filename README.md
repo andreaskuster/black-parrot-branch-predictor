@@ -13,10 +13,14 @@
 ## Prequisites
 
 ```
-sudo apt install virtualenv build-essential python3-dev gtkwave
+sudo apt install virtualenv build-essential python3-dev gtkwave verilator
 ```
 verilator
 iverilog -> icarus
+
+```
+pip3 install -r requirements.txt
+```
 
 We run our evaluation on:
 - `ubuntu 19.10 x86_64 kernel 5.3.0-40-generic`
