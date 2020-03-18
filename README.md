@@ -24,7 +24,7 @@ pip3 install -r requirements.txt
 
 We run our evaluation on:
 - `ubuntu 19.10 x86_64 kernel 5.3.0-40-generic`
-- `python v3.7`
+- `python v3.8`
 - `cocotb v1.3.0`
 - `verilator v4.020 2019-10-06`
 
