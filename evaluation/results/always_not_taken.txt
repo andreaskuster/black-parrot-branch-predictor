@@ -1,0 +1,5 @@
+trace, accuracy
+short_server_1, 0.388470340920621
+long_server_1, 0.350725707402946
+short_mobile_1, 0.30708112485047
+long_mobile_1, 0.485146028580392
