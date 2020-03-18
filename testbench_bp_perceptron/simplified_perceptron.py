@@ -3,24 +3,40 @@ import numpy as np
 
 class Perceptron:
 
-    def __init__(self, no_of_inputs, learning_rate=1):
+    def __init__(self, no_of_inputs, learning_rate=1, int_bit_width=5):
         # save params
-        self.learning_rate: int = learning_rate
+        self.int_bit_width = int_bit_width
+        self.saturation = (2**int_bit_width) -1
+        self.saturation_half = (2 ** (int_bit_width-1)) - 1
+        self.learning_rate: int = self.limit(learning_rate)
         self.weights: np.array = np.zeros(no_of_inputs + 1, dtype=int)
 
-    def predict(self, inputs):
+    def limit(self, element):
+        if element > self.saturation:
+            return self.saturation
+        elif element < 0:
+            return 0
+        else:
+            return element
+
+    def predict(self, inputs, internal=False):
         # compute sum(input[i]*weight[i]) + bias
-        activation = np.dot(inputs, self.weights[1:]) + self.weights[0]
+        activation = self.limit(np.dot(inputs, self.weights[1:]) + self.weights[0])
         # apply activation function
-        return 1 if activation > 0 else 0
+        if internal:
+            return self.saturation if activation > self.saturation_half else 0
+        else:
+            return 1 if activation > self.saturation_half else 0
 
     def train(self, inputs, label):
         # predict using current weights
         prediction = self.predict(inputs)
         # update weights
         self.weights[1:] += self.learning_rate * (label - prediction) * inputs
+        for i in range(len(self.weights)):
+            self.weights[i] = self.limit(self.weights[i])
         # update bias
-        self.weights[0] += self.learning_rate * (label - prediction)
+        self.weights[0] += self.limit(self.learning_rate * (label - prediction))
 
 
 if __name__ == "__main__":
@@ -34,9 +50,9 @@ if __name__ == "__main__":
             - integer only datatype (instead of float)
             - single round training (no storage of training data, possibly single-cycle training)
             - single perceptron
-            
+            - fixed integer bit width (and saturation instead of roll-over)
+               
             ToDo:
-                - fixed integer bit width (and saturation instead of roll-over)
                 - multiple perceptrons, choosen by lowest address bits
     """
 
