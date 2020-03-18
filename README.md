@@ -15,8 +15,7 @@
 ```
 sudo apt install virtualenv build-essential python3-dev gtkwave verilator
 ```
-verilator
-iverilog -> icarus
+
 
 ```
 pip3 install -r requirements.txt
