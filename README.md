@@ -29,6 +29,11 @@ we have no notion of testing the correctness of our implementation. Recall: "Har
 software.", Part of Taylor's VLSI Axiom #5. In the case of a branch predictor, with a large internal state, it is even
 almost impossible to write good tests by hand.
 
+This reasoning above can be underlined well with one of our early cycle performance analyis. Even for larger tests such 
+as the coremark benchmark, we even get slightly better performance (lower cycle cound is better) with the primitive 
+'always taken' implementation compared to the current 'bimodal' branch predictor.
+![Test Program Cycle Performance](./evaluation/plots/bp_comparison_black_parrot_cycles.png)
+
 
 
 
