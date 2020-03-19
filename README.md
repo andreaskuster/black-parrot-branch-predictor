@@ -34,7 +34,12 @@ as the coremark benchmark, we even get slightly better performance (lower cycle 
 'always taken' implementation compared to the current 'bimodal' branch predictor.
 ![Test Program Cycle Performance](./evaluation/plots/bp_comparison_black_parrot_cycles.png)
 
+In order to overcome these limitations, we developed our own performance evaluation and testing system.
 
+After being given a hint by Professor Taylor, we started investigating the use of branch traces from the most recent
+[Championship Branch Prediction CBP-5](https://www.jilp.org/cbp2016). 
+
+![](./doc/co_simulation.png)
 
 
 
@@ -56,16 +61,14 @@ In order to execute all testbenches automatically, you can run `make` in the roo
 
 ### Prequisites
 
-```
-sudo apt install virtualenv build-essential python3-dev gtkwave verilator
-```
+The following packages are required to run the simulation:
+`sudo apt install virtualenv build-essential python3-dev gtkwave verilator libboost-all-dev`
 
+To install all python packages, run the following command: `pip3 install -r requirements.txt`
 
-```
-pip3 install -r requirements.txt
-```
+### Reproducibility
 
-We run our evaluation on:
+We run our evaluation on the following system:
 - `ubuntu 19.10 x86_64 kernel 5.3.0-40-generic`
 - `python v3.8`
 - `cocotb v1.3.0`
@@ -73,11 +76,14 @@ We run our evaluation on:
 
 
 ## Testing
-http://hpca23.cse.tamu.edu/cbp2016/
 
-https://www.jilp.org/cbp2016/
+More information about the traces can be fourn on their [official homepage](https://www.jilp.org/cbp2016/). Our traces 
+are part of a large collection of training cases, which we converted using or modified [bt9 reader](./bt9_reader) to simple
+traces of the form: `branch_address taken \n`. They can be found downloaded from [here](http://hpca23.cse.tamu.edu/cbp2016).
 
-Test file sizes (#branches):
+The bt9 conversion tool can be compiled using `cd bt9_reader && make` and used by executing `./bt9_reader INPUT_TRACE OUTPUT_FILE`
+
+We used the following four traces for the evaluation with test file sizes (#branches):
 - short_mobile_1.trace: 16'662'268 
 - long_mobile_1.trace: 29'269'647
 - short_server_1.trace: 230'692'528
@@ -85,7 +91,14 @@ Test file sizes (#branches):
 
 
 ## Roadmap
-- Perceptron:
+
+Even though we tried to implement our branch predictor designs as generic as possible, we could still not incorporate all
+extra tweaks and tricks we found on the web. 
+
+We encourage people to contribute to this repo by adding additional testbenches. A few ideas for superior designs might be:
+
+- Perceptron Branch Predictor: The first version of the model is already implemented. We have to find a good balance between
+a good prediction rate and the complexity of the hardware (in terms of resources and critical path).
     - https://www.cs.utexas.edu/~lin/papers/hpca01.pdf
     - http://hpca23.cse.tamu.edu/taco/pdfs/hpca7_dist.pdf
 
@@ -93,6 +106,11 @@ Test file sizes (#branches):
     - http://www.irisa.fr/caps/people/seznec/JILP-COTTAGE.pdf
     - https://pharm.ece.wisc.edu/papers/badgr_iccd16.pdf
 
+- Furthermore, so far, we only used the branch address and branch history information for our branch predictions. There 
+might be some headroom for improvement by appying additional heuristics such as looking at the type of branch instruction.
+
+## Contributions
+Any kind of feedback or pull requests with additional testbenches are welcome.
 
 ## Credits
 - https://github.com/black-parrot/black-parrot
