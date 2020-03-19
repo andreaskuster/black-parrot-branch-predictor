@@ -218,8 +218,25 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 
 ### Tournament
+
+The gselect branch predictor is a dynamic branch predictor and uses the lowest `bht_indx_width_p - bp_n_hist` bits of 
+the address, concatenated with `bp_n_hist`latest branch history bits as the hash function.
+
 ![](./testbench_bp_tournament/bp_tournament.png) 
 
+__Accuracy__: The gselect branch predictor is a tradeoff between full spreading of the information (gshare) and only using
+the branch address (bimodal). We therefore expect the result of this predictor to be somewhere between the two others. In
+theory, in these of a workload that fits very well the combination of history bits and address bits selected for this 
+implementation, it could also outperform the others.
+
+__Predictions per Cycle__: The critical path is most likely from the branch history shift register through the concatenation to 
+the lookup/update of the saturating counter, which should be reasonable fast for small branch history table sizes.
+
+__Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
+size of the branch history table plus the size of the branch history.
+
+__Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
+size of the branch history table plus the size of the branch history.
 
 
 
@@ -240,8 +257,8 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 
 ### Neural Branch Predictors
-Neural branch predictors found their way into modern high-performance/high missprediction penalty CPU designs, especially 
-beacause of their ability to remember long history information without the necessity of exponential scale. But still, they
+Neural branch predictors found their way into modern high-performance/high missprediction penalty CPU designs (i.e. [AMD Ryzen](https://en.wikipedia.org/wiki/Ryzen), especially 
+because of their ability to remember long history information without the necessity of exponential scale. But still, they
 are resource hungry and we have to carefully balance and reduce unnecessary functionality in order to make them feasible 
 for the black-parrot RISC-V processor.
 
@@ -255,7 +272,7 @@ In order to further minimize the footprint, the model currently supports the fol
 - input: parameterized number of address index and branch history bits
 - binary classification (branch taken/not taken)
 - integer only data type (no float)
-- single training round (aka singe update f perceptron weights)
+- single training round (aka single update of perceptron weights)
 - single perceptron (another design choice could be to have multiple perceptrons, branch address indexed)
 - fixed data width integers
 
@@ -316,6 +333,22 @@ which was not possible before.
 Furthermore, running traces with over 10M branch instruction we did not prove, but we know with high certainty, that either
 both RTL and the python model implementations are both correct or both wrong. But even if they would be wrong, according 
 to Taylor's axiom, we are at least 10x faster in finding the bug! :)
+
+## Proposal
+
+Andreas:
+
+Life is full of up and downs, and so is the choice of a good branch predictor. Doing the choice of your life within two
+weeks is probably a bit short-handed, but there is still one little beautiful idea that stand out of the mass. Taking two 
+orthogonal implementations, and gluing them together using the very same basic, but well working building block (saturating counter) 
+allows to (mostly) get the best of both words (see graph below: tournament vs bimodal/gshare/gselect).
+
+[](./evaluation/plots/comparison_short_mobile_1.png)
+
+In my opinion, we should use the tournament branch predictor, since this approach scales performance very well (upon
+changes of parameter bht_idx_width_p) with size, which is an important characteristic for the flexibility and re-usability
+approach of black-parrot.
+
 
 ## Theoretical Power/Area Estimate
 
