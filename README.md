@@ -46,6 +46,10 @@ After being given a hint by Professor Taylor, we started investigating the use o
 
 In this section, we will have a look at all branch predictor implementations, their functionality and there performance.
 
+### Static Branch Predictors
+Static branch predictors are very simple predictors used mostly in the earliest designs. They do not rely on the branch history
+at runtime, but rather predict on the bases of the branch type.
+
 ### Always Not Taken
 The always not taken branch predictor is a static and ultra light-weight (area, power) branch predictor. Like the name already
 reveals, it simply predicts all branches as 'not taken'.
@@ -129,9 +133,26 @@ More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_always_taken/README.md)
 - [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_02_always_taken/bp_fe/src/v/bp_fe_bp.v#L33)
 
+### Dynamic Branch Predictors
+Dynamic branch predictors not only rely no the branch type, but also incorporate information about branch outcome at runtime.
+
+Furthermore, the branch predictors we will see in this section can be generalised to consist of a branch history table 
+(saturating counters representing the likelyhood of taking/not taking the branch, with an update mechanism) and a hash
+function determining which counter to use.
 
 ### Bimodal
+The bimodal branch predictor is a dynamic branch predictor and uses the lowest `bht_indx_width_p` bits as the hash function.
+
 ![](./testbench_bp_bimodal/bp_bimodal.png) 
+
+__Predictions per Cycle__: The critical path is most likely the lookup/update of the saturating counter, which should be 
+reasonable fast for small branch history table sizes.
+
+__Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
+size of the branch history table.
+
+__Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
+size of the branch history table.
 
 More detailed evaluations and the integration into black-parrot can be found:
 [Detailed evaluation](./testbench_bp_bimodal/README.md)
@@ -139,6 +160,8 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 
 ### Gshare
+
+
 ![](./testbench_bp_gshare/bp_gshare.png) 
 
 
@@ -181,17 +204,41 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 
 
-More detailed evaluations and the integration into black-parrot can be found:
+This design is still __under development__. The current evaluations can be found:
 [Detailed evaluation](./testbench_bp_perceptron/README.md)
-[BlackParrot Integration]()
+[Implementation Details](./testbench_bp_perceptron)
 
 ## Findings
+
+Generally, the problem of predicting the correct branch decision cannot be done previous to the evaluation of the
+conditional branch statement (in the presence of I/O and random number generators). Furthermore, there is usually a tight
+bound on the latency and resources (power/area) that are available for the implementation of such a predictor. Therefore,
+all the predictors use heuristics and are greedy, which means that most likely there does not exist the best predictor, but
+it is rather a balance between different tradeoffs.
+These plots below provide insight into __how much information__ each of the branch predictors is capable of storing, 
+given different amounts of input information (in the form of branch history, address bits). It is __important__ to note 
+that the area and power requirements of different implementations might diverge significantly. For more information about
+that, refer to the [theoretical power/area estimate](#theoretical-powerarea-estimate) and the findings from our backend flow.
 
 ![](./evaluation/plots/comparison_short_mobile_1.png)
 ![](./evaluation/plots/comparison_long_mobile_1.png)
 ![](./evaluation/plots/comparison_short_server_1.png)
 ![](./evaluation/plots/comparison_long_server_1.png)
 
+__always taken / always not taken__:
+1. The conjecture about the performance increase of the 'always taken' over the 'always not taken' holds for all traces.
+2. The conjecture that the static branch predictor are more inaccurate than the dynamic branch predictors holds too.
+
+
+
+
+## Theoretical Power/Area Estimate
+
+Since 
+
+![](./evaluation/plots/ram_comparison.png)
+
+ 
 
 ## Co-Simulation
 
