@@ -42,7 +42,64 @@ After being given a hint by Professor Taylor, we started investigating the use o
 ![](./doc/co_simulation.png)
 
 
+## Branch Predictor Implementations
 
+
+### Always Not Taken
+
+
+
+[Detailed evaluation](./testbench_bp_always_taken/README.md)
+[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_01_always_not_taken/bp_fe/src/v/bp_fe_bp.v#L28)
+
+
+### Always Taken
+
+
+[Detailed evaluation](./testbench_bp_always_taken/README.md)
+[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_02_always_taken/bp_fe/src/v/bp_fe_bp.v#L33)
+
+
+### Bimodal
+
+[Detailed evaluation](./testbench_bp_bimodal/README.md)
+[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_03_bimodal/bp_fe/src/v/bp_fe_bp.v#L38)
+
+
+### Gshare
+
+
+[Detailed evaluation](./testbench_bp_gshare/README.md)
+[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_04_gshare/bp_fe/src/v/bp_fe_bp.v#L56)
+
+### Gselect
+
+[Detailed evaluation](./testbench_bp_gselect/README.md)
+[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_05_gselect/bp_fe/src/v/bp_fe_bp.v#L76)
+
+### Tournament
+
+
+[Detailed evaluation](./testbench_bp_tournament/README.md)
+[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_06_tournament/bp_fe/src/v/bp_fe_bp.v#L95)
+
+### Two-Level Local
+
+
+[Detailed evaluation](./testbench_bp_two_level_local/README.md)
+[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_07_two_level_local/bp_fe/src/v/bp_fe_bp.v#L113)
+
+### Perceptron
+
+[Detailed evaluation](./testbench_bp_perceptron/README.md)
+[BlackParrot Integration]()
+
+## Findings
+
+![](./evaluation/plots/comparison_short_mobile_1.png)
+![](./evaluation/plots/comparison_long_mobile_1.png)
+![](./evaluation/plots/comparison_short_server_1.png)
+![](./evaluation/plots/comparison_long_server_1.png)
 
 
 ## Co-Simulation
@@ -59,20 +116,22 @@ In order to execute all testbenches automatically, you can run `make` in the roo
 2. Open the waveform file using gtkwave `gtkwave dump.vcd`
 
 
-### Prequisites
+## Prequisites
 
 The following packages are required to run the simulation:
 `sudo apt install virtualenv build-essential python3-dev gtkwave verilator libboost-all-dev`
 
 To install all python packages, run the following command: `pip3 install -r requirements.txt`
 
-### Reproducibility
+## Reproducibility
 
 We run our evaluation on the following system:
 - `ubuntu 19.10 x86_64 kernel 5.3.0-40-generic`
 - `python v3.8`
 - `cocotb v1.3.0`
 - `verilator v4.020 2019-10-06`
+
+The raw data we used for generating the plots can be found [here](./evaluation/results)
 
 
 ## Testing
