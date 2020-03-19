@@ -131,36 +131,57 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 
 ### Bimodal
+![](./testbench_bp_bimodal/bp_bimodal.png) 
 
+More detailed evaluations and the integration into black-parrot can be found:
 [Detailed evaluation](./testbench_bp_bimodal/README.md)
 [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_03_bimodal/bp_fe/src/v/bp_fe_bp.v#L38)
 
 
 ### Gshare
+![](./testbench_bp_gshare/bp_gshare.png) 
 
 
+More detailed evaluations and the integration into black-parrot can be found:
 [Detailed evaluation](./testbench_bp_gshare/README.md)
 [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_04_gshare/bp_fe/src/v/bp_fe_bp.v#L56)
 
-### Gselect
 
+### Gselect
+![](./testbench_bp_gselect/bp_gselect.png) 
+
+
+More detailed evaluations and the integration into black-parrot can be found:
 [Detailed evaluation](./testbench_bp_gselect/README.md)
 [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_05_gselect/bp_fe/src/v/bp_fe_bp.v#L76)
 
+
 ### Tournament
+![](./testbench_bp_tournament/bp_tournament.png) 
 
 
+
+More detailed evaluations and the integration into black-parrot can be found:
 [Detailed evaluation](./testbench_bp_tournament/README.md)
 [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_06_tournament/bp_fe/src/v/bp_fe_bp.v#L95)
 
+
 ### Two-Level Local
+![](./testbench_bp_two_level_local/bp_two_level_local.png) 
 
 
+
+More detailed evaluations and the integration into black-parrot can be found:
 [Detailed evaluation](./testbench_bp_two_level_local/README.md)
 [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_07_two_level_local/bp_fe/src/v/bp_fe_bp.v#L113)
 
-### Perceptron
 
+### Perceptron
+![](./testbench_bp_perceptron/bp_perceptron.png) 
+
+
+
+More detailed evaluations and the integration into black-parrot can be found:
 [Detailed evaluation](./testbench_bp_perceptron/README.md)
 [BlackParrot Integration]()
 
@@ -204,7 +225,8 @@ We run our evaluation on the following system:
 
 The raw data we used for generating the plots can be found [here](./evaluation/results)
 
-Unoptimized assembly code can be generated from C using: `gcc -S CODE.c -O0`
+Unoptimized assembly code can be generated from C using: `gcc -S CODE.c -O0`. We added both C and assembly version 
+[here](./testbench_bp_always_taken/while_assembly)
 
 ## Testing
 
