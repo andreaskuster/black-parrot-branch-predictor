@@ -1,10 +1,13 @@
 # Black Parrot Branch Predictor [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-
 ## Intro
-
+As part of our VLSI2 class at University of Washington, we seek to improve a part of the [BlackParrot](https://github.com/black-parrot/black-parrot) Open-Source RISC-V 
+processor in terms of PPA (Power, Performance, Area) and/or simplicity. We decided to tackle the problem of improving the 
+[branch predictor](https://en.wikipedia.org/wiki/Branch_predictor), since a better predictor can easily improve the overall
+performance by reducing the number of misspredictions/revertions.
 
 ## Setup
+
 
 ### Reason for using our setup
 
