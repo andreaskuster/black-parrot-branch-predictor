@@ -47,14 +47,14 @@ After being given a hint by Professor Taylor, we started investigating the use o
 In this section, we will have a look at all branch predictor implementations, their functionality and there performance.
 
 ### Always Not Taken
-The always taken branch predictor is a static and ulta light-weight (area, power) branch predictor. Like the name already
-reveils, it simply bredicts all branches as 'not taken'.
+The always not taken branch predictor is a static and ultra light-weight (area, power) branch predictor. Like the name already
+reveals, it simply predicts all branches as 'not taken'.
 
 #### Conjecture:
 
 __Accuracy__: We expect this branch predictor to perform badly, and specifically worse than its always taken counterpart. 
 The reasoning is that even if "if/else" branches might work in favour for either of them, most loops are implemented in 
-the following scheme: 
+the following general loop scheme works strongly in favour of the 'always taken' predictor: 
 
 C-Code:
 ```
@@ -89,9 +89,45 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 ### Always Taken
 
+The always taken branch predictor is a static and ultra light-weight (area, power) branch predictor. Like the name already
+reveals, it simply predicts all branches as 'taken'.
 
-[Detailed evaluation](./testbench_bp_always_taken/README.md)
-[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_02_always_taken/bp_fe/src/v/bp_fe_bp.v#L33)
+#### Conjecture:
+
+__Accuracy__: We expect this branch predictor to perform worse than the dynamical branch predictors, but better than 
+its always taken counterpart.  The reasoning is that even if "if/else" branches might work in favour for either of them, most loops are implemented in 
+the following general loop scheme works strongly in favour of the 'always taken' predictor:
+
+C-Code:
+```
+    x = 0;
+	while(x < 42){
+		x++;
+	}
+```
+Assembly Version
+```
+        jmp     .L2
+.L3:
+        addl    $1, -4(%rbp)
+.L2:
+        cmpl    $41, -4(%rbp)
+        jle     .L3
+```
+with `x=-4(%rbp)`
+
+You note that the conditional jump `jle` is going to be 'taken' 42 times and only once 'not taken'.
+
+
+__Predictions per Cycle__: Since there is no computation involved, the implementation should be able to run at almost every frequency.
+
+__Area__: The area usage should be almost zero.
+
+__Power__: The power usage should be almost zero.
+
+More detailed evaluations and the integration into black-parrot can be found:
+- [Detailed evaluation](./testbench_bp_always_taken/README.md)
+- [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_02_always_taken/bp_fe/src/v/bp_fe_bp.v#L33)
 
 
 ### Bimodal
