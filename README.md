@@ -6,6 +6,12 @@ processor in terms of PPA (Power, Performance, Area) and/or simplicity. We decid
 [branch predictor](https://en.wikipedia.org/wiki/Branch_predictor), since a better predictor can easily improve the overall
 performance by reducing the number of misspredictions/revertions.
 
+The current implementation is a fixed-width (=2) saturating counter [one-level bimodal branch predictor](https://en.wikipedia.org/wiki/Branch_predictor#One-level_branch_prediction).
+In order to explore the whole design space, we generalized the imposing a adjustable saturating counter bit-width parameter
+on the one hand, and by implementing different branch predictors such as always-taken, gselect, gshare, two-level local and
+tournament. The major contribution is not only the RTL implementation of these predictors, but also a comprehensive study 
+and comparison in terms of prediction performance and PPA between the designs.
+
 ## Setup
 
 
