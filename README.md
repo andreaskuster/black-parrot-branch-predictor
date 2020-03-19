@@ -37,6 +37,9 @@ as the coremark benchmark, we even get slightly better performance (lower cycle 
 
 
 
+
+
+
 ## Co-Simulation
 
 1. Change into the testbench_NAME directory `cd testbench_NAME`
@@ -47,7 +50,8 @@ In order to execute all testbenches automatically, you can run `make` in the roo
 
 ## Wave Form Viewer
 
-``` gtkwave dump.vcd ```
+1. Run the co-simulation first. This should generate a file `dump.vcd` in the testbench_NAME folder.
+2. Open the waveform file using gtkwave `gtkwave dump.vcd`
 
 
 ### Prequisites
