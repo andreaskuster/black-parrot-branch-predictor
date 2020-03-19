@@ -217,6 +217,8 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 
 
+
+
 More detailed evaluations and the integration into black-parrot can be found:
 [Detailed evaluation](./testbench_bp_tournament/README.md)
 [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_06_tournament/bp_fe/src/v/bp_fe_bp.v#L95)
@@ -233,20 +235,23 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 
 ### Neural Branch Predictors
-
+Neural branch predictors found their way into modern high-performance/high missprediction penalty CPU designs, especially 
+beacause of their ability to remember long history information without the necessity of exponential scale. But still, they
+are resource hungry and we have to carefully balance and reduce unnecessary functionality in order to make them feasible 
+for the black-parrot RISC-V processor.
 
 ### Perceptron
 
 The [Perceptron Algorithm](https://en.wikipedia.org/wiki/Perceptron) is one of the most basic neural network algorithm. 
 With limited latency and area/power budget, it is probably the most reasonable starting point for a neural branch predictor.
 
-In order to further minimize the footprint, the moel currently supports the following features:
+In order to further minimize the footprint, the model currently supports the following features:
 
 - input: parameterized number of address index and branch history bits
 - binary classification (branch taken/not taken)
 - integer only data type (no float)
 - single training round (aka singe update f perceptron weights)
-- single perceptron (another design choice could be to have multiple perceptrons, brach address indexed)
+- single perceptron (another design choice could be to have multiple perceptrons, branch address indexed)
 - fixed data width integers
 
 ![](./testbench_bp_perceptron/bp_perceptron.png) 
@@ -286,7 +291,14 @@ cannot check this) that this is indeed due to the amount of correlation.
 __gshare__:
 4. We can see that the gshare predictor is worse for smaller table size, but because of its 'good spread', we see that it 
 outperforms most of the others for larger table sizes.
- 
+__gselect__:
+5.
+
+__tournament__:
+6.
+
+__two-level local__:
+7.
 
 
 Last but not least, a not so obvious conjecture was that the initial testing method did not add much of insight/relevance.
