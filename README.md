@@ -14,8 +14,8 @@ and comparison in terms of prediction performance and PPA between the designs.
 
 ## Setup
 To gain the ability of comparison between the different implementations, we first started with the existing [test programs](https://github.com/black-parrot/black-parrot/tree/master/bp_common/test)
-of black parrot, which reports the number of cycles each of the program takes (verilator simulation). This approach comes
-with a couple of downsides. 
+of black parrot, which reports the number of cycles each of the program takes ([verilator](https://www.veripool.org/wiki/verilator)
+simulation). This approach comes with a couple of downsides. 
 
 (1) Firstly, we are reporting cycles instead of accuracy (#correct predictions/#total branches).
 This is problematic in multiple ways, e.g. what if the program does not contain any branches/only very few? what if the 
@@ -29,28 +29,28 @@ we have no notion of testing the correctness of our implementation. Recall: "Har
 software.", Part of Taylor's VLSI Axiom #5. In the case of a branch predictor, with a large internal state, it is even
 almost impossible to write good tests by hand.
 
-This reasoning above can be underlined well with one of our early cycle performance analyis. Even for larger tests such 
-as the coremark benchmark, we even get slightly better performance (lower cycle cound is better) with the primitive 
+This reasoning above can be underlined well with one of our early cycle performance analysis. Even for larger tests such 
+as the coremark benchmark, we even get slightly better performance (lower cycle count is better) with the primitive 
 'always taken' implementation compared to the current 'bimodal' branch predictor.
 ![Test Program Cycle Performance](./evaluation/plots/bp_comparison_black_parrot_cycles.png)
 
 
 
 
-### Reason for using our setup
+## Co-Simulation
 
-### Description of Setup (Model-RTL co-simulation)
+1. Change into the testbench_NAME directory `cd testbench_NAME`
+2. Execute the co-simulation by running `make`
 
+In order to execute all testbenches automatically, you can run `make` in the root directory of the repo.
 
-## Simulation
-```cd testbench_NAME & make ```
 
 ## Wave Form Viewer
 
 ``` gtkwave dump.vcd ```
 
 
-## Prequisites
+### Prequisites
 
 ```
 sudo apt install virtualenv build-essential python3-dev gtkwave verilator
