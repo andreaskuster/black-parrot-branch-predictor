@@ -1,6 +1,15 @@
 # Black Parrot Branch Predictor [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 
+## Intro
+
+
+## Setup
+
+### Reason for using our setup
+
+### Description of Setup (Model-RTL co-simulation)
+
 
 ## Simulation
 ```cd testbench_NAME & make ```
@@ -58,3 +67,4 @@ Test file sizes (#branches):
 - https://web.engr.oregonstate.edu/~benl/Projects/branch_pred/#l3
 - https://en.wikipedia.org/wiki/Branch_predictor#Local_branch_prediction
 - http://people.cs.pitt.edu/~childers/CS2410/slides/lect-branch-prediction.pdf
+- https://medium.com/@thomascountz/19-line-line-by-line-python-perceptron-b6f113b161f3

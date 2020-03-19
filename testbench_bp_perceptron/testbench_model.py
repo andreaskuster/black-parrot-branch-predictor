@@ -74,8 +74,8 @@ class BranchPredictorPerceptron:
         # number of inputs
         self.n_inputs = bht_addr_bits + n_hist
         # perceptron params
-        self.learning_rate = learning_rate
-        self.weights = np.zeros(self.n_inputs + 1, dtype=int)
+        self.learning_rate: int = learning_rate
+        self.weights: np.array = np.zeros(self.n_inputs + 1, dtype=int)
         # add global history shift register
         self.gh = ShiftRegister(size=n_hist)
 
@@ -88,21 +88,30 @@ class BranchPredictorPerceptron:
 
     def update(self, address, correct):
         # prepare perceptron input
-        inputs = (address * (2 ** self.n_hist)) + self.gh.reg_to_number()
+        inputs = ((address * (2 ** self.n_hist)) + self.gh.reg_to_number()) % (2**self.n_inputs)
+        # convert int to bit vector
+        input_vec = np.array(self.int_to_bit_vec(inputs, length=self.n_inputs))
         # compute prediction
         prediction = self.predict(inputs)
         # determine actual outcome
         taken_actual = (correct and prediction) or (not correct and not prediction)
         # update perceptron weights
-        label = 1 if taken_actual else -1
-        self.weights[1:] += self.learning_rate * (label - prediction) * inputs
+        label = 20 if taken_actual else 0
+        # update weights
+        self.weights[1:] += self.learning_rate * (label - prediction) * input_vec
+        # update bias
         self.weights[0] += self.learning_rate * (label - prediction)
+
 
     def predict(self, address):
         # prepare perceptron input
-        inputs = ((address * (2 ** self.n_hist)) + self.gh.reg_to_number()) % self.n_inputs
-        # compute sum and apply activation
-        return (np.dot(inputs, self.weights[1:]) + self.weights[0]) >= 0
+        inputs = ((address * (2 ** self.n_hist)) + self.gh.reg_to_number()) % (2**self.n_inputs)
+        # convert int to bit vector
+        input_vec = self.int_to_bit_vec(inputs, length=self.n_inputs)
+        # compute sum(input[i]*weight[i]) + bias
+        activation = np.dot(input_vec, self.weights[1:]) + self.weights[0]
+        # apply activation function
+        return 20 if activation > 10 else 0
 
 
 def evaluate(sat_bits, addr_bits, n_hist, trace):
@@ -128,24 +137,24 @@ def evaluate(sat_bits, addr_bits, n_hist, trace):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--debug", action='store_true')
-    parser.add_argument("--gridsearch", action='store_true')
+    parser.add_argument("--debug", action="store_true")
+    parser.add_argument("--gridsearch", action="store_true")
     args = parser.parse_args()
 
     if args.debug:
 
         # params
-        _BHT_ADDR_BITS = 1
-        _N_HIST = 1
+        _BHT_ADDR_BITS = 4
+        _N_HIST = 0
 
-        tr = TraceReader("../evaluation/traces/dummy.trace")
+        tr = TraceReader("../evaluation/traces/dummy2.trace")
         bp = BranchPredictorPerceptron(bht_addr_bits=_BHT_ADDR_BITS, n_hist=_N_HIST)
 
         for address, taken in tr.read():
             # remove upper bits
             address = address % (2**_BHT_ADDR_BITS)
             # predict branch
-            prediction = bp.predict(address)
+            prediction = 1 if bp.predict(address) > 10 else 0
             # determine if prediction was correct
             correct = prediction == taken
             # update internal state
