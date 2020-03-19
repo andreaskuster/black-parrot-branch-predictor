@@ -150,8 +150,7 @@ predictor to be good for workloads with very few correlation between sequential 
 should show better accuracy for smaller branch history table sizes, since this hash function does not spread very widely
 and therefore we expect less collisions.  
 
-__Predictions per Cycle__: The critical path is most likely the lookup/update of the saturating counter, which should be 
-reasonable fast for small branch history table sizes.
+__Predictions per Cycle / Critical Path__: TODO
 
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history table.
@@ -176,8 +175,7 @@ nicely over the whole hash image, we expect this predictor to perform very well 
 Furthermore, because of the broad spread, we expect that this predictor can improve a lot over larger branch history table
 sizes.
 
-__Predictions per Cycle__: The critical path is most likely from the branch history shift register through the XOR to 
-the lookup/update of the saturating counter, which should be reasonable fast for small branch history table sizes.
+__Predictions per Cycle / Critical Path__: TODO
 
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history table plus the size of the branch history.
@@ -203,8 +201,7 @@ the branch address (bimodal). We therefore expect the result of this predictor t
 theory, in these of a workload that fits very well the combination of history bits and address bits selected for this 
 implementation, it could also outperform the others.
 
-__Predictions per Cycle__: The critical path is most likely from the branch history shift register through the concatenation to 
-the lookup/update of the saturating counter, which should be reasonable fast for small branch history table sizes.
+__Predictions per Cycle / Critical Path__: TODO
 
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history table plus the size of the branch history.
@@ -219,26 +216,24 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 ### Tournament
 
-The gselect branch predictor is a dynamic branch predictor and uses the lowest `bht_indx_width_p - bp_n_hist` bits of 
-the address, concatenated with `bp_n_hist`latest branch history bits as the hash function.
+The tournament branch predictor is a dynamic branch predictor and uses a hybrid approach. One branch predictor uses the
+branch address only as a hash function, while the second one uses the branch history shift register only. In order to 
+choose which of both predictions we should use, there is an additional saturating counter, the selector, which gives trust
+to either of them, depending on the correctness of their previous predictions. 
 
 ![](./testbench_bp_tournament/bp_tournament.png) 
 
-__Accuracy__: The gselect branch predictor is a tradeoff between full spreading of the information (gshare) and only using
-the branch address (bimodal). We therefore expect the result of this predictor to be somewhere between the two others. In
-theory, in these of a workload that fits very well the combination of history bits and address bits selected for this 
-implementation, it could also outperform the others.
+__Accuracy__: While this branch prediction uses two branch predictors internally, it mostly gets the best result out of
+both words. We therefore expect this one to perform reasonably close to the maximum value of both internal branch predictors.
 
-__Predictions per Cycle__: The critical path is most likely from the branch history shift register through the concatenation to 
-the lookup/update of the saturating counter, which should be reasonable fast for small branch history table sizes.
+__Predictions per Cycle / Critical Path__: TODO
+
 
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
-size of the branch history table plus the size of the branch history.
+size of the branch history tables plus the size of the branch history.
 
 __Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
-size of the branch history table plus the size of the branch history.
-
-
+size of the branch history tables plus the size of the branch history.
 
 
 More detailed evaluations and the integration into black-parrot can be found:
@@ -247,8 +242,23 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 
 ### Two-Level Local
+
+The two-level local branch predictor uses the indirection over a (huge) correlation table consisting of branch address 
+indexed branch histories. The history is later used as an index to the actual branch history table consisting of saturating
+counters.
+
 ![](./testbench_bp_two_level_local/bp_two_level_local.png) 
 
+__Accuracy__: Since this predictor basically stores all the information given to him (and uses it), it should outperform 
+all others (with the grain of salt for using a lot more area/power). 
+
+__Predictions per Cycle / Critical Path__: TODO
+
+__Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
+size of the correlation table plus the branch history table.
+
+__Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
+size of the correlation table plus the branch history table.
 
 
 More detailed evaluations and the integration into black-parrot can be found:
@@ -320,10 +330,11 @@ __gselect__:
 5. Depending on the trace, the accuracy is usually in between or close to the one from gshare and/or bimodal.
 
 __tournament__:
-6.
+6. Some traces show pretty nicely what we expected (i.e. long_mobile_1) and for others, the accuracy is closeby or a little
+lower.
 
 __two-level local__:
-7.
+7. It outperforms all the other most of the time. Sometimes even very significantly.
 
 
 Last but not least, a not so obvious conjecture was that the initial testing method did not add much of insight/relevance.
