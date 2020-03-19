@@ -214,9 +214,24 @@ More detailed evaluations and the integration into black-parrot can be found:
 [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_07_two_level_local/bp_fe/src/v/bp_fe_bp.v#L113)
 
 
-### Perceptron
-![](./testbench_bp_perceptron/bp_perceptron.png) 
+### Neural Branch Predictors
 
+
+### Perceptron
+
+The [Perceptron Algorithm](https://en.wikipedia.org/wiki/Perceptron) is one of the most basic neural network algorithm. 
+With limited latency and area/power budget, it is probably the most reasonable starting point for a neural branch predictor.
+
+In order to further minimize the footprint, the moel currently supports the following features:
+
+- input: parameterized number of address index and branch history bits
+- binary classification (branch taken/not taken)
+- integer only data type (no float)
+- single training round (aka singe update f perceptron weights)
+- single perceptron (another design choice could be to have multiple perceptrons, brach address indexed)
+- fixed data width integers
+
+![](./testbench_bp_perceptron/bp_perceptron.png) 
 
 
 This design is still __under development__. The current evaluations can be found:
@@ -236,8 +251,11 @@ that the area and power requirements of different implementations might diverge 
 that, refer to the [theoretical power/area estimate](#theoretical-powerarea-estimate) and the findings from our backend flow.
 
 ![](./evaluation/plots/comparison_short_mobile_1.png)
+
 ![](./evaluation/plots/comparison_long_mobile_1.png)
+
 ![](./evaluation/plots/comparison_short_server_1.png)
+
 ![](./evaluation/plots/comparison_long_server_1.png)
 
 __always taken / always not taken__:
@@ -252,7 +270,7 @@ cannot check this) that this is indeed due to the amount of correlation.
 
 ## Theoretical Power/Area Estimate
 
-For this simplified power estimate model, we assume that the predictors power and area usage scales with its RAM usage. 
+For this simplified power estimate model, we assume that the predictors power and area usage scales with its RAM size. 
 We think that his is reasonable, since the remaining part of the predictors above has either a 
 
 Below you can see a table with logarithmic size axis that show how the branch history table scales.
