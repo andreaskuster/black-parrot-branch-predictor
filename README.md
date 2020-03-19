@@ -161,9 +161,19 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 ### Gshare
 
+The bimodal branch predictor is a dynamic branch predictor and uses the lowest `bht_indx_width_p` bits as the hash function.
 
 ![](./testbench_bp_gshare/bp_gshare.png) 
 
+
+__Predictions per Cycle__: The critical path is most likely from the branch history shift register through the XOR to 
+the lookup/update of the saturating counter, which should be reasonable fast for small branch history table sizes.
+
+__Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
+size of the branch history table plus the size of the branch history.
+
+__Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
+size of the branch history table plus the size of the branch history.
 
 More detailed evaluations and the integration into black-parrot can be found:
 [Detailed evaluation](./testbench_bp_gshare/README.md)
