@@ -252,11 +252,15 @@ cannot check this) that this is indeed due to the amount of correlation.
 
 ## Theoretical Power/Area Estimate
 
-Since 
+For this simplified power estimate model, we assume that the predictors power and area usage scales with its RAM usage. 
+We think that his is reasonable, since the remaining part of the predictors above has either a 
+
+Below you can see a table with logarithmic size axis that show how the branch history table scales.
 
 ![](./evaluation/plots/ram_comparison.png)
 
- 
+We can conclude that the branch predictors, except the two-level local bp can e directly compared while we have to take
+the better accuracy of the two-level local pb with a grain of salt, due to its high cost in terms of area/power
 
 ## Co-Simulation
 
