@@ -166,10 +166,15 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 ### Gshare
 
-The bimodal branch predictor is a dynamic branch predictor and uses the lowest `bht_indx_width_p` bits as the hash function.
+The gshare branch predictor is a dynamic branch predictor and uses the lowest `bht_indx_width_p` bits of the branch address 
+and the branch history xored as the hash function.
 
 ![](./testbench_bp_gshare/bp_gshare.png) 
 
+__Accuracy__: Since applying biwise xor over all available input information (branch address and branch history) should spread
+nicely over the whole hash image, we expect this predictor to perform very well on workloads with long branch correlation.
+Furthermore, because of the broad spread, we expect that this predictor can improve a lot over larger branch history table
+sizes.
 
 __Predictions per Cycle__: The critical path is most likely from the branch history shift register through the XOR to 
 the lookup/update of the saturating counter, which should be reasonable fast for small branch history table sizes.
@@ -186,8 +191,21 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 
 ### Gselect
+
+The gselect branch predictor is a dynamic branch predictor and uses the lowest `bht_indx_width_p - bp_n_hist` bits of 
+the address, concatenated with `bp_n_hist`latest branch history bits as the hash function.
+
+
 ![](./testbench_bp_gselect/bp_gselect.png) 
 
+__Predictions per Cycle__: The critical path is most likely from the branch history shift register through the concatenation to 
+the lookup/update of the saturating counter, which should be reasonable fast for small branch history table sizes.
+
+__Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
+size of the branch history table plus the size of the branch history.
+
+__Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
+size of the branch history table plus the size of the branch history.
 
 More detailed evaluations and the integration into black-parrot can be found:
 [Detailed evaluation](./testbench_bp_gselect/README.md)
@@ -265,8 +283,19 @@ __bimodal__:
 3. We can see that the bimodal predictor has higher accuracy for small table sizes compared to gshare and gselect. 
 For some of the traces the break-even point is earlier than for others. We therefore assume (unfortunately we 
 cannot check this) that this is indeed due to the amount of correlation.
+__gshare__:
+4. We can see that the gshare predictor is worse for smaller table size, but because of its 'good spread', we see that it 
+outperforms most of the others for larger table sizes.
+ 
 
 
+Last but not least, a not so obvious conjecture was that the initial testing method did not add much of insight/relevance.
+With our own evaluation setup, we can e.g. distinguish quite clearly between the always taken and bimodal predictor performance,
+which was not possible before.
+
+Furthermore, running traces with over 10M branch instruction we did not prove, but we know with high certainty, that either
+both RTL and the python model implementations are both correct or both wrong. But even if they would be wrong, according 
+to Taylor's axiom, we are at least 10x faster in finding the bug! :)
 
 ## Theoretical Power/Area Estimate
 
