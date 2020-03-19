@@ -198,6 +198,11 @@ the address, concatenated with `bp_n_hist`latest branch history bits as the hash
 
 ![](./testbench_bp_gselect/bp_gselect.png) 
 
+__Accuracy__: The gselect branch predictor is a tradeoff between full spreading of the information (gshare) and only using
+the branch address (bimodal). We therefore expect the result of this predictor to be somewhere between the two others. In
+theory, in these of a workload that fits very well the combination of history bits and address bits selected for this 
+implementation, it could also outperform the others.
+
 __Predictions per Cycle__: The critical path is most likely from the branch history shift register through the concatenation to 
 the lookup/update of the saturating counter, which should be reasonable fast for small branch history table sizes.
 
@@ -284,15 +289,18 @@ that, refer to the [theoretical power/area estimate](#theoretical-powerarea-esti
 __always taken / always not taken__:
 1. The conjecture about the performance increase of the 'always taken' over the 'always not taken' holds for all traces.
 2. The conjecture that the static branch predictor are more inaccurate than the dynamic branch predictors holds too.
+
 __bimodal__:
 3. We can see that the bimodal predictor has higher accuracy for small table sizes compared to gshare and gselect. 
 For some of the traces the break-even point is earlier than for others. We therefore assume (unfortunately we 
 cannot check this) that this is indeed due to the amount of correlation.
+
 __gshare__:
 4. We can see that the gshare predictor is worse for smaller table size, but because of its 'good spread', we see that it 
 outperforms most of the others for larger table sizes.
+
 __gselect__:
-5.
+5. Depending on the trace, the accuracy is usually in between or close to the one from gshare and/or bimodal.
 
 __tournament__:
 6.
