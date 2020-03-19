@@ -13,6 +13,23 @@ tournament. The major contribution is not only the RTL implementation of these p
 and comparison in terms of prediction performance and PPA between the designs.
 
 ## Setup
+To gain the ability of comparison between the different implementations, we first started with the existing [test programs](https://github.com/black-parrot/black-parrot/tree/master/bp_common/test)
+of black parrot, which reports the number of cycles each of the program takes (verilator simulation). This approach comes
+with a couple of downsides. 
+
+(1) Firstly, we are reporting cycles instead of accuracy (#correct predictions/#total branches).
+This is problematic in multiple ways, e.g. what if the program does not contain any branches/only very few? what if the 
+branches are only of a certain type?.
+
+(2) Secondly, some of the test programs finish execution in only a few thousand cycles, while only a fraction of these cycles 
+are spent on branch instructions. This drastically reduces the statistical relevance of our findings from these tests.
+
+(3) Last but not least, since malfunctioning branch predictors only decrease the performance, but not the correct code execution
+we have no notion of testing the correctness of our implementation. Recall: "Hardware is about 10x as hard to debug as 
+software.", Part of Taylor's VLSI Axiom #5. In the case of a branch predictor, with a large internal state, it is even
+almost impossible to write good tests by hand.
+
+
 
 
 ### Reason for using our setup
