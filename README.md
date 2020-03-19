@@ -145,6 +145,11 @@ The bimodal branch predictor is a dynamic branch predictor and uses the lowest `
 
 ![](./testbench_bp_bimodal/bp_bimodal.png) 
 
+__Accuracy__: Since the bimodal branch predictor solely relies on the address bits for the hash function, we expect this
+predictor to be good for workloads with very few correlation between sequential branches. For such workloads, this predictor
+should show better accuracy for smaller branch history table sizes, since this hash function does not spread very widely
+and therefore we expect less collisions.  
+
 __Predictions per Cycle__: The critical path is most likely the lookup/update of the saturating counter, which should be 
 reasonable fast for small branch history table sizes.
 
@@ -238,7 +243,10 @@ that, refer to the [theoretical power/area estimate](#theoretical-powerarea-esti
 __always taken / always not taken__:
 1. The conjecture about the performance increase of the 'always taken' over the 'always not taken' holds for all traces.
 2. The conjecture that the static branch predictor are more inaccurate than the dynamic branch predictors holds too.
-
+__bimodal__:
+3. We can see that the bimodal predictor has higher accuracy for small table sizes compared to gshare and gselect. 
+For some of the traces the break-even point is earlier than for others. We therefore assume (unfortunately we 
+cannot check this) that this is indeed due to the amount of correlation.
 
 
 
