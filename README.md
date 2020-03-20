@@ -74,10 +74,10 @@ the following general loop scheme works strongly in favour of the 'always taken'
 
 C-Code:
 ```
-    x = 0;
-	while(x < 42){
-		x++;
-	}
+x = 0;
+while(x < 42){
+    x++;
+}
 ```
 Assembly Version
 ```
@@ -116,10 +116,10 @@ the following general loop scheme works strongly in favour of the 'always taken'
 
 C-Code:
 ```
-    x = 0;
-	while(x < 42){
-		x++;
-	}
+x = 0;
+while(x < 42){
+    x++;
+}
 ```
 Assembly Version
 ```
@@ -171,8 +171,8 @@ __Power__: Since the computational part of the module is rather small, we expect
 size of the branch history table.
 
 More detailed evaluations and the integration into black-parrot can be found:
-[Detailed evaluation](./testbench_bp_bimodal/README.md)
-[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_03_bimodal/bp_fe/src/v/bp_fe_bp.v#L38)
+- [Detailed evaluation](./testbench_bp_bimodal/README.md)
+- [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_03_bimodal/bp_fe/src/v/bp_fe_bp.v#L38)
 
 
 ### Gshare
@@ -196,8 +196,8 @@ __Power__: Since the computational part of the module is rather small, we expect
 size of the branch history table plus the size of the branch history.
 
 More detailed evaluations and the integration into black-parrot can be found:
-[Detailed evaluation](./testbench_bp_gshare/README.md)
-[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_04_gshare/bp_fe/src/v/bp_fe_bp.v#L56)
+- [Detailed evaluation](./testbench_bp_gshare/README.md)
+- [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_04_gshare/bp_fe/src/v/bp_fe_bp.v#L56)
 
 
 ### Gselect
@@ -222,8 +222,8 @@ __Power__: Since the computational part of the module is rather small, we expect
 size of the branch history table plus the size of the branch history.
 
 More detailed evaluations and the integration into black-parrot can be found:
-[Detailed evaluation](./testbench_bp_gselect/README.md)
-[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_05_gselect/bp_fe/src/v/bp_fe_bp.v#L76)
+- [Detailed evaluation](./testbench_bp_gselect/README.md)
+- [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_05_gselect/bp_fe/src/v/bp_fe_bp.v#L76)
 
 
 ### Tournament
@@ -249,8 +249,8 @@ size of the branch history tables plus the size of the branch history.
 
 
 More detailed evaluations and the integration into black-parrot can be found:
-[Detailed evaluation](./testbench_bp_tournament/README.md)
-[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_06_tournament/bp_fe/src/v/bp_fe_bp.v#L95)
+- [Detailed evaluation](./testbench_bp_tournament/README.md)
+- [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_06_tournament/bp_fe/src/v/bp_fe_bp.v#L95)
 
 
 ### Two-Level Local
@@ -274,8 +274,8 @@ size of the correlation table plus the branch history table.
 
 
 More detailed evaluations and the integration into black-parrot can be found:
-[Detailed evaluation](./testbench_bp_two_level_local/README.md)
-[BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_07_two_level_local/bp_fe/src/v/bp_fe_bp.v#L113)
+- [Detailed evaluation](./testbench_bp_two_level_local/README.md)
+- [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_07_two_level_local/bp_fe/src/v/bp_fe_bp.v#L113)
 
 
 ### Neural Branch Predictors
@@ -302,8 +302,8 @@ In order to further minimize the footprint, the model currently supports the fol
 
 
 This design is still __under development__. The current evaluations can be found:
-[Detailed evaluation](./testbench_bp_perceptron/README.md)
-[Implementation Details](./testbench_bp_perceptron)
+- [Detailed evaluation](./testbench_bp_perceptron/README.md)
+- [Implementation Details](./testbench_bp_perceptron)
 
 ## Findings
 
@@ -385,6 +385,18 @@ Below you can see a table with logarithmic size axis that show how the branch hi
 We can conclude that the branch predictors, except the two-level local bp can e directly compared while we have to take
 the better accuracy of the two-level local pb with a grain of salt, due to its high cost in terms of area/power
 
+## Black-Parrot Module Hierarchy
+
+### FrontEnd
+![](./utilities/plots/fe.png)
+
+### BackEnd
+![](./utilities/plots/be.png)
+
+### MemoryEnd
+![](./utilities/plots/uce.png)
+
+
 ## Co-Simulation
 
 1. Change into the testbench_NAME directory `cd testbench_NAME`
@@ -458,14 +470,7 @@ might be some headroom for improvement by appying additional heuristics such as 
 Any kind of feedback/issues or pull requests are welcome.
 
 For moral support, you can also buy me a cup of coffee:
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_donations" />
-<input type="hidden" name="business" value="QVJSS734ZPLYE" />
-<input type="hidden" name="currency_code" value="CHF" />
-<input type="image" src="https://www.paypalobjects.com/en_US/CH/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_CH/i/scr/pixel.gif" width="1" height="1" />
-</form>
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QVJSS734ZPLYE&currency_code=CHF&source=url)
 
 ## Credits
 - https://github.com/black-parrot/black-parrot
