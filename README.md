@@ -43,7 +43,13 @@ branch_taken newline" format. The implementation details can be found in [bt9_re
 simulation, we used four of the training files from different categories (`short_mobile_1`, `long_mobile_1`, `short_server_1`,
 `long_server_1`), each consisting of several millions of branches. The converted files can be found in [traces](./traces).
 
-
+In order to solve the second issue of thorougly test/simulate or design with a big amount of internal state, we decided 
+to use [cocotb](https://github.com/cocotb/cocotb), which allows us to co-simulate our RTL code (using [verilator](https://www.veripool.org/wiki/verilator))
+and our model of the predictor written in python. Furthermore, we can use the traces from CBP-5, simulate them on both the
+RTL and python implementation and check if the output matches. This gives us high confidence of the correctness (considering 
+the trace sizes). In addition to that, we can measure the actual accuracy (#correctly predicted/#all predictions) and do not
+have to rely on the indirect measure of the number of cycles.
+To get a better understanding of the working principle, we illustrated the functionality below:
 
 ![](./doc/co_simulation.png)
 
