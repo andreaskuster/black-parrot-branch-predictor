@@ -7,10 +7,7 @@ processor in terms of PPA (Power, Performance, Area) and/or simplicity. We decid
 performance by reducing the number of misspredictions/revertions.
 
 The current implementation is a fixed-width (=2) saturating counter [one-level bimodal branch predictor](https://en.wikipedia.org/wiki/Branch_predictor#One-level_branch_prediction).
-In order to explore the whole design space, we generalized the imposing a adjustable saturating counter bit-width parameter
-on the one hand, and by implementing different branch predictors such as always-taken, gselect, gshare, two-level local and
-tournament. The major contribution is not only the RTL implementation of these predictors, but also a comprehensive study 
-and comparison in terms of prediction performance and PPA between the designs.
+In order to explore the whole design space, we generalized the existing implementation by imposing an adjustable saturating counter bit-width parameter on the one hand, and we implemented different branch predictors such as always-taken, gselect, gshare, two-level local and tournament. The major contribution is not only the RTL implementation of these predictors, but also a comprehensive study and comparison in terms of prediction performance and PPA between the designs.
 
 ## Setup
 To gain the ability of comparison between the different implementations, we first started with the existing [test programs](https://github.com/black-parrot/black-parrot/tree/master/bp_common/test)
