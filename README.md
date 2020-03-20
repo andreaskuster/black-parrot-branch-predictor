@@ -116,10 +116,10 @@ the following general loop scheme works strongly in favour of the 'always taken'
 
 C-Code:
 ```
-    x = 0;
-	while(x < 42){
-		x++;
-	}
+x = 0;
+while(x < 42){
+    x++;
+}
 ```
 Assembly Version
 ```
