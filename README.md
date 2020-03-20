@@ -385,6 +385,18 @@ Below you can see a table with logarithmic size axis that show how the branch hi
 We can conclude that the branch predictors, except the two-level local bp can e directly compared while we have to take
 the better accuracy of the two-level local pb with a grain of salt, due to its high cost in terms of area/power
 
+## Black-Parrot Module Hierarchy
+
+### FrontEnd
+![](./utilities/plots/fe.png)
+
+### BackEnd
+![](./utilities/plots/be.png)
+
+### MemoryEnd
+![](./utilities/plots/uce.png)
+
+
 ## Co-Simulation
 
 1. Change into the testbench_NAME directory `cd testbench_NAME`
