@@ -443,7 +443,17 @@ a good prediction rate and the complexity of the hardware (in terms of resources
 might be some headroom for improvement by appying additional heuristics such as looking at the type of branch instruction.
 
 ## Contributions
-Any kind of feedback or pull requests with additional testbenches are welcome.
+Any kind of feedback/issues or pull requests are welcome.
+
+For moral support, you can also buy me a cup of coffee:
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_donations" />
+<input type="hidden" name="business" value="QVJSS734ZPLYE" />
+<input type="hidden" name="currency_code" value="CHF" />
+<input type="image" src="https://www.paypalobjects.com/en_US/CH/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_CH/i/scr/pixel.gif" width="1" height="1" />
+</form>
 
 ## Credits
 - https://github.com/black-parrot/black-parrot
