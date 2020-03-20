@@ -50,7 +50,7 @@ To get a better understanding of the working principle, we illustrated the funct
 
 ## Branch Predictor Implementations
 
-In this section, we will have a look at all branch predictor implementations, their functionality and there performance.
+In this section, we will have a look at all branch predictor implementations, their functionality and their performance.
 
 ### Static Branch Predictors
 Static branch predictors are very simple predictors used mostly in the earliest designs. They do not rely on the branch history
@@ -140,7 +140,7 @@ More detailed evaluations and the integration into black-parrot can be found:
 - [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_02_always_taken/bp_fe/src/v/bp_fe_bp.v#L33)
 
 ### Dynamic Branch Predictors
-Dynamic branch predictors not only rely no the branch type, but also incorporate information about branch outcome at runtime.
+Dynamic branch predictors not only rely on the branch type, but also incorporate information about branch outcome at runtime.
 
 Furthermore, the branch predictors we will see in this section can be generalised to consist of a branch history table 
 (saturating counters representing the likelyhood of taking/not taking the branch, with an update mechanism) and a hash
