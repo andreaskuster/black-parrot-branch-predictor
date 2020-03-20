@@ -35,12 +35,9 @@ In order to overcome these limitations, we developed our own performance evaluat
 
 After being given a hint by Professor Taylor, we started investigating the use of branch traces from the most recent
 [Championship Branch Prediction CBP-5](https://www.jilp.org/cbp2016). Since these files come in a complex encoding, we 
-used there branch predictor test backbone and build a conversion utility that translates these files to simple "branch_address
-branch_taken newline" format. The implementation details can be found in [bt9_reader](./bt9_reader). For our evaluation and
-simulation, we used four of the training files from different categories (`short_mobile_1`, `long_mobile_1`, `short_server_1`,
-`long_server_1`), each consisting of several millions of branches. The converted files can be found in [traces](./traces).
+used their branch predictor test backbone and built a conversion utility that translates these files to a simple "branch_address branch_taken newline" format. The implementation details can be found in [bt9_reader](./bt9_reader). For our evaluation and simulation, we used four of the training files from different categories (`short_mobile_1`, `long_mobile_1`, `short_server_1`, `long_server_1`), each consisting of several millions of branches. The converted files can be found in [traces](./traces).
 
-In order to solve the second issue of thorougly test/simulate or design with a big amount of internal state, we decided 
+In order to solve the second issue of thoroughly test/simulate or design with a big amount of internal state, we decided 
 to use [cocotb](https://github.com/cocotb/cocotb), which allows us to co-simulate our RTL code (using [verilator](https://www.veripool.org/wiki/verilator))
 and our model of the predictor written in python. Furthermore, we can use the traces from CBP-5, simulate them on both the
 RTL and python implementation and check if the output matches. This gives us high confidence of the correctness (considering 
