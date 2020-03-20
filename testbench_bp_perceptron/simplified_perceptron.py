@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 
 
@@ -10,6 +12,13 @@ class Perceptron:
         self.saturation_half = (2 ** (int_bit_width-1)) - 1
         self.learning_rate: int = self.limit(learning_rate)
         self.weights: np.array = np.zeros(no_of_inputs + 1, dtype=int)
+        self.weights_path = "weights"
+
+    def store_weights(self):
+        np.save(self.weights, self.weights_path)
+
+    def load_weights(self):
+        self.weights = np.load(self.weights_path)
 
     def limit(self, element):
         if element > self.saturation:
