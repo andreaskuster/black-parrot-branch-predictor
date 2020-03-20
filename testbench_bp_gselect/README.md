@@ -17,11 +17,11 @@
 
 ![](../evaluation/plots/gselect_long_server_1_nhist_6.png)
 
-Comparison to the current black-parrot implementation:
+Comparison with the current black-parrot implementation:
 ![](../evaluation/plots/bimodal_vs_gselect.png)
 
 
-There are two main observations:
+There are tree main observations:
 - Saturating counters should probably have two or three bits and the get worse with more, most likely due to the longer 
 learning/re-learning phase.
 - The (default) behaviour of hash functions: the bigger the image size to map into, the less collisions 
