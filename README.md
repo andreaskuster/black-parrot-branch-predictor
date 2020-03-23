@@ -7,10 +7,7 @@ processor in terms of PPA (Power, Performance, Area) and/or simplicity. We decid
 performance by reducing the number of misspredictions/revertions.
 
 The current implementation is a fixed-width (=2) saturating counter [one-level bimodal branch predictor](https://en.wikipedia.org/wiki/Branch_predictor#One-level_branch_prediction).
-In order to explore the whole design space, we generalized the imposing a adjustable saturating counter bit-width parameter
-on the one hand, and by implementing different branch predictors such as always-taken, gselect, gshare, two-level local and
-tournament. The major contribution is not only the RTL implementation of these predictors, but also a comprehensive study 
-and comparison in terms of prediction performance and PPA between the designs.
+In order to explore the whole design space, we generalized the existing implementation by imposing an adjustable saturating counter bit-width parameter on the one hand, and we implemented different branch predictors such as always-taken, gselect, gshare, two-level local and tournament. The major contribution is not only the RTL implementation of these predictors, but also a comprehensive study and comparison in terms of prediction performance and PPA between the designs.
 
 ## Setup
 To gain the ability of comparison between the different implementations, we first started with the existing [test programs](https://github.com/black-parrot/black-parrot/tree/master/bp_common/test)
@@ -38,12 +35,9 @@ In order to overcome these limitations, we developed our own performance evaluat
 
 After being given a hint by Professor Taylor, we started investigating the use of branch traces from the most recent
 [Championship Branch Prediction CBP-5](https://www.jilp.org/cbp2016). Since these files come in a complex encoding, we 
-used there branch predictor test backbone and build a conversion utility that translates these files to simple "branch_address
-branch_taken newline" format. The implementation details can be found in [bt9_reader](./bt9_reader). For our evaluation and
-simulation, we used four of the training files from different categories (`short_mobile_1`, `long_mobile_1`, `short_server_1`,
-`long_server_1`), each consisting of several millions of branches. The converted files can be found in [traces](./traces).
+used their branch predictor test backbone and built a conversion utility that translates these files to a simple "branch_address branch_taken newline" format. The implementation details can be found in [bt9_reader](./bt9_reader). For our evaluation and simulation, we used four of the training files from different categories (`short_mobile_1`, `long_mobile_1`, `short_server_1`, `long_server_1`), each consisting of several millions of branches. The converted files can be found in [traces](./traces).
 
-In order to solve the second issue of thorougly test/simulate or design with a big amount of internal state, we decided 
+In order to solve the second issue of thoroughly test/simulate or design with a big amount of internal state, we decided 
 to use [cocotb](https://github.com/cocotb/cocotb), which allows us to co-simulate our RTL code (using [verilator](https://www.veripool.org/wiki/verilator))
 and our model of the predictor written in python. Furthermore, we can use the traces from CBP-5, simulate them on both the
 RTL and python implementation and check if the output matches. This gives us high confidence of the correctness (considering 
@@ -56,7 +50,7 @@ To get a better understanding of the working principle, we illustrated the funct
 
 ## Branch Predictor Implementations
 
-In this section, we will have a look at all branch predictor implementations, their functionality and there performance.
+In this section, we will have a look at all branch predictor implementations, their functionality and their performance.
 
 ### Static Branch Predictors
 Static branch predictors are very simple predictors used mostly in the earliest designs. They do not rely on the branch history
@@ -146,7 +140,7 @@ More detailed evaluations and the integration into black-parrot can be found:
 - [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_02_always_taken/bp_fe/src/v/bp_fe_bp.v#L33)
 
 ### Dynamic Branch Predictors
-Dynamic branch predictors not only rely no the branch type, but also incorporate information about branch outcome at runtime.
+Dynamic branch predictors not only rely on the branch type, but also incorporate information about branch outcome at runtime.
 
 Furthermore, the branch predictors we will see in this section can be generalised to consist of a branch history table 
 (saturating counters representing the likelyhood of taking/not taking the branch, with an update mechanism) and a hash
