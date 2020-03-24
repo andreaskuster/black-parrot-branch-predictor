@@ -104,7 +104,7 @@ def bp_predict(dut, index, model_prediction):
 
     # read prediction
     dut_prediction = int(dut.predict_o.value)
-    # dut._log.info('Got value: %d' % dut_prediction)
+    dut._log.info('Got value: %d' % dut_prediction)
     if dut_prediction != model_prediction:
         raise TestFailure('Mismatch detected: dut %d, model %d!' % (dut_prediction, model_prediction))
 
@@ -128,12 +128,8 @@ def branch_predictor_basic(dut):
     # reset
     yield bp_reset(dut)
 
-    tr = TraceReader("../evaluation/traces/dummy.trace")
+    tr = TraceReader("../traces/dummy.trace")
     bp = BranchPredictorAlwaysTaken()
-
-    dut._log.info("global history: {}".format(dut.bp.gh))
-    # dut._log.info("cnt0: {}, cnt1: {}, cnt2: {}, cnt3: {}".format(dut.bp.c0, dut.bp.c1, dut.bp.c2, dut.bp.c3))
-    dut._log.info("-----------START---------------")
 
     for address, taken in tr.read():
 
@@ -143,12 +139,6 @@ def branch_predictor_basic(dut):
         correct = pred_model == taken
         bp.update(address, correct)
         yield bp_update(dut, address, correct)
-        dut._log.info("global history: {}".format(dut.bp.gh))
-        dut._log.info("write index: {}".format(dut.bp.idx_w_i))
-        dut._log.info("correct: {}".format(dut.bp.correct_i))
-        # dut._log.info("test: {}".format(dut.bp.bht[0]))
-        # dut._log.info("cnt0: {}, cnt1: {}, cnt2: {}, cnt3: {}".format(dut.bp.c0, dut.bp.c1, dut.bp.c2, dut.bp.c3))
-        dut._log.info("--------------------------")
 
     yield RisingEdge(dut.clk_i)
     dut._log.info("Finished.")
