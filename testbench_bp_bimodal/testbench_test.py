@@ -151,7 +151,7 @@ def branch_predictor_basic(dut):
     # reset
     yield bp_reset(dut)
     # load trace
-    tr = TraceReader("../evaluation/traces/dummy.trace")
+    tr = TraceReader("../traces/dummy.trace")
     # load model
     bp = BranchPredictorBimodal(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS)
     # co-simulate trace (model and rtl simulation)
