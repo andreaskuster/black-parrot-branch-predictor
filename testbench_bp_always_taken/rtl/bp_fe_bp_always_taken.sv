@@ -18,8 +18,7 @@
  *
 */
 module bp_fe_bp_always_taken
-  ( 
-  , input  r_v_i
+  ( input  r_v_i
   , output predict_o
   );
 
