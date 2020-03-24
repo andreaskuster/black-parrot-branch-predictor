@@ -126,7 +126,7 @@ def branch_predictor_basic(dut):
     # reset
     yield bp_reset(dut)
 
-    tr = TraceReader("../evaluation/traces/dummy.trace")
+    tr = TraceReader("../traces/dummy.trace")
     bp = BranchPredictorGselect(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS, n_hist=_N_HIST)
 
     dut._log.info("global history: {}".format(dut.bp.gh))
