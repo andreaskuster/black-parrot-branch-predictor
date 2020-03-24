@@ -152,7 +152,7 @@ def branch_predictor_basic(dut):
     # reset
     yield bp_reset(dut)
     # load trace
-    tr = TraceReader("../evaluation/traces/short_mobile_1.trace")
+    tr = TraceReader("../traces/dummy.trace")
     # load model
     bp = BranchPredictorTwoLevelLocal(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS, n_hist=_B_HIST)
     # co-simulate trace (model and rtl simulation)
