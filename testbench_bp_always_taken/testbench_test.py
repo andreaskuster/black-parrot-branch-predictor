@@ -104,9 +104,9 @@ def bp_predict(dut, index, model_prediction):
 
     # read prediction
     dut_prediction = int(dut.predict_o.value)
-    dut._log.info('Got value: %d' % dut_prediction)
+    dut._log.info("Got value: {}".format(dut_prediction))
     if dut_prediction != model_prediction:
-        raise TestFailure('Mismatch detected: dut %d, model %d!' % (dut_prediction, model_prediction))
+        raise TestFailure("Mismatch detected: dut {}, model {}!".format(dut_prediction, model_prediction))
 
     dut.r_v_i <= 0
     dut.idx_r_i <= 0
