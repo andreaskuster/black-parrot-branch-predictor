@@ -1,1 +1,2 @@
-from .testbench_model import BranchPredictorAlwaysTaken, TraceReader
+# expose classes for external import
+from .testbench_model import BranchPredictorAlwaysTaken
