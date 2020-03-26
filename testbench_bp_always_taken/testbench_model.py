@@ -24,6 +24,9 @@ __license__ = "GPL"
 
 import argparse
 
+import os.path
+
+
 class TraceReader:
 
     def __init__(self, filename):
@@ -54,7 +57,6 @@ def evaluate(sat_bits, addr_bits, trace):
     n_correct = 0
     n_total = 0
 
-    import os.path
     tr = TraceReader(os.path.join("traces", trace + ".trace"))
     bp = BranchPredictorAlwaysTaken()
 
@@ -72,12 +74,13 @@ def evaluate(sat_bits, addr_bits, trace):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--debug", action='store_true')
-    parser.add_argument("--gridsearch", action='store_true')
+    parser.add_argument("--debug", action="store_true")
+    parser.add_argument("--gridsearch", action="store_true")
     args = parser.parse_args()
 
     if args.debug:
-        tr = TraceReader("../evaluation/traces/dummy.trace")
+
+        tr = TraceReader("../traces/dummy.trace")
         bp = BranchPredictorAlwaysTaken()
 
         for address, taken in tr.read():
@@ -87,10 +90,12 @@ if __name__ == "__main__":
 
     if args.gridsearch:
 
-        from concurrent.futures import ThreadPoolExecutor
-
-        with ThreadPoolExecutor(max_workers=8) as executor:
+        from multiprocessing import Pool
+        tasks = list()
+        with Pool(processes=7) as pool:
             for sat_bits in [1, 2, 3, 4, 5]:
                 for addr_bits in [3, 6, 9, 12, 15]:
                     for trace in ["short_mobile_1", "long_mobile_1", "short_server_1", "long_server_1"]:
-                        executor.submit(evaluate, sat_bits, addr_bits, trace)
+                        tasks.append(pool.apply_async(evaluate, (sat_bits, addr_bits, trace)))
+            for task in tasks:
+                task.get()
