@@ -29,22 +29,21 @@
 
 TOPLEVEL_LANG ?= verilog
 
-#SIM ?= icarus
 SIM ?= verilator
 VERILATOR_TRACE=1
 
 PWD=$(shell pwd)
 
 ifeq ($(OS),Msys)
-WPWD=$(shell sh -c 'pwd -W')
+    WPWD=$(shell sh -c 'pwd -W')
 else
-WPWD=$(shell pwd)
+    WPWD=$(shell pwd)
 endif
 PYTHONPATH := $(WPWD):$(PYTHONPATH)
 
 ifeq ($(TOPLEVEL_LANG), verilog)
 	VERILOG_SOURCES = $(WPWD)/rtl/*
-else ifeq ($(TOPLEVEL_LANG),vhdl)
+else ifeq ($(TOPLEVEL_LANG), vhdl)
 	VHDL_SOURCES = $(WPWD)/rtl/*
 else
 	$(error "A valid value (verilog or vhdl) was not provided for TOPLEVEL_LANG=$(TOPLEVEL_LANG)")
