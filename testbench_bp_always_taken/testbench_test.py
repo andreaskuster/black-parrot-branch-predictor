@@ -22,6 +22,7 @@ __author__ = "Andreas Kuster"
 __copyright__ = "Copyright 2020"
 __license__ = "GPL"
 
+import os
 import cocotb
 
 from cocotb.triggers import RisingEdge
@@ -43,8 +44,11 @@ def branch_predictor_basic(dut):
     # reset
     yield BpRtlSim.bp_reset(dut)
 
-    # instantiate trace reader with the dummy trace
-    tr = TraceReader("../traces/dummy.trace")
+    # read trace name from environment variable (set in the Makefile)
+    trace = os.environ["TRACE"]
+
+    # instantiate trace reader with the given trace
+    tr = TraceReader(os.path.join("../traces", trace + ".trace"))
 
     # instantiate branch predictor
     bp = BranchPredictorAlwaysTaken()

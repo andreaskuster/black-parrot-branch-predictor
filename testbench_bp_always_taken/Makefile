@@ -36,6 +36,8 @@ PWD=$(shell pwd)
 
 PARENT_DIR=$(shell dirname $(PWD))
 
+export TRACE=dummy
+
 ifeq ($(OS),Msys)
     WPWD=$(shell sh -c 'pwd -W')
 else
