@@ -1,5 +1,5 @@
 /*
- * bp_fe_bp_always_taken.v
+ *  bp_fe_bp_always_taken.v
  *
  *  Copyright (C) 2020  Andreas Kuster
  *
