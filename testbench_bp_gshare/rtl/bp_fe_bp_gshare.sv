@@ -1,5 +1,5 @@
 /*
- * bp_fe_bp_gshare.v
+ *  bp_fe_bp_gshare.v
  *
  *  Copyright (C) 2020  Andreas Kuster
  *
