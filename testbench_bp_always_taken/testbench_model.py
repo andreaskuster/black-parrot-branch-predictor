@@ -24,8 +24,6 @@ __license__ = "GPL"
 
 import argparse
 
-import os.path
-
 from base import BranchPredictor, TraceReader, Evaluator
 
 
