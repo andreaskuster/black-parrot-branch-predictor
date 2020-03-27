@@ -32,7 +32,7 @@ bp_fe_bp_gselect
     , .r_v_i(r_v_i)
     , .idx_r_i(idx_r_i)
     , .predict_o(predict_o)
-);
+    );
 
 
 `ifndef VERILATOR

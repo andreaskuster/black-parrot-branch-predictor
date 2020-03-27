@@ -15,10 +15,10 @@ module testbench
   , output                      predict_o
   );
 
-    bp_fe_bp_always_taken bp
-    ( .r_v_i(r_v_i)
-    , .predict_o(predict_o)
-    );
+  bp_fe_bp_always_taken bp
+  ( .r_v_i(r_v_i)
+  , .predict_o(predict_o)
+  );
 
 `ifndef VERILATOR
   // dump waves
