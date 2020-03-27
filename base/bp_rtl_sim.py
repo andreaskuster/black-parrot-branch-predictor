@@ -94,7 +94,6 @@ class BpRtlSim:
     @staticmethod
     @cocotb.coroutine
     def bp_predict(dut, index, model_prediction):
-
         # read
         dut.r_v_i <= 1
         dut.idx_r_i <= index
@@ -104,10 +103,11 @@ class BpRtlSim:
 
         # read prediction
         dut_prediction = int(dut.predict_o.value)
-        dut._log.info("Got value: {}".format(dut_prediction))
+        dut._log.info("Address: {}, dut prediction: {}, model prediction: {}".format(index, dut_prediction, model_prediction))
         if dut_prediction != model_prediction:
             raise TestFailure("Mismatch detected: dut {}, model {}".format(dut_prediction, model_prediction))
 
+        # reset flags
         dut.r_v_i <= 0
         dut.idx_r_i <= 0
 
