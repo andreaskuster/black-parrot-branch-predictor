@@ -116,10 +116,10 @@ if __name__ == "__main__":
         # add all evaluation corners
         for trace in ["short_mobile_1", "long_mobile_1", "short_server_1", "long_server_1"]:
             ev.submit(trace)
-        
+
         # wait for all tasks to finish
         ev.finalize()
         # write result to file
-        ev.write_result("gridsearch_bp_always_not_taken.txt")
+        ev.write_result("gridsearch_bp_always_not_taken.csv")
         # print result
         ev.print_result()
