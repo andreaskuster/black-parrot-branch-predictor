@@ -99,6 +99,6 @@ if __name__ == "__main__":
         # wait for all tasks to finish
         ev.finalize()
         # write result to file
-        ev.write_result("gridsearch_bp_always_not_taken.csv")
+        ev.write_result("gridsearch_bp_always_taken.csv")
         # print result
         ev.print_result()
