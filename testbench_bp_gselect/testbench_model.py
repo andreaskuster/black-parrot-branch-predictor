@@ -29,9 +29,10 @@ from base import Evaluator, TraceReader, ShiftRegister, SaturationCounter
 
 class BranchPredictorGselect:
     """
-    The bimodal branch predictor is a dynamic branch predictor. It indexes saturation counter in the branch history table
-    which indicate the likelihood of predicting the branch to be 'taken'. The counter increments for each actual branch
-    taken and decrements for each actual not taken branch. This is the python model implementation.
+    The gselect branch predictor is a dynamic branch predictor. It indexes saturation counter using the branch
+    address concatenated with the branch history in the branch history table which indicate the likelihood of
+    predicting the branch to be 'taken'. The counter increments for each actual branch taken and decrements for each
+    actual not taken branch. This is the python model implementation.
     """
 
     def __init__(self, sat_cnt_bits, bht_addr_bits, n_hist):
