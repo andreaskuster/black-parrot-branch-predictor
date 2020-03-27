@@ -1,5 +1,5 @@
 /*
- * bp_fe_bp_perceptron.v
+ *  bp_fe_bp_perceptron.v
  *
  *  Copyright (C) 2020  Andreas Kuster
  *
