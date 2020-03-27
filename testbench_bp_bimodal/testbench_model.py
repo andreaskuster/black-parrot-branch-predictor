@@ -22,7 +22,6 @@ __author__ = "Andreas Kuster"
 __copyright__ = "Copyright 2020"
 __license__ = "GPL"
 
-import os
 import argparse
 
 from base import TraceReader, SaturationCounter, Evaluator
@@ -30,8 +29,9 @@ from base import TraceReader, SaturationCounter, Evaluator
 
 class BranchPredictorBimodal:
     """
-    The always taken branch predictor is a static and ultra light-weight (area, power) branch predictor. Like the name
-    already reveals, it simply predicts all branches as 'taken'. This is the python model implementation.
+    The bimodal branch predictor is a dynamic branch predictor. It indexes saturation counter in the branch history table
+    which indicate the likelihood of predicting the branch to be 'taken'. The counter increments for each actual branch
+    taken and decrements for each actual not taken branch. This is the python model implementation.
     """
 
     def __init__(self, sat_cnt_bits, bht_addr_bits):
