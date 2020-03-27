@@ -152,7 +152,7 @@ The bimodal branch predictor is a dynamic branch predictor and uses the lowest `
 ![](./testbench_bp_bimodal/bp_bimodal.png) 
 
 __Accuracy__: Since the bimodal branch predictor solely relies on the address bits for the hash function, we expect this
-predictor to be good for workloads with very few correlation between sequential branches. For such workloads, this predictor
+predictor to be good for workloads with very little correlation between sequential branches. For such workloads, this predictor
 should show better accuracy for smaller branch history table sizes, since this hash function does not spread very widely
 and therefore we expect less collisions.  
 
