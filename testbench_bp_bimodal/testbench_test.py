@@ -33,8 +33,11 @@ from base import TraceReader, BpRtlSim
 
 @cocotb.test()
 def branch_predictor_basic(dut):
-    """branch predictor basic"""
-
+    """
+    Branch Predictor trace co-simulation testing.
+    :param dut: device under test
+    :return: None
+    """
     # setup clock gen
     cocotb.fork(BpRtlSim.clock_gen(dut.clk_i, period=1000))
 
