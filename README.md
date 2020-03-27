@@ -382,13 +382,13 @@ the better accuracy of the two-level local pb with a grain of salt, due to its h
 ## Black-Parrot Module Hierarchy
 
 ### FrontEnd
-![](./utilities/plots/fe.png)
+![](./utilities/hierarchy_view_plots/fe.png)
 
 ### BackEnd
-![](./utilities/plots/be.png)
+![](./utilities/hierarchy_view_plots/be.png)
 
 ### MemoryEnd
-![](./utilities/plots/uce.png)
+![](./utilities/hierarchy_view_plots/uce.png)
 
 
 ## Co-Simulation
