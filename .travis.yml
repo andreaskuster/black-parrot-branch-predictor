@@ -3,7 +3,9 @@ python:
   - "3.8"
 before_install:
   - sudo apt-get update
-  - sudo apt-get -y install verilator
+  - sudo apt-get -y install git make autoconf g++
+  - git clone https://github.com/verilator/verilator.git
+  - cd verilator && autoconf && ./configure && make -j2 && sudo make install && cd ..
 install:
   - pip install -r requirements.txt
 script:
