@@ -27,7 +27,8 @@ import cocotb
 from cocotb.triggers import Timer, RisingEdge
 from cocotb.result import TestFailure
 
-from testbench_model import BranchPredictorAlwaysTaken, TraceReader
+from testbench_bp_always_taken import BranchPredictorAlwaysTaken
+from base import TraceReader
 
 clock_period = 1000
 
@@ -95,6 +96,7 @@ def bp_update(dut, index, correct):
 
 @cocotb.coroutine
 def bp_predict(dut, index, model_prediction):
+
     # read
     dut.r_v_i <= 1
     dut.idx_r_i <= index
@@ -106,7 +108,7 @@ def bp_predict(dut, index, model_prediction):
     dut_prediction = int(dut.predict_o.value)
     dut._log.info("Got value: {}".format(dut_prediction))
     if dut_prediction != model_prediction:
-        raise TestFailure("Mismatch detected: dut {}, model {}!".format(dut_prediction, model_prediction))
+        raise TestFailure("Mismatch detected: dut {}, model {}".format(dut_prediction, model_prediction))
 
     dut.r_v_i <= 0
     dut.idx_r_i <= 0
@@ -128,17 +130,24 @@ def branch_predictor_basic(dut):
     # reset
     yield bp_reset(dut)
 
+    # instantiate trace reader with the dummy trace
     tr = TraceReader("../traces/dummy.trace")
+
+    # instantiate branch predictor
     bp = BranchPredictorAlwaysTaken()
 
+    # loop over all trace lines
     for address, taken in tr.read():
-
+        # predict branch
         pred_model = bp.predict(address)
+        # wait for the simulation
         yield bp_predict(dut, address, pred_model)
-
+        # check if prediction was correct
         correct = pred_model == taken
+        # update internal predictor state
         bp.update(address, correct)
+        # wait for the simulation
         yield bp_update(dut, address, correct)
 
     yield RisingEdge(dut.clk_i)
-    dut._log.info("Finished.")
+    dut._log.info("Co-simulation finished.")
