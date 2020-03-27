@@ -45,7 +45,7 @@ class BranchPredictorAlwaysTaken(BranchPredictor):
         Update internal state using the information from the most recent prediction result.
         :param address:
         :param correct:
-        :return:
+        :return: None
         """
         # nothing to update
         pass
