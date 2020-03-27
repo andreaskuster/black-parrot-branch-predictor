@@ -424,7 +424,7 @@ We run our evaluation on the following system:
 The raw data we used for generating the plots can be found [here](./evaluation/results)
 
 Unoptimized assembly code can be generated from C using: `gcc -S CODE.c -O0`. We added both C and assembly version 
-[here](./testbench_bp_always_taken/while_assembly)
+[here](doc/while_assembly)
 
 ## Testing
 
