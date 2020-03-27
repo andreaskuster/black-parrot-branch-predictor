@@ -102,7 +102,7 @@ class BpRtlSim:
         yield RisingEdge(dut.clk_i)
 
         # read prediction
-        dut_prediction = int(dut.predict_o.value)
+        dut_prediction = bool(dut.predict_o.value)
         dut._log.info("Address: {}, dut prediction: {}, model prediction: {}".format(index, dut_prediction, model_prediction))
         if dut_prediction != model_prediction:
             raise TestFailure("Mismatch detected: dut {}, model {}".format(dut_prediction, model_prediction))
