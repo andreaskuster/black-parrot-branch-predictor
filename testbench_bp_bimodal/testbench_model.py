@@ -51,8 +51,8 @@ class BranchPredictorBimodal:
     def update(self, address, correct):
         """
         Update internal state using the information from the most recent prediction result.
-        :param address:
-        :param correct:
+        :param address: branch address
+        :param correct: flag indicating whether the last prediction was correct
         :return: None
         """
         # extract relevant index bits
