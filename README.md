@@ -394,7 +394,7 @@ the better accuracy of the two-level local pb with a grain of salt, due to its h
 ## Co-Simulation
 
 1. Change into the testbench_NAME directory `cd testbench_NAME`
-2. Execute the co-simulation by running `make`
+2. Execute the co-simulation by running `make` (the trace file can be passed using: `TRACE=long_server_1 make`)
 
 In order to execute all testbenches automatically, you can run `make` in the root directory of the repo.
 
@@ -458,12 +458,13 @@ a good prediction rate and the complexity of the hardware (in terms of resources
     - https://pharm.ece.wisc.edu/papers/badgr_iccd16.pdf
 
 - Furthermore, so far, we only used the branch address and branch history information for our branch predictions. There 
-might be some headroom for improvement by appying additional heuristics such as looking at the type of branch instruction.
+might be some headroom for improvement by applying additional heuristics such as looking at the type of branch instruction.
 
 ## Contributions
 Any kind of feedback/issues or pull requests are welcome.
 
 For moral support, you can also buy me a cup of coffee:
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QVJSS734ZPLYE&currency_code=CHF&source=url)
 
 ## Credits

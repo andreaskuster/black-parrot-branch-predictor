@@ -27,6 +27,7 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ###############################################################################
 
+
 TOPLEVEL_LANG ?= verilog
 
 SIM ?= verilator
@@ -35,22 +36,21 @@ VERILATOR_TRACE=1
 PWD=$(shell pwd)
 
 PARENT_DIR=$(shell dirname $(PWD))
-
-export TRACE=dummy
+TRACE=dummy
 
 ifeq ($(OS),Msys)
-    WPWD=$(shell sh -c 'pwd -W')
+	WPWD=$(shell sh -c 'pwd -W')
 else
-    WPWD=$(shell pwd)
+	WPWD=$(shell pwd)
 endif
 PYTHONPATH := $(WPWD):$(PARENT_DIR):$(PYTHONPATH)
 
 ifeq ($(TOPLEVEL_LANG), verilog)
-    VERILOG_SOURCES = $(WPWD)/rtl/*
+	VERILOG_SOURCES = $(WPWD)/rtl/*
 else ifeq ($(TOPLEVEL_LANG), vhdl)
-    VHDL_SOURCES = $(WPWD)/rtl/*
+	VHDL_SOURCES = $(WPWD)/rtl/*
 else
-    $(error "A valid value (verilog or vhdl) was not provided for TOPLEVEL_LANG=$(TOPLEVEL_LANG)")
+	$(error "A valid value (verilog or vhdl) was not provided for TOPLEVEL_LANG=$(TOPLEVEL_LANG)")
 endif
 
 TOPLEVEL := testbench
