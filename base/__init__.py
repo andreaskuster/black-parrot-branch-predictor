@@ -2,3 +2,4 @@
 from .branch_predictor import BranchPredictor
 from .trace_reader import TraceReader
 from .evaluator import Evaluator
+from .bp_rtl_sim import BpRtlSim
