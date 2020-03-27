@@ -36,6 +36,7 @@ VERILATOR_TRACE=1
 PWD=$(shell pwd)
 
 PARENT_DIR=$(shell dirname $(PWD))
+
 TRACE=dummy
 
 ifeq ($(OS),Msys)
