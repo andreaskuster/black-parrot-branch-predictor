@@ -62,25 +62,6 @@ class BranchPredictorAlwaysTaken(BranchPredictor):
         return True
 
 
-def evaluate(sat_bits, addr_bits, trace):
-
-    n_correct = 0
-    n_total = 0
-
-    tr = TraceReader(os.path.join("traces", trace + ".trace"))
-    bp = BranchPredictorAlwaysTaken()
-
-    for address, taken in tr.read():
-        prediction = bp.predict(address)
-        correct = prediction == taken
-        bp.update(address, correct)
-        if correct:
-            n_correct += 1
-        n_total += 1
-    print("{}, {}, {}, {}".format(trace, sat_bits, addr_bits, n_correct / n_total))
-    return n_correct / n_total
-
-
 if __name__ == "__main__":
 
     # process command line arguments
