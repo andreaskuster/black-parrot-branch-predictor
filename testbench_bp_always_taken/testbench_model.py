@@ -26,28 +26,38 @@ import argparse
 
 import os.path
 
-
-class TraceReader:
-
-    def __init__(self, filename):
-        self.filename = filename
-
-    def read(self):
-        with open(self.filename, "r") as file:
-            for line in file:
-                address, taken = line.split()
-                yield int(address)//4, int(taken)  # remove lowest 2 bits from address, since they are always 0
+from base import BranchPredictor, TraceReader, Evaluator
 
 
-class BranchPredictorAlwaysTaken:
+class BranchPredictorAlwaysTaken(BranchPredictor):
+    """
+    The always taken branch predictor is a static and ultra light-weight (area, power) branch predictor. Like the name
+    already reveals, it simply predicts all branches as 'taken'. This is the python model implementation.
+    """
 
     def __init__(self):
+        """
+        Initialize internal state.
+        """
+        # no internal state to initialize
         pass
 
     def update(self, address, correct):
+        """
+
+        :param address:
+        :param correct:
+        :return:
+        """
+        # nothing to update
         pass
 
     def predict(self, address):
+        """
+
+        :param address:
+        :return:
+        """
         # always predict 'taken'
         return True
 
@@ -73,29 +83,43 @@ def evaluate(sat_bits, addr_bits, trace):
 
 if __name__ == "__main__":
 
+    # process command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("--debug", action="store_true")
     parser.add_argument("--gridsearch", action="store_true")
     args = parser.parse_args()
 
+    # debugging
     if args.debug:
 
+        # instantiate trace reader with the dummy trace
         tr = TraceReader("../traces/dummy.trace")
+
+        # instantiate branch predictor
         bp = BranchPredictorAlwaysTaken()
 
+        # loop over all trace lines
         for address, taken in tr.read():
+            # predict branch
             prediction = bp.predict(address)
+            # check if prediction was correct
             correct = prediction == taken
+            # update internal predictor state
             bp.update(address, correct)
 
+    # parameter grid search
     if args.gridsearch:
 
-        from multiprocessing import Pool
-        tasks = list()
-        with Pool(processes=7) as pool:
-            for sat_bits in [1, 2, 3, 4, 5]:
-                for addr_bits in [3, 6, 9, 12, 15]:
-                    for trace in ["short_mobile_1", "long_mobile_1", "short_server_1", "long_server_1"]:
-                        tasks.append(pool.apply_async(evaluate, (sat_bits, addr_bits, trace)))
-            for task in tasks:
-                task.get()
+        # instantiate evaluator
+        ev = Evaluator(branch_predictor=BranchPredictorAlwaysTaken, num_processes=4)
+
+        # add all evaluation corners
+        for trace in ["short_mobile_1", "long_mobile_1", "short_server_1", "long_server_1"]:
+            ev.submit(trace)
+        
+        # wait for all tasks to finish
+        ev.finalize()
+        # write result to file
+        ev.write_result("gridsearch_bp_always_not_taken.txt")
+        # print result
+        ev.print_result()
