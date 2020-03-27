@@ -42,7 +42,7 @@ class BranchPredictorAlwaysTaken(BranchPredictor):
 
     def update(self, address, correct):
         """
-
+        Update internal state using the information from the most recent prediction result.
         :param address:
         :param correct:
         :return:
@@ -52,9 +52,9 @@ class BranchPredictorAlwaysTaken(BranchPredictor):
 
     def predict(self, address):
         """
-
-        :param address:
-        :return:
+        Predict branch using the internal state and the branch address.
+        :param address: branch address
+        :return: prediction
         """
         # always predict 'taken'
         return True
