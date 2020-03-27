@@ -5,7 +5,10 @@ before_install:
   - sudo apt-get update
   - sudo apt-get -y install git make autoconf g++
   - git clone https://github.com/verilator/verilator.git
-  - cd verilator && autoconf && ./configure && make -j2 && sudo make install && cd ..
+  - cd verilator && autoconf && ./configure && make -j4 && sudo make install && cd ..
+cache:
+  directories:
+    - $HOME/verilator
 install:
   - pip install -r requirements.txt
 script:
