@@ -44,11 +44,11 @@ endif
 PYTHONPATH := $(WPWD):$(PARENT_DIR):$(PYTHONPATH)
 
 ifeq ($(TOPLEVEL_LANG), verilog)
-	VERILOG_SOURCES = $(WPWD)/rtl/*
+    VERILOG_SOURCES = $(WPWD)/rtl/*
 else ifeq ($(TOPLEVEL_LANG), vhdl)
-	VHDL_SOURCES = $(WPWD)/rtl/*
+    VHDL_SOURCES = $(WPWD)/rtl/*
 else
-	$(error "A valid value (verilog or vhdl) was not provided for TOPLEVEL_LANG=$(TOPLEVEL_LANG)")
+    $(error "A valid value (verilog or vhdl) was not provided for TOPLEVEL_LANG=$(TOPLEVEL_LANG)")
 endif
 
 TOPLEVEL := testbench
