@@ -24,62 +24,23 @@ __license__ = "GPL"
 
 import argparse
 
-class ShiftRegister:
-
-    def __init__(self, size, init_val=0):
-        self.size = size
-        self.register = [init_val]*size
-
-    def shift(self, new_item):
-        new_item = int(new_item)
-        if new_item not in [0, 1]:
-            print("Warning: not a binary number.")
-        self.register = [new_item] + self.register[0:self.size-1]
-
-    def reg_to_number(self):
-        number = 0
-        for i in range(self.size):
-            number += (2 ** i)*self.register[i]
-        return number
-"""
-        for i in range(self.size):
-            number += (2 ** i)*self.register[i]
-        return number
-"""
-
-class SaturationCounter:
-
-    def __init__(self, n_bits=0, init_val=0):
-        self.counter = init_val
-        self.max_val = 2**n_bits - 1
-
-    def count_up(self):
-        if self.counter < self.max_val:
-            self.counter += 1
-
-    def count_down(self):
-        if self.counter > 0:
-            self.counter -= 1
-
-    def value(self):
-        return self.counter
-
-
-class TraceReader:
-
-    def __init__(self, filename):
-        self.filename = filename
-
-    def read(self):
-        with open(self.filename, "r") as file:
-            for line in file:
-                address, taken = line.split()
-                yield int(address)//4, int(taken)  # remove lowest 2 bits from address, since they are always 0
+from base import Evaluator, TraceReader, SaturationCounter, ShiftRegister
 
 
 class BranchPredictorGshare:
+    """
+    The gshare branch predictor is a dynamic branch predictor. It indexes saturation counter using the branch address
+    xor-ed with the branch history in the branch history table which indicate the likelihood of predicting the branch
+    to be 'taken'. The counter increments for each actual branch taken and decrements for each actual not taken
+    branch. This is the python model implementation.
+    """
 
     def __init__(self, sat_cnt_bits, bht_addr_bits):
+        """
+        Initialize internal state.
+        :param sat_cnt_bits: saturating counter bit width
+        :param bht_addr_bits: number of address bits for the branch history table index and the branch history shift register
+        """
         # store parameters
         self.sat_cnt_bits = sat_cnt_bits
         self.bht_size = 2 ** bht_addr_bits
@@ -91,72 +52,81 @@ class BranchPredictorGshare:
         self.gh = ShiftRegister(size=bht_addr_bits, init_val=0)
 
     def update(self, address, correct):
-        # extract relevant index bits
+        """
+        Update internal state using the information from the most recent prediction result.
+        :param address: branch address
+        :param correct: flag indicating whether the last prediction was correct
+        :return: None
+        """
+        # extract relevant index bits (xor-ing history and address bits)
         index = (address ^ self.gh.reg_to_number()) % self.bht_size
-        # update counter
+        # get prediction
         taken_prediction = self.predict(address)
+        # compute correct branch decision
         taken_actual = (correct and taken_prediction) or (not correct and not taken_prediction)
+        # update counter
         if taken_actual:
             self.bht[index].count_up()
         else:
             self.bht[index].count_down()
+        # add correct branch decision to the history
         self.gh.shift(taken_actual)
 
     def predict(self, address):
-        # extract relevant index bits
+        """
+        Predict branch using the internal state and the branch address.
+        :param address: branch address
+        :return: prediction
+        """
+        # extract relevant index bits (xor-ing history and address bits)
         index = (address ^ self.gh.reg_to_number()) % self.bht_size
+        # get state of the saturation counter
         return self.bht[index].value() > self.saturation_size_half
-
-
-def evaluate(sat_bits, addr_bits, trace):
-
-    n_correct = 0
-    n_total = 0
-
-    import os.path
-    tr = TraceReader(os.path.join("traces", trace + ".trace"))
-    bp = BranchPredictorGshare(sat_cnt_bits=sat_bits, bht_addr_bits=addr_bits)
-
-    for address, taken in tr.read():
-        prediction = bp.predict(address)
-        correct = prediction == taken
-        bp.update(address, correct)
-        if correct:
-            n_correct += 1
-        n_total += 1
-    print("{}, {}, {}, {}".format(trace, sat_bits, addr_bits, n_correct / n_total))
-    return n_correct / n_total
 
 
 if __name__ == "__main__":
 
+    # process command line arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--debug", action='store_true')
-    parser.add_argument("--gridsearch", action='store_true')
+    parser.add_argument("--debug", action="store_true")
+    parser.add_argument("--gridsearch", action="store_true")
     args = parser.parse_args()
 
-
-    _SAT_CNT_BITS = 2
-    _BHT_ADDR_BITS = 6
-
+    # debugging
     if args.debug:
-        tr = TraceReader("../evaluation/traces/dummy.trace")
+
+        # instantiate trace reader with the dummy trace
+        tr = TraceReader("../traces/dummy.trace")
+
+        # instantiate branch predictor
+        _SAT_CNT_BITS = 2
+        _BHT_ADDR_BITS = 6
         bp = BranchPredictorGshare(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS)
 
+        # loop over all trace lines
         for address, taken in tr.read():
-            # remove upper bits
-            address = address % (2**_BHT_ADDR_BITS)
-
+            # predict branch
             prediction = bp.predict(address)
+            # check if prediction was correct
             correct = prediction == taken
+            # update internal predictor state
             bp.update(address, correct)
 
+    # parameter grid search
     if args.gridsearch:
 
-        from concurrent.futures import ThreadPoolExecutor
+        # instantiate evaluator
+        ev = Evaluator(branch_predictor=BranchPredictorGshare, num_processes=4)
 
-        with ThreadPoolExecutor(max_workers=8) as executor:
+        # add all evaluation corners
+        for trace in ["short_mobile_1", "long_mobile_1", "short_server_1", "long_server_1"]:
             for sat_bits in [1, 2, 3, 4, 5]:
                 for addr_bits in [3, 6, 9, 12, 15]:
-                    for trace in ["short_mobile_1", "long_mobile_1", "short_server_1", "long_server_1"]:
-                        executor.submit(evaluate, sat_bits, addr_bits, trace)
+                        ev.submit(trace, sat_bits, addr_bits)
+
+        # wait for all tasks to finish
+        ev.finalize()
+        # write result to file
+        ev.write_result("gridsearch_bp_gshare.csv")
+        # print result
+        ev.print_result()
