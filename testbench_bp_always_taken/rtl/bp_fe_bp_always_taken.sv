@@ -23,6 +23,6 @@ module bp_fe_bp_always_taken
   );
 
   // always predict 'taken'
-  assign predict_o = r_v_i ? 1'b1 : 1'b0;
+  assign predict_o = r_v_i ? 1'b0 : 1'b0;
 
 endmodule
