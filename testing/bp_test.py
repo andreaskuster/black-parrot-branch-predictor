@@ -73,6 +73,7 @@ class TestbenchTest(unittest.TestCase):
                 if subitem.tag == "failure":
                     error = "test case: {}".format([str(x) + ": " + str(item.attrib[x]) for x in item.attrib]) + \
                             "\n failure: {}".format([str(x) + ": " + str(subitem.attrib[x]) for x in subitem.attrib])
+                    print(error, file=sys.stderr)
                     self.fail(error)
 
 
