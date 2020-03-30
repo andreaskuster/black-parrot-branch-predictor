@@ -3,7 +3,7 @@ import cocotb
 from cocotb.triggers import Timer, RisingEdge
 from cocotb.result import TestFailure
 
-from adder_model import adder_model
+from testbench_example import adder_model
 
 # simulation clock period in ps
 clock_period = 1000
