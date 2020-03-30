@@ -44,7 +44,7 @@ class TestbenchTest(unittest.TestCase):
         for test_bench in self._TEST_BENCHES:
             self.run_testbench(test_case=test_bench)
 
-    def run_testbench(self, verbose=False, test_case="testbench_example"):
+    def run_testbench(self, verbose=True, test_case="testbench_example"):
 
         parent = os.path.abspath(os.path.join(os.path.curdir, os.pardir))
 
