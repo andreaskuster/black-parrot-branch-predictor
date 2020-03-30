@@ -36,24 +36,36 @@ import xml.etree.ElementTree as ET
 
 class TestbenchTest(unittest.TestCase):
 
+    # define all testbenches
     _TEST_BENCHES = ["testbench_example", "testbench_bp_always_taken", "testbench_bp_bimodal", "testbench_bp_gshare",
                      "testbench_bp_gselect", "testbench_bp_tournament", "testbench_bp_two_level_local"]
 
+    # main test routine
     def test_all(self):
-
+        # test all testbenches sequentially
         for test_bench in self._TEST_BENCHES:
             self.run_testbench(test_case=test_bench)
 
+    # single test routing
     def run_testbench(self, verbose=True, test_case="testbench_example", local=False):
+        """
+        Execute python model and RTL implementation co-simulation.
+        :param verbose: cocotb output
+        :param test_case: design
+        :param local: local or travis-ci executioin
+        """
 
+        # local: parent directory, travis-ci: current directory
         if local:
             parent = os.path.abspath(os.path.join(os.path.curdir, os.pardir))
             working_dir = parent
         else:
             working_dir = os.path.curdir
 
+        # run external cocotb co-simulation
         process = Popen(["make", test_case], stdout=PIPE, stderr=PIPE, cwd=working_dir)
 
+        # either output stdout or wait for completion
         if verbose:
             while process.poll() is None:
                 line = str(process.stdout.readline(), encoding="utf-8")
@@ -62,11 +74,12 @@ class TestbenchTest(unittest.TestCase):
         else:
             process.wait()
 
+        # parse result
         tree = ET.parse(os.path.join(working_dir, test_case, "results.xml"))
-
         root = tree.getroot()
         results = root.findall("testsuite/testcase")
 
+        # output result
         for item in results:
             print("test case: {}".format([str(x) + ": " + str(item.attrib[x]) for x in item.attrib]))
             for subitem in item:
@@ -85,7 +98,3 @@ if __name__ == "__main__":
     unittest.main()
     # exit
     sys.exit(0)
-
-
-
-
