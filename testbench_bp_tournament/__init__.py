@@ -1,1 +1,2 @@
-from .testbench_model import BranchPredictorTournament, TraceReader, ShiftRegister, SaturationCounter
+# expose classes for external import
+from .testbench_model import BranchPredictorTournament
