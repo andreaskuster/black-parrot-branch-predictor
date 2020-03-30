@@ -24,59 +24,24 @@ __license__ = "GPL"
 
 import argparse
 
-
-class ShiftRegister:
-
-    def __init__(self, size, init_val=0):
-        self.size = size
-        self.register = [init_val] * size
-
-    def shift(self, new_item):
-        new_item = int(new_item)
-        if new_item not in [0, 1]:
-            print("Warning: not a binary number.")
-        self.register = [new_item] + self.register[0:self.size - 1]
-
-    def reg_to_number(self):
-        number = 0
-        for i in range(self.size):
-            number += (2 ** i) * self.register[i]
-        return number
-
-
-class SaturationCounter:
-
-    def __init__(self, n_bits=0, init_val=0):
-        self.counter = init_val
-        self.max_val = 2 ** n_bits - 1
-
-    def count_up(self):
-        if self.counter < self.max_val:
-            self.counter += 1
-
-    def count_down(self):
-        if self.counter > 0:
-            self.counter -= 1
-
-    def value(self):
-        return self.counter
-
-
-class TraceReader:
-
-    def __init__(self, filename):
-        self.filename = filename
-
-    def read(self):
-        with open(self.filename, "r") as file:
-            for line in file:
-                address, taken = line.split()
-                yield int(address) // 4, int(taken)  # remove lowest 2 bits from address, since they are always 0
+from base import Evaluator, TraceReader, SaturationCounter, ShiftRegister
 
 
 class BranchPredictorTournament:
+    """
+    The tournament branch predictor is a dynamic branch predictor. It indexes saturation counter using the branch address
+    xor-ed with the branch history in the branch history table which indicate the likelihood of predicting the branch
+    to be 'taken'. The counter increments for each actual branch taken and decrements for each actual not taken
+    branch. This is the python model implementation.
+    """
 
     def __init__(self, sat_cnt_bits, bht_addr_bits, n_hist):
+        """
+        Initialize internal state.
+        :param sat_cnt_bits: saturating counter bit width
+        :param bht_addr_bits: number of address bits for the branch history table index and the branch history shift register
+        :param n_hist:
+        """
         # store general parameters
         self.sat_cnt_bits = sat_cnt_bits
         self.bht_addr_bits = bht_addr_bits
@@ -104,6 +69,12 @@ class BranchPredictorTournament:
         self.bht_sel = SaturationCounter(n_bits=sat_cnt_bits, init_val=self.saturation_size_half)
 
     def update(self, address, correct):
+        """
+        Update internal state using the information from the most recent prediction result.
+        :param address: branch address
+        :param correct: flag indicating whether the last prediction was correct
+        :return: None
+        """
         # get the selector decision
         select_prediction = self.predict_selector()
         # get the local prediction
@@ -115,7 +86,7 @@ class BranchPredictorTournament:
             taken_actual = (correct and global_prediction) or (not correct and not global_prediction)
         else:
             taken_actual = (correct and local_prediction) or (not correct and not local_prediction)
-        # update counters
+        # update counter
         if taken_actual:
             # local
             self.bht_local[address % self.bht_local_size].count_up()
@@ -126,9 +97,10 @@ class BranchPredictorTournament:
             self.bht_local[address % self.bht_local_size].count_down()
             # global
             self.bht_global[self.bh.reg_to_number()].count_down()
-        # update selector
+        # compute correct branch decision
         local_correct = (local_prediction == taken_actual)
         global_correct = (global_prediction == taken_actual)
+        # update counter
         if local_correct and not global_correct:
             self.bht_sel.count_down()
         elif not local_correct and global_correct:
@@ -137,6 +109,11 @@ class BranchPredictorTournament:
         self.bh.shift(taken_actual)
 
     def predict(self, address):
+        """
+        Predict branch using the internal state and the branch address.
+        :param address: branch address
+        :return: prediction
+        """
         # check which branch predictor we trust (selector)
         if self.predict_selector():
             return self.predict_global()
@@ -144,79 +121,75 @@ class BranchPredictorTournament:
             return self.predict_local(address)
 
     def predict_local(self, address):
+        """
+        Predict local (branch address)
+        :param address: branch address
+        :return: local prediction
+        """
         # local branch predictor
         return self.bht_local[address % self.bht_local_size].value() > self.saturation_size_half
 
     def predict_global(self):
+        """
+        Predict global (branch history).
+        :return: global prediction
+        """
         # global branch predictor
         return self.bht_global[self.bh.reg_to_number()].value() > self.saturation_size_half
 
     def predict_selector(self):
+        """
+        Decide which predictor (local vs global) to choose.
+        :return: decision
+        """
         # selector
         return self.bht_sel.value() > self.saturation_size_half
 
 
-def evaluate(sat_bits, addr_bits, n_hist, trace):
-    n_correct = 0
-    n_total = 0
-
-    import os.path
-    tr = TraceReader(os.path.join("../evaluation/traces", trace + ".trace"))
-    bp = BranchPredictorTournament(sat_cnt_bits=sat_bits, bht_addr_bits=addr_bits, n_hist=n_hist)
-
-    for address, taken in tr.read():
-        prediction = bp.predict(address)
-        correct = prediction == taken
-        bp.update(address, correct)
-        if correct:
-            n_correct += 1
-        n_total += 1
-    result = "{}, {}, {}, {}".format(trace, sat_bits, addr_bits, n_correct / n_total)
-    print(result)
-    return result
-
-
 if __name__ == "__main__":
 
+    # process command line arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--debug", action='store_true')
-    parser.add_argument("--gridsearch", action='store_true')
+    parser.add_argument("--debug", action="store_true")
+    parser.add_argument("--gridsearch", action="store_true")
     args = parser.parse_args()
 
+    # debugging
     if args.debug:
 
-        # params
+        # instantiate trace reader with the dummy trace
+        tr = TraceReader("../traces/dummy.trace")
+
+        # instantiate branch predictor
         _SAT_CNT_BITS = 2
         _BHT_ADDR_BITS = 2
         _N_HIST = 2
-
-        tr = TraceReader("../evaluation/traces/dummy.trace")
         bp = BranchPredictorTournament(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS, n_hist=_N_HIST)
 
+        # loop over all trace lines
         for address, taken in tr.read():
-            # remove upper bits
-            address = address % (2 ** _BHT_ADDR_BITS)
             # predict branch
             prediction = bp.predict(address)
-            # determine if prediction was correct
+            # check if prediction was correct
             correct = prediction == taken
-            # update internal state
+            # update internal predictor state
             bp.update(address, correct)
 
+    # parameter grid search
     if args.gridsearch:
 
-        from multiprocessing import Pool
+        # instantiate evaluator
+        ev = Evaluator(branch_predictor=BranchPredictorTournament, num_processes=4)
 
-        tasks = list()
-        with Pool(processes=7) as pool:
+        # add all evaluation corners
+        for trace in ["short_mobile_1", "long_mobile_1", "short_server_1", "long_server_1"]:
             for sat_bits in [1, 2, 3, 4, 5]:
                 for addr_bits in [3, 6, 9, 12, 15]:
-                    for trace in ["short_mobile_1", "long_mobile_1", "short_server_1", "long_server_1"]:
-                        tasks.append(pool.apply_async(evaluate, (sat_bits, addr_bits, addr_bits, trace)))
-            results = list()
-            for task in tasks:
-                results.append(task.get())
-            with open("gridsearch_tournament.txt", "w") as file:
-                for result in results:
-                    file.write(result + "\n")
-        print("done")
+                        ev.submit(trace, sat_bits, addr_bits)
+
+        # wait for all tasks to finish
+        ev.finalize()
+        # write result to file
+        ev.write_result("gridsearch_bp_gshare.csv")
+        # print result
+        ev.print_result()
