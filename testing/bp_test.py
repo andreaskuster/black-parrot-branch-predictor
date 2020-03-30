@@ -44,11 +44,15 @@ class TestbenchTest(unittest.TestCase):
         for test_bench in self._TEST_BENCHES:
             self.run_testbench(test_case=test_bench)
 
-    def run_testbench(self, verbose=True, test_case="testbench_example"):
+    def run_testbench(self, verbose=True, test_case="testbench_example", local=False):
 
-        parent = os.path.abspath(os.path.join(os.path.curdir, os.pardir))
+        if local:
+            parent = os.path.abspath(os.path.join(os.path.curdir, os.pardir))
+            working_dir = parent
+        else:
+            working_dir = os.path.curdir
 
-        process = Popen(["make", test_case], stdout=PIPE, stderr=PIPE, cwd=parent)
+        process = Popen(["make", test_case], stdout=PIPE, stderr=PIPE, cwd=working_dir)
 
         if verbose:
             while process.poll() is None:
@@ -58,7 +62,7 @@ class TestbenchTest(unittest.TestCase):
         else:
             process.wait()
 
-        tree = ET.parse(os.path.join(parent, test_case, "results.xml"))
+        tree = ET.parse(os.path.join(working_dir, test_case, "results.xml"))
 
         root = tree.getroot()
         results = root.findall("testsuite/testcase")
