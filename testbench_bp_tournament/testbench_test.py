@@ -22,133 +22,55 @@ __author__ = "Andreas Kuster"
 __copyright__ = "Copyright 2020"
 __license__ = "GPL"
 
+import os
 import cocotb
-from cocotb.triggers import Timer, RisingEdge, ReadOnly
-from cocotb.result import TestFailure
-from testbench_model import BranchPredictorTournament, TraceReader
 
-clock_period = 1000
+from cocotb.triggers import RisingEdge
 
-@cocotb.coroutine
-def clock_gen(signal, period=10000):
-    while True:
-        signal <= 0
-        yield Timer(period / 2)
-        signal <= 1
-        yield Timer(period / 2)
-
-@cocotb.coroutine
-def bp_init(dut):
-    # reset
-    dut.reset_i = 1
-
-    # write branch result
-    dut.w_v_i = 0
-    dut.idx_w_i = 0
-    dut.correct_i = 0
-
-    # read branch prediction
-    dut.r_v_i = 0
-    dut.idx_r_i = 0
-    dut.predict_o = 0
-
-    # simulate a clock edge
-    yield RisingEdge(dut.clk_i)
-
-@cocotb.coroutine
-def bp_reset(dut):
-    # reset
-    dut.reset_i <= 1
-
-    # simulate a clock edge
-    yield RisingEdge(dut.clk_i)
-
-    # remove reset flag
-    dut.reset_i <= 0
-
-    # simulate a clock edge
-    yield RisingEdge(dut.clk_i)
-
-@cocotb.coroutine
-def bp_update(dut, index, correct):
-
-    # write
-    dut.w_v_i <= 1
-    dut.idx_w_i <= index
-    dut.correct_i <= correct
-
-    # simulate a clock edge
-    yield RisingEdge(dut.clk_i)
-
-    dut.w_v_i <= 0
-    dut.idx_w_i <= 0
-    dut.correct_i <= 0
-
-    # simulate a clock edge
-    yield RisingEdge(dut.clk_i)
-
-@cocotb.coroutine
-def bp_predict(dut, index, model_prediction):
-    # read
-    dut.r_v_i <= 1
-    dut.idx_r_i <= index
-
-    # simulate a clock edge
-    yield RisingEdge(dut.clk_i)
-
-    # read prediction
-    dut_prediction = int(dut.predict_o.value)
-    dut._log.info("read addr: {}".format(dut.idx_r_i))
-    if dut_prediction != model_prediction:
-        raise TestFailure('Mismatch detected: dut %d, model %d!' % (dut_prediction, model_prediction))
-
-    dut.r_v_i <= 0
-    dut.idx_r_i <= 0
-
-    # simulate a clock edge
-    yield RisingEdge(dut.clk_i)
+from testbench_bp_tournament import BranchPredictorTournament
+from base import TraceReader, BpRtlSim
 
 
 @cocotb.test()
 def branch_predictor_basic(dut):
-    """branch predictor basic"""
-    _SAT_CNT_BITS = 2
-    _BHT_ADDR_BITS = 9
-
+    """
+    Branch Predictor trace co-simulation testing.
+    :param dut: device under test
+    :return: None
+    """
     # setup clock gen
-    cocotb.fork(clock_gen(dut.clk_i, period=clock_period))
+    cocotb.fork(BpRtlSim.clock_gen(dut.clk_i, period=1000))
 
     # init vars
-    yield bp_init(dut)
+    yield BpRtlSim.bp_init(dut)
 
     # reset
-    yield bp_reset(dut)
+    yield BpRtlSim.bp_reset(dut)
 
-    tr = TraceReader("../traces/dummy.trace")
-    bp = BranchPredictorTournament(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS, n_hist=_BHT_ADDR_BITS)
+    # read trace name from environment variable (set in the Makefile)
+    trace = os.environ["TRACE"]
 
-    dut._log.info("global history: {}".format(dut.bp.gh))
-    #dut._log.info("l0: {}, l1: {}, l2: {}, l3: {}".format(dut.bp.l0, dut.bp.l1, dut.bp.l2, dut.bp.l3))
-    #dut._log.info("g0: {}, g1: {}, g2: {}, g3: {}".format(dut.bp.g0, dut.bp.g1, dut.bp.g2, dut.bp.g3))
-    dut._log.info("select counter: {}".format(dut.bp.bht_sel))
-    dut._log.info("-----------START---------------")
+    # instantiate trace reader with the given trace
+    tr = TraceReader(os.path.join("../traces", trace + ".trace"))
 
+    # instantiate branch predictor
+    _SAT_CNT_BITS = 2
+    _BHT_ADDR_BITS = 9
+    _N_HIST = 9
+    bp = BranchPredictorTournament(sat_cnt_bits=_SAT_CNT_BITS, bht_addr_bits=_BHT_ADDR_BITS, n_hist=_N_HIST)
+
+    # loop over all trace lines
     for address, taken in tr.read():
-
-        address = address % (2**_BHT_ADDR_BITS)
-
+        # predict branch
         pred_model = bp.predict(address)
-        yield bp_predict(dut, address, pred_model)
-
+        # wait for the simulation
+        yield BpRtlSim.bp_predict(dut, address, pred_model)
+        # check if prediction was correct
         correct = pred_model == taken
+        # update internal predictor state
         bp.update(address, correct)
-        yield bp_update(dut, address, correct)
-        dut._log.info("correct: {}".format(dut.bp.correct_i))
-        dut._log.info("global history: {}".format(dut.bp.gh))
-        #dut._log.info("l0: {}, l1: {}, l2: {}, l3: {}".format(dut.bp.l0, dut.bp.l1, dut.bp.l2, dut.bp.l3))
-        #dut._log.info("g0: {}, g1: {}, g2: {}, g3: {}".format(dut.bp.g0, dut.bp.g1, dut.bp.g2, dut.bp.g3))
-        dut._log.info("select counter: {}".format(dut.bp.bht_sel))
-        dut._log.info("--------------------------")
+        # wait for the simulation
+        yield BpRtlSim.bp_update(dut, address, correct)
 
     yield RisingEdge(dut.clk_i)
-    dut._log.info("Finished.")
+    dut._log.info("Co-simulation finished.")
