@@ -36,7 +36,7 @@ import xml.etree.ElementTree as ET
 
 class TestbenchTest(unittest.TestCase):
 
-    _TEST_BENCHES = ["testbench_example", "testbench_bp_bimodal", "testbench_bp_gshare", "testbench_bp_always_taken"
+    _TEST_BENCHES = ["testbench_example", "testbench_bp_always_taken", "testbench_bp_bimodal", "testbench_bp_gshare",
                      "testbench_bp_gselect", "testbench_bp_tournament", "testbench_bp_two_level_local"]
 
     def test_all(self):
