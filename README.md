@@ -189,6 +189,25 @@ size of the branch history table plus the size of the branch history.
 __Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
 size of the branch history table plus the size of the branch history.
 
+__Performance__ (backend flow):
+
+| test case | instr/s |
+|           |         |
+| Towers    | 75.65   |
+| Vvadd     | 56.24   |
+| Median    | 45.15   |
+
+
+__Power__ (backend flow):
+| test case |  mJ/s |
+|           |       |
+| Towers    | 0.75  |
+| Vvadd     | 1     |
+| Median    | 1.586 |
+
+
+Area (backend flow): 61448.6913 nm^2
+
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_gshare/README.md)
 - [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_04_gshare/bp_fe/src/v/bp_fe_bp.v#L56)
@@ -214,6 +233,26 @@ size of the branch history table plus the size of the branch history.
 
 __Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
 size of the branch history table plus the size of the branch history.
+
+__Performance__ (backend flow):
+
+| test case | instr/s |
+|           |         |
+| Towers    | 80.45   |
+| Vvadd     | 72.84   |
+| Median    | 37.51   |
+
+
+__Power__ (backend flow):
+
+| test case |  mJ/s  |
+|           |        |
+| Towers    | 0.8589 |
+| Vvadd     | 0.8937 |
+| Median    | 1.802  |
+
+Area (backend flow): 61044.9405 nm^2
+
 
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_gselect/README.md)
@@ -242,6 +281,27 @@ __Power__: Since the computational part of the module is rather small, we expect
 size of the branch history tables plus the size of the branch history.
 
 
+__Performance__ (backend flow):
+
+| test case | instr/s |
+|           |         |
+| Towers    | 78.02   |
+| Vvadd     | 77.29   |
+| Median    | 39.38   |
+
+
+__Power__ (backend flow):
+
+| test case |  mJ/s  |
+|           |        |
+| Towers    | 0.77   |
+| Vvadd     | 0.7568 |
+| Median    | 1.508  |
+
+Area (backend flow): 117722.4186 nm^2
+
+
+
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_tournament/README.md)
 - [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_06_tournament/bp_fe/src/v/bp_fe_bp.v#L95)
@@ -266,6 +326,25 @@ size of the correlation table plus the branch history table.
 __Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
 size of the correlation table plus the branch history table.
 
+
+__Performance__ (backend flow):
+
+| test case | instr/s |
+|           |         |
+| Towers    | 81.04   |
+| Vvadd     | 80.38   |
+| Median    | 45.12   |
+
+
+__Power__ (backend flow):
+
+| test case |  mJ/s   |
+|           |         |
+| Towers    | 0.7959  |
+| Vvadd     | 0.78999 |
+| Median    | 1.427   |
+
+Area (backend flow): 196948.6813 nm^2
 
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_two_level_local/README.md)
