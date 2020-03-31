@@ -26,12 +26,14 @@ import os
 
 if __name__ == "__main__":
     """
-    Counts the number of traces in all trace files.
+    Counts the number of branch operations in all trace files.
     """
     _BASE_PATH = ""
 
+    # list all trace files
     traces = [f for f in os.listdir(_BASE_PATH) if os.path.isfile(os.path.join(_BASE_PATH, f)) and f.endswith(".trace")]
 
+    # count lines of trace files
     for trace in traces:
         counter = 0
         with open(os.path.join("", trace)) as file:
