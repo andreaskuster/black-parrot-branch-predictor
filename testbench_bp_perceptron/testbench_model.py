@@ -152,6 +152,6 @@ if __name__ == "__main__":
         # wait for all tasks to finish
         ev.finalize()
         # write result to file
-        ev.write_result("gridsearch_bp_gshare.csv")
+        ev.write_result("gridsearch_bp_perceptron.csv")
         # print result
         ev.print_result()
