@@ -156,8 +156,6 @@ predictor to be good for workloads with very little correlation between sequenti
 should show better accuracy for smaller branch history table sizes, since this hash function does not spread very widely
 and therefore we expect less collisions.  
 
-__Predictions per Cycle / Critical Path__: TODO
-
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history table.
 
@@ -180,8 +178,6 @@ __Accuracy__: Since applying biwise xor over all available input information (br
 nicely over the whole hash image, we expect this predictor to perform very well on workloads with long branch correlation.
 Furthermore, because of the broad spread, we expect that this predictor can improve a lot over larger branch history table
 sizes.
-
-__Predictions per Cycle / Critical Path__: TODO
 
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history table plus the size of the branch history.
@@ -226,8 +222,6 @@ the branch address (bimodal). We therefore expect the result of this predictor t
 theory, in these of a workload that fits very well the combination of history bits and address bits selected for this 
 implementation, it could also outperform the others.
 
-__Predictions per Cycle / Critical Path__: TODO
-
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history table plus the size of the branch history.
 
@@ -270,9 +264,6 @@ to either of them, depending on the correctness of their previous predictions.
 
 __Accuracy__: While this branch prediction uses two branch predictors internally, it mostly gets the best result out of
 both words. We therefore expect this one to perform reasonably close to the maximum value of both internal branch predictors.
-
-__Predictions per Cycle / Critical Path__: TODO
-
 
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history tables plus the size of the branch history.
@@ -317,8 +308,6 @@ counters.
 
 __Accuracy__: Since this predictor basically stores all the information given to him (and uses it), it should outperform 
 all others (with the grain of salt for using a lot more area/power). 
-
-__Predictions per Cycle / Critical Path__: TODO
 
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the correlation table plus the branch history table.
