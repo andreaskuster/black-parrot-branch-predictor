@@ -29,6 +29,9 @@ from base import Evaluator, TraceReader, SaturationCounter, ShiftRegister
 
 class BranchPredictorTwoLevelLocal:
     """
+    The two-level local branch predictor is a dynamic branch predictor. The saturating counter is choosen indirectly via
+    a lookup in in the correlation table. The correlation table stores branch histories indexed by the address bits. This
+    is the python model implementation.
     """
 
     def __init__(self, sat_cnt_bits, bht_addr_bits, n_hist):
