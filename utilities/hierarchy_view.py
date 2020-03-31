@@ -24,6 +24,7 @@ __license__ = "GPL"
 
 import networkx as nx
 import matplotlib.pyplot as plt
+
 import pydot
 import graphviz
 import enum
@@ -31,19 +32,35 @@ import argparse
 
 
 class Root(enum.Enum):
+    """
+    Root module root nodes.
+    """
     FE = "fe"
     BE = "be"
     UCE = "uce"
 
 
+# graph instance
 G = nx.DiGraph()
 
 
 def node_name(name, type):
+    """
+    Generate node label.
+    :param name: node name
+    :param type: node type
+    :return: name string
+    """
     return "{}\n{}".format(type, name)
 
 
 def add_nodes_recursive(name, type, hierarchy):
+    """
+    Recursive module traversal
+    :param name: current node name
+    :param type: current node type
+    :param hierarchy: hierarchy map
+    """
     for node in hierarchy[type]:
         G.add_edge(node_name(name, type), node_name(node, hierarchy[type][node]))
         add_nodes_recursive(node, hierarchy[type][node], hierarchy)
@@ -51,14 +68,17 @@ def add_nodes_recursive(name, type, hierarchy):
 
 if __name__ == "__main__":
 
+    # parse arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("-r", "--root", default=Root.FE.name, choices=[x.name for x in Root])
     args = parser.parse_args()
     root = Root[args.root]
 
+    # store root file name and path
     _SAVE_PATH = root.value
     _ROOT = "bp_{}".format(root.value + (".v" if root == Root.UCE else "_top.v"))
 
+    # module to instance mapping
     hierarchy = {
         ########
         # BP_FE
@@ -343,16 +363,19 @@ if __name__ == "__main__":
         "bsg_counter_set_down.v": {}
     }
 
-
+    # walk through the tree
     add_nodes_recursive("root", _ROOT, hierarchy)
 
-
+    # print the graph
     print(G.adj)
 
-    # some point (for large graphs)
-    plt.axis('off')
-    # generate positions
-    positions = nx.nx_pydot.graphviz_layout(G, prog="dot", )
+    # remove plot axis
+    plt.axis("off")
+
+    # generate graphviz node positions
+    positions = nx.nx_pydot.graphviz_layout(G, prog="dot")
+
+    # set figure size depending on graph type
     if root == Root.UCE:
         plt.figure(figsize=(15, 5))
     elif root == Root.FE:
@@ -360,11 +383,13 @@ if __name__ == "__main__":
     elif root == Root.BE:
         plt.figure(figsize=(80, 16))
 
+    # draw visual graph
     nx.draw_networkx_nodes(G=G, pos=positions)
     nx.draw_networkx(G=G, pos=positions, node_size=1000, font_size=6)
 
     # save plot to file if save_path has been specified
     if _SAVE_PATH is not None:
         plt.savefig(_SAVE_PATH)
+        
     # plot it
     plt.show()
