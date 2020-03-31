@@ -52,7 +52,7 @@ class TestbenchTest(unittest.TestCase):
         Execute python model and RTL implementation co-simulation.
         :param verbose: cocotb output
         :param test_case: design
-        :param local: local or travis-ci executioin
+        :param local: local or travis-ci execution
         """
 
         # local: parent directory, travis-ci: current directory
