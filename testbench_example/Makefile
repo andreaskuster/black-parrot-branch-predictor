@@ -37,8 +37,6 @@ PWD=$(shell pwd)
 
 PARENT_DIR=$(shell dirname $(PWD))
 
-export TRACE=dummy
-
 ifeq ($(OS),Msys)
 	WPWD=$(shell sh -c 'pwd -W')
 else
@@ -54,8 +52,8 @@ else
 	$(error "A valid value (verilog or vhdl) was not provided for TOPLEVEL_LANG=$(TOPLEVEL_LANG)")
 endif
 
-TOPLEVEL := testbench
-MODULE   := testbench_test
+TOPLEVEL := adder
+MODULE   := adder_test
 
 include $(shell cocotb-config --makefiles)/Makefile.inc
 include $(shell cocotb-config --makefiles)/Makefile.sim
