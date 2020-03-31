@@ -390,6 +390,6 @@ if __name__ == "__main__":
     # save plot to file if save_path has been specified
     if _SAVE_PATH is not None:
         plt.savefig(_SAVE_PATH)
-        
+
     # plot it
     plt.show()
