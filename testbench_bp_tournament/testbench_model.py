@@ -29,10 +29,9 @@ from base import Evaluator, TraceReader, SaturationCounter, ShiftRegister
 
 class BranchPredictorTournament:
     """
-    The tournament branch predictor is a dynamic branch predictor. It indexes saturation counter using the branch address
-    xor-ed with the branch history in the branch history table which indicate the likelihood of predicting the branch
-    to be 'taken'. The counter increments for each actual branch taken and decrements for each actual not taken
-    branch. This is the python model implementation.
+    The tournament branch predictor is a dynamic branch predictor. It is a combination of a local predictor (branch address)
+    and a global predictor (branch history). A selector chooses between the two predictors. This is the python model
+    implementation.
     """
 
     def __init__(self, sat_cnt_bits, bht_addr_bits, n_hist):
