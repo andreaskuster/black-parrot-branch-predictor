@@ -1,0 +1,57 @@
+****************************************
+Report : clock timing
+	-type skew
+	-verbose
+	-nworst 1
+	-setup
+	-crosstalk_delta
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 16:00:24 2020
+****************************************
+
+  Clock: core_clk
+
+  Startpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_tournament_bp/bht_local_reg_99__1_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe/mem/icache/ld_data_tv_r_reg_2__6_
+               (rising edge-triggered flip-flop clocked by core_clk)
+
+
+  Point                                                                                      DTrans   Trans    Delta     Incr       Path
+  -----------------------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                          0.000
+  clock source latency                                                                                                  0.000      0.000
+  clk_i (in)                                                                                          0.000             0.000 &    0.000 r
+  CTSINVX4_G1B4I1/INP (INVX8)                                                                0.000    0.082    0.000    0.033 &    0.033 r
+  CTSINVX4_G1B4I1/ZN (INVX8)                                                                          0.072             0.041 &    0.074 f
+  CTSINVX16_G1B3I4/INP (INVX16)                                                              0.000    0.079    0.000    0.012 &    0.087 f
+  CTSINVX16_G1B3I4/ZN (INVX16)                                                                        0.077             0.036 &    0.122 r
+  core/fe/pc_gen/CTSINVX16_G1B2I9/INP (INVX4)                                                0.000    0.086    0.000    0.014 &    0.136 r
+  core/fe/pc_gen/CTSINVX16_G1B2I9/ZN (INVX4)                                                          0.185             0.111 &    0.247 f
+  core/fe/pc_gen/CTSINVX16_G1B1I33/INP (INVX8)                                               0.000    0.187    0.000    0.007 &    0.254 f
+  core/fe/pc_gen/CTSINVX16_G1B1I33/ZN (INVX8)                                                         0.229             0.131 &    0.385 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_tournament_bp/bht_local_reg_99__1_/CLK (DFFX1)    0.000    0.229    0.000    0.006 &    0.390 r
+  startpoint clock latency                                                                                                         0.390
+
+  clock core_clk (rise edge)                                                                          0.000
+  clock source latency                                                                                                  0.000      0.000
+  clk_i (in)                                                                                          0.000             0.000 &    0.000 r
+  CTSINVX4_G1B4I1/INP (INVX8)                                                                0.000    0.072    0.000    0.029 &    0.029 r
+  CTSINVX4_G1B4I1/ZN (INVX8)                                                                          0.062             0.036 &    0.065 f
+  core/fe/CTSINVX4_G1B3I3/INP (INVX2)                                                        0.000    0.062    0.000    0.001 &    0.066 f
+  core/fe/CTSINVX4_G1B3I3/ZN (INVX2)                                                                  0.092             0.055 &    0.121 r
+  core/fe/CTSINVX8_G1B2I1/INP (INVX8)                                                        0.000    0.092    0.000    0.001 &    0.122 r
+  core/fe/CTSINVX8_G1B2I1/ZN (INVX8)                                                                  0.113             0.072 &    0.194 f
+  core/fe/mem/icache/CTSINVX4_G1B1I20/INP (INVX32)                                           0.000    0.113    0.000    0.004 &    0.198 f
+  core/fe/mem/icache/CTSINVX4_G1B1I20/ZN (INVX32)                                                     0.060             0.021 &    0.219 r
+  core/fe/mem/icache/ld_data_tv_r_reg_2__6_/CLK (DFFX1)                                      0.000    0.060    0.000    0.009 &    0.228 r
+  endpoint clock latency                                                                                                           0.228
+  -----------------------------------------------------------------------------------------------------------------------
+  startpoint clock latency                                                                                       0.390
+  endpoint clock latency                                                                                        -0.228
+  clock reconvergence pessimism                                                                                 -0.010
+  -----------------------------------------------------------------------------------------------------------------------
+  skew                                                                                                           0.153
+
+1

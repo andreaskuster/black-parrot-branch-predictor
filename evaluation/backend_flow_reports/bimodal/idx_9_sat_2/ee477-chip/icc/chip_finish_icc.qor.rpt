@@ -1,0 +1,127 @@
+ 
+****************************************
+Report : qor
+Design : bp_softcore
+Version: M-2016.12-SP5-3
+Date   : Thu Mar 12 13:59:40 2020
+****************************************
+
+
+  Timing Path Group 'FEEDTHROUGH'
+  -----------------------------------
+  Levels of Logic:              21.00
+  Critical Path Length:          2.98
+  Critical Path Slack:           3.82
+  Critical Path Clk Period:      7.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REGIN'
+  -----------------------------------
+  Levels of Logic:              26.00
+  Critical Path Length:          3.76
+  Critical Path Slack:           3.57
+  Critical Path Clk Period:      7.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:         -0.17
+  Total Hold Violation:         -6.67
+  No. of Hold Violations:       85.00
+  -----------------------------------
+
+  Timing Path Group 'REGOUT'
+  -----------------------------------
+  Levels of Logic:              49.00
+  Critical Path Length:          5.17
+  Critical Path Slack:           1.24
+  Critical Path Clk Period:      7.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'core_clk'
+  -----------------------------------
+  Levels of Logic:              54.00
+  Critical Path Length:          5.96
+  Critical Path Slack:           0.99
+  Critical Path Clk Period:      7.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:        537
+  Hierarchical Port Count:      86251
+  Leaf Cell Count:              57482
+  Buf/Inv Cell Count:            8847
+  Buf Cell Count:                4989
+  Inv Cell Count:                3858
+  CT Buf/Inv Cell Count:          105
+  Combinational Cell Count:     45736
+  Sequential Cell Count:        11746
+  Macro Count:                     22
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:   468892.573998
+  Noncombinational Area:
+                        291775.791590
+  Buf/Inv Area:          93416.142294
+  Total Buffer Area:         64392.19
+  Total Inverter Area:       29023.95
+  Macro/Black Box Area:
+                       1677249.770874
+  Net Area:             286413.676881
+  Net XLength        :     3369773.00
+  Net YLength        :     3407725.00
+  -----------------------------------
+  Cell Area:           2437918.136462
+  Design Area:         2724331.813343
+  Net Length        :      6777498.00
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         73591
+  Nets With Violations:            57
+  Max Trans Violations:            57
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: linuxsrv01.ece.uw.edu
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                   51.43
+  Logic Optimization:                 61.29
+  Mapping Optimization:              851.99
+  -----------------------------------------
+  Overall Compile Time:             1389.01
+  Overall Compile Wall Clock Time:   751.10
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0  (with Crosstalk delta delays)
+
+
+  Design (Hold)  WNS: 0.17  TNS: 6.67  Number of Violating Paths: 85  (with Crosstalk delta delays)
+
+  --------------------------------------------------------------------
+
+
+1

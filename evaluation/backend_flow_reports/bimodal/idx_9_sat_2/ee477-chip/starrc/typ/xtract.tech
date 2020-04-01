@@ -1,0 +1,66 @@
+-stage_id 1
+-o xout
+-clean_xin
+-filter
+-full_chip_xin xin
+-i xin
+-tcad_file /home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/stdview/stdcells.typ.nxtgrd
+-layer_info layer_info
+-operating_temperature 25
+-density_based_thickness
+-xm 400
+-extraction RC
+-should_reduce_different_layers no
+-rfr 0.99
+-topo
+-suppress_file xtract.sup
+-vert_parts
+-cut_thickness 1
+-overlap_dist 2
+-covertical 4
+-strict_cell_overlap_handling
+-trench_contact_virtual_via_segmentation_ratio 2.0
+-max_virtual_via_segmentation_number 1000000
+-net_segment_cut_length 20
+-abutment_merge_mode 4
+-new_scan_engine 2
+-clean_xin_mode 1
+-layer_based_nxtgrd_read
+-noncritical_min_area 0.25
+-noncritical_min_length 0.25
+-new_res_rc
+-new_res_environment 2
+-new_res_optimization 1
+-res_cache_hash_size 50000
+-do_not_handle_long_contacts
+-rx_enclosure_simple
+-new_cap_environment 6
+-new_cap_environment_nondominant 1
+-new_cap_model 1
+-thickness_var_threshold 0.05
+-new_cap_plane_limit 4.0
+-new_cap_simple_via_pad_model 2
+-cap_cache_hash_size 25000
+-cap_area_cache_hash_size 25000
+-new_cap_sort_small_environments 8
+-max_env_model_length_multiple 0.0
+-max_model_length_ratio 0.0
+-simple_model_plane_limit 0.0
+-max_env_prune_length_multiple 2.0
+-max_prune_length_ratio 1.0
+-max_via_env_prune_length_multiple 2.0
+-fill_extraction_abs_threshold 1e-19
+-new_cap_fill_extract_iterations 2
+-full_cap_fill_mode
+-last_fill_iteration_simple
+-fast_fill_model 5
+-inter_pic_level_connections
+-fine_dbu
+-calc_text_count
+-num_parts 40
+-density_input xin_density
+-bidirectional
+-net_command_file select_nets
+-small_net_delay_threshold 0.25
+-random_access_xout
+-lateral_cap_scaling_mode 2

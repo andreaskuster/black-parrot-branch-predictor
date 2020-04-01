@@ -1,0 +1,21 @@
+****************************************
+Report : timing
+	-path_type full_clock
+	-delay_type min
+	-slack_lesser_than 1000000.000
+	-max_paths 30
+	-group **default**
+	-transition_time
+	-sort_by slack
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sun Mar 15 20:17:50 2020
+****************************************
+
+Report timing status: Started...
+Report timing status: Processing group **default**
+Report timing status: Processing group **default** (total endpoints 0)...100% done.
+No constrained paths.
+
+Report timing status: Completed...
+1

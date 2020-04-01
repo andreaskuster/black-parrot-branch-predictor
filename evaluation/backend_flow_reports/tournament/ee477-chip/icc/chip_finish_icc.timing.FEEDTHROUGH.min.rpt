@@ -1,0 +1,1796 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 10
+        -input_pins
+        -nets
+        -group FEEDTHROUGH
+        -max_paths 500
+        -transition_time
+        -capacitance
+Design : bp_softcore
+Version: M-2016.12-SP5-3
+Date   : Sat Mar 14 14:49:43 2020
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+
+Information: Percent of Arnoldi-based delays = 29.55%
+
+  Startpoint: mem_resp_i[54]
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 f
+  mem_resp_i[54] (in)                              0.0000    0.0000 @   0.1000 f
+  mem_resp_i[54] (net)           3      12.5589              0.0000     0.1000 f
+  U3127/IN1 (OA221X1)                              0.0009    0.0001 @   0.1001 f
+  U3127/Q (OA221X1)                                0.0452    0.0923     0.1925 f
+  mem_resp_yumi_o (net)          1       6.4359              0.0000     0.1925 f
+  mem_resp_yumi_o (out)                            0.0452   -0.0081 &   0.1843 f
+  data arrival time                                                     0.1843
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.1843
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.2843
+
+
+  Startpoint: mem_resp_i[54]
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 r
+  mem_resp_i[54] (in)                              0.0000    0.0000 @   0.1000 r
+  mem_resp_i[54] (net)           3      12.6109              0.0000     0.1000 r
+  U3127/IN1 (OA221X1)                              0.0009    0.0001 @   0.1001 r
+  U3127/Q (OA221X1)                                0.0477    0.0989     0.1990 r
+  mem_resp_yumi_o (net)          1       6.4359              0.0000     0.1990 r
+  mem_resp_yumi_o (out)                            0.0477   -0.0085 &   0.1905 r
+  data arrival time                                                     0.1905
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.1905
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.2905
+
+
+  Startpoint: mem_resp_i[54]
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 r
+  mem_resp_i[54] (in)                              0.0000    0.0000 @   0.1000 r
+  mem_resp_i[54] (net)           3      12.6109              0.0000     0.1000 r
+  U2012/INP (INVX0)                                0.0009    0.0001 @   0.1001 r
+  U2012/ZN (INVX0)                                 0.0265    0.0184     0.1185 f
+  n258 (net)                     2       3.7628              0.0000     0.1185 f
+  U3127/IN3 (OA221X1)                              0.0265    0.0000 &   0.1185 f
+  U3127/Q (OA221X1)                                0.0452    0.0890     0.2075 f
+  mem_resp_yumi_o (net)          1       6.4359              0.0000     0.2075 f
+  mem_resp_yumi_o (out)                            0.0452   -0.0081 &   0.1994 f
+  data arrival time                                                     0.1994
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.1994
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.2994
+
+
+  Startpoint: mem_resp_i[54]
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 f
+  mem_resp_i[54] (in)                              0.0000    0.0000 @   0.1000 f
+  mem_resp_i[54] (net)           3      12.5589              0.0000     0.1000 f
+  U2012/INP (INVX0)                                0.0009    0.0001 @   0.1001 f
+  U2012/ZN (INVX0)                                 0.0319    0.0176     0.1178 r
+  n258 (net)                     2       3.7316              0.0000     0.1178 r
+  U3127/IN3 (OA221X1)                              0.0319    0.0000 &   0.1178 r
+  U3127/Q (OA221X1)                                0.0477    0.0951     0.2129 r
+  mem_resp_yumi_o (net)          1       6.4359              0.0000     0.2129 r
+  mem_resp_yumi_o (out)                            0.0477   -0.0085 &   0.2044 r
+  data arrival time                                                     0.2044
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2044
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3044
+
+
+  Startpoint: mem_resp_v_i
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 r
+  mem_resp_v_i (in)                                0.0000    0.0000 @   0.1000 r
+  mem_resp_v_i (net)             1       3.1985              0.0000     0.1000 r
+  U2014/IN1 (AND2X1)                               0.0001   -0.0001 @   0.0999 r
+  U2014/Q (AND2X1)                                 0.0551    0.0603     0.1602 r
+  n239 (net)                     3      11.2780              0.0000     0.1602 r
+  U3127/IN5 (OA221X1)                              0.0551   -0.0126 &   0.1476 r
+  U3127/Q (OA221X1)                                0.0477    0.0732     0.2208 r
+  mem_resp_yumi_o (net)          1       6.4359              0.0000     0.2208 r
+  mem_resp_yumi_o (out)                            0.0477   -0.0085 &   0.2123 r
+  data arrival time                                                     0.2123
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2123
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3123
+
+
+  Startpoint: mem_resp_v_i
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 f
+  mem_resp_v_i (in)                                0.0000    0.0000 @   0.1000 f
+  mem_resp_v_i (net)             1       3.1116              0.0000     0.1000 f
+  U2014/IN1 (AND2X1)                               0.0001   -0.0001 @   0.0999 f
+  U2014/Q (AND2X1)                                 0.0516    0.0594     0.1593 f
+  n239 (net)                     3      11.2085              0.0000     0.1593 f
+  U3127/IN5 (OA221X1)                              0.0516   -0.0123 &   0.1470 f
+  U3127/Q (OA221X1)                                0.0452    0.0868     0.2338 f
+  mem_resp_yumi_o (net)          1       6.4359              0.0000     0.2338 f
+  mem_resp_yumi_o (out)                            0.0452   -0.0081 &   0.2257 f
+  data arrival time                                                     0.2257
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2257
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3257
+
+
+  Startpoint: io_resp_i[54]
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 f
+  io_resp_i[54] (in)                               0.0000    0.0000 @   0.1000 f
+  io_resp_i[54] (net)            2       7.5620              0.0000     0.1000 f
+  U2020/IN1 (NAND2X0)                              0.0003    0.0001 @   0.1001 f
+  U2020/QN (NAND2X0)                               0.0734    0.0363     0.1364 r
+  n50 (net)                      2       6.0798              0.0000     0.1364 r
+  U2021/INP (INVX0)                                0.0734   -0.0070 &   0.1294 r
+  U2021/ZN (INVX0)                                 0.0495    0.0364     0.1658 f
+  n241 (net)                     2       4.7960              0.0000     0.1658 f
+  U3128/IN1 (AO22X1)                               0.0495    0.0000 &   0.1658 f
+  U3128/Q (AO22X1)                                 0.0464    0.0894     0.2552 f
+  io_resp_yumi_o (net)           1       7.5751              0.0000     0.2552 f
+  io_resp_yumi_o (out)                             0.0464    0.0002 &   0.2554 f
+  data arrival time                                                     0.2554
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2554
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3554
+
+
+  Startpoint: io_resp_i[54]
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 r
+  io_resp_i[54] (in)                               0.0000    0.0000 @   0.1000 r
+  io_resp_i[54] (net)            2       7.6347              0.0000     0.1000 r
+  U2020/IN1 (NAND2X0)                              0.0003    0.0001 @   0.1001 r
+  U2020/QN (NAND2X0)                               0.0731    0.0404     0.1405 f
+  n50 (net)                      2       6.0608              0.0000     0.1405 f
+  U2021/INP (INVX0)                                0.0731   -0.0070 &   0.1335 f
+  U2021/ZN (INVX0)                                 0.0575    0.0354     0.1689 r
+  n241 (net)                     2       4.7896              0.0000     0.1689 r
+  U3128/IN1 (AO22X1)                               0.0575    0.0000 &   0.1689 r
+  U3128/Q (AO22X1)                                 0.0482    0.0953     0.2642 r
+  io_resp_yumi_o (net)           1       7.5751              0.0000     0.2642 r
+  io_resp_yumi_o (out)                             0.0482    0.0002 &   0.2644 r
+  data arrival time                                                     0.2644
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2644
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3644
+
+
+  Startpoint: io_resp_i[54]
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 r
+  io_resp_i[54] (in)                               0.0000    0.0000 @   0.1000 r
+  io_resp_i[54] (net)            2       7.6347              0.0000     0.1000 r
+  U2004/INP (INVX0)                                0.0003    0.0001 @   0.1001 r
+  U2004/ZN (INVX0)                                 0.0158    0.0133     0.1134 f
+  n45 (net)                      1       1.6732              0.0000     0.1134 f
+  U2005/IN2 (NAND2X0)                              0.0158    0.0000 &   0.1135 f
+  U2005/QN (NAND2X0)                               0.0789    0.0427     0.1562 r
+  n52 (net)                      2       5.9475              0.0000     0.1562 r
+  U2006/INP (INVX0)                                0.0789   -0.0099 &   0.1463 r
+  U2006/ZN (INVX0)                                 0.0571    0.0418     0.1881 f
+  n240 (net)                     2       6.1626              0.0000     0.1881 f
+  U3128/IN3 (AO22X1)                               0.0571   -0.0010 &   0.1871 f
+  U3128/Q (AO22X1)                                 0.0464    0.0799     0.2670 f
+  io_resp_yumi_o (net)           1       7.5751              0.0000     0.2670 f
+  io_resp_yumi_o (out)                             0.0464    0.0002 &   0.2672 f
+  data arrival time                                                     0.2672
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2672
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3672
+
+
+  Startpoint: io_resp_i[54]
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 f
+  io_resp_i[54] (in)                               0.0000    0.0000 @   0.1000 f
+  io_resp_i[54] (net)            2       7.5620              0.0000     0.1000 f
+  U2004/INP (INVX0)                                0.0003    0.0001 @   0.1001 f
+  U2004/ZN (INVX0)                                 0.0202    0.0130     0.1131 r
+  n45 (net)                      1       1.7418              0.0000     0.1131 r
+  U2005/IN2 (NAND2X0)                              0.0202    0.0000 &   0.1131 r
+  U2005/QN (NAND2X0)                               0.0738    0.0463     0.1594 f
+  n52 (net)                      2       5.9285              0.0000     0.1594 f
+  U2006/INP (INVX0)                                0.0738   -0.0094 &   0.1499 f
+  U2006/ZN (INVX0)                                 0.0655    0.0404     0.1903 r
+  n240 (net)                     2       6.2317              0.0000     0.1903 r
+  U3128/IN3 (AO22X1)                               0.0655   -0.0012 &   0.1891 r
+  U3128/Q (AO22X1)                                 0.0482    0.0791     0.2682 r
+  io_resp_yumi_o (net)           1       7.5751              0.0000     0.2682 r
+  io_resp_yumi_o (out)                             0.0482    0.0002 &   0.2684 r
+  data arrival time                                                     0.2684
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2684
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3684
+
+
+  Startpoint: mem_resp_i[57]
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 f
+  mem_resp_i[57] (in)                              0.0000    0.0000 @   0.1000 f
+  mem_resp_i[57] (net)           1       3.8547              0.0000     0.1000 f
+  U2013/IN1 (NOR3X0)                               0.0001    0.0000 @   0.1000 f
+  U2013/QN (NOR3X0)                                0.1789    0.0763     0.1763 r
+  n46 (net)                      1      15.4528              0.0000     0.1763 r
+  U2014/IN2 (AND2X1)                               0.1789   -0.0312 &   0.1452 r
+  U2014/Q (AND2X1)                                 0.0551    0.0859     0.2311 r
+  n239 (net)                     3      11.2780              0.0000     0.2311 r
+  U3127/IN5 (OA221X1)                              0.0551   -0.0126 &   0.2185 r
+  U3127/Q (OA221X1)                                0.0477    0.0732     0.2917 r
+  mem_resp_yumi_o (net)          1       6.4359              0.0000     0.2917 r
+  mem_resp_yumi_o (out)                            0.0477   -0.0085 &   0.2832 r
+  data arrival time                                                     0.2832
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2832
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3832
+
+
+  Startpoint: io_resp_i[56]
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 r
+  io_resp_i[56] (in)                               0.0000    0.0000 @   0.1000 r
+  io_resp_i[56] (net)            1       4.1231              0.0000     0.1000 r
+  U2003/IN1 (NOR4X0)                               0.0001    0.0000 @   0.1000 r
+  U2003/QN (NOR4X0)                                0.0616    0.0409     0.1408 f
+  n49 (net)                      2       6.4591              0.0000     0.1408 f
+  U2005/IN1 (NAND2X0)                              0.0616   -0.0126 &   0.1282 f
+  U2005/QN (NAND2X0)                               0.0789    0.0507     0.1790 r
+  n52 (net)                      2       5.9475              0.0000     0.1790 r
+  U2006/INP (INVX0)                                0.0789   -0.0099 &   0.1691 r
+  U2006/ZN (INVX0)                                 0.0571    0.0418     0.2109 f
+  n240 (net)                     2       6.1626              0.0000     0.2109 f
+  U3128/IN3 (AO22X1)                               0.0571   -0.0010 &   0.2098 f
+  U3128/Q (AO22X1)                                 0.0464    0.0799     0.2898 f
+  io_resp_yumi_o (net)           1       7.5751              0.0000     0.2898 f
+  io_resp_yumi_o (out)                             0.0464    0.0002 &   0.2900 f
+  data arrival time                                                     0.2900
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2900
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3900
+
+
+  Startpoint: mem_resp_i[55]
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 f
+  mem_resp_i[55] (in)                              0.0000    0.0000 @   0.1000 f
+  mem_resp_i[55] (net)           1       4.3303              0.0000     0.1000 f
+  U2013/IN2 (NOR3X0)                               0.0001   -0.0001 @   0.0999 f
+  U2013/QN (NOR3X0)                                0.1789    0.0878     0.1877 r
+  n46 (net)                      1      15.4528              0.0000     0.1877 r
+  U2014/IN2 (AND2X1)                               0.1789   -0.0312 &   0.1565 r
+  U2014/Q (AND2X1)                                 0.0551    0.0859     0.2425 r
+  n239 (net)                     3      11.2780              0.0000     0.2425 r
+  U3127/IN5 (OA221X1)                              0.0551   -0.0126 &   0.2298 r
+  U3127/Q (OA221X1)                                0.0477    0.0732     0.3031 r
+  mem_resp_yumi_o (net)          1       6.4359              0.0000     0.3031 r
+  mem_resp_yumi_o (out)                            0.0477   -0.0085 &   0.2945 r
+  data arrival time                                                     0.2945
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2945
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3945
+
+
+  Startpoint: io_resp_i[56]
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 f
+  io_resp_i[56] (in)                               0.0000    0.0000 @   0.1000 f
+  io_resp_i[56] (net)            1       3.3434              0.0000     0.1000 f
+  U2003/IN1 (NOR4X0)                               0.0000   -0.0001 @   0.0999 f
+  U2003/QN (NOR4X0)                                0.1423    0.0516     0.1515 r
+  n49 (net)                      2       6.5285              0.0000     0.1515 r
+  U2005/IN1 (NAND2X0)                              0.1423   -0.0301 &   0.1215 r
+  U2005/QN (NAND2X0)                               0.0738    0.0683     0.1897 f
+  n52 (net)                      2       5.9285              0.0000     0.1897 f
+  U2006/INP (INVX0)                                0.0738   -0.0094 &   0.1803 f
+  U2006/ZN (INVX0)                                 0.0655    0.0404     0.2207 r
+  n240 (net)                     2       6.2317              0.0000     0.2207 r
+  U3128/IN3 (AO22X1)                               0.0655   -0.0012 &   0.2195 r
+  U3128/Q (AO22X1)                                 0.0482    0.0791     0.2985 r
+  io_resp_yumi_o (net)           1       7.5751              0.0000     0.2985 r
+  io_resp_yumi_o (out)                             0.0482    0.0002 &   0.2987 r
+  data arrival time                                                     0.2987
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2987
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3987
+
+
+  Startpoint: mem_resp_i[56]
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 f
+  mem_resp_i[56] (in)                              0.0000    0.0000 @   0.1000 f
+  mem_resp_i[56] (net)           1       8.4612              0.0000     0.1000 f
+  U2013/IN3 (NOR3X0)                               0.0004    0.0001 @   0.1001 f
+  U2013/QN (NOR3X0)                                0.1789    0.0921     0.1922 r
+  n46 (net)                      1      15.4528              0.0000     0.1922 r
+  U2014/IN2 (AND2X1)                               0.1789   -0.0312 &   0.1610 r
+  U2014/Q (AND2X1)                                 0.0551    0.0859     0.2470 r
+  n239 (net)                     3      11.2780              0.0000     0.2470 r
+  U3127/IN5 (OA221X1)                              0.0551   -0.0126 &   0.2343 r
+  U3127/Q (OA221X1)                                0.0477    0.0732     0.3076 r
+  mem_resp_yumi_o (net)          1       6.4359              0.0000     0.3076 r
+  mem_resp_yumi_o (out)                            0.0477   -0.0085 &   0.2990 r
+  data arrival time                                                     0.2990
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.2990
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.3990
+
+
+  Startpoint: io_resp_i[55]
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 r
+  io_resp_i[55] (in)                               0.0000    0.0000 @   0.1000 r
+  io_resp_i[55] (net)            1       3.9236              0.0000     0.1000 r
+  U2003/IN2 (NOR4X0)                               0.0001    0.0000 @   0.1000 r
+  U2003/QN (NOR4X0)                                0.0616    0.0513     0.1513 f
+  n49 (net)                      2       6.4591              0.0000     0.1513 f
+  U2005/IN1 (NAND2X0)                              0.0616   -0.0126 &   0.1387 f
+  U2005/QN (NAND2X0)                               0.0789    0.0507     0.1894 r
+  n52 (net)                      2       5.9475              0.0000     0.1894 r
+  U2006/INP (INVX0)                                0.0789   -0.0099 &   0.1795 r
+  U2006/ZN (INVX0)                                 0.0571    0.0418     0.2213 f
+  n240 (net)                     2       6.1626              0.0000     0.2213 f
+  U3128/IN3 (AO22X1)                               0.0571   -0.0010 &   0.2203 f
+  U3128/Q (AO22X1)                                 0.0464    0.0799     0.3002 f
+  io_resp_yumi_o (net)           1       7.5751              0.0000     0.3002 f
+  io_resp_yumi_o (out)                             0.0464    0.0002 &   0.3004 f
+  data arrival time                                                     0.3004
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.3004
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.4004
+
+
+  Startpoint: io_resp_i[56]
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 r
+  io_resp_i[56] (in)                               0.0000    0.0000 @   0.1000 r
+  io_resp_i[56] (net)            1       4.1231              0.0000     0.1000 r
+  U2003/IN1 (NOR4X0)                               0.0001    0.0000 @   0.1000 r
+  U2003/QN (NOR4X0)                                0.0616    0.0409     0.1408 f
+  n49 (net)                      2       6.4591              0.0000     0.1408 f
+  U2020/IN2 (NAND2X0)                              0.0616   -0.0126 &   0.1282 f
+  U2020/QN (NAND2X0)                               0.0734    0.0549     0.1831 r
+  n50 (net)                      2       6.0798              0.0000     0.1831 r
+  U2021/INP (INVX0)                                0.0734   -0.0070 &   0.1761 r
+  U2021/ZN (INVX0)                                 0.0495    0.0364     0.2125 f
+  n241 (net)                     2       4.7960              0.0000     0.2125 f
+  U3128/IN1 (AO22X1)                               0.0495    0.0000 &   0.2126 f
+  U3128/Q (AO22X1)                                 0.0464    0.0894     0.3020 f
+  io_resp_yumi_o (net)           1       7.5751              0.0000     0.3020 f
+  io_resp_yumi_o (out)                             0.0464    0.0002 &   0.3022 f
+  data arrival time                                                     0.3022
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.3022
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.4022
+
+
+  Startpoint: mem_resp_i[57]
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 r
+  mem_resp_i[57] (in)                              0.0000    0.0000 @   0.1000 r
+  mem_resp_i[57] (net)           1       4.5934              0.0000     0.1000 r
+  U2013/IN1 (NOR3X0)                               0.0001    0.0000 @   0.1000 r
+  U2013/QN (NOR3X0)                                0.1165    0.0695     0.1695 f
+  n46 (net)                      1      15.4479              0.0000     0.1695 f
+  U2014/IN2 (AND2X1)                               0.1165   -0.0199 &   0.1496 f
+  U2014/Q (AND2X1)                                 0.0516    0.0874     0.2370 f
+  n239 (net)                     3      11.2085              0.0000     0.2370 f
+  U3127/IN5 (OA221X1)                              0.0516   -0.0123 &   0.2247 f
+  U3127/Q (OA221X1)                                0.0452    0.0868     0.3115 f
+  mem_resp_yumi_o (net)          1       6.4359              0.0000     0.3115 f
+  mem_resp_yumi_o (out)                            0.0452   -0.0081 &   0.3033 f
+  data arrival time                                                     0.3033
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.3033
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.4033
+
+
+  Startpoint: io_resp_i[56]
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 f
+  io_resp_i[56] (in)                               0.0000    0.0000 @   0.1000 f
+  io_resp_i[56] (net)            1       3.3434              0.0000     0.1000 f
+  U2003/IN1 (NOR4X0)                               0.0000   -0.0001 @   0.0999 f
+  U2003/QN (NOR4X0)                                0.1423    0.0516     0.1515 r
+  n49 (net)                      2       6.5285              0.0000     0.1515 r
+  U2020/IN2 (NAND2X0)                              0.1423   -0.0301 &   0.1215 r
+  U2020/QN (NAND2X0)                               0.0731    0.0617     0.1832 f
+  n50 (net)                      2       6.0608              0.0000     0.1832 f
+  U2021/INP (INVX0)                                0.0731   -0.0070 &   0.1762 f
+  U2021/ZN (INVX0)                                 0.0575    0.0354     0.2115 r
+  n241 (net)                     2       4.7896              0.0000     0.2115 r
+  U3128/IN1 (AO22X1)                               0.0575    0.0000 &   0.2116 r
+  U3128/Q (AO22X1)                                 0.0482    0.0953     0.3069 r
+  io_resp_yumi_o (net)           1       7.5751              0.0000     0.3069 r
+  io_resp_yumi_o (out)                             0.0482    0.0002 &   0.3071 r
+  data arrival time                                                     0.3071
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.3071
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.4071
+
+
+  Startpoint: io_resp_i[57]
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                        Fanout       Cap     Trans      Incr       Path      Attributes
+  -------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  input external delay                                       0.1000     0.1000 r
+  io_resp_i[57] (in)                               0.0000    0.0000 @   0.1000 r
+  io_resp_i[57] (net)            1       3.6744              0.0000     0.1000 r
+  U2003/IN3 (NOR4X0)                               0.0000    0.0000 @   0.1000 r
+  U2003/QN (NOR4X0)                                0.0616    0.0586     0.1586 f
+  n49 (net)                      2       6.4591              0.0000     0.1586 f
+  U2005/IN1 (NAND2X0)                              0.0616   -0.0126 &   0.1460 f
+  U2005/QN (NAND2X0)                               0.0789    0.0507     0.1967 r
+  n52 (net)                      2       5.9475              0.0000     0.1967 r
+  U2006/INP (INVX0)                                0.0789   -0.0099 &   0.1868 r
+  U2006/ZN (INVX0)                                 0.0571    0.0418     0.2287 f
+  n240 (net)                     2       6.1626              0.0000     0.2287 f
+  U3128/IN3 (AO22X1)                               0.0571   -0.0010 &   0.2276 f
+  U3128/Q (AO22X1)                                 0.0464    0.0799     0.3075 f
+  io_resp_yumi_o (net)           1       7.5751              0.0000     0.3075 f
+  io_resp_yumi_o (out)                             0.0464    0.0002 &   0.3077 f
+  data arrival time                                                     0.3077
+
+  clock core_clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                                0.0000     0.0000
+  clock reconvergence pessimism                              0.0000     0.0000
+  output external delay                                     -0.1000    -0.1000
+  data required time                                                   -0.1000
+  -------------------------------------------------------------------------------------------------
+  data required time                                                   -0.1000
+  data arrival time                                                    -0.3077
+  -------------------------------------------------------------------------------------------------
+  slack (MET)                                                           0.4077
+
+
+  Startpoint: io_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: mem_cmd_v_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 r
+  io_cmd_ready_i (in)                                             0.0000    0.0000 @   0.1000 r
+  io_cmd_ready_i (net)                          1      14.2592              0.0000     0.1000 r
+  U3121/IN1 (AND3X1)                                              0.0012    0.0005 @   0.1005 r
+  U3121/Q (AND3X1)                                                0.2240    0.1518 @   0.2523 r
+  arb_ready_li (net)                            2      64.1549              0.0000     0.2523 r
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2523 r
+  mem_arbiter/ready_i (net)                            64.1549              0.0000     0.2523 r
+  mem_arbiter/U1/IN1 (AND2X1)                                     0.2240   -0.0498 @   0.2025 r
+  mem_arbiter/U1/Q (AND2X1)                                       0.0504    0.0914     0.2939 r
+  mem_arbiter/grants_o[1] (net)                 2       6.2557              0.0000     0.2939 r
+  mem_arbiter/grants_o[1] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.2939 r
+  fifo_yumi_li[1] (net)                                 6.2557              0.0000     0.2939 r
+  U1993/IN1 (NOR2X1)                                              0.0504    0.0000 &   0.2939 r
+  U1993/QN (NOR2X1)                                               0.2782    0.1556 @   0.4495 f
+  n237 (net)                                    2      57.8790              0.0000     0.4495 f
+  U3123/IN2 (NOR2X0)                                              0.2782   -0.0919 @   0.3576 f
+  U3123/QN (NOR2X0)                                               0.1913    0.1161     0.4737 r
+  mem_cmd_v_o (net)                             1      19.6822              0.0000     0.4737 r
+  mem_cmd_v_o (out)                                               0.1913   -0.0124 &   0.4613 r
+  data arrival time                                                                    0.4613
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.4613
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.5613
+
+
+  Startpoint: mem_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: mem_cmd_v_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 r
+  mem_cmd_ready_i (in)                                            0.0000    0.0000 @   0.1000 r
+  mem_cmd_ready_i (net)                         1      14.6544              0.0000     0.1000 r
+  U3121/IN2 (AND3X1)                                              0.0012    0.0003 @   0.1003 r
+  U3121/Q (AND3X1)                                                0.2240    0.1578 @   0.2581 r
+  arb_ready_li (net)                            2      64.1549              0.0000     0.2581 r
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2581 r
+  mem_arbiter/ready_i (net)                            64.1549              0.0000     0.2581 r
+  mem_arbiter/U1/IN1 (AND2X1)                                     0.2240   -0.0498 @   0.2083 r
+  mem_arbiter/U1/Q (AND2X1)                                       0.0504    0.0914     0.2997 r
+  mem_arbiter/grants_o[1] (net)                 2       6.2557              0.0000     0.2997 r
+  mem_arbiter/grants_o[1] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.2997 r
+  fifo_yumi_li[1] (net)                                 6.2557              0.0000     0.2997 r
+  U1993/IN1 (NOR2X1)                                              0.0504    0.0000 &   0.2997 r
+  U1993/QN (NOR2X1)                                               0.2782    0.1556 @   0.4553 f
+  n237 (net)                                    2      57.8790              0.0000     0.4553 f
+  U3123/IN2 (NOR2X0)                                              0.2782   -0.0919 @   0.3634 f
+  U3123/QN (NOR2X0)                                               0.1913    0.1161     0.4795 r
+  mem_cmd_v_o (net)                             1      19.6822              0.0000     0.4795 r
+  mem_cmd_v_o (out)                                               0.1913   -0.0124 &   0.4671 r
+  data arrival time                                                                    0.4671
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.4671
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.5671
+
+
+  Startpoint: io_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: mem_cmd_v_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 r
+  io_cmd_ready_i (in)                                             0.0000    0.0000 @   0.1000 r
+  io_cmd_ready_i (net)                          1      14.2592              0.0000     0.1000 r
+  U3121/IN1 (AND3X1)                                              0.0012    0.0005 @   0.1005 r
+  U3121/Q (AND3X1)                                                0.2240    0.1518 @   0.2523 r
+  arb_ready_li (net)                            2      64.1549              0.0000     0.2523 r
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2523 r
+  mem_arbiter/ready_i (net)                            64.1549              0.0000     0.2523 r
+  mem_arbiter/U2/IN1 (AND2X1)                                     0.2240   -0.0498 @   0.2025 r
+  mem_arbiter/U2/Q (AND2X1)                                       0.0510    0.0975     0.3001 r
+  mem_arbiter/grants_o[0] (net)                 2       9.7711              0.0000     0.3001 r
+  mem_arbiter/grants_o[0] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.3001 r
+  fifo_yumi_li[0] (net)                                 9.7711              0.0000     0.3001 r
+  U1993/IN2 (NOR2X1)                                              0.0510    0.0000 &   0.3001 r
+  U1993/QN (NOR2X1)                                               0.2782    0.1612 @   0.4613 f
+  n237 (net)                                    2      57.8790              0.0000     0.4613 f
+  U3123/IN2 (NOR2X0)                                              0.2782   -0.0919 @   0.3694 f
+  U3123/QN (NOR2X0)                                               0.1913    0.1161     0.4855 r
+  mem_cmd_v_o (net)                             1      19.6822              0.0000     0.4855 r
+  mem_cmd_v_o (out)                                               0.1913   -0.0124 &   0.4731 r
+  data arrival time                                                                    0.4731
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.4731
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.5731
+
+
+  Startpoint: mem_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: mem_cmd_v_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 r
+  mem_cmd_ready_i (in)                                            0.0000    0.0000 @   0.1000 r
+  mem_cmd_ready_i (net)                         1      14.6544              0.0000     0.1000 r
+  U3121/IN2 (AND3X1)                                              0.0012    0.0003 @   0.1003 r
+  U3121/Q (AND3X1)                                                0.2240    0.1578 @   0.2581 r
+  arb_ready_li (net)                            2      64.1549              0.0000     0.2581 r
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2581 r
+  mem_arbiter/ready_i (net)                            64.1549              0.0000     0.2581 r
+  mem_arbiter/U2/IN1 (AND2X1)                                     0.2240   -0.0498 @   0.2084 r
+  mem_arbiter/U2/Q (AND2X1)                                       0.0510    0.0975     0.3059 r
+  mem_arbiter/grants_o[0] (net)                 2       9.7711              0.0000     0.3059 r
+  mem_arbiter/grants_o[0] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.3059 r
+  fifo_yumi_li[0] (net)                                 9.7711              0.0000     0.3059 r
+  U1993/IN2 (NOR2X1)                                              0.0510    0.0000 &   0.3059 r
+  U1993/QN (NOR2X1)                                               0.2782    0.1612 @   0.4671 f
+  n237 (net)                                    2      57.8790              0.0000     0.4671 f
+  U3123/IN2 (NOR2X0)                                              0.2782   -0.0919 @   0.3752 f
+  U3123/QN (NOR2X0)                                               0.1913    0.1161     0.4913 r
+  mem_cmd_v_o (net)                             1      19.6822              0.0000     0.4913 r
+  mem_cmd_v_o (out)                                               0.1913   -0.0124 &   0.4789 r
+  data arrival time                                                                    0.4789
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.4789
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.5789
+
+
+  Startpoint: io_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: mem_cmd_v_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 f
+  io_cmd_ready_i (in)                                             0.0000    0.0000 @   0.1000 f
+  io_cmd_ready_i (net)                          1      14.1903              0.0000     0.1000 f
+  U3121/IN1 (AND3X1)                                              0.0012    0.0005 @   0.1005 f
+  U3121/Q (AND3X1)                                                0.2348    0.1654 @   0.2659 f
+  arb_ready_li (net)                            2      63.9811              0.0000     0.2659 f
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2659 f
+  mem_arbiter/ready_i (net)                            63.9811              0.0000     0.2659 f
+  mem_arbiter/U1/IN1 (AND2X1)                                     0.2348   -0.0562 @   0.2097 f
+  mem_arbiter/U1/Q (AND2X1)                                       0.0437    0.0827     0.2925 f
+  mem_arbiter/grants_o[1] (net)                 2       5.1712              0.0000     0.2925 f
+  mem_arbiter/grants_o[1] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.2925 f
+  fifo_yumi_li[1] (net)                                 5.1712              0.0000     0.2925 f
+  U1993/IN1 (NOR2X1)                                              0.0437    0.0000 &   0.2925 f
+  U1993/QN (NOR2X1)                                               0.3633    0.1612 @   0.4537 r
+  n237 (net)                                    2      57.8980              0.0000     0.4537 r
+  U3123/IN2 (NOR2X0)                                              0.3641   -0.1237 @   0.3301 r
+  U3123/QN (NOR2X0)                                               0.1425    0.1595     0.4896 f
+  mem_cmd_v_o (net)                             1      19.6822              0.0000     0.4896 f
+  mem_cmd_v_o (out)                                               0.1425   -0.0075 &   0.4821 f
+  data arrival time                                                                    0.4821
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.4821
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.5821
+
+
+  Startpoint: mem_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: mem_cmd_v_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 f
+  mem_cmd_ready_i (in)                                            0.0000    0.0000 @   0.1000 f
+  mem_cmd_ready_i (net)                         1      14.5941              0.0000     0.1000 f
+  U3121/IN2 (AND3X1)                                              0.0012    0.0003 @   0.1003 f
+  U3121/Q (AND3X1)                                                0.2348    0.1703 @   0.2706 f
+  arb_ready_li (net)                            2      63.9811              0.0000     0.2706 f
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2706 f
+  mem_arbiter/ready_i (net)                            63.9811              0.0000     0.2706 f
+  mem_arbiter/U1/IN1 (AND2X1)                                     0.2348   -0.0562 @   0.2144 f
+  mem_arbiter/U1/Q (AND2X1)                                       0.0437    0.0827     0.2972 f
+  mem_arbiter/grants_o[1] (net)                 2       5.1712              0.0000     0.2972 f
+  mem_arbiter/grants_o[1] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.2972 f
+  fifo_yumi_li[1] (net)                                 5.1712              0.0000     0.2972 f
+  U1993/IN1 (NOR2X1)                                              0.0437    0.0000 &   0.2972 f
+  U1993/QN (NOR2X1)                                               0.3633    0.1612 @   0.4584 r
+  n237 (net)                                    2      57.8980              0.0000     0.4584 r
+  U3123/IN2 (NOR2X0)                                              0.3641   -0.1237 @   0.3348 r
+  U3123/QN (NOR2X0)                                               0.1425    0.1595     0.4943 f
+  mem_cmd_v_o (net)                             1      19.6822              0.0000     0.4943 f
+  mem_cmd_v_o (out)                                               0.1425   -0.0075 &   0.4868 f
+  data arrival time                                                                    0.4868
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.4868
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.5868
+
+
+  Startpoint: io_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: mem_cmd_v_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 f
+  io_cmd_ready_i (in)                                             0.0000    0.0000 @   0.1000 f
+  io_cmd_ready_i (net)                          1      14.1903              0.0000     0.1000 f
+  U3121/IN1 (AND3X1)                                              0.0012    0.0005 @   0.1005 f
+  U3121/Q (AND3X1)                                                0.2348    0.1654 @   0.2659 f
+  arb_ready_li (net)                            2      63.9811              0.0000     0.2659 f
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2659 f
+  mem_arbiter/ready_i (net)                            63.9811              0.0000     0.2659 f
+  mem_arbiter/U2/IN1 (AND2X1)                                     0.2348   -0.0562 @   0.2097 f
+  mem_arbiter/U2/Q (AND2X1)                                       0.0467    0.0909     0.3006 f
+  mem_arbiter/grants_o[0] (net)                 2       9.2894              0.0000     0.3006 f
+  mem_arbiter/grants_o[0] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.3006 f
+  fifo_yumi_li[0] (net)                                 9.2894              0.0000     0.3006 f
+  U1993/IN2 (NOR2X1)                                              0.0467    0.0000 &   0.3007 f
+  U1993/QN (NOR2X1)                                               0.3633    0.1633 @   0.4640 r
+  n237 (net)                                    2      57.8980              0.0000     0.4640 r
+  U3123/IN2 (NOR2X0)                                              0.3641   -0.1237 @   0.3403 r
+  U3123/QN (NOR2X0)                                               0.1425    0.1595     0.4998 f
+  mem_cmd_v_o (net)                             1      19.6822              0.0000     0.4998 f
+  mem_cmd_v_o (out)                                               0.1425   -0.0075 &   0.4923 f
+  data arrival time                                                                    0.4923
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.4923
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.5923
+
+
+  Startpoint: mem_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: mem_cmd_v_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 f
+  mem_cmd_ready_i (in)                                            0.0000    0.0000 @   0.1000 f
+  mem_cmd_ready_i (net)                         1      14.5941              0.0000     0.1000 f
+  U3121/IN2 (AND3X1)                                              0.0012    0.0003 @   0.1003 f
+  U3121/Q (AND3X1)                                                0.2348    0.1703 @   0.2706 f
+  arb_ready_li (net)                            2      63.9811              0.0000     0.2706 f
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2706 f
+  mem_arbiter/ready_i (net)                            63.9811              0.0000     0.2706 f
+  mem_arbiter/U2/IN1 (AND2X1)                                     0.2348   -0.0562 @   0.2144 f
+  mem_arbiter/U2/Q (AND2X1)                                       0.0467    0.0909     0.3054 f
+  mem_arbiter/grants_o[0] (net)                 2       9.2894              0.0000     0.3054 f
+  mem_arbiter/grants_o[0] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.3054 f
+  fifo_yumi_li[0] (net)                                 9.2894              0.0000     0.3054 f
+  U1993/IN2 (NOR2X1)                                              0.0467    0.0000 &   0.3054 f
+  U1993/QN (NOR2X1)                                               0.3633    0.1633 @   0.4687 r
+  n237 (net)                                    2      57.8980              0.0000     0.4687 r
+  U3123/IN2 (NOR2X0)                                              0.3641   -0.1237 @   0.3450 r
+  U3123/QN (NOR2X0)                                               0.1425    0.1595     0.5045 f
+  mem_cmd_v_o (net)                             1      19.6822              0.0000     0.5045 f
+  mem_cmd_v_o (out)                                               0.1425   -0.0075 &   0.4970 f
+  data arrival time                                                                    0.4970
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.4970
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.5970
+
+
+  Startpoint: io_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: io_cmd_v_o (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 r
+  io_cmd_ready_i (in)                                             0.0000    0.0000 @   0.1000 r
+  io_cmd_ready_i (net)                          1      14.2592              0.0000     0.1000 r
+  U3121/IN1 (AND3X1)                                              0.0012    0.0005 @   0.1005 r
+  U3121/Q (AND3X1)                                                0.2240    0.1518 @   0.2523 r
+  arb_ready_li (net)                            2      64.1549              0.0000     0.2523 r
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2523 r
+  mem_arbiter/ready_i (net)                            64.1549              0.0000     0.2523 r
+  mem_arbiter/U1/IN1 (AND2X1)                                     0.2240   -0.0498 @   0.2025 r
+  mem_arbiter/U1/Q (AND2X1)                                       0.0504    0.0914     0.2939 r
+  mem_arbiter/grants_o[1] (net)                 2       6.2557              0.0000     0.2939 r
+  mem_arbiter/grants_o[1] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.2939 r
+  fifo_yumi_li[1] (net)                                 6.2557              0.0000     0.2939 r
+  U1993/IN1 (NOR2X1)                                              0.0504    0.0000 &   0.2939 r
+  U1993/QN (NOR2X1)                                               0.2782    0.1556 @   0.4495 f
+  n237 (net)                                    2      57.8790              0.0000     0.4495 f
+  U1994/INP (INVX0)                                               0.2782   -0.0919 @   0.3576 f
+  U1994/ZN (INVX0)                                                0.0815    0.0365     0.3940 r
+  n40 (net)                                     1       1.9965              0.0000     0.3940 r
+  U1995/IN2 (NAND2X0)                                             0.0815    0.0000 &   0.3940 r
+  U1995/QN (NAND2X0)                                              0.1002    0.0648     0.4589 f
+  n236 (net)                                    2       8.3806              0.0000     0.4589 f
+  U3122/IN2 (NOR2X0)                                              0.1002   -0.0029 &   0.4560 f
+  U3122/QN (NOR2X0)                                               0.4459    0.2157     0.6717 r
+  io_cmd_v_o (net)                              1      52.7571              0.0000     0.6717 r
+  io_cmd_v_o (out)                                                0.4459   -0.1338 &   0.5379 r
+  data arrival time                                                                    0.5379
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.5379
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.6379
+
+
+  Startpoint: mem_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: io_cmd_v_o (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 r
+  mem_cmd_ready_i (in)                                            0.0000    0.0000 @   0.1000 r
+  mem_cmd_ready_i (net)                         1      14.6544              0.0000     0.1000 r
+  U3121/IN2 (AND3X1)                                              0.0012    0.0003 @   0.1003 r
+  U3121/Q (AND3X1)                                                0.2240    0.1578 @   0.2581 r
+  arb_ready_li (net)                            2      64.1549              0.0000     0.2581 r
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2581 r
+  mem_arbiter/ready_i (net)                            64.1549              0.0000     0.2581 r
+  mem_arbiter/U1/IN1 (AND2X1)                                     0.2240   -0.0498 @   0.2083 r
+  mem_arbiter/U1/Q (AND2X1)                                       0.0504    0.0914     0.2997 r
+  mem_arbiter/grants_o[1] (net)                 2       6.2557              0.0000     0.2997 r
+  mem_arbiter/grants_o[1] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.2997 r
+  fifo_yumi_li[1] (net)                                 6.2557              0.0000     0.2997 r
+  U1993/IN1 (NOR2X1)                                              0.0504    0.0000 &   0.2997 r
+  U1993/QN (NOR2X1)                                               0.2782    0.1556 @   0.4553 f
+  n237 (net)                                    2      57.8790              0.0000     0.4553 f
+  U1994/INP (INVX0)                                               0.2782   -0.0919 @   0.3634 f
+  U1994/ZN (INVX0)                                                0.0815    0.0365     0.3998 r
+  n40 (net)                                     1       1.9965              0.0000     0.3998 r
+  U1995/IN2 (NAND2X0)                                             0.0815    0.0000 &   0.3998 r
+  U1995/QN (NAND2X0)                                              0.1002    0.0648     0.4647 f
+  n236 (net)                                    2       8.3806              0.0000     0.4647 f
+  U3122/IN2 (NOR2X0)                                              0.1002   -0.0029 &   0.4618 f
+  U3122/QN (NOR2X0)                                               0.4459    0.2157     0.6775 r
+  io_cmd_v_o (net)                              1      52.7571              0.0000     0.6775 r
+  io_cmd_v_o (out)                                                0.4459   -0.1338 &   0.5437 r
+  data arrival time                                                                    0.5437
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.5437
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.6437
+
+
+  Startpoint: io_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: io_cmd_v_o (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 r
+  io_cmd_ready_i (in)                                             0.0000    0.0000 @   0.1000 r
+  io_cmd_ready_i (net)                          1      14.2592              0.0000     0.1000 r
+  U3121/IN1 (AND3X1)                                              0.0012    0.0005 @   0.1005 r
+  U3121/Q (AND3X1)                                                0.2240    0.1518 @   0.2523 r
+  arb_ready_li (net)                            2      64.1549              0.0000     0.2523 r
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2523 r
+  mem_arbiter/ready_i (net)                            64.1549              0.0000     0.2523 r
+  mem_arbiter/U2/IN1 (AND2X1)                                     0.2240   -0.0498 @   0.2025 r
+  mem_arbiter/U2/Q (AND2X1)                                       0.0510    0.0975     0.3001 r
+  mem_arbiter/grants_o[0] (net)                 2       9.7711              0.0000     0.3001 r
+  mem_arbiter/grants_o[0] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.3001 r
+  fifo_yumi_li[0] (net)                                 9.7711              0.0000     0.3001 r
+  U1993/IN2 (NOR2X1)                                              0.0510    0.0000 &   0.3001 r
+  U1993/QN (NOR2X1)                                               0.2782    0.1612 @   0.4613 f
+  n237 (net)                                    2      57.8790              0.0000     0.4613 f
+  U1994/INP (INVX0)                                               0.2782   -0.0919 @   0.3694 f
+  U1994/ZN (INVX0)                                                0.0815    0.0365     0.4058 r
+  n40 (net)                                     1       1.9965              0.0000     0.4058 r
+  U1995/IN2 (NAND2X0)                                             0.0815    0.0000 &   0.4058 r
+  U1995/QN (NAND2X0)                                              0.1002    0.0648     0.4707 f
+  n236 (net)                                    2       8.3806              0.0000     0.4707 f
+  U3122/IN2 (NOR2X0)                                              0.1002   -0.0029 &   0.4678 f
+  U3122/QN (NOR2X0)                                               0.4459    0.2157     0.6835 r
+  io_cmd_v_o (net)                              1      52.7571              0.0000     0.6835 r
+  io_cmd_v_o (out)                                                0.4459   -0.1338 &   0.5496 r
+  data arrival time                                                                    0.5496
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.5496
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.6496
+
+
+  Startpoint: io_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: io_cmd_v_o (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 f
+  io_cmd_ready_i (in)                                             0.0000    0.0000 @   0.1000 f
+  io_cmd_ready_i (net)                          1      14.1903              0.0000     0.1000 f
+  U3121/IN1 (AND3X1)                                              0.0012    0.0005 @   0.1005 f
+  U3121/Q (AND3X1)                                                0.2348    0.1654 @   0.2659 f
+  arb_ready_li (net)                            2      63.9811              0.0000     0.2659 f
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2659 f
+  mem_arbiter/ready_i (net)                            63.9811              0.0000     0.2659 f
+  mem_arbiter/U1/IN1 (AND2X1)                                     0.2348   -0.0562 @   0.2097 f
+  mem_arbiter/U1/Q (AND2X1)                                       0.0437    0.0827     0.2925 f
+  mem_arbiter/grants_o[1] (net)                 2       5.1712              0.0000     0.2925 f
+  mem_arbiter/grants_o[1] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.2925 f
+  fifo_yumi_li[1] (net)                                 5.1712              0.0000     0.2925 f
+  U1993/IN1 (NOR2X1)                                              0.0437    0.0000 &   0.2925 f
+  U1993/QN (NOR2X1)                                               0.3633    0.1612 @   0.4537 r
+  n237 (net)                                    2      57.8980              0.0000     0.4537 r
+  U1994/INP (INVX0)                                               0.3641   -0.1237 @   0.3300 r
+  U1994/ZN (INVX0)                                                0.0957    0.0419     0.3719 f
+  n40 (net)                                     1       1.9279              0.0000     0.3719 f
+  U1995/IN2 (NAND2X0)                                             0.0957    0.0000 &   0.3720 f
+  U1995/QN (NAND2X0)                                              0.1076    0.0709     0.4429 r
+  n236 (net)                                    2       8.2750              0.0000     0.4429 r
+  U3122/IN2 (NOR2X0)                                              0.1076   -0.0032 &   0.4397 r
+  U3122/QN (NOR2X0)                                               0.3430    0.2097     0.6494 f
+  io_cmd_v_o (net)                              1      52.7571              0.0000     0.6494 f
+  io_cmd_v_o (out)                                                0.3430   -0.0984 &   0.5510 f
+  data arrival time                                                                    0.5510
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.5510
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.6510
+
+
+  Startpoint: mem_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: io_cmd_v_o (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 r
+  mem_cmd_ready_i (in)                                            0.0000    0.0000 @   0.1000 r
+  mem_cmd_ready_i (net)                         1      14.6544              0.0000     0.1000 r
+  U3121/IN2 (AND3X1)                                              0.0012    0.0003 @   0.1003 r
+  U3121/Q (AND3X1)                                                0.2240    0.1578 @   0.2581 r
+  arb_ready_li (net)                            2      64.1549              0.0000     0.2581 r
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2581 r
+  mem_arbiter/ready_i (net)                            64.1549              0.0000     0.2581 r
+  mem_arbiter/U2/IN1 (AND2X1)                                     0.2240   -0.0498 @   0.2084 r
+  mem_arbiter/U2/Q (AND2X1)                                       0.0510    0.0975     0.3059 r
+  mem_arbiter/grants_o[0] (net)                 2       9.7711              0.0000     0.3059 r
+  mem_arbiter/grants_o[0] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.3059 r
+  fifo_yumi_li[0] (net)                                 9.7711              0.0000     0.3059 r
+  U1993/IN2 (NOR2X1)                                              0.0510    0.0000 &   0.3059 r
+  U1993/QN (NOR2X1)                                               0.2782    0.1612 @   0.4671 f
+  n237 (net)                                    2      57.8790              0.0000     0.4671 f
+  U1994/INP (INVX0)                                               0.2782   -0.0919 @   0.3752 f
+  U1994/ZN (INVX0)                                                0.0815    0.0365     0.4116 r
+  n40 (net)                                     1       1.9965              0.0000     0.4116 r
+  U1995/IN2 (NAND2X0)                                             0.0815    0.0000 &   0.4116 r
+  U1995/QN (NAND2X0)                                              0.1002    0.0648     0.4765 f
+  n236 (net)                                    2       8.3806              0.0000     0.4765 f
+  U3122/IN2 (NOR2X0)                                              0.1002   -0.0029 &   0.4736 f
+  U3122/QN (NOR2X0)                                               0.4459    0.2157     0.6893 r
+  io_cmd_v_o (net)                              1      52.7571              0.0000     0.6893 r
+  io_cmd_v_o (out)                                                0.4459   -0.1338 &   0.5555 r
+  data arrival time                                                                    0.5555
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.5555
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.6555
+
+
+  Startpoint: mem_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: io_cmd_v_o (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 f
+  mem_cmd_ready_i (in)                                            0.0000    0.0000 @   0.1000 f
+  mem_cmd_ready_i (net)                         1      14.5941              0.0000     0.1000 f
+  U3121/IN2 (AND3X1)                                              0.0012    0.0003 @   0.1003 f
+  U3121/Q (AND3X1)                                                0.2348    0.1703 @   0.2706 f
+  arb_ready_li (net)                            2      63.9811              0.0000     0.2706 f
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2706 f
+  mem_arbiter/ready_i (net)                            63.9811              0.0000     0.2706 f
+  mem_arbiter/U1/IN1 (AND2X1)                                     0.2348   -0.0562 @   0.2144 f
+  mem_arbiter/U1/Q (AND2X1)                                       0.0437    0.0827     0.2972 f
+  mem_arbiter/grants_o[1] (net)                 2       5.1712              0.0000     0.2972 f
+  mem_arbiter/grants_o[1] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.2972 f
+  fifo_yumi_li[1] (net)                                 5.1712              0.0000     0.2972 f
+  U1993/IN1 (NOR2X1)                                              0.0437    0.0000 &   0.2972 f
+  U1993/QN (NOR2X1)                                               0.3633    0.1612 @   0.4584 r
+  n237 (net)                                    2      57.8980              0.0000     0.4584 r
+  U1994/INP (INVX0)                                               0.3641   -0.1237 @   0.3348 r
+  U1994/ZN (INVX0)                                                0.0957    0.0419     0.3767 f
+  n40 (net)                                     1       1.9279              0.0000     0.3767 f
+  U1995/IN2 (NAND2X0)                                             0.0957    0.0000 &   0.3767 f
+  U1995/QN (NAND2X0)                                              0.1076    0.0709     0.4476 r
+  n236 (net)                                    2       8.2750              0.0000     0.4476 r
+  U3122/IN2 (NOR2X0)                                              0.1076   -0.0032 &   0.4444 r
+  U3122/QN (NOR2X0)                                               0.3430    0.2097     0.6541 f
+  io_cmd_v_o (net)                              1      52.7571              0.0000     0.6541 f
+  io_cmd_v_o (out)                                                0.3430   -0.0984 &   0.5557 f
+  data arrival time                                                                    0.5557
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.5557
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.6557
+
+
+  Startpoint: io_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: io_cmd_v_o (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 f
+  io_cmd_ready_i (in)                                             0.0000    0.0000 @   0.1000 f
+  io_cmd_ready_i (net)                          1      14.1903              0.0000     0.1000 f
+  U3121/IN1 (AND3X1)                                              0.0012    0.0005 @   0.1005 f
+  U3121/Q (AND3X1)                                                0.2348    0.1654 @   0.2659 f
+  arb_ready_li (net)                            2      63.9811              0.0000     0.2659 f
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2659 f
+  mem_arbiter/ready_i (net)                            63.9811              0.0000     0.2659 f
+  mem_arbiter/U2/IN1 (AND2X1)                                     0.2348   -0.0562 @   0.2097 f
+  mem_arbiter/U2/Q (AND2X1)                                       0.0467    0.0909     0.3006 f
+  mem_arbiter/grants_o[0] (net)                 2       9.2894              0.0000     0.3006 f
+  mem_arbiter/grants_o[0] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.3006 f
+  fifo_yumi_li[0] (net)                                 9.2894              0.0000     0.3006 f
+  U1993/IN2 (NOR2X1)                                              0.0467    0.0000 &   0.3007 f
+  U1993/QN (NOR2X1)                                               0.3633    0.1633 @   0.4640 r
+  n237 (net)                                    2      57.8980              0.0000     0.4640 r
+  U1994/INP (INVX0)                                               0.3641   -0.1237 @   0.3403 r
+  U1994/ZN (INVX0)                                                0.0957    0.0419     0.3822 f
+  n40 (net)                                     1       1.9279              0.0000     0.3822 f
+  U1995/IN2 (NAND2X0)                                             0.0957    0.0000 &   0.3822 f
+  U1995/QN (NAND2X0)                                              0.1076    0.0709     0.4531 r
+  n236 (net)                                    2       8.2750              0.0000     0.4531 r
+  U3122/IN2 (NOR2X0)                                              0.1076   -0.0032 &   0.4500 r
+  U3122/QN (NOR2X0)                                               0.3430    0.2097     0.6596 f
+  io_cmd_v_o (net)                              1      52.7571              0.0000     0.6596 f
+  io_cmd_v_o (out)                                                0.3430   -0.0984 &   0.5612 f
+  data arrival time                                                                    0.5612
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.5612
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.6612
+
+
+  Startpoint: mem_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: io_cmd_v_o (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+
+  Point                                       Fanout       Cap     Trans      Incr       Path      Attributes
+  ----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  input external delay                                                      0.1000     0.1000 f
+  mem_cmd_ready_i (in)                                            0.0000    0.0000 @   0.1000 f
+  mem_cmd_ready_i (net)                         1      14.5941              0.0000     0.1000 f
+  U3121/IN2 (AND3X1)                                              0.0012    0.0003 @   0.1003 f
+  U3121/Q (AND3X1)                                                0.2348    0.1703 @   0.2706 f
+  arb_ready_li (net)                            2      63.9811              0.0000     0.2706 f
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)               0.0000     0.2706 f
+  mem_arbiter/ready_i (net)                            63.9811              0.0000     0.2706 f
+  mem_arbiter/U2/IN1 (AND2X1)                                     0.2348   -0.0562 @   0.2144 f
+  mem_arbiter/U2/Q (AND2X1)                                       0.0467    0.0909     0.3054 f
+  mem_arbiter/grants_o[0] (net)                 2       9.2894              0.0000     0.3054 f
+  mem_arbiter/grants_o[0] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)           0.0000     0.3054 f
+  fifo_yumi_li[0] (net)                                 9.2894              0.0000     0.3054 f
+  U1993/IN2 (NOR2X1)                                              0.0467    0.0000 &   0.3054 f
+  U1993/QN (NOR2X1)                                               0.3633    0.1633 @   0.4687 r
+  n237 (net)                                    2      57.8980              0.0000     0.4687 r
+  U1994/INP (INVX0)                                               0.3641   -0.1237 @   0.3450 r
+  U1994/ZN (INVX0)                                                0.0957    0.0419     0.3869 f
+  n40 (net)                                     1       1.9279              0.0000     0.3869 f
+  U1995/IN2 (NAND2X0)                                             0.0957    0.0000 &   0.3869 f
+  U1995/QN (NAND2X0)                                              0.1076    0.0709     0.4579 r
+  n236 (net)                                    2       8.2750              0.0000     0.4579 r
+  U3122/IN2 (NOR2X0)                                              0.1076   -0.0032 &   0.4547 r
+  U3122/QN (NOR2X0)                                               0.3430    0.2097     0.6643 f
+  io_cmd_v_o (net)                              1      52.7571              0.0000     0.6643 f
+  io_cmd_v_o (out)                                                0.3430   -0.0984 &   0.5659 f
+  data arrival time                                                                    0.5659
+
+  clock core_clk (rise edge)                                                0.0000     0.0000
+  clock network delay (ideal)                                               0.0000     0.0000
+  clock reconvergence pessimism                                             0.0000     0.0000
+  output external delay                                                    -0.1000    -0.1000
+  data required time                                                                  -0.1000
+  ----------------------------------------------------------------------------------------------------------------
+  data required time                                                                  -0.1000
+  data arrival time                                                                   -0.5659
+  ----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.6659
+
+
+1

@@ -1,0 +1,886 @@
+----------------------------------------
+Report  : report_design_physical
+          -all
+          -floorplan
+          -netlist
+          -route
+          -utilization
+          -design_setup
+Date    : Fri Mar 13 12:10:46 2020
+Version : M-2016.12-SP5-3
+--------------------------------------------------------------------------------
+                            DESIGN SETUP INFORMATION
+--------------------------------------------------------------------------------
+Host Name             : linuxsrv01.ece.uw.edu
+Working Directory     : /home/jlewis24/final_project/ee477-chip
+Library Name          : bp_softcore_mwlib
+Cell Name             : chip_finish_icc.CEL;1
+Library settings      :
+  Search Path      : .
+                     ./rm_icc_scripts
+                     ./rm_icc_zrt_scripts
+                     ./rm_icc_dp_scripts
+                     /home/jlewis24/final_project/ee477-chip/mk/../scripts/dc
+                     /home/jlewis24/final_project/ee477-chip/mk/../scripts/icc
+                     /home/jlewis24/final_project/ee477-chip/mk/../scripts/pt
+                     /home/lab.apps/vlsiapps/icc/M-2016.12-SP5-3/icc/M-2016.12-SP5-3/libraries/syn
+                     /home/lab.apps/vlsiapps/icc/M-2016.12-SP5-3/icc/M-2016.12-SP5-3/minpower/syn
+                     /home/lab.apps/vlsiapps/icc/M-2016.12-SP5-3/icc/M-2016.12-SP5-3/dw/syn_ver
+                     /home/lab.apps/vlsiapps/icc/M-2016.12-SP5-3/icc/M-2016.12-SP5-3/dw/sim_ver
+  Target Libraries : /home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/stdview/stdcells.db
+  Link Libraries   : *
+                     /home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/stdview/stdcells.db
+                     /home/jlewis24/final_project/ee477-chip/mk/../memories/saed90_8x64_1P_bit/saed90_8x64_1P_bit.db
+                     /home/jlewis24/final_project/ee477-chip/mk/../memories/saed90_64x32_2P/saed90_64x32_2P.db
+                     /home/jlewis24/final_project/ee477-chip/mk/../memories/saed90_64x512_1P_BM/saed90_64x512_1P_BM.db
+                     /home/jlewis24/final_project/ee477-chip/mk/../memories/saed90_248x64_1P_bit/saed90_248x64_1P_bit.db
+                     /home/jlewis24/final_project/ee477-chip/mk/../memories/saed90_16x64_1P_bit/saed90_16x64_1P_bit.db
+                     /home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/pkgs/SAED_EDK90nm_01252011/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/clock_gating/saed90nm_typ_cg.db
+  MW Ref Libraries : /home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/pkgs/SAED_EDK90nm_01252011/SAED_EDK90nm/Digital_Standard_cell_Library/process/astro/fram/saed90nm_fr
+                     /home/jlewis24/final_project/ee477-chip/memories/saed90_8x64_1P_bit/ref_lib/saed90_8x64_1P_bit.mw
+                     /home/jlewis24/final_project/ee477-chip/memories/saed90_64x32_2P/ref_lib/saed90_64x32_2P.mw
+                     /home/jlewis24/final_project/ee477-chip/memories/saed90_64x512_1P_BM/ref_lib/saed90_64x512_1P_BM.mw
+                     /home/jlewis24/final_project/ee477-chip/memories/saed90_248x64_1P_bit/ref_lib/saed90_248x64_1P_bit.mw
+                     /home/jlewis24/final_project/ee477-chip/memories/saed90_16x64_1P_bit/ref_lib/saed90_16x64_1P_bit.mw
+
+Units                 :
+                   Library   Milkyway  TechFile
+    Time              ns        ns        ns
+    Capacitance       fF        -         pF
+    Resitance         MOhm      -         kOhm
+    Power             -         -         pW
+    Current           uA        uA        uA
+    Voltage           V         V         V
+--------------------------------------------------------------------------------
+                              NETLIST INFORMATION
+--------------------------------------------------------------------------------
+
+CELL INSTANCE SECTION
+---------------------
+ Cell Instance Type       Count           Area     Sites
+TOTAL LEAF CELLS         276877     4043669.71 unit:4404974 
+  Standard  Cells        276855     2366419.97 unit:2567730 
+  Antenna Cells               0           0.00 --
+  STD Filler Cells            0           0.00 --
+  Macro Cells                22     1677249.74 unit:1837244 
+    Block                     0           0.00 --
+    HardMacros               22     1677249.74 unit:1837244 
+    SoftMacros                0           0.00 --
+    physBlackBox              0           0.00 --
+    SoftFixed IO              0           0.00 --
+  IOPad  Cells                0           0.00 --
+    Pad Filler Cells          0           0.00 --
+    FC Pad                    0           0.00 --
+  Cover Cells                 0           0.00 --
+  FC Driver Cells             0           0.00 --
+  Chip Cells                  0           0.00 --
+  Tap Cells                   0           0.00 --
+  CornerPad Cells             0           0.00 --
+  SpecialVia Cells            0           0.00 --
+  StackVia Cells              0           0.00 --
+  Other  Cells                0           0.00 --
+
+  Spare Cells                 0           0.00 --
+  Special cells               0           0.00 --
+    Level Shifters            0           0.00 --
+    Isolation                 0           0.00 --
+    Switch                    0           0.00 --
+    AlwaysOn                  0           0.00 --
+    TieOff Cells              0           0.00 --
+
+  NORMAL CELLS            57477     2437529.19 unit:2662200 
+  PHYSONLY CELLS         219400     1606140.52 unit:1742774 
+    STD Filler Cells          0           0.00 --
+    PGPin Only Cells     219400     1606140.52 unit:1742774 
+
+  Combinational           45731      468503.65 unit:508359 
+  Sequential              11746     1969025.54 unit:2153841 
+  Others                      0           0.00 --
+
+  Buffers                  4982       63917.57 unit:69355 
+  Inverters                3860       29081.09 unit:31555 
+  Inverters/Buffers        8842       92998.66 unit:100910 
+  Latches                     0           0.00 --
+  Flipflops               11724      291775.80 unit:316597 
+
+  DoubleHeight                0           0.00 --
+  TripleHeight                0           0.00 --
+  MoreThanTriple              0           0.00 --
+
+LogicalBlackBox cells         0           0.00 --
+
+NET INFORMATION
+---------------
+NetType        Count FloatingNets      Vias  Nets/Cells
+Signal         60505          721    675495      0.219
+Power              1            0        12      0.000
+Ground             1            0        12      0.000
+TieLow            39           39       112      0.000
+TieHigh          925          925         9      0.003
+Others           106            0     53436      0.000
+Total          61577         1685    729076      0.222
+Feedthru           0            0         0      0.000
+
+NET FANOUT AND PINCOUNT STATISTICS
+----------------------------------
+FanOut         NetCount    NetPins        NetCount
+Less than 2       37644    Less than 2        1672
+2                 17621    2                 35972
+3                  2709    3                 17623
+4                  1025    4                  2707
+5                   289    5                  1025
+6-10                744    6-10                939
+11-20               469    11-20               543
+21-30               249    21-30               250
+31-50               688    31-50               691
+51-100               66    51-100               82
+101-500              71    101-500              71
+501-1000              0    501-1000              0
+>1000                 0    >1000                 0
+
+PORT and PIN INFORMATION
+------------------------
+Type     Total    Input   Output    INOUT  3-st    Power   Ground  Uncon Pin/net Pin/STDcell
+Leaf    771882   146964    71164   553754     0   276877   276877 11699   12.54      2.79
+Macro     4316     2600     1672       44     0       22       22     2    0.07    196.18
+Ports     2292     1146     1144        2     0        1        1    28       -         -
+
+MASTER INSTANTIATION INFORMATION
+--------------------------------
+No. of Masters Used: 91
+Name                Type  InstCnt    LKgPwr  Height   Width     PinDens SiteName
+SHFILL3             std    179613              2.88    0.96      0.7234 unit
+MUX21X1             std     15796 83300.359    2.88    3.84      0.5425 unit
+SHFILL1             std     15217              2.88    0.32      2.1701 unit
+SHFILL2             std     14039              2.88    0.64      1.0851 unit
+DFFX1               std     11717 140823.703
+                                               2.88    8.64      0.2411 unit
+SHFILL128           std      7604              2.88   40.96      0.0170 unit
+AO22X1              std      6111 63182.500    2.88    4.16      0.5843 unit
+NBUFFX2             std      3644 40719.719    2.88    1.92      0.7234 unit
+NAND2X0             std      3600 38742.410    2.88    1.92      0.9042 unit
+INVX0               std      3037 25413.820    2.88    1.92      0.7234 unit
+AND2X1              std      2969 56926.770    2.88    2.56      0.6782 unit
+SHFILL64            std      2927              2.88   20.48      0.0339 unit
+NOR2X0              std      1508 35280.500    2.88    1.92      0.9042 unit
+NAND4X0             std       945 114436.898
+                                               2.88    2.88      0.8439 unit
+AO222X1             std       685 69029.430    2.88    5.12      0.6104 unit
+XNOR2X1             std       659 82874.438    2.88    4.80      0.3617 unit
+NOR4X0              std       581 48421.648    2.88    3.20      0.7595 unit
+OR2X1               std       495 58361.301    2.88    2.56      0.6782 unit
+NBUFFX32            std       494 445035.312
+                                               2.88   19.20      0.0723 unit
+NBUFFX8             std       402 104232.797
+                                               2.88    5.12      0.2713 unit
+OR4X1               std       389 64943.410    2.88    3.52      0.6905 unit
+OA22X1              std       373 63813.160    2.88    3.84      0.6330 unit
+NBUFFX16            std       364 204079.000
+                                               2.88    9.28      0.1497 unit
+OA21X1              std       293 58174.328    2.88    3.20      0.6510 unit
+AO21X1              std       290 59356.102    2.88    3.52      0.5919 unit
+XOR2X1              std       279 89835.469    2.88    4.80      0.3617 unit
+AOI22X1             std       217 89749.391    2.88    4.48      0.5425 unit
+NAND3X0             std       194 91514.172    2.88    2.56      0.8138 unit
+INVX4               std       185 209355.703
+                                               2.88    3.20      0.4340 unit
+INVX8               std       167 418709.406
+                                               2.88    5.12      0.2713 unit
+INVX2               std       161 104679.203
+                                               2.88    2.24      0.6200 unit
+HADDX1              std       161 114777.703
+                                               2.88    5.44      0.3830 unit
+FADDX1              std       152 159159.594
+                                               2.88   10.24      0.2374 unit
+NOR3X0              std       137 48439.371    2.88    2.88      0.7234 unit
+AND3X1              std       130 59411.602    2.88    2.88      0.7234 unit
+OAI21X1             std       123 88240.156    2.88    3.84      0.5425 unit
+AO221X1             std       108 65205.121    2.88    4.48      0.6200 unit
+OA221X1             std       105 71517.531    2.88    4.48      0.6200 unit
+INVX1               std       104 52340.102    2.88    2.24      0.6200 unit
+NAND2X1             std        99 78585.352    2.88    1.92      0.9042 unit
+INVX16              std        96 837424.375
+                                               2.88    8.96      0.1550 unit
+NBUFFX4             std        77 53558.441    2.88    3.52      0.3946 unit
+INVX32              std        73 1674824.000
+                                               2.88   16.32      0.0851 unit
+AOI21X1             std        61 86423.453    2.88    4.16      0.5008 unit
+NAND2X2             std        47 157172.203
+                                               2.88    3.20      0.5425 unit
+OAI22X1             std        41 98691.023    2.88    4.48      0.5425 unit
+AND4X1              std        38 63451.641    2.88    3.52      0.6905 unit
+AND2X2              std        38 108073.102
+                                               2.88    2.88      0.6028 unit
+NOR2X2              std        30 62885.871    2.88    3.20      0.5425 unit
+NOR2X1              std        24 49424.141    2.88    2.24      0.7750 unit
+NOR4X1              std        23 119171.102
+                                               2.88    5.44      0.4468 unit
+MUX21X2             std        22 134878.094
+                                               2.88    4.48      0.4650 unit
+OR2X2               std        18 110618.297
+                                               2.88    3.20      0.5425 unit
+AOI222X1            std        17 109880.500
+                                               2.88    5.44      0.5744 unit
+IBUFFX2             std        17 131684.797
+                                               2.88    3.52      0.3946 unit
+OR3X1               std        16 62566.211    2.88    3.20      0.6510 unit
+OAI222X1            std        16 94702.359    2.88    5.44      0.5744 unit
+NOR2X4              std        15 125772.102
+                                               2.88    5.12      0.3391 unit
+IBUFFX4             std        14 235516.094
+                                               2.88    4.48      0.3100 unit
+NAND4X1             std        14 161902.203
+                                               2.88    4.48      0.5425 unit
+AOI221X1            std        10 102492.797
+                                               2.88    5.12      0.5425 unit
+NAND2X4             std         9 314345.688
+                                               2.88    5.12      0.3391 unit
+NAND3X1             std         8 102554.398
+                                               2.88    4.16      0.5008 unit
+MUX41X1             std         7 84198.359    2.88    8.00      0.3906 unit
+DFFX2               std         7 206368.797
+                                               2.88   10.88      0.1915 unit
+AND2X4              std         5 210446.406
+                                               2.88    3.84      0.4521 unit
+XOR3X1              std         3 168382.703
+                                               2.88    7.68      0.2713 unit
+OR2X4               std         3 216337.406
+                                               2.88    4.16      0.4173 unit
+IBUFFX16            std         3 861120.500
+                                               2.88   10.88      0.1277 unit
+IBUFFX8             std         3 441872.594
+                                               2.88    6.40      0.2170 unit
+NAND3X2             std         3 155091.000
+                                               2.88    4.48      0.4650 unit
+OR4X2               std         3 119479.297
+                                               2.88    4.16      0.5843 unit
+XOR2X2              std         2 141002.703
+                                               2.88    5.44      0.3191 unit
+AND3X2              std         2 109738.102
+                                               2.88    3.52      0.5919 unit
+AO222X2             std         2 120678.000
+                                               2.88    5.44      0.5744 unit
+XNOR3X1             std         2 184973.906
+                                               2.88    7.68      0.2713 unit
+AO22X2              std         2 114795.602
+                                               2.88    4.48      0.5425 unit
+OA21X2              std         2 111685.703
+                                               2.88    3.84      0.5425 unit
+OR3X2               std         1 115956.797
+                                               2.88    3.84      0.5425 unit
+OA221X2             std         1 118595.398
+                                               2.88    5.12      0.5425 unit
+OAI21X2             std         1 139790.594
+                                               2.88    4.16      0.5008 unit
+DELLN1X2            std         1 121283.703
+                                               2.88    5.12      0.2713 unit
+OAI221X1            std         1 101722.203
+                                               2.88    5.12      0.5425 unit
+AO21X2              std         1 110945.297
+                                               2.88    4.16      0.5008 unit
+NOR3X4              std         1 263851.406
+                                               2.88    5.76      0.3617 unit
+AND3X4              std         1 211042.500
+                                               2.88    4.48      0.4650 unit
+saed90_64x512_1P_BM macro      16 98404400.000
+                                             151.04  561.92      0.0018 unit
+saed90_64x32_2P     macro       2 17166900.000
+                                             129.28  108.80      0.0104 unit
+saed90_248x64_1P_bit
+                    macro       2 62029000.000
+                                             263.68  544.00      0.0053 unit
+saed90_16x64_1P_bit macro       1 6510350.000
+                                              75.52   37.12      0.0214 unit
+saed90_8x64_1P_bit  macro       1 3626860.000
+                                              39.68   37.12      0.0244 unit
+--------------------------------------------------------------------------------
+                             FLOORPLAN INFORMATION
+--------------------------------------------------------------------------------
+SITE ROW INFORMATION
+--------------------
+Site Type     Hrows     Vrows      Tiles        Width      Height   Row area
+unit            521         0    4477474         0.32        2.88   4126440.04
+
+CHIP AND CORE INFORMATION
+-------------------------
+               Width         Height               Area
+Core        2750.080       1500.480        4126440.038
+Chip        2769.920       1519.520        4208948.838
+
+ROUTE GUIDE SECTION
+-------------------
+No route guide exists
+
+VOLTAGE AREA SECTION
+--------------------
+No voltage area exists
+
+PLAN GROUP SECTION
+------------------
+No plan group exists
+
+EXCL MOVEBOUND SECTION
+----------------------
+No exclusive movebound exists
+
+HARD/SOFT MOVEBOUND SECTION
+---------------------------
+No hard/soft movebound exists
+
+GROUP BOUND SECTION
+-------------------
+No group bound exists
+
+RP GROUP SECTION
+----------------
+No rp group exists
+
+POWER DOMAIN SECTION
+--------------------
+No power domain exists
+
+LAYER SECTION
+-------------
+Name    Dir     Ign           Pitch   Spacing     Width
+M1      Hor     NO            0.320     0.140     0.140
+M2      Ver     NO            0.320     0.160     0.160
+M3      Hor     NO            0.320     0.160     0.160
+M4      Ver     NO            0.320     0.160     0.160
+M5      Hor     NO            0.320     0.160     0.160
+M6      Ver     NO            0.320     0.160     0.160
+M7      Hor     NO            0.320     0.160     0.160
+M8      Ver     NO            0.320     0.160     0.160
+M9      Hor     NO            0.900     0.450     0.450
+--------------------------------------------------------------------------------
+                            UTILIZATION INFORMATION
+--------------------------------------------------------------------------------
+BLOCKAGES SECTION
+-----------------
+BLK Type           Count Islands  Area(um^2)    AreaOutsideCore(um^2)
+                                                         BlockedSites            BlockedSites(unit)
+Hard Placement Blockage
+                       0       0        0.00        0.00 ---                     0
+Soft Placement Blockage
+                       0       0        0.00        0.00 ---                     ---
+Partial Placement Blockage
+                       0       0        0.00        0.00 ---                     ---
+Macro Cell            22      22  1677249.74        0.00 unit:1827812            1827812
+Pad Cell               0       0        0.00        0.00 ---                     0
+Fixed Standard Cell
+                     105     103     1749.20        0.00 unit:1898               1898
+Hard Keepout Margin Derived
+                      22       2    79574.63        0.00 unit:96840              96840
+Soft Keepout Margin Derived
+                       0       0        0.00        0.00 ---                     ---
+Complete PNet        ---     ---        0.00        0.00 ---                     0
+Partial PNet         ---     ---        0.00        0.00 ---                     ---
+Voltage Area Guardband
+                       0       0        0.00        0.00 ---                     0
+Exclusive Movebound Guardband
+                       0       0        0.00        0.00 ---                     ---
+Hard Keepout Distance Blockage
+                       0       0        0.00        0.00 ---                     0
+Chimney Area         ---     ---        0.00        0.00 ---                     0
+
+CELL INSTANCE SECTION
+---------------------
+
+ Cell Instance Type       Count           Area
+  Placed Cells           276877     4043669.71
+    Fixed Cells              22     1677249.74
+    Soft Fixed Cells          0           0.00
+  Unplaced Cells              0           0.00
+
+UTILIZATION RATIOS
+------------------
+Chip area           : 4208948.84
+Core area           : 4126440.04
+  SiteRow area      : 4126440.04
+Cell/Core Ratio     : 97.9941%
+Cell/Chip Ratio     : 96.0731%
+(A) Logical cell sites (non-fixed) :       823058
+(B) Logical cell sites (fixed) :         1898
+(C) All blocked sites :      1911642
+(D) Total core sites :      4477474
+Cell Utilization(non-fixed) = 32.08% (A) / (D - C)
+                                              (823058) / (4477474 - 1911642)
+Cell Utilization(non-fixed + fixed) = 32.13% (A + B) / (D - (C - B))
+                                              (823058 + 1898) / (4477474 - (1911642 - 1898))
+Blockage Percentage = 42.69% (C) / (D)
+                                              (1911642) / (4477474)
+
+PNET OPTIONS INFORMATION
+------------------------
+Layer     Blockage MinWidth  MinHeight Via_additive    Density   DER minWidth
+                                                                            DER minHeight
+M1        none        ---       ---    Via additive     ---         ---        ---
+M2        none        ---       ---    Via additive     ---         ---        ---
+M3        none        ---       ---    Via additive     ---         ---        ---
+M4        none        ---       ---    Via additive     ---         ---        ---
+M5        none        ---       ---    Via additive     ---         ---        ---
+M6        none        ---       ---    Via additive     ---         ---        ---
+M7        none        ---       ---    Via additive     ---         ---        ---
+M8        none        ---       ---    Via additive     ---         ---        ---
+M9        none        ---       ---    Via additive     ---         ---        ---
+--------------------------------------------------------------------------------
+                               ROUTE INFORMATION
+--------------------------------------------------------------------------------
+
+Timing/Optimization Information:
+
+Global Routing Information:
+    layer M1, dir Hor, min width = 0.14, min space = 0.14 pitch = 0.32
+    layer M2, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.32
+    layer M3, dir Hor, min width = 0.16, min space = 0.16 pitch = 0.32
+    layer M4, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.32
+    layer M5, dir Hor, min width = 0.16, min space = 0.16 pitch = 0.32
+    layer M6, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.32
+    layer M7, dir Hor, min width = 0.16, min space = 0.16 pitch = 0.32
+    layer M8, dir Ver, min width = 0.16, min space = 0.16 pitch = 0.32
+    layer M9, dir Hor, min width = 0.45, min space = 0.45 pitch = 0.90
+     
+    Average gCell capacity  3.04	 on layer (1)	 M1
+    Average gCell capacity  5.34	 on layer (2)	 M2
+    Average gCell capacity  5.37	 on layer (3)	 M3
+    Average gCell capacity  5.34	 on layer (4)	 M4
+    Average gCell capacity  5.37	 on layer (5)	 M5
+    Average gCell capacity  9.01	 on layer (6)	 M6
+    Average gCell capacity  9.01	 on layer (7)	 M7
+    Average gCell capacity  9.01	 on layer (8)	 M8
+    Average gCell capacity  3.20	 on layer (9)	 M9
+     
+    Initial. Both Dirs: Overflow =   770 Max = 11 GRCs =   396 (0.04%)
+    Initial. H routing: Overflow =   192 Max = 11 (GRCs =  2) GRCs =    90 (0.02%)
+    Initial. V routing: Overflow =   577 Max = 11 (GRCs =  1) GRCs =   306 (0.06%)
+     
+    phase1. Both Dirs: Overflow =   763 Max = 11 GRCs =   394 (0.04%)
+    phase1. H routing: Overflow =   191 Max = 11 (GRCs =  2) GRCs =    89 (0.02%)
+    phase1. V routing: Overflow =   572 Max = 11 (GRCs =  1) GRCs =   305 (0.06%)
+     
+    phase2. Both Dirs: Overflow =   762 Max = 11 GRCs =   394 (0.04%)
+    phase2. H routing: Overflow =   191 Max = 11 (GRCs =  2) GRCs =    89 (0.02%)
+    phase2. V routing: Overflow =   571 Max = 11 (GRCs =  1) GRCs =   305 (0.06%)
+     
+    Total Wire Length = 6973.17
+    Layer M1 wire length = 778.22
+    Layer M2 wire length = 1033.88
+    Layer M3 wire length = 3734.22
+    Layer M4 wire length = 109.72
+    Layer M5 wire length = 35.46
+    Layer M6 wire length = 553.63
+    Layer M7 wire length = 662.09
+    Layer M8 wire length = 63.31
+    Layer M9 wire length = 2.62
+    Total Number of Contacts = 1734
+    Via VIA12B count = 796
+    Via VIA23C count = 794
+    Via VIA34C count = 46
+    Via VIA45C count = 35
+    Via VIA56C count = 29
+    Via VIA67C count = 23
+    Via VIA78C count = 9
+    Via VIA89C count = 2
+     
+    Elapsed real time: 0:00:07
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:12 total = 0:00:13
+    Total Proc Memory(MB): 2702
+
+Track Assignment Information:
+    Number of wires with overlap after iteration 0 = 2779 of 4839
+
+    Number of wires with overlap after iteration 1 = 1789 of 3582
+
+    Total M1 wire length: 982.3
+    Total M2 wire length: 1540.1
+    Total M3 wire length: 3933.3
+    Total M4 wire length: 357.6
+    Total M5 wire length: 223.1
+    Total M6 wire length: 607.3
+    Total M7 wire length: 578.8
+    Total M8 wire length: 20.3
+    Total M9 wire length: 96.0
+    Total wire length: 8338.9
+
+    Elapsed real time: 0:00:03
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:06 total = 0:00:07
+    Total Proc Memory(MB): 2837
+
+Detailed Routing Information:
+    
+
+    ---------- Detail route ----------
+
+     
+    Iteration 0: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	1424
+     
+    Iteration 1: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	259
+     
+    Iteration 2: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	218
+     
+    Iteration 3: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	164
+     
+    Iteration 4: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	106
+     
+    Iteration 5: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	70
+     
+    Iteration 6: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	61
+     
+    Iteration 7: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	26
+     
+    Iteration 8: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	26
+     
+    Iteration 9: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	10
+     
+    Elapsed real time: 0:02:54
+    Elapsed cpu time: sys = 0:00:10 usr = 0:08:27 total = 0:08:37
+    Total Proc Memory(MB): 2845
+     
+    Cumulative run time upto current stage: Elapsed = 0:02:54 CPU = 0:08:37
+     
+    DR finished with 0 open nets, of which 0 are frozen
+    DR finished with 8 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	8
+    	Diff net spacing : 7
+    	Same net spacing : 1
+    Total number of nets = 61550
+    0 open nets, of which 0 are frozen
+    Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                     0 ports without pins of 0 cells connected to 0 nets
+                                     0 ports of 0 cover cells connected to 0 non-pg nets
+    Total number of DRCs = 8
+    Total number of antenna violations = antenna checking not active
+    Total number of voltage-area violations = no voltage-areas defined
+    
+
+     
+    Elapsed real time: 0:00:00
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:00 total = 0:00:00
+    Total Proc Memory(MB): 2845
+     
+    Cumulative run time upto current stage: Elapsed = 0:02:54 CPU = 0:08:37
+    
+
+    ---------- Eco detail route ----------
+
+     
+    Iteration 0: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	14
+     
+    Iteration 1: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	9
+     
+    Iteration 2: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	6
+     
+    Iteration 3: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	3
+     
+    Iteration 4: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	2
+    DR finished with 2 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	2
+    	Diff net spacing : 2
+     
+    Begin timing optimization in DR ...
+
+     
+    Finished timing optimization in DR ...
+
+     
+    Elapsed real time: 0:00:18
+    Elapsed cpu time: sys = 0:00:01 usr = 0:00:59 total = 0:01:01
+    Total Proc Memory(MB): 2867
+     
+    Cumulative run time upto current stage: Elapsed = 0:03:12 CPU = 0:09:38
+     
+    ECO Route finished with 0 open nets, of which 0 are frozen
+    ECO Route finished with 2 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	2
+    	Diff net spacing : 2
+    Total number of nets = 61577
+    0 open nets, of which 0 are frozen
+    Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                     0 ports without pins of 0 cells connected to 0 nets
+                                     0 ports of 0 cover cells connected to 0 non-pg nets
+    Total number of DRCs = 2
+    Total number of antenna violations = antenna checking not active
+    Total number of voltage-area violations = no voltage-areas defined
+    
+
+     
+    Elapsed real time: 0:00:00
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:00 total = 0:00:00
+    Total Proc Memory(MB): 2867
+     
+    Cumulative run time upto current stage: Elapsed = 0:03:12 CPU = 0:09:38
+    
+
+    ---------- Eco detail route ----------
+
+     
+    Iteration 0: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	27
+     
+    Iteration 1: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	10
+     
+    Iteration 2: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	4
+     
+    Iteration 3: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	4
+     
+    Iteration 4: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	5
+     
+    Elapsed real time: 0:00:51
+    Elapsed cpu time: sys = 0:00:05 usr = 0:02:58 total = 0:03:03
+    Total Proc Memory(MB): 3002
+     
+    Cumulative run time upto current stage: Elapsed = 0:04:03 CPU = 0:12:41
+     
+    ECO Route finished with 0 open nets, of which 0 are frozen
+    ECO Route finished with 2 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	2
+    	Diff net spacing : 2
+    Total number of nets = 61577
+    0 open nets, of which 0 are frozen
+    Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                     0 ports without pins of 0 cells connected to 0 nets
+                                     0 ports of 0 cover cells connected to 0 non-pg nets
+    Total number of DRCs = 2
+    Total number of antenna violations = antenna checking not active
+    Total number of voltage-area violations = no voltage-areas defined
+    
+
+     
+    Elapsed real time: 0:00:00
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:00 total = 0:00:00
+    Total Proc Memory(MB): 3002
+     
+    Cumulative run time upto current stage: Elapsed = 0:04:03 CPU = 0:12:41
+    
+
+    ---------- Eco detail route ----------
+
+     
+    Iteration 0: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	4
+     
+    Iteration 1: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	3
+     
+    Iteration 2: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	2
+     
+    Iteration 3: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	4
+     
+    Iteration 4: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	2
+     
+    Iteration 5: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	2
+     
+    Iteration 6: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	2
+     
+    Iteration 7: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	4
+     
+    Iteration 8: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	14
+     
+    Iteration 9: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	4
+     
+    Iteration 10: DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	2
+     
+    Elapsed real time: 0:00:20
+    Elapsed cpu time: sys = 0:00:01 usr = 0:00:57 total = 0:00:59
+    Total Proc Memory(MB): 2303
+     
+    Cumulative run time upto current stage: Elapsed = 0:04:23 CPU = 0:13:40
+     
+    ECO Route finished with 0 open nets, of which 0 are frozen
+    ECO Route finished with 2 violations
+     
+    DRC-SUMMARY:
+    	@@@@@@@ TOTAL VIOLATIONS =	2
+    	Diff net spacing : 2
+    Total number of nets = 61577
+    0 open nets, of which 0 are frozen
+    Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                     0 ports without pins of 0 cells connected to 0 nets
+                                     0 ports of 0 cover cells connected to 0 non-pg nets
+    Total number of DRCs = 2
+    Total number of antenna violations = antenna checking not active
+    Total number of voltage-area violations = no voltage-areas defined
+    
+
+     
+    Elapsed real time: 0:00:00
+    Elapsed cpu time: sys = 0:00:00 usr = 0:00:00 total = 0:00:00
+    Total Proc Memory(MB): 2303
+     
+    Cumulative run time upto current stage: Elapsed = 0:04:23 CPU = 0:13:40
+     
+    Total Wire Length =                    6743963 micron
+    Total Number of Contacts =             729052
+    Total Number of Wires =                663694
+    Total Number of PtConns =              947
+    Total Number of Routed Wires =       663694
+    Total Routed Wire Length =           6743721 micron
+    Total Number of Routed Contacts =       729052
+    	Layer          M1 :      89231 micron
+    	Layer          M2 :     692022 micron
+    	Layer          M3 :    1006444 micron
+    	Layer          M4 :    1023863 micron
+    	Layer          M5 :     919067 micron
+    	Layer          M6 :    1048980 micron
+    	Layer          M7 :    1157986 micron
+    	Layer          M8 :     643352 micron
+    	Layer          M9 :     163018 micron
+    	Via        VIA89C :       5891
+    	Via   VIA89C(rot) :          5
+    	Via        VIA78C :      25484
+    	Via        VIA67C :      38800
+    	Via        VIA56C :      49507
+    	Via        VIA45C :      82335
+    	Via        VIA34C :     110108
+    	Via        VIA23C :     208264
+    	Via        VIA12B :      28992
+    	Via   VIA12B(rot) :     179626
+    	Via        VIA12C :         40
+     
+    Redundant via conversion report:
+    --------------------------------
+
+      Total optimized via conversion rate =  0.00% (0 / 729052 vias)
+     
+        Layer VIA1       =  0.00% (0      / 208658  vias)
+            Un-optimized = 100.00% (208658  vias)
+        Layer VIA2       =  0.00% (0      / 208264  vias)
+            Un-optimized = 100.00% (208264  vias)
+        Layer VIA3       =  0.00% (0      / 110108  vias)
+            Un-optimized = 100.00% (110108  vias)
+        Layer VIA4       =  0.00% (0      / 82335   vias)
+            Un-optimized = 100.00% (82335   vias)
+        Layer VIA5       =  0.00% (0      / 49507   vias)
+            Un-optimized = 100.00% (49507   vias)
+        Layer VIA6       =  0.00% (0      / 38800   vias)
+            Un-optimized = 100.00% (38800   vias)
+        Layer VIA7       =  0.00% (0      / 25484   vias)
+            Un-optimized = 100.00% (25484   vias)
+        Layer VIA8       =  0.00% (0      / 5896    vias)
+            Un-optimized = 100.00% (5896    vias)
+     
+      Total double via conversion rate    =  0.00% (0 / 729052 vias)
+     
+        Layer VIA1       =  0.00% (0      / 208658  vias)
+        Layer VIA2       =  0.00% (0      / 208264  vias)
+        Layer VIA3       =  0.00% (0      / 110108  vias)
+        Layer VIA4       =  0.00% (0      / 82335   vias)
+        Layer VIA5       =  0.00% (0      / 49507   vias)
+        Layer VIA6       =  0.00% (0      / 38800   vias)
+        Layer VIA7       =  0.00% (0      / 25484   vias)
+        Layer VIA8       =  0.00% (0      / 5896    vias)
+     
+      The optimized via conversion rate based on total routed via count =  0.00% (0 / 729052 vias)
+     
+        Layer VIA1       =  0.00% (0      / 208658  vias)
+            Un-optimized = 100.00% (208658  vias)
+        Layer VIA2       =  0.00% (0      / 208264  vias)
+            Un-optimized = 100.00% (208264  vias)
+        Layer VIA3       =  0.00% (0      / 110108  vias)
+            Un-optimized = 100.00% (110108  vias)
+        Layer VIA4       =  0.00% (0      / 82335   vias)
+            Un-optimized = 100.00% (82335   vias)
+        Layer VIA5       =  0.00% (0      / 49507   vias)
+            Un-optimized = 100.00% (49507   vias)
+        Layer VIA6       =  0.00% (0      / 38800   vias)
+            Un-optimized = 100.00% (38800   vias)
+        Layer VIA7       =  0.00% (0      / 25484   vias)
+            Un-optimized = 100.00% (25484   vias)
+        Layer VIA8       =  0.00% (0      / 5896    vias)
+            Un-optimized = 100.00% (5896    vias)
+     
+
+DRC information: 
+      Diff net spacing: 2 
+      Total error number: 2
+
+Ring Wiring Statistics:
+
+Stripe Wiring Statistics:
+
+User Wiring Statistics:
+
+PG follow-pin Wiring Statistics:
+    metal1 Wire Length(count):             838775.84(4141)
+    metal2 Wire Length(count):                 53.28(24)
+  ==============================================
+    Total Wire Length(count):              838829.12(4165)
+    Number of via1 Contacts:             24
+  ==============================================
+    Total Number of Contacts:       24
+
+Signal Wiring Statistics:
+    metal1 Wire Length(count):              90946.00(45915)
+    metal2 Wire Length(count):             692004.23(215913)
+    metal3 Wire Length(count):            1006385.32(155683)
+    metal4 Wire Length(count):            1023834.91(86768)
+    metal5 Wire Length(count):             919045.16(62970)
+    metal6 Wire Length(count):            1048967.71(40932)
+    metal7 Wire Length(count):            1157977.75(34886)
+    metal8 Wire Length(count):             643350.74(21035)
+    metal9 Wire Length(count):             163115.98(5196)
+  ==============================================
+    Total Wire Length(count):             6745627.82(669298)
+
+      Mask Name      Contact Code    Number Of Contacts    Percentage
+        via1          VIA12B(11)            208618	        100
+        via1          VIA12C(15)                40	     0.0192
+        via2          VIA23C(16)            208264	        100
+        via3          VIA34C(17)            110108	        100
+        via4          VIA45C(18)             82335	        100
+        via5          VIA56C(19)             49507	        100
+        via6          VIA67C(20)             38800	        100
+        via7          VIA78C(21)             25484	        100
+        via8          VIA89C(22)              5896	        100
+  ==============================================
+    Total Number of Contacts:    729052
+
+  Horizontal/Vertical Wire Distribution:
+    Layer      Hor. Wire (% of Hor.)     Ver. Wire (% of Ver.)
+    metal1         85424.02 ( 2.55%)          5521.98 ( 0.16%)
+    metal2         24265.78 ( 0.72%)        667738.45 (19.68%)
+    metal3        998575.71 (29.79%)          7809.61 ( 0.23%)
+    metal4          5826.03 ( 0.17%)       1018008.88 (30.00%)
+    metal5        916184.69 (27.33%)          2860.47 ( 0.08%)
+    metal6          1938.99 ( 0.06%)       1047028.71 (30.85%)
+    metal7       1156137.80 (34.49%)          1839.95 ( 0.05%)
+    metal8          1597.58 ( 0.05%)        641753.17 (18.91%)
+    metal9        162100.55 ( 4.84%)          1015.42 ( 0.03%)
+  ==============================================================
+    Total        3352051.17                3393576.64
+--------------------------------------------------------------------------------

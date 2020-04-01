@@ -1,0 +1,31 @@
+report_clock_gating -structure -nosplit -verbose 
+ 
+****************************************
+Report : clock_gating
+        -verbose
+        -nosplit
+        -structure
+Design : bp_softcore
+Version: O-2018.06-SP4
+Date   : Sat Mar 14 13:20:25 2020
+****************************************
+
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |        0         |
+          |                                       |                  |
+          |    Number of Gated registers          |     0 (0.00%)    |
+          |                                       |                  |
+          |    Number of Ungated registers        | 13990 (100.00%)  |
+          |                                       |                  |
+          |    Maximum number of stages           |        -         |
+          |                                       |                  |
+          |    Total number of registers          |    13990         |
+          ------------------------------------------------------------
+
+
+
+
+

@@ -1,0 +1,25 @@
+report_timing -group **default** -delay_type min -path_type full_clock -max_paths 100 -transition_time -nets -attributes -nosplit 
+ 
+****************************************
+Report : timing
+        -path full_clock
+        -delay min
+        -nets
+        -group **default**
+        -max_paths 100
+        -transition_time
+Design : bp_softcore
+Version: O-2018.06-SP4
+Date   : Thu Mar 12 12:09:13 2020
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: Inactive.
+No paths.
+
+
+

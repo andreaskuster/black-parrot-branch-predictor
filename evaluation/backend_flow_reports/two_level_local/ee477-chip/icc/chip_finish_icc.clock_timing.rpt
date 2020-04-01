@@ -1,0 +1,53 @@
+Information: Start rc update...
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer M1 : 0.22 0.19 (RCEX-011)
+Information: Library Derived Res for layer M1 : 6.4e-07 6.4e-07 (RCEX-011)
+Information: Library Derived Cap for layer M2 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M2 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M3 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M3 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M4 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M4 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M5 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M5 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M6 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M6 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M7 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M7 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M8 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M8 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M9 : 0.3 0.23 (RCEX-011)
+Information: Library Derived Res for layer M9 : 6.2e-08 6.2e-08 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.25 0.21 (RCEX-011)
+Information: Library Derived Horizontal Res : 4.8e-07 4.8e-07 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.25 0.21 (RCEX-011)
+Information: Library Derived Vertical Res : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 8e-07 8e-07 (RCEX-011)
+Information: End rc update.
+ 
+****************************************
+Report : clock timing
+        -type skew
+        -nworst 1
+        -setup
+Design : bp_softcore
+Version: M-2016.12-SP5-3
+Date   : Sun Mar 15 19:34:45 2020
+****************************************
+
+  Clock: core_clk
+  Clock Pin                              Latency    CRP      Skew
+----------------------------------------------------------------------------
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_two_level_local_bp/bct_reg_6__4_/CLK
+                                         0.50                          wrp-+
+  core/fe/mem/icache/data_mems_7__data_mem/macro_mem/CE1
+                                         0.37      -0.00     0.13      wrp-+
+----------------------------------------------------------------------------
+
+1

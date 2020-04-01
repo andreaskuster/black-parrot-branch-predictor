@@ -1,0 +1,122 @@
+Information: Setting timing_save_pin_arrival_and_slack to TRUE and updating timing. (PTE-076)
+Information: It is recommended that the variable timing_save_pin_arrival_and_slack be set before the initial timing update for optimal performance of this command. (PTE-077)
+Information: Updating design -     Calculating arrivals  100%... (UITE-214)
+****************************************
+Report : si_bottleneck
+	-cost_type delta_delay
+	-slack_lesser_than 0
+	-max_nets 20
+	-significant_digits 3
+	-nosplit
+	-minimum_active_aggressors 1
+	-min
+	-max
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 16:00:24 2020
+****************************************
+
+ Bottleneck Cost:  delta_delay
+ net                                                         cost
+ ---------------------------------------------------------------------
+ core/fe_cmd_li[69]                                             0.129
+ core/fe_cmd_li[71]                                             0.117
+ core/fe_cmd_li[62]                                             0.109
+ core/fe_cmd_li[68]                                             0.107
+ core/fe_cmd_li[60]                                             0.104
+ core/fe_cmd_li[72]                                             0.092
+ core/fe_cmd_li[52]                                             0.087
+ core/fe_cmd_li[74]                                             0.083
+ core/fe_cmd_li[49]                                             0.080
+ core/fe_cmd_li[70]                                             0.080
+ core/fe_cmd_li[58]                                             0.078
+ core/fe_cmd_li[42]                                             0.076
+ core/fe_cmd_li[56]                                             0.073
+ core/fe_cmd_li[64]                                             0.072
+ core/be/be_mem/dtlb/vtag_cam/n256                              0.069
+ core/fe_cmd_li[54]                                             0.064
+ core/be/be_checker/director/n115                               0.063
+ core/fe_cmd_li[57]                                             0.063
+ core/fe_cmd_li[75]                                             0.063
+ core/fe_cmd_li[32]                                             0.063
+
+1
+****************************************
+Report : si_bottleneck
+	-cost_type delta_delay_ratio
+	-slack_lesser_than 0
+	-max_nets 20
+	-significant_digits 3
+	-nosplit
+	-minimum_active_aggressors 1
+	-min
+	-max
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 16:00:24 2020
+****************************************
+
+ Bottleneck Cost:  delta_delay_ratio
+ net                                                         cost
+ ---------------------------------------------------------------------
+ io_resp_i[58]                                                  0.940
+ io_resp_i[80]                                                  0.880
+ io_resp_i[78]                                                  0.749
+ io_resp_i[96]                                                  0.674
+ io_resp_i[61]                                                  0.665
+ io_resp_i[85]                                                  0.608
+ io_resp_i[110]                                                 0.569
+ io_resp_i[101]                                                 0.568
+ io_resp_i[86]                                                  0.567
+ io_resp_i[76]                                                  0.548
+ io_resp_i[68]                                                  0.509
+ io_resp_i[65]                                                  0.505
+ io_resp_i[104]                                                 0.488
+ io_resp_i[118]                                                 0.475
+ io_resp_i[81]                                                  0.457
+ io_resp_i[90]                                                  0.426
+ core/be/be_mem/dtlb/vtag_cam/n256                              0.410
+ io_resp_i[66]                                                  0.378
+ core/be/be_mem/dtlb/vtag_cam/n139                              0.377
+ core/fe_cmd_li[69]                                             0.372
+
+1
+****************************************
+Report : si_bottleneck
+	-cost_type delay_bump_per_aggressor
+	-slack_lesser_than 0
+	-max_nets 20
+	-significant_digits 3
+	-minimum_active_aggressors 1
+	-min
+	-max
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 16:00:24 2020
+****************************************
+
+ Bottleneck Cost:  delay_bump_per_aggressor
+ net                                                         cost
+ ---------------------------------------------------------------------
+ mem_resp_i[85]                                                 0.407
+ mem_resp_i[75]                                                 0.405
+ mem_resp_i[86]                                                 0.381
+ mem_resp_i[90]                                                 0.336
+ mem_resp_i[58]                                                 0.328
+ mem_resp_i[78]                                                 0.314
+ mem_resp_i[59]                                                 0.314
+ mem_resp_i[27]                                                 0.304
+ mem_resp_i[61]                                                 0.287
+ mem_resp_i[104]                                                0.281
+ core/clk_i_G1B4I10                                             0.274
+ mem_resp_i[94]                                                 0.273
+ mem_resp_i[63]                                                 0.264
+ io_resp_i[17]                                                  0.262
+ mem_resp_i[110]                                                0.262
+ mem_resp_i[80]                                                 0.258
+ mem_resp_i[21]                                                 0.258
+ core/be/be_calculator/pipe_mem/csr_shift_reg/n278              0.257
+ mem_resp_i[62]                                                 0.255
+ io_resp_i[85]                                                  0.249
+
+1

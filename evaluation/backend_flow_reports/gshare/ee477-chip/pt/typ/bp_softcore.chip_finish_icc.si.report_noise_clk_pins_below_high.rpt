@@ -1,0 +1,31 @@
+****************************************
+Report : noise
+	-verbose
+	-nosplit
+	-high
+	-below
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Fri Mar 13 18:32:20 2020
+****************************************
+
+ analysis mode: report_at_source
+ slack type: height
+
+ noise_region: below_high
+ pin name (net name)       width    height     slack
+ -----------------------------------------------------
+ core/fe/mem/icache/data_mems_1__data_mem/macro_mem/CE1 (core/fe/mem/icache/CTS_core_clk_CTO_delay8)
+ Aggressors:
+ core/fe/mem/icache/data_mems_1__data_mem/n39    0.167    0.095
+ core/fe/mem/icache/data_mems_1__data_mem/n510    0.172    0.064
+ core/fe/mem/icache/data_mem_data_lo[80]    0.197    0.023
+ core/fe/mem/icache/data_mems_0__data_mem/n549    0.173    0.031
+ core/fe/mem/icache/data_mems_1__data_mem/n420    0.175    0.031
+ core/fe/mem/icache/n379    0.174    0.030
+ Propagated:
+ core/fe/mem/icache/CTS_CTS_core_clk_CTO_delay8/Z        -        -
+ Total:                    0.171     0.251     0.049
+
+
+1

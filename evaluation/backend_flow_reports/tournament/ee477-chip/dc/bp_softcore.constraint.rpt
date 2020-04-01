@@ -1,0 +1,555 @@
+report_constraint -verbose                       
+ 
+****************************************
+Report : constraint
+        -verbose
+Design : bp_softcore
+Version: O-2018.06-SP4
+Date   : Sat Mar 14 13:20:24 2020
+****************************************
+
+
+  Startpoint: io_resp_v_i
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  io_resp_v_i (in)                                        0.00       0.10 r
+  U2002/ZN (INVX0)                                        0.02 *     0.12 f
+  U2003/QN (NOR4X0)                                       0.11 *     0.23 r
+  U2020/QN (NAND2X0)                                      0.11 *     0.34 f
+  U2021/ZN (INVX0)                                        0.05 *     0.39 r
+  U2022/QN (NOR2X0)                                       0.20 *     0.60 f
+  U2062/Z (NBUFFX2)                                       0.39 *     0.99 f
+  U2168/Z (NBUFFX2)                                       0.20 *     1.20 f
+  U2028/Q (AO222X1)                                       0.15 *     1.34 f
+  uce_1__uce/U19/Q (AO22X1)                               0.15 *     1.49 f
+  core/be/be_mem/dcache/U251/Z (NBUFFX2)                  0.37 *     1.87 f
+  core/be/be_mem/dcache/wbuf/U165/ZN (INVX0)              0.12 *     1.99 r
+  core/be/be_mem/dcache/wbuf/U379/Q (MUX21X1)             0.11 *     2.09 r
+  core/be/be_mem/dcache/wbuf/U382/QN (NAND4X0)            0.05 *     2.14 f
+  core/be/be_mem/dcache/wbuf/U388/QN (NOR4X0)             0.08 *     2.22 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)               0.11 *     2.33 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                 0.07 *     2.40 f
+  uce_1__uce/U51/QN (NAND2X0)                             0.07 *     2.47 r
+  uce_1__uce/U52/ZN (INVX0)                               0.07 *     2.55 f
+  uce_1__uce/U53/Q (OA221X1)                              0.11 *     2.66 f
+  uce_1__uce/U72/ZN (INVX0)                               0.05 *     2.70 r
+  uce_1__uce/U720/QN (NAND3X0)                            0.12 *     2.82 f
+  U3127/Q (OA221X1)                                       0.16 *     2.99 f
+  mem_resp_yumi_o (out)                                   0.00 *     2.99 f
+  data arrival time                                                  2.99
+
+  clock core_clk (rise edge)                              7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  output external delay                                  -0.10       5.90
+  data required time                                                 5.90
+  --------------------------------------------------------------------------
+  data required time                                                 5.90
+  data arrival time                                                 -2.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.91
+
+
+  Startpoint: io_resp_v_i
+              (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_27_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  io_resp_v_i (in)                                        0.00       0.10 r
+  U2002/ZN (INVX0)                                        0.02 *     0.12 f
+  U2003/QN (NOR4X0)                                       0.11 *     0.23 r
+  U2020/QN (NAND2X0)                                      0.11 *     0.34 f
+  U2021/ZN (INVX0)                                        0.05 *     0.39 r
+  U2022/QN (NOR2X0)                                       0.20 *     0.60 f
+  U2062/Z (NBUFFX2)                                       0.39 *     0.99 f
+  U2168/Z (NBUFFX2)                                       0.20 *     1.20 f
+  U2028/Q (AO222X1)                                       0.15 *     1.34 f
+  uce_1__uce/U19/Q (AO22X1)                               0.15 *     1.49 f
+  core/be/be_mem/dcache/U251/Z (NBUFFX2)                  0.37 *     1.87 f
+  core/be/be_mem/dcache/wbuf/U165/ZN (INVX0)              0.12 *     1.99 r
+  core/be/be_mem/dcache/wbuf/U379/Q (MUX21X1)             0.11 *     2.09 r
+  core/be/be_mem/dcache/wbuf/U382/QN (NAND4X0)            0.05 *     2.14 f
+  core/be/be_mem/dcache/wbuf/U388/QN (NOR4X0)             0.08 *     2.22 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)               0.11 *     2.33 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                 0.07 *     2.40 f
+  uce_1__uce/U51/QN (NAND2X0)                             0.07 *     2.47 r
+  uce_1__uce/U52/ZN (INVX0)                               0.07 *     2.55 f
+  uce_1__uce/U53/Q (OA221X1)                              0.11 *     2.66 f
+  uce_1__uce/U72/ZN (INVX0)                               0.05 *     2.70 r
+  uce_1__uce/U74/QN (NAND2X1)                             0.09 *     2.79 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                 0.24 *     3.03 r
+  core/be/be_mem/dcache/U1560/Z (NBUFFX2)                 0.28 *     3.31 r
+  core/be/be_mem/dcache/U2166/Q (MUX21X1)                 0.14 *     3.44 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_27_/D (DFFX1)
+                                                          0.00 *     3.44 r
+  data arrival time                                                  3.44
+
+  clock core_clk (rise edge)                              7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  core/be/be_mem/dcache/uncached_load_data_r_reg_27_/CLK (DFFX1)
+                                                          0.00       6.00 r
+  library setup time                                     -0.07       5.93
+  data required time                                                 5.93
+  --------------------------------------------------------------------------
+  data required time                                                 5.93
+  data arrival time                                                 -3.44
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.49
+
+
+  Startpoint: core/be/be_calculator/pipe_mem/csr_shift_reg/shift_r_reg_1__80_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core/be/be_calculator/pipe_mem/csr_shift_reg/shift_r_reg_1__80_/CLK (DFFX1)
+                                                          0.00 #     0.00 r
+  core/be/be_calculator/pipe_mem/csr_shift_reg/shift_r_reg_1__80_/Q (DFFX1)
+                                                          0.20       0.20 f
+  core/be/be_mem/csr/U182/ZN (INVX1)                      0.03 *     0.23 r
+  core/be/be_mem/csr/U192/QN (NAND2X1)                    0.06 *     0.29 f
+  core/be/be_mem/csr/U194/QN (NOR2X1)                     0.07 *     0.36 r
+  core/be/be_mem/csr/U98/ZN (INVX1)                       0.10 *     0.46 f
+  core/be/be_mem/csr/U1254/QN (NOR2X1)                    0.26 *     0.72 r
+  core/be/be_mem/csr/U115/Z (NBUFFX2)                     0.16 *     0.89 r
+  core/be/be_mem/csr/U117/ZN (INVX1)                      0.04 *     0.93 f
+  core/be/be_mem/csr/U1327/QN (NOR2X1)                    0.04 *     0.97 r
+  core/be/be_mem/csr/U1703/QN (NOR4X0)                    0.06 *     1.02 f
+  core/be/be_mem/csr/U1705/QN (AOI21X1)                   0.11 *     1.14 r
+  core/be/be_mem/U13/QN (NAND2X1)                         0.03 *     1.17 f
+  core/be/be_mem/U18/QN (NAND2X2)                         0.04 *     1.21 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U3/Q (OR2X1)
+                                                          0.07 *     1.28 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U4/Q (OR2X1)
+                                                          0.07 *     1.35 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U6/Q (OR2X1)
+                                                          0.07 *     1.42 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U8/Q (OR2X1)
+                                                          0.06 *     1.48 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U9/Q (OR2X1)
+                                                          0.07 *     1.55 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U10/Q (OR2X1)
+                                                          0.07 *     1.62 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U12/Q (OR2X1)
+                                                          0.07 *     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U13/Q (OR2X1)
+                                                          0.07 *     1.76 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U14/Q (OR2X1)
+                                                          0.07 *     1.83 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U15/Z (NBUFFX2)
+                                                          0.06 *     1.89 r
+  core/be/be_mem/csr/mcause_exception_enc/a/U13/ZN (INVX1)
+                                                          0.02 *     1.90 f
+  core/be/be_mem/csr/mcause_exception_enc/a/U14/QN (NOR2X0)
+                                                          0.03 *     1.93 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_left/aligned_right/U3/Z (NBUFFX2)
+                                                          0.06 *     1.99 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_left/U1/Q (OR2X1)
+                                                          0.05 *     2.04 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/U1/Q (OR2X1)
+                                                          0.06 *     2.10 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/U1/Q (OR2X2)
+                                                          0.07 *     2.18 r
+  core/be/be_mem/csr/mcause_exception_enc/b/U3/Q (OR2X1)
+                                                          0.05 *     2.23 r
+  core/be/be_mem/csr/U1249/QN (NAND3X0)                   0.06 *     2.29 f
+  core/be/be_mem/csr/U1250/ZN (INVX1)                     0.05 *     2.34 r
+  core/be/be_mem/csr/U1251/QN (NOR2X2)                    0.04 *     2.37 f
+  core/be/be_mem/csr/U1268/Q (AND2X2)                     0.24 *     2.61 f
+  core/be/be_checker/director/U11/Q (OR3X2)               0.14 *     2.75 f
+  core/be/be_checker/director/U161/QN (NAND2X2)           0.05 *     2.81 r
+  core/be/be_checker/director/U410/QN (NAND4X1)           0.17 *     2.97 f
+  core/be/be_calculator/U21/Q (OR2X2)                     0.11 *     3.09 f
+  core/be/be_calculator/pipe_mem/U139/QN (NOR2X4)         0.06 *     3.15 r
+  core/be/be_mem/U270/Q (MUX21X2)                         0.18 *     3.33 r
+  core/be/be_mem/dcache/U137/QN (NAND3X2)                 0.17 *     3.50 f
+  core/be/be_mem/dcache/U138/QN (NOR2X4)                  0.08 *     3.58 r
+  core/be/be_mem/dcache/U1189/QN (NOR2X1)                 0.20 *     3.78 f
+  core/be/be_mem/dcache/U1190/ZN (INVX0)                  0.05 *     3.83 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                 0.09 *     3.92 f
+  uce_1__uce/U51/QN (NAND2X0)                             0.07 *     3.99 r
+  uce_1__uce/U52/ZN (INVX0)                               0.07 *     4.07 f
+  uce_1__uce/U53/Q (OA221X1)                              0.11 *     4.18 f
+  uce_1__uce/U72/ZN (INVX0)                               0.05 *     4.23 r
+  uce_1__uce/U720/QN (NAND3X0)                            0.12 *     4.34 f
+  U3127/Q (OA221X1)                                       0.16 *     4.51 f
+  mem_resp_yumi_o (out)                                   0.00 *     4.51 f
+  data arrival time                                                  4.51
+
+  clock core_clk (rise edge)                              7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  output external delay                                  -0.10       5.90
+  data required time                                                 5.90
+  --------------------------------------------------------------------------
+  data required time                                                 5.90
+  data arrival time                                                 -4.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.39
+
+
+  Startpoint: core/be/be_mem/dcache/paddr_tv_r_reg_17_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/minstret_reg/data_r_reg_47_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core/be/be_mem/dcache/paddr_tv_r_reg_17_/CLK (DFFX1)
+                                                          0.00 #     0.00 r
+  core/be/be_mem/dcache/paddr_tv_r_reg_17_/Q (DFFX1)      0.29       0.29 f
+  core/be/be_mem/dcache/U271/Q (XNOR2X1)                  0.14 *     0.42 r
+  core/be/be_mem/dcache/U273/QN (NAND4X0)                 0.05 *     0.48 f
+  core/be/be_mem/dcache/U274/QN (NOR4X0)                  0.08 *     0.55 r
+  core/be/be_mem/dcache/U290/QN (NAND4X0)                 0.10 *     0.65 f
+  core/be/be_mem/dcache/U665/QN (NOR3X0)                  0.07 *     0.72 r
+  core/be/be_mem/dcache/pe_store_hit/a/genblk1_scan/U3/Q (OR2X2)
+                                                          0.09 *     0.81 r
+  core/be/be_mem/dcache/pe_store_hit/a/genblk1_scan/U4/QN (NOR2X4)
+                                                          0.03 *     0.84 f
+  core/be/be_mem/dcache/pe_store_hit/a/genblk1_scan/U7/QN (NAND2X4)
+                                                          0.02 *     0.87 r
+  core/be/be_mem/dcache/pe_store_hit/a/genblk1_scan/U8/QN (NOR2X2)
+                                                          0.02 *     0.89 f
+  core/be/be_mem/dcache/pe_store_hit/a/genblk1_scan/U9/ZN (INVX1)
+                                                          0.03 *     0.92 r
+  core/be/be_mem/dcache/pe_store_hit/a/genblk1_scan/U10/Q (OR2X1)
+                                                          0.06 *     0.98 r
+  core/be/be_mem/dcache/pe_store_hit/a/genblk1_scan/U11/Q (OR2X1)
+                                                          0.06 *     1.04 r
+  core/be/be_mem/dcache/pe_store_hit/a/U5/ZN (INVX1)      0.02 *     1.06 f
+  core/be/be_mem/dcache/pe_store_hit/a/U13/Q (AND2X1)     0.05 *     1.11 f
+  core/be/be_mem/dcache/pe_store_hit/b/aligned_right/aligned_right/aligned_right/U3/Z (NBUFFX2)
+                                                          0.05 *     1.16 f
+  core/be/be_mem/dcache/pe_store_hit/b/aligned_right/aligned_right/U1/Q (OR2X1)
+                                                          0.06 *     1.22 f
+  core/be/be_mem/dcache/pe_store_hit/b/aligned_right/U1/Q (OR2X2)
+                                                          0.07 *     1.29 f
+  core/be/be_mem/dcache/pe_store_hit/b/U1/Q (OR2X2)       0.07 *     1.36 f
+  core/be/be_mem/dcache/U170/QN (NOR2X4)                  0.03 *     1.39 r
+  core/be/be_mem/dcache/U173/QN (NOR2X4)                  0.03 *     1.42 f
+  core/be/be_mem/dcache/U225/QN (NAND2X4)                 0.02 *     1.45 r
+  core/be/be_mem/dcache/U230/QN (NAND2X4)                 0.10 *     1.55 f
+  core/be/be_mem/U119/Z (NBUFFX16)                        0.15 *     1.70 f
+  core/be/be_mem/U138/ZN (INVX2)                          0.02 *     1.72 r
+  core/be/be_mem/U91/Q (AND3X1)                           0.07 *     1.78 r
+  core/be/be_calculator/pipe_mem/U140/Q (AND2X2)          0.08 *     1.87 r
+  core/be/be_calculator/U14/ZN (INVX2)                    0.03 *     1.90 f
+  core/be/be_calculator/U16/QN (NAND2X4)                  0.02 *     1.92 r
+  core/be/be_calculator/U33/ZN (INVX2)                    0.02 *     1.94 f
+  core/be/be_calculator/U34/Q (AND3X2)                    0.12 *     2.06 f
+  core/be/be_mem/csr/add_x_8/U101/QN (NAND2X4)            0.06 *     2.11 r
+  core/be/be_mem/csr/add_x_8/U150/QN (NOR2X4)             0.02 *     2.14 f
+  core/be/be_mem/csr/add_x_8/U153/C1 (HADDX1)             0.09 *     2.23 f
+  core/be/be_mem/csr/add_x_8/U154/C1 (HADDX1)             0.10 *     2.33 f
+  core/be/be_mem/csr/add_x_8/U155/C1 (HADDX1)             0.10 *     2.42 f
+  core/be/be_mem/csr/add_x_8/U156/C1 (HADDX1)             0.10 *     2.52 f
+  core/be/be_mem/csr/add_x_8/U157/C1 (HADDX1)             0.10 *     2.62 f
+  core/be/be_mem/csr/add_x_8/U158/C1 (HADDX1)             0.10 *     2.72 f
+  core/be/be_mem/csr/add_x_8/U159/C1 (HADDX1)             0.10 *     2.82 f
+  core/be/be_mem/csr/add_x_8/U160/C1 (HADDX1)             0.10 *     2.91 f
+  core/be/be_mem/csr/add_x_8/U161/C1 (HADDX1)             0.10 *     3.01 f
+  core/be/be_mem/csr/add_x_8/U162/C1 (HADDX1)             0.10 *     3.11 f
+  core/be/be_mem/csr/add_x_8/U163/C1 (HADDX1)             0.10 *     3.21 f
+  core/be/be_mem/csr/add_x_8/U164/C1 (HADDX1)             0.10 *     3.31 f
+  core/be/be_mem/csr/add_x_8/U165/C1 (HADDX1)             0.10 *     3.41 f
+  core/be/be_mem/csr/add_x_8/U166/C1 (HADDX1)             0.10 *     3.51 f
+  core/be/be_mem/csr/add_x_8/U167/C1 (HADDX1)             0.10 *     3.60 f
+  core/be/be_mem/csr/add_x_8/U168/C1 (HADDX1)             0.10 *     3.70 f
+  core/be/be_mem/csr/add_x_8/U169/C1 (HADDX1)             0.10 *     3.80 f
+  core/be/be_mem/csr/add_x_8/U170/C1 (HADDX1)             0.10 *     3.90 f
+  core/be/be_mem/csr/add_x_8/U171/C1 (HADDX1)             0.10 *     4.00 f
+  core/be/be_mem/csr/add_x_8/U172/C1 (HADDX1)             0.10 *     4.10 f
+  core/be/be_mem/csr/add_x_8/U173/C1 (HADDX1)             0.10 *     4.20 f
+  core/be/be_mem/csr/add_x_8/U174/C1 (HADDX1)             0.10 *     4.30 f
+  core/be/be_mem/csr/add_x_8/U175/C1 (HADDX1)             0.10 *     4.40 f
+  core/be/be_mem/csr/add_x_8/U176/C1 (HADDX1)             0.10 *     4.50 f
+  core/be/be_mem/csr/add_x_8/U177/C1 (HADDX1)             0.10 *     4.60 f
+  core/be/be_mem/csr/add_x_8/U178/C1 (HADDX1)             0.10 *     4.69 f
+  core/be/be_mem/csr/add_x_8/U179/C1 (HADDX1)             0.10 *     4.79 f
+  core/be/be_mem/csr/add_x_8/U180/C1 (HADDX1)             0.10 *     4.89 f
+  core/be/be_mem/csr/add_x_8/U181/C1 (HADDX1)             0.10 *     4.99 f
+  core/be/be_mem/csr/add_x_8/U182/C1 (HADDX1)             0.10 *     5.09 f
+  core/be/be_mem/csr/add_x_8/U183/C1 (HADDX1)             0.10 *     5.19 f
+  core/be/be_mem/csr/add_x_8/U184/C1 (HADDX1)             0.10 *     5.29 f
+  core/be/be_mem/csr/add_x_8/U185/C1 (HADDX1)             0.10 *     5.38 f
+  core/be/be_mem/csr/add_x_8/U186/C1 (HADDX1)             0.10 *     5.48 f
+  core/be/be_mem/csr/add_x_8/U187/C1 (HADDX1)             0.10 *     5.58 f
+  core/be/be_mem/csr/add_x_8/U151/Q (XOR2X1)              0.10 *     5.69 r
+  core/be/be_mem/csr/U2682/Q (AO222X1)                    0.06 *     5.75 r
+  core/be/be_mem/csr/minstret_reg/U12/Q (AND2X1)          0.06 *     5.81 r
+  core/be/be_mem/csr/minstret_reg/data_r_reg_47_/D (DFFX1)
+                                                          0.00 *     5.81 r
+  data arrival time                                                  5.81
+
+  clock core_clk (rise edge)                              7.00       7.00
+  clock network delay (ideal)                             0.00       7.00
+  clock uncertainty                                      -1.00       6.00
+  core/be/be_mem/csr/minstret_reg/data_r_reg_47_/CLK (DFFX1)
+                                                          0.00       6.00 r
+  library setup time                                     -0.07       5.93
+  data required time                                                 5.93
+  --------------------------------------------------------------------------
+  data required time                                                 5.93
+  data arrival time                                                 -5.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.13
+
+
+  Startpoint: mem_resp_i[54]
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock core_clk (rise edge)               0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.10       0.10 f
+  mem_resp_i[54] (in)                      0.00       0.10 f
+  U3127/Q (OA221X1)                        0.14 *     0.24 f
+  mem_resp_yumi_o (out)                    0.00 *     0.24 f
+  data arrival time                                   0.24
+
+  clock core_clk (rise edge)               0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        1.00       1.00
+  output external delay                   -0.10       0.90
+  data required time                                  0.90
+  -----------------------------------------------------------
+  data required time                                  0.90
+  data arrival time                                  -0.24
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.66
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: uce_1__uce/index_counter/ctr_r_reg_0_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  reset_i (in)                                            0.00       0.10 r
+  U1755/Z (NBUFFX2)                                       0.12 *     0.22 r
+  uce_1__uce/index_counter/U25/QN (NOR2X0)                0.06 *     0.28 f
+  uce_1__uce/index_counter/ctr_r_reg_0_/D (DFFX1)         0.00 *     0.28 f
+  data arrival time                                                  0.28
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       1.00       1.00
+  uce_1__uce/index_counter/ctr_r_reg_0_/CLK (DFFX1)       0.00       1.00 r
+  library hold time                                      -0.01       0.99
+  data required time                                                 0.99
+  --------------------------------------------------------------------------
+  data required time                                                 0.99
+  data arrival time                                                 -0.28
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.71
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_89_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[89]
+            (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  fifo_1__mem_fifo/dff/data_r_reg_89_/CLK (DFFX1)         0.00 #     0.00 r
+  fifo_1__mem_fifo/dff/data_r_reg_89_/Q (DFFX1)           0.17       0.17 r
+  U1921/Q (AND2X1)                                        0.10 *     0.28 r
+  io_cmd_o[89] (out)                                      0.00 *     0.28 r
+  data arrival time                                                  0.28
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       1.00       1.00
+  output external delay                                  -0.10       0.90
+  data required time                                                 0.90
+  --------------------------------------------------------------------------
+  data required time                                                 0.90
+  data arrival time                                                 -0.28
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.62
+
+
+  Startpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_117_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_calculator/calc_stage_reg/data_r_reg_200_
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core/be/be_calculator/calc_stage_reg/data_r_reg_117_/CLK (DFFX1)
+                                                          0.00 #     0.00 r
+  core/be/be_calculator/calc_stage_reg/data_r_reg_117_/Q (DFFX1)
+                                                          0.17       0.17 f
+  core/be/be_calculator/calc_stage_reg/data_r_reg_200_/D (DFFX1)
+                                                          0.00 *     0.17 f
+  data arrival time                                                  0.17
+
+  clock core_clk (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       1.00       1.00
+  core/be/be_calculator/calc_stage_reg/data_r_reg_200_/CLK (DFFX1)
+                                                          0.00       1.00 r
+  library hold time                                      -0.01       0.99
+  data required time                                                 0.99
+  --------------------------------------------------------------------------
+  data required time                                                 0.99
+  data arrival time                                                 -0.17
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.82
+
+
+    Net: core/fe/mem/icache/n51
+
+    max_transition         0.05
+  - Transition Time        0.21
+  ------------------------------
+    Slack                 -0.16  (VIOLATED)
+
+    List of pins on net "core/fe/mem/icache/n51" with transition violations :
+   -----------------------------------------------------------------
+                             Required        Actual
+                            Transition     Transition       Slack
+   -----------------------------------------------------------------
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[187]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[189]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[191]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[193]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[195]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[197]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[199]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[201]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[203]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[205]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[207]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[209]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[211]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[213]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[215]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[186]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[188]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[190]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[192]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[194]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[196]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[198]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[200]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[202]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[204]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[206]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[208]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[210]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[212]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[214]
+                                0.05           0.21          -0.16  (VIOLATED)
+       PIN :   core/fe/mem/icache/tag_mem/macro_mem/WBM1[216]
+                                0.05           0.21          -0.16  (VIOLATED)
+
+    Net: core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n4880
+
+    max_capacitance      104.00
+  - Capacitance          103.86
+  ------------------------------
+    Slack                  0.14  (MET)
+
+
+    Net: io_cmd_o[327]
+
+    Capacitance            0.02
+  - min_capacitance        0.10
+  ------------------------------
+    Slack                 -0.08  (VIOLATED)
+
+
+    Design: bp_softcore
+
+    max_leakage_power          0.00
+  - Current Leakage Power  6340047360.00
+  ----------------------------------
+    Slack                  -6340047360.00  (VIOLATED)
+
+
+Min pulse width constraints
+
+                       Required      Actual
+  Pin                pulse width   pulse width   Slack           Scenario
+--------------------------------------------------------------------------------
+  core/be/be_mem/dcache/data_mem_pkt_way_r_reg_2_/CLK(low)
+                      0.12          2.50          2.38 (MET)
+
+
+

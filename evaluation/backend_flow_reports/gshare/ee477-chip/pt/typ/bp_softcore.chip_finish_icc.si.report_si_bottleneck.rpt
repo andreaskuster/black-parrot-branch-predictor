@@ -1,0 +1,122 @@
+Information: Setting timing_save_pin_arrival_and_slack to TRUE and updating timing. (PTE-076)
+Information: It is recommended that the variable timing_save_pin_arrival_and_slack be set before the initial timing update for optimal performance of this command. (PTE-077)
+Information: Updating design -     Calculating arrivals  100%... (UITE-214)
+****************************************
+Report : si_bottleneck
+	-cost_type delta_delay
+	-slack_lesser_than 0
+	-max_nets 20
+	-significant_digits 3
+	-nosplit
+	-minimum_active_aggressors 1
+	-min
+	-max
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Fri Mar 13 18:32:24 2020
+****************************************
+
+ Bottleneck Cost:  delta_delay
+ net                                                         cost
+ ---------------------------------------------------------------------
+ core/be/be_mem/dcache/n926                                     0.167
+ core/fe_cmd_li[8]                                              0.123
+ core/be/be_mem/dcache/n_5_net_                                 0.113
+ core/be/be_mem/dcache/n677                                     0.108
+ core/be/be_checker/director/n161                               0.083
+ core/be/be_mem/dcache/data_mem_w_li                            0.082
+ core/fe_cmd_li[40]                                             0.078
+ core/fe_cmd_li[61]                                             0.078
+ core/fe_cmd_li[53]                                             0.075
+ core/be/be_checker/director/n216                               0.075
+ core/fe_cmd_li[64]                                             0.070
+ core/be/be_mem/dtlb/miss_v_reg/n3                              0.068
+ core/be/be_mem/dtlb/miss_v_reg/n1                              0.063
+ core/fe_cmd_li[76]                                             0.061
+ core/fe_cmd_li[43]                                             0.061
+ core/fe_cmd_li[73]                                             0.061
+ core/fe_cmd_li[45]                                             0.059
+ core/fe_cmd_li[52]                                             0.057
+ core/fe_cmd_li[41]                                             0.054
+ core/fe_cmd_li[58]                                             0.053
+
+1
+****************************************
+Report : si_bottleneck
+	-cost_type delta_delay_ratio
+	-slack_lesser_than 0
+	-max_nets 20
+	-significant_digits 3
+	-nosplit
+	-minimum_active_aggressors 1
+	-min
+	-max
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Fri Mar 13 18:32:25 2020
+****************************************
+
+ Bottleneck Cost:  delta_delay_ratio
+ net                                                         cost
+ ---------------------------------------------------------------------
+ io_resp_i[67]                                                  0.560
+ io_resp_i[86]                                                  0.546
+ io_resp_i[87]                                                  0.477
+ core/be/be_mem/dtlb/vtag_cam/n33                               0.459
+ core/be/be_checker/director/n161                               0.437
+ io_resp_i[91]                                                  0.425
+ core/fe_cmd_fifo/unhardened_fifo/ft/wptr/n9                    0.417
+ mem_resp_i[86]                                                 0.413
+ core/be/be_mem/dtlb/miss_v_reg/n3                              0.409
+ core/be/be_checker/director/n216                               0.404
+ mem_resp_i[91]                                                 0.373
+ io_resp_i[83]                                                  0.363
+ io_resp_i[79]                                                  0.359
+ core/be/be_checker/director/n243                               0.358
+ core/fe_cmd_li[8]                                              0.353
+ core/be/be_mem/dcache/n926                                     0.351
+ core/be/be_checker/director/n128                               0.348
+ core/be/be_mem/dcache/n_5_net_                                 0.341
+ io_resp_i[89]                                                  0.335
+ io_resp_i[74]                                                  0.335
+
+1
+****************************************
+Report : si_bottleneck
+	-cost_type delay_bump_per_aggressor
+	-slack_lesser_than 0
+	-max_nets 20
+	-significant_digits 3
+	-minimum_active_aggressors 1
+	-min
+	-max
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Fri Mar 13 18:32:25 2020
+****************************************
+
+ Bottleneck Cost:  delay_bump_per_aggressor
+ net                                                         cost
+ ---------------------------------------------------------------------
+ io_resp_i[86]                                                  0.454
+ mem_resp_i[86]                                                 0.343
+ io_resp_i[91]                                                  0.337
+ core/be/be_mem/dcache/data_mem_data_lo[458]                    0.321
+ mem_resp_i[78]                                                 0.309
+ mem_resp_i[91]                                                 0.308
+ io_resp_i[117]                                                 0.272
+ core/be/be_mem/dcache/data_mem_data_lo[465]                    0.244
+ core/fe_cmd_fifo/unhardened_fifo/ft/SYNOPSYS_UNCONNECTED_1     0.230
+ core/be/be_mem/dcache/data_mem_data_lo[9]                      0.230
+ core/be/be_mem/dtlb/entry_ram/z_s1r1w_mem/synth/n624           0.224
+ core/be/be_mem/dtlb/entry_ram/z_s1r1w_mem/synth/mem[255]       0.202
+ core/be/be_checker/director/npc_n[9]                           0.198
+ core/be/be_mem/dtlb/entry_ram/z_s1r1w_mem/synth/mem[270]       0.197
+ core/be/be_mem/dtlb/entry_ram/z_s1r1w_mem/synth/mem[252]       0.192
+ core/be/be_mem/dtlb/entry_ram/z_s1r1w_mem/synth/n569           0.187
+ core/be/be_mem/dcache/data_mem_data_lo[83]                     0.185
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/mem[38]        0.180
+ core/be/be_mem/dtlb/entry_ram/z_s1r1w_mem/synth/mem[13]        0.180
+ core/be/be_mem/dtlb/entry_ram/z_s1r1w_mem/synth/mem[132]       0.180
+
+1

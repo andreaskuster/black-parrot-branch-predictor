@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------------------------
+CPU#   | STAGE SUMMARY                                            |END TIME        |HOST NAME
+----------------------------------------------------------------------------------------------
+CPU_01 |*Layers              Elp=00:00:01 Cpu=00:00:00 Mem=218.4  |Mar 12 14:09:24 |linuxsrv01.ece.uw.edu
+CPU_01 |*Models              Elp=00:00:00 Cpu=00:00:00 Mem=94.4   |Mar 12 14:09:24 |linuxsrv01.ece.uw.edu
+CPU_01 |*HN                  Elp=00:00:08 Cpu=00:00:07 Mem=316.2  |Mar 12 14:09:32 |linuxsrv01.ece.uw.edu
+CPU_01 |*Cells               Elp=00:00:09 Cpu=00:00:06 Mem=281.1  |Mar 12 14:09:41 |linuxsrv01.ece.uw.edu
+CPU_01 |*Translate           Elp=00:00:03 Cpu=00:00:02 Mem=144.1  |Mar 12 14:09:44 |linuxsrv01.ece.uw.edu
+CPU_01 |*Partition_DP        Elp=00:00:13 Cpu=00:00:10 Mem=113.5  |Mar 12 14:09:58 |linuxsrv01.ece.uw.edu
+CPU_01 |*PartitionPP         Elp=00:00:00 Cpu=00:00:00 Mem=106.7  |Mar 12 14:09:58 |linuxsrv01.ece.uw.edu
+CPU_01 |*xTract_DP           Elp=00:05:06 Cpu=00:04:43 Mem=1159   |Mar 12 14:15:04 |linuxsrv01.ece.uw.edu
+CPU_01 |*xTractPP            Elp=00:00:00 Cpu=00:00:00 Mem=90.4   |Mar 12 14:15:09 |linuxsrv01.ece.uw.edu
+CPU_01 |*ReportViolations    Elp=00:00:00 Cpu=00:00:00 Mem=0      |Mar 12 14:15:12 |linuxsrv01.ece.uw.edu
+CPU_01 |*Netlist_DP          Elp=00:00:47 Cpu=00:00:35 Mem=206.7  |Mar 12 14:16:01 |linuxsrv01.ece.uw.edu
+----------------------------------------------------------------------------------------------
+Start Time: Thu Mar 12 14:09:23 2020
+End Time: Thu Mar 12 14:16:05 2020
+----------------------------------------------------------------------------------------------
+Overall:         Elp=00:06:42  Cpu=00:05:46
+PreXtraction:    Elp=00:00:35  Cpu=00:00:27
+Xtraction:       Elp=00:05:06  Cpu=00:04:43
+PostXtraction:   Elp=00:01:01  Cpu=00:00:35
+----------------------------------------------------------------------------------------------

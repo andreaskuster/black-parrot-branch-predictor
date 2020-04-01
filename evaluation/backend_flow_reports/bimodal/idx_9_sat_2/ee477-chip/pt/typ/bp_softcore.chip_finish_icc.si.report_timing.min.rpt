@@ -1,0 +1,456 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-input_pins
+	-nets
+	-nworst 10
+	-slack_lesser_than 1000000.000
+	-max_paths 10
+	-crosstalk_delta
+	-sort_by slack
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Thu Mar 12 14:16:51 2020
+****************************************
+
+Report timing status: Started...
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                  Fanout  Delta     Incr       Path
+  -------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000      0.000
+  clock network delay (ideal)                                             0.000      0.000
+  input external delay                                                    0.100      0.100 r
+  reset_i (in)                                                            0.000 &    0.100 r
+  reset_i (net)                                           35 
+  core/fe_queue_fifo/rptr_circ_ptr/U12/IN1 (NOR2X0)             -0.002    0.099 &    0.199 r
+  core/fe_queue_fifo/rptr_circ_ptr/U12/QN (NOR2X0)                        0.056 &    0.256 f
+  core/fe_queue_fifo/rptr_circ_ptr/n15 (net)               1 
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/D (DFFX1)       -0.000   -0.000 &    0.256 f
+  data arrival time                                                                  0.256
+
+  clock core_clk (rise edge)                                              0.000      0.000
+  clock network delay (propagated)                                        0.378      0.378
+  clock reconvergence pessimism                                           0.000      0.378
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                          0.378 r
+  library hold time                                                       0.022      0.400
+  data required time                                                                 0.400
+  -------------------------------------------------------------------------------------------
+  data required time                                                                 0.400
+  data arrival time                                                                 -0.256
+  -------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                  -0.145
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                  Fanout  Delta     Incr       Path
+  -------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                              0.000      0.000
+  clock network delay (ideal)                                             0.000      0.000
+  input external delay                                                    0.100      0.100 f
+  reset_i (in)                                                            0.000 &    0.100 f
+  reset_i (net)                                           35 
+  core/fe_queue_fifo/rptr_circ_ptr/U12/IN1 (NOR2X0)             -0.002    0.095 &    0.195 f
+  core/fe_queue_fifo/rptr_circ_ptr/U12/QN (NOR2X0)                        0.048 &    0.244 r
+  core/fe_queue_fifo/rptr_circ_ptr/n15 (net)               1 
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/D (DFFX1)       -0.000   -0.000 &    0.244 r
+  data arrival time                                                                  0.244
+
+  clock core_clk (rise edge)                                              0.000      0.000
+  clock network delay (propagated)                                        0.378      0.378
+  clock reconvergence pessimism                                           0.000      0.378
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                          0.378 r
+  library hold time                                                      -0.030      0.348
+  data required time                                                                 0.348
+  -------------------------------------------------------------------------------------------
+  data required time                                                                 0.348
+  data arrival time                                                                 -0.244
+  -------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                  -0.105
+
+
+  Startpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: core/CTSINVX16_G1B1I69/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                    Fanout  Delta     Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.307      0.307
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                 0.000      0.307 r
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/Q (DFFX1)                   0.227 &    0.534 r
+  core/fe_queue_fifo/rptr_circ_ptr/o[2] (net)                8 
+  core/fe_queue_fifo/rptr_circ_ptr/U13/A (FADDX1)                  0.000    0.001 &    0.535 r
+  core/fe_queue_fifo/rptr_circ_ptr/U13/S (FADDX1)                           0.106 &    0.641 f
+  core/fe_queue_fifo/rptr_circ_ptr/n_o[2] (net)              1 
+  core/fe_queue_fifo/rptr_circ_ptr/U11/INP (INVX0)                -0.000   -0.000 &    0.640 f
+  core/fe_queue_fifo/rptr_circ_ptr/U11/ZN (INVX0)                           0.022 &    0.662 r
+  core/fe_queue_fifo/rptr_circ_ptr/n5 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U12/IN2 (NOR2X0)                0.000    0.000 &    0.662 r
+  core/fe_queue_fifo/rptr_circ_ptr/U12/QN (NOR2X0)                          0.034 &    0.696 f
+  core/fe_queue_fifo/rptr_circ_ptr/n15 (net)                 1 
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/D (DFFX1)         -0.000   -0.000 &    0.696 f
+  data arrival time                                                                    0.696
+
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.378      0.378
+  clock reconvergence pessimism                                            -0.071      0.308
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                            0.308 r
+  library hold time                                                         0.022      0.329
+  data required time                                                                   0.329
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.329
+  data arrival time                                                                   -0.696
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.367
+
+
+  Startpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: core/CTSINVX16_G1B1I69/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                    Fanout  Delta     Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.307      0.307
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                 0.000      0.307 r
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/Q (DFFX1)                   0.243 &    0.550 f
+  core/fe_queue_fifo/rptr_circ_ptr/o[2] (net)                8 
+  core/fe_queue_fifo/rptr_circ_ptr/U13/A (FADDX1)                  0.000    0.001 &    0.551 f
+  core/fe_queue_fifo/rptr_circ_ptr/U13/S (FADDX1)                           0.105 &    0.655 f
+  core/fe_queue_fifo/rptr_circ_ptr/n_o[2] (net)              1 
+  core/fe_queue_fifo/rptr_circ_ptr/U11/INP (INVX0)                -0.000   -0.000 &    0.655 f
+  core/fe_queue_fifo/rptr_circ_ptr/U11/ZN (INVX0)                           0.022 &    0.677 r
+  core/fe_queue_fifo/rptr_circ_ptr/n5 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U12/IN2 (NOR2X0)                0.000    0.000 &    0.677 r
+  core/fe_queue_fifo/rptr_circ_ptr/U12/QN (NOR2X0)                          0.034 &    0.711 f
+  core/fe_queue_fifo/rptr_circ_ptr/n15 (net)                 1 
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/D (DFFX1)         -0.000   -0.000 &    0.711 f
+  data arrival time                                                                    0.711
+
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.378      0.378
+  clock reconvergence pessimism                                            -0.071      0.308
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                            0.308 r
+  library hold time                                                         0.022      0.329
+  data required time                                                                   0.329
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.329
+  data arrival time                                                                   -0.711
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.382
+
+
+  Startpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: core/CTSINVX16_G1B1I69/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                    Fanout  Delta     Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.307      0.307
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                 0.000      0.307 r
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/Q (DFFX1)                   0.227 &    0.534 r
+  core/fe_queue_fifo/rptr_circ_ptr/o[2] (net)                8 
+  core/fe_queue_fifo/rptr_circ_ptr/U13/A (FADDX1)                  0.000    0.001 &    0.535 r
+  core/fe_queue_fifo/rptr_circ_ptr/U13/S (FADDX1)                           0.095 &    0.630 r
+  core/fe_queue_fifo/rptr_circ_ptr/n_o[2] (net)              1 
+  core/fe_queue_fifo/rptr_circ_ptr/U11/INP (INVX0)                -0.000   -0.000 &    0.629 r
+  core/fe_queue_fifo/rptr_circ_ptr/U11/ZN (INVX0)                           0.023 &    0.652 f
+  core/fe_queue_fifo/rptr_circ_ptr/n5 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U12/IN2 (NOR2X0)                0.000    0.000 &    0.652 f
+  core/fe_queue_fifo/rptr_circ_ptr/U12/QN (NOR2X0)                          0.031 &    0.683 r
+  core/fe_queue_fifo/rptr_circ_ptr/n15 (net)                 1 
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/D (DFFX1)         -0.000   -0.000 &    0.683 r
+  data arrival time                                                                    0.683
+
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.378      0.378
+  clock reconvergence pessimism                                            -0.071      0.308
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                            0.308 r
+  library hold time                                                        -0.030      0.277
+  data required time                                                                   0.277
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.277
+  data arrival time                                                                   -0.683
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.405
+
+
+  Startpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: core/CTSINVX16_G1B1I69/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                    Fanout  Delta     Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.307      0.307
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                 0.000      0.307 r
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/Q (DFFX1)                   0.243 &    0.550 f
+  core/fe_queue_fifo/rptr_circ_ptr/o[2] (net)                8 
+  core/fe_queue_fifo/rptr_circ_ptr/U13/A (FADDX1)                  0.000    0.001 &    0.551 f
+  core/fe_queue_fifo/rptr_circ_ptr/U13/S (FADDX1)                           0.092 &    0.643 r
+  core/fe_queue_fifo/rptr_circ_ptr/n_o[2] (net)              1 
+  core/fe_queue_fifo/rptr_circ_ptr/U11/INP (INVX0)                -0.000   -0.000 &    0.643 r
+  core/fe_queue_fifo/rptr_circ_ptr/U11/ZN (INVX0)                           0.023 &    0.665 f
+  core/fe_queue_fifo/rptr_circ_ptr/n5 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U12/IN2 (NOR2X0)                0.000    0.000 &    0.665 f
+  core/fe_queue_fifo/rptr_circ_ptr/U12/QN (NOR2X0)                          0.031 &    0.696 r
+  core/fe_queue_fifo/rptr_circ_ptr/n15 (net)                 1 
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/D (DFFX1)         -0.000   -0.000 &    0.696 r
+  data arrival time                                                                    0.696
+
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.378      0.378
+  clock reconvergence pessimism                                            -0.071      0.308
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                            0.308 r
+  library hold time                                                        -0.030      0.277
+  data required time                                                                   0.277
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.277
+  data arrival time                                                                   -0.696
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.419
+
+
+  Startpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: core/CTSINVX16_G1B1I69/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                    Fanout  Delta     Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.307      0.307
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_/CLK (DFFX1)                 0.000      0.307 r
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_/Q (DFFX1)                   0.243 &    0.550 r
+  core/fe_queue_fifo/rptr_circ_ptr/o[1] (net)               12 
+  core/fe_queue_fifo/rptr_circ_ptr/U10/A (FADDX1)                  0.000    0.000 &    0.550 r
+  core/fe_queue_fifo/rptr_circ_ptr/U10/CO (FADDX1)                          0.120 &    0.670 r
+  core/fe_queue_fifo/rptr_circ_ptr/n7 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U13/CI (FADDX1)                -0.000   -0.000 &    0.670 r
+  core/fe_queue_fifo/rptr_circ_ptr/U13/S (FADDX1)                           0.094 &    0.764 f
+  core/fe_queue_fifo/rptr_circ_ptr/n_o[2] (net)              1 
+  core/fe_queue_fifo/rptr_circ_ptr/U11/INP (INVX0)                -0.000   -0.000 &    0.764 f
+  core/fe_queue_fifo/rptr_circ_ptr/U11/ZN (INVX0)                           0.022 &    0.786 r
+  core/fe_queue_fifo/rptr_circ_ptr/n5 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U12/IN2 (NOR2X0)                0.000    0.000 &    0.786 r
+  core/fe_queue_fifo/rptr_circ_ptr/U12/QN (NOR2X0)                          0.034 &    0.820 f
+  core/fe_queue_fifo/rptr_circ_ptr/n15 (net)                 1 
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/D (DFFX1)         -0.000   -0.000 &    0.820 f
+  data arrival time                                                                    0.820
+
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.378      0.378
+  clock reconvergence pessimism                                            -0.071      0.308
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                            0.308 r
+  library hold time                                                         0.022      0.329
+  data required time                                                                   0.329
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.329
+  data arrival time                                                                   -0.820
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.490
+
+
+  Startpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: core/CTSINVX16_G1B1I69/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                    Fanout  Delta     Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.307      0.307
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_/CLK (DFFX1)                 0.000      0.307 r
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_/Q (DFFX1)                   0.260 &    0.566 f
+  core/fe_queue_fifo/rptr_circ_ptr/o[1] (net)               12 
+  core/fe_queue_fifo/rptr_circ_ptr/U10/A (FADDX1)                  0.000    0.000 &    0.567 f
+  core/fe_queue_fifo/rptr_circ_ptr/U10/CO (FADDX1)                          0.111 &    0.678 f
+  core/fe_queue_fifo/rptr_circ_ptr/n7 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U13/CI (FADDX1)                -0.000   -0.000 &    0.678 f
+  core/fe_queue_fifo/rptr_circ_ptr/U13/S (FADDX1)                           0.093 &    0.771 f
+  core/fe_queue_fifo/rptr_circ_ptr/n_o[2] (net)              1 
+  core/fe_queue_fifo/rptr_circ_ptr/U11/INP (INVX0)                -0.000   -0.000 &    0.771 f
+  core/fe_queue_fifo/rptr_circ_ptr/U11/ZN (INVX0)                           0.022 &    0.792 r
+  core/fe_queue_fifo/rptr_circ_ptr/n5 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U12/IN2 (NOR2X0)                0.000    0.000 &    0.792 r
+  core/fe_queue_fifo/rptr_circ_ptr/U12/QN (NOR2X0)                          0.034 &    0.827 f
+  core/fe_queue_fifo/rptr_circ_ptr/n15 (net)                 1 
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/D (DFFX1)         -0.000   -0.000 &    0.827 f
+  data arrival time                                                                    0.827
+
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.378      0.378
+  clock reconvergence pessimism                                            -0.071      0.308
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                            0.308 r
+  library hold time                                                         0.022      0.329
+  data required time                                                                   0.329
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.329
+  data arrival time                                                                   -0.827
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.497
+
+
+  Startpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: core/CTSINVX16_G1B1I69/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                    Fanout  Delta     Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.307      0.307
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_/CLK (DFFX1)                 0.000      0.307 r
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_/Q (DFFX1)                   0.243 &    0.550 r
+  core/fe_queue_fifo/rptr_circ_ptr/o[1] (net)               12 
+  core/fe_queue_fifo/rptr_circ_ptr/U10/A (FADDX1)                  0.000    0.000 &    0.550 r
+  core/fe_queue_fifo/rptr_circ_ptr/U10/CO (FADDX1)                          0.120 &    0.670 r
+  core/fe_queue_fifo/rptr_circ_ptr/n7 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U13/CI (FADDX1)                -0.000   -0.000 &    0.670 r
+  core/fe_queue_fifo/rptr_circ_ptr/U13/S (FADDX1)                           0.071 &    0.741 r
+  core/fe_queue_fifo/rptr_circ_ptr/n_o[2] (net)              1 
+  core/fe_queue_fifo/rptr_circ_ptr/U11/INP (INVX0)                -0.000   -0.000 &    0.741 r
+  core/fe_queue_fifo/rptr_circ_ptr/U11/ZN (INVX0)                           0.023 &    0.764 f
+  core/fe_queue_fifo/rptr_circ_ptr/n5 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U12/IN2 (NOR2X0)                0.000    0.000 &    0.764 f
+  core/fe_queue_fifo/rptr_circ_ptr/U12/QN (NOR2X0)                          0.031 &    0.795 r
+  core/fe_queue_fifo/rptr_circ_ptr/n15 (net)                 1 
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/D (DFFX1)         -0.000   -0.000 &    0.794 r
+  data arrival time                                                                    0.794
+
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.378      0.378
+  clock reconvergence pessimism                                            -0.071      0.308
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                            0.308 r
+  library hold time                                                        -0.030      0.277
+  data required time                                                                   0.277
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.277
+  data arrival time                                                                   -0.794
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.517
+
+
+  Startpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: core/CTSINVX16_G1B1I69/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                    Fanout  Delta     Incr       Path
+  ---------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.307      0.307
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_/CLK (DFFX1)                 0.000      0.307 r
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_1_/Q (DFFX1)                   0.260 &    0.566 f
+  core/fe_queue_fifo/rptr_circ_ptr/o[1] (net)               12 
+  core/fe_queue_fifo/rptr_circ_ptr/U10/A (FADDX1)                  0.000    0.000 &    0.567 f
+  core/fe_queue_fifo/rptr_circ_ptr/U10/CO (FADDX1)                          0.111 &    0.678 f
+  core/fe_queue_fifo/rptr_circ_ptr/n7 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U13/CI (FADDX1)                -0.000   -0.000 &    0.678 f
+  core/fe_queue_fifo/rptr_circ_ptr/U13/S (FADDX1)                           0.071 &    0.748 r
+  core/fe_queue_fifo/rptr_circ_ptr/n_o[2] (net)              1 
+  core/fe_queue_fifo/rptr_circ_ptr/U11/INP (INVX0)                -0.000   -0.000 &    0.748 r
+  core/fe_queue_fifo/rptr_circ_ptr/U11/ZN (INVX0)                           0.023 &    0.771 f
+  core/fe_queue_fifo/rptr_circ_ptr/n5 (net)                  1 
+  core/fe_queue_fifo/rptr_circ_ptr/U12/IN2 (NOR2X0)                0.000    0.000 &    0.771 f
+  core/fe_queue_fifo/rptr_circ_ptr/U12/QN (NOR2X0)                          0.031 &    0.801 r
+  core/fe_queue_fifo/rptr_circ_ptr/n15 (net)                 1 
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/D (DFFX1)         -0.000   -0.000 &    0.801 r
+  data arrival time                                                                    0.801
+
+  clock core_clk (rise edge)                                                0.000      0.000
+  clock network delay (propagated)                                          0.378      0.378
+  clock reconvergence pessimism                                            -0.071      0.308
+  core/fe_queue_fifo/rptr_circ_ptr/ptr_r_reg_2_/CLK (DFFX1)                            0.308 r
+  library hold time                                                        -0.030      0.277
+  data required time                                                                   0.277
+  ---------------------------------------------------------------------------------------------
+  data required time                                                                   0.277
+  data arrival time                                                                   -0.801
+  ---------------------------------------------------------------------------------------------
+  slack (MET)                                                                          0.524
+
+Report timing status: (total endpoints 14420)...10% done.
+Report timing status: (total endpoints 14420)...20% done.
+Report timing status: (total endpoints 14420)...30% done.
+Report timing status: (total endpoints 14420)...40% done.
+Report timing status: (total endpoints 14420)...50% done.
+Report timing status: (total endpoints 14420)...60% done.
+Report timing status: (total endpoints 14420)...70% done.
+Report timing status: (total endpoints 14420)...80% done.
+Report timing status: (total endpoints 14420)...90% done.
+Warning: report_timing has satisfied the max_paths criteria. There are 14419 further endpoints which have paths of interest with slack less than 1000000.000 that were not considered when generating this report. (UITE-502)
+
+Report timing status: Completed...
+1

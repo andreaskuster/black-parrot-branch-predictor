@@ -1,0 +1,1888 @@
+****************************************
+Report : timing
+	-path_type full_clock
+	-delay_type max
+	-slack_lesser_than 1000000.000
+	-max_paths 30
+	-group REGIN
+	-transition_time
+	-sort_by slack
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 11:11:09 2020
+****************************************
+
+Report timing status: Started...
+Report timing status: Processing group REGIN
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_4__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                         0.000      0.000      0.000
+  clock network delay (ideal)                                                                   0.000      0.000
+  input external delay                                                                          0.100      0.100 f
+  io_resp_v_i (in)                                                                   0.000      0.000 &    0.100 f
+  U2002/ZN (INVX0)                                                                   0.031      0.017 &    0.117 r
+  U2003/QN (NOR4X0)                                                                  0.119      0.078 &    0.195 f
+  icc_place1886/Z (NBUFFX2)                                                          0.085      0.096 &    0.291 f
+  U2020/QN (NAND2X0)                                                                 0.120      0.082 &    0.373 r
+  U2021/ZN (INVX0)                                                                   0.072      0.055 &    0.428 f
+  U2022/QN (NOR2X1)                                                                  0.561      0.255 &    0.684 r
+  icc_place1930/Z (NBUFFX2)                                                          0.265      0.286 &    0.970 r
+  U2030/Q (AO222X1)                                                                  0.318      0.278 &    1.248 r
+  uce_1__uce/U17/Q (AO22X1)                                                          0.342      0.303 &    1.550 r
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                                     0.142      0.172 &    1.722 r
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                                      0.248      0.170 &    1.893 f
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                                        0.060      0.128 &    2.021 f
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                                       0.135      0.052 &    2.074 r
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                                        0.107      0.090 &    2.164 f
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                                          0.045      0.091 &    2.255 f
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                                            0.127      0.056 H    2.310 r
+  uce_1__uce/U51/QN (NAND2X0)                                                        0.175      0.886 H    3.196 f
+  uce_1__uce/U52/ZN (INVX0)                                                          0.112      0.075 &    3.272 r
+  uce_1__uce/U53/Q (OA221X1)                                                         0.059      0.086 &    3.358 r
+  uce_1__uce/U72/ZN (INVX0)                                                          0.053      0.041 &    3.399 f
+  uce_1__uce/U74/QN (NAND2X0)                                                        0.182      0.089 &    3.488 r
+  core/be/be_mem/dcache/U1177/QN (NAND4X0)                                           0.149      0.062 &    3.550 f
+  core/be/be_mem/dcache/U1178/QN (NAND2X0)                                           0.420      0.231 &    3.781 r
+  core/be/be_mem/dcache/U1183/Q (AO21X1)                                             0.240      0.268 &    4.049 r
+  core/be/be_mem/dcache/data_mem_4__data_mem/icc_place72/ZN (IBUFFX4)                0.047      0.212 &    4.261 f
+  core/be/be_mem/dcache/data_mem_4__data_mem/macro_mem/CSB1 (saed90_64x512_1P_BM)    0.037      0.012 &    4.273 f
+  data arrival time                                                                                        4.273
+
+  clock core_clk (rise edge)                                                         0.000      7.000      7.000
+  clock source latency                                                                          0.000      7.000
+  clk_i (in)                                                                         0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                                        0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                                         0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I14/ZN (INVX8)                                                        0.103      0.063 &    7.129 f
+  CTSINVX16_G1B1I11/ZN (INVX32)                                                      0.065      0.042 &    7.171 r
+  core/be/be_mem/dcache/data_mem_4__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.065      0.012 &    7.183 r
+  clock reconvergence pessimism                                                                 0.000      7.183
+  library setup time                                                                           -0.050      7.133
+  data required time                                                                                       7.133
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       7.133
+  data arrival time                                                                                       -4.273
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.859
+
+Report timing status: Processing group REGIN (total endpoints 8445)...10% done.
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                         0.000      0.000      0.000
+  clock network delay (ideal)                                                                   0.000      0.000
+  input external delay                                                                          0.100      0.100 r
+  io_resp_v_i (in)                                                                   0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                                   0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                                  0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                                          0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                                 0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                                   0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                                  0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                                          0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                                  0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                                          0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                                     0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                                      0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                                        0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                                       0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                                        0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                                          0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                                            0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                                        0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                                          0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                                         0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                                          0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                                        0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U141/ZN (INVX0)                                              0.071      0.043 &    3.581 r
+  core/be/be_mem/dcache/U142/QN (NOR2X0)                                             0.099      0.057 &    3.637 f
+  core/be/be_mem/dcache/U144/Q (AO21X2)                                              0.242      0.196 &    3.834 f
+  core/be/be_mem/dcache/icc_place212/ZN (INVX2)                                      0.119      0.133 &    3.967 r
+  core/be/be_mem/dcache/icc_place376/ZN (INVX8)                                      0.082      0.040 &    4.007 f
+  core/be/be_mem/dcache/icc_place378/ZN (INVX0)                                      0.057      0.058 &    4.064 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/icc_place21/Z (NBUFFX2)                 0.112      0.104 &    4.168 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/icc_clock40/ZN (INVX16)                 0.040      0.025 &    4.194 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/icc_clock39/ZN (INVX16)                 0.038      0.016 &    4.209 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/WEB1 (saed90_64x512_1P_BM)    0.038      0.022 &    4.231 r
+  data arrival time                                                                                        4.231
+
+  clock core_clk (rise edge)                                                         0.000      7.000      7.000
+  clock source latency                                                                          0.000      7.000
+  clk_i (in)                                                                         0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                                        0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                                         0.060      0.055 &    7.066 r
+  CTSINVX16_G1B2I10/ZN (INVX16)                                                      0.085      0.052 &    7.118 f
+  core/be/be_mem/dcache/CTSINVX4_G1B1I2/ZN (INVX32)                                  0.052      0.035 &    7.152 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.052      0.022 &    7.174 r
+  clock reconvergence pessimism                                                                 0.000      7.174
+  library setup time                                                                           -0.050      7.124
+  data required time                                                                                       7.124
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       7.124
+  data arrival time                                                                                       -4.231
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.892
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_3__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                         0.000      0.000      0.000
+  clock network delay (ideal)                                                                   0.000      0.000
+  input external delay                                                                          0.100      0.100 r
+  io_resp_v_i (in)                                                                   0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                                   0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                                  0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                                          0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                                 0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                                   0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                                  0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                                          0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                                  0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                                          0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                                     0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                                      0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                                        0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                                       0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                                        0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                                          0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                                            0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                                        0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                                          0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                                         0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                                          0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                                        0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U141/ZN (INVX0)                                              0.071      0.043 &    3.581 r
+  core/be/be_mem/dcache/U142/QN (NOR2X0)                                             0.099      0.057 &    3.637 f
+  core/be/be_mem/dcache/U144/Q (AO21X2)                                              0.242      0.196 &    3.834 f
+  core/be/be_mem/dcache/icc_place212/ZN (INVX2)                                      0.119      0.133 &    3.967 r
+  core/be/be_mem/dcache/icc_place376/ZN (INVX8)                                      0.082      0.040 &    4.007 f
+  core/be/be_mem/dcache/icc_place205/ZN (INVX0)                                      0.053      0.041 &    4.048 r
+  core/be/be_mem/dcache/icc_place333/Z (NBUFFX32)                                    0.051      0.136 &    4.184 r
+  core/be/be_mem/dcache/data_mem_3__data_mem/macro_mem/WEB1 (saed90_64x512_1P_BM)    0.043      0.025 &    4.209 r
+  data arrival time                                                                                        4.209
+
+  clock core_clk (rise edge)                                                         0.000      7.000      7.000
+  clock source latency                                                                          0.000      7.000
+  clk_i (in)                                                                         0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                                        0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                                         0.060      0.055 &    7.066 r
+  CTSINVX16_G1B2I10/ZN (INVX16)                                                      0.085      0.052 &    7.118 f
+  core/be/be_mem/dcache/CTSINVX4_G1B1I2/ZN (INVX32)                                  0.052      0.035 &    7.152 r
+  core/be/be_mem/dcache/data_mem_3__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.052      0.011 &    7.163 r
+  clock reconvergence pessimism                                                                 0.000      7.163
+  library setup time                                                                           -0.050      7.113
+  data required time                                                                                       7.113
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       7.113
+  data arrival time                                                                                       -4.209
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.904
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_7__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                         0.000      0.000      0.000
+  clock network delay (ideal)                                                                   0.000      0.000
+  input external delay                                                                          0.100      0.100 r
+  io_resp_v_i (in)                                                                   0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                                   0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                                  0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                                          0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                                 0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                                   0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                                  0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                                          0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                                  0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                                          0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                                     0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                                      0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                                        0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                                       0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                                        0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                                          0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                                            0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                                        0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                                          0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                                         0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                                          0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                                        0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U141/ZN (INVX0)                                              0.071      0.043 &    3.581 r
+  core/be/be_mem/dcache/U142/QN (NOR2X0)                                             0.099      0.057 &    3.637 f
+  core/be/be_mem/dcache/U144/Q (AO21X2)                                              0.242      0.196 &    3.834 f
+  core/be/be_mem/dcache/icc_place320/ZN (INVX1)                                      0.167      0.207 &    4.040 r
+  core/be/be_mem/dcache/icc_place319/Z (NBUFFX8)                                     0.048      0.178 &    4.218 r
+  core/be/be_mem/dcache/data_mem_7__data_mem/macro_mem/WEB1 (saed90_64x512_1P_BM)    0.035      0.005 &    4.223 r
+  data arrival time                                                                                        4.223
+
+  clock core_clk (rise edge)                                                         0.000      7.000      7.000
+  clock source latency                                                                          0.000      7.000
+  clk_i (in)                                                                         0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                                        0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                                         0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I14/ZN (INVX8)                                                        0.103      0.063 &    7.129 f
+  CTSINVX16_G1B1I11/ZN (INVX32)                                                      0.065      0.042 &    7.171 r
+  core/be/be_mem/dcache/data_mem_7__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.065      0.014 &    7.185 r
+  clock reconvergence pessimism                                                                 0.000      7.185
+  library setup time                                                                           -0.050      7.135
+  data required time                                                                                       7.135
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       7.135
+  data arrival time                                                                                       -4.223
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.912
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_7__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                         0.000      0.000      0.000
+  clock network delay (ideal)                                                                   0.000      0.000
+  input external delay                                                                          0.100      0.100 r
+  io_resp_v_i (in)                                                                   0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                                   0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                                  0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                                          0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                                 0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                                   0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                                  0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                                          0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                                  0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                                          0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                                     0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                                      0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                                        0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                                       0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                                        0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                                          0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                                            0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                                        0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                                          0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                                         0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                                          0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                                        0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U1177/QN (NAND4X0)                                           0.147      0.057 &    3.595 r
+  core/be/be_mem/dcache/U1178/QN (NAND2X0)                                           0.411      0.233 &    3.827 f
+  core/be/be_mem/dcache/U1186/Q (AO21X1)                                             0.083      0.150 &    3.977 f
+  core/be/be_mem/dcache/data_mem_7__data_mem/icc_place67/ZN (INVX2)                  0.131      0.071 &    4.049 r
+  core/be/be_mem/dcache/data_mem_7__data_mem/icc_place46/Z (NBUFFX16)                0.050      0.134 &    4.183 r
+  core/be/be_mem/dcache/data_mem_7__data_mem/macro_mem/CSB1 (saed90_64x512_1P_BM)    0.039      0.014 &    4.197 r
+  data arrival time                                                                                        4.197
+
+  clock core_clk (rise edge)                                                         0.000      7.000      7.000
+  clock source latency                                                                          0.000      7.000
+  clk_i (in)                                                                         0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                                        0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                                         0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I14/ZN (INVX8)                                                        0.103      0.063 &    7.129 f
+  CTSINVX16_G1B1I11/ZN (INVX32)                                                      0.065      0.042 &    7.171 r
+  core/be/be_mem/dcache/data_mem_7__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.065      0.014 &    7.185 r
+  clock reconvergence pessimism                                                                 0.000      7.185
+  library setup time                                                                           -0.050      7.135
+  data required time                                                                                       7.135
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       7.135
+  data arrival time                                                                                       -4.197
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.938
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_4__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                         0.000      0.000      0.000
+  clock network delay (ideal)                                                                   0.000      0.000
+  input external delay                                                                          0.100      0.100 r
+  io_resp_v_i (in)                                                                   0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                                   0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                                  0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                                          0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                                 0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                                   0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                                  0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                                          0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                                  0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                                          0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                                     0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                                      0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                                        0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                                       0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                                        0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                                          0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                                            0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                                        0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                                          0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                                         0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                                          0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                                        0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U141/ZN (INVX0)                                              0.071      0.043 &    3.581 r
+  core/be/be_mem/dcache/U142/QN (NOR2X0)                                             0.099      0.057 &    3.637 f
+  core/be/be_mem/dcache/U144/Q (AO21X2)                                              0.242      0.196 &    3.834 f
+  core/be/be_mem/dcache/icc_place320/ZN (INVX1)                                      0.167      0.207 &    4.040 r
+  core/be/be_mem/dcache/icc_place334/Z (NBUFFX2)                                     0.043      0.154 &    4.195 r
+  core/be/be_mem/dcache/data_mem_4__data_mem/macro_mem/WEB1 (saed90_64x512_1P_BM)    0.031      0.000 &    4.195 r
+  data arrival time                                                                                        4.195
+
+  clock core_clk (rise edge)                                                         0.000      7.000      7.000
+  clock source latency                                                                          0.000      7.000
+  clk_i (in)                                                                         0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                                        0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                                         0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I14/ZN (INVX8)                                                        0.103      0.063 &    7.129 f
+  CTSINVX16_G1B1I11/ZN (INVX32)                                                      0.065      0.042 &    7.171 r
+  core/be/be_mem/dcache/data_mem_4__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.065      0.012 &    7.183 r
+  clock reconvergence pessimism                                                                 0.000      7.183
+  library setup time                                                                           -0.050      7.133
+  data required time                                                                                       7.133
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       7.133
+  data arrival time                                                                                       -4.195
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.938
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                         0.000      0.000      0.000
+  clock network delay (ideal)                                                                   0.000      0.000
+  input external delay                                                                          0.100      0.100 f
+  io_resp_v_i (in)                                                                   0.000      0.000 &    0.100 f
+  U2002/ZN (INVX0)                                                                   0.031      0.017 &    0.117 r
+  U2003/QN (NOR4X0)                                                                  0.119      0.078 &    0.195 f
+  icc_place1886/Z (NBUFFX2)                                                          0.085      0.096 &    0.291 f
+  U2020/QN (NAND2X0)                                                                 0.120      0.082 &    0.373 r
+  U2021/ZN (INVX0)                                                                   0.072      0.055 &    0.428 f
+  U2022/QN (NOR2X1)                                                                  0.561      0.255 &    0.684 r
+  icc_place1930/Z (NBUFFX2)                                                          0.265      0.286 &    0.970 r
+  U2030/Q (AO222X1)                                                                  0.318      0.278 &    1.248 r
+  uce_1__uce/U17/Q (AO22X1)                                                          0.342      0.303 &    1.550 r
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                                     0.142      0.172 &    1.722 r
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                                      0.248      0.170 &    1.893 f
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                                        0.060      0.128 &    2.021 f
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                                       0.135      0.052 &    2.074 r
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                                        0.107      0.090 &    2.164 f
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                                          0.045      0.091 &    2.255 f
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                                            0.127      0.056 H    2.310 r
+  uce_1__uce/U51/QN (NAND2X0)                                                        0.175      0.886 H    3.196 f
+  uce_1__uce/U52/ZN (INVX0)                                                          0.112      0.075 &    3.272 r
+  uce_1__uce/U53/Q (OA221X1)                                                         0.059      0.086 &    3.358 r
+  uce_1__uce/U72/ZN (INVX0)                                                          0.053      0.041 &    3.399 f
+  uce_1__uce/U74/QN (NAND2X0)                                                        0.182      0.089 &    3.488 r
+  core/be/be_mem/dcache/U1177/QN (NAND4X0)                                           0.149      0.062 &    3.550 f
+  core/be/be_mem/dcache/U1178/QN (NAND2X0)                                           0.420      0.231 &    3.781 r
+  core/be/be_mem/dcache/U1179/Q (AO21X1)                                             0.080      0.192 &    3.973 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/icc_place456/ZN (INVX0)                 0.055      0.049 &    4.021 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/icc_place93/Z (NBUFFX2)                 0.042      0.070 &    4.091 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/icc_clock76/ZN (INVX2)                  0.069      0.045 &    4.136 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/icc_clock75/ZN (INVX8)                  0.051      0.028 &    4.164 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/CSB1 (saed90_64x512_1P_BM)    0.042      0.020 &    4.184 f
+  data arrival time                                                                                        4.184
+
+  clock core_clk (rise edge)                                                         0.000      7.000      7.000
+  clock source latency                                                                          0.000      7.000
+  clk_i (in)                                                                         0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                                        0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                                         0.060      0.055 &    7.066 r
+  CTSINVX16_G1B2I10/ZN (INVX16)                                                      0.085      0.052 &    7.118 f
+  core/be/be_mem/dcache/CTSINVX4_G1B1I2/ZN (INVX32)                                  0.052      0.035 &    7.152 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.052      0.022 &    7.174 r
+  clock reconvergence pessimism                                                                 0.000      7.174
+  library setup time                                                                           -0.050      7.124
+  data required time                                                                                       7.124
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       7.124
+  data arrival time                                                                                       -4.184
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.940
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_5__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                         0.000      0.000      0.000
+  clock network delay (ideal)                                                                   0.000      0.000
+  input external delay                                                                          0.100      0.100 f
+  io_resp_v_i (in)                                                                   0.000      0.000 &    0.100 f
+  U2002/ZN (INVX0)                                                                   0.031      0.017 &    0.117 r
+  U2003/QN (NOR4X0)                                                                  0.119      0.078 &    0.195 f
+  icc_place1886/Z (NBUFFX2)                                                          0.085      0.096 &    0.291 f
+  U2020/QN (NAND2X0)                                                                 0.120      0.082 &    0.373 r
+  U2021/ZN (INVX0)                                                                   0.072      0.055 &    0.428 f
+  U2022/QN (NOR2X1)                                                                  0.561      0.255 &    0.684 r
+  icc_place1930/Z (NBUFFX2)                                                          0.265      0.286 &    0.970 r
+  U2030/Q (AO222X1)                                                                  0.318      0.278 &    1.248 r
+  uce_1__uce/U17/Q (AO22X1)                                                          0.342      0.303 &    1.550 r
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                                     0.142      0.172 &    1.722 r
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                                      0.248      0.170 &    1.893 f
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                                        0.060      0.128 &    2.021 f
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                                       0.135      0.052 &    2.074 r
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                                        0.107      0.090 &    2.164 f
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                                          0.045      0.091 &    2.255 f
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                                            0.127      0.056 H    2.310 r
+  uce_1__uce/U51/QN (NAND2X0)                                                        0.175      0.886 H    3.196 f
+  uce_1__uce/U52/ZN (INVX0)                                                          0.112      0.075 &    3.272 r
+  uce_1__uce/U53/Q (OA221X1)                                                         0.059      0.086 &    3.358 r
+  uce_1__uce/U72/ZN (INVX0)                                                          0.053      0.041 &    3.399 f
+  uce_1__uce/U74/QN (NAND2X0)                                                        0.182      0.089 &    3.488 r
+  core/be/be_mem/dcache/U1177/QN (NAND4X0)                                           0.149      0.062 &    3.550 f
+  core/be/be_mem/dcache/U1178/QN (NAND2X0)                                           0.420      0.231 &    3.781 r
+  core/be/be_mem/dcache/U1184/Q (AO21X1)                                             0.156      0.232 &    4.013 r
+  core/be/be_mem/dcache/data_mem_5__data_mem/icc_place57/ZN (IBUFFX4)                0.042      0.160 &    4.174 f
+  core/be/be_mem/dcache/data_mem_5__data_mem/macro_mem/CSB1 (saed90_64x512_1P_BM)    0.033      0.012 &    4.186 f
+  data arrival time                                                                                        4.186
+
+  clock core_clk (rise edge)                                                         0.000      7.000      7.000
+  clock source latency                                                                          0.000      7.000
+  clk_i (in)                                                                         0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                                        0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                                         0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I14/ZN (INVX8)                                                        0.103      0.063 &    7.129 f
+  CTSINVX16_G1B1I11/ZN (INVX32)                                                      0.065      0.042 &    7.171 r
+  core/be/be_mem/dcache/data_mem_5__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.065      0.007 &    7.178 r
+  clock reconvergence pessimism                                                                 0.000      7.178
+  library setup time                                                                           -0.050      7.128
+  data required time                                                                                       7.128
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       7.128
+  data arrival time                                                                                       -4.186
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.942
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                         0.000      0.000      0.000
+  clock network delay (ideal)                                                                   0.000      0.000
+  input external delay                                                                          0.100      0.100 r
+  io_resp_v_i (in)                                                                   0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                                   0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                                  0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                                          0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                                 0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                                   0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                                  0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                                          0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                                  0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                                          0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                                     0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                                      0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                                        0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                                       0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                                        0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                                          0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                                            0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                                        0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                                          0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                                         0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                                          0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                                        0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U1177/QN (NAND4X0)                                           0.147      0.057 &    3.595 r
+  core/be/be_mem/dcache/U1178/QN (NAND2X0)                                           0.411      0.233 &    3.827 f
+  core/be/be_mem/dcache/U1180/Q (AO21X1)                                             0.062      0.135 &    3.962 f
+  core/be/be_mem/dcache/data_mem_1__data_mem/icc_place66/ZN (INVX0)                  0.062      0.042 &    4.005 r
+  core/be/be_mem/dcache/data_mem_1__data_mem/icc_place13/Z (NBUFFX2)                 0.040      0.070 &    4.075 r
+  core/be/be_mem/dcache/data_mem_1__data_mem/icc_place82/Z (NBUFFX16)                0.053      0.078 &    4.153 r
+  core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/CSB1 (saed90_64x512_1P_BM)    0.044      0.023 &    4.176 r
+  data arrival time                                                                                        4.176
+
+  clock core_clk (rise edge)                                                         0.000      7.000      7.000
+  clock source latency                                                                          0.000      7.000
+  clk_i (in)                                                                         0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                                        0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                                         0.060      0.055 &    7.066 r
+  CTSINVX16_G1B2I10/ZN (INVX16)                                                      0.085      0.052 &    7.118 f
+  core/be/be_mem/dcache/CTSINVX4_G1B1I2/ZN (INVX32)                                  0.052      0.035 &    7.152 r
+  core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.052      0.020 &    7.172 r
+  clock reconvergence pessimism                                                                 0.000      7.172
+  library setup time                                                                           -0.050      7.122
+  data required time                                                                                       7.122
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       7.122
+  data arrival time                                                                                       -4.176
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.946
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_15_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2153/Q (MUX21X1)                           0.049      0.128 &    4.196 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_15_/D (DFFX1)      0.049      0.001 &    4.197 r
+  data arrival time                                                                       4.197
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_15_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                                0.000      7.200
+  library setup time                                                          -0.051      7.149
+  data required time                                                                      7.149
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.149
+  data arrival time                                                                      -4.197
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.952
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_7_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                            Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                       0.000      0.000      0.000
+  clock network delay (ideal)                                                 0.000      0.000
+  input external delay                                                        0.100      0.100 r
+  io_resp_v_i (in)                                                 0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                 0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                        0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                               0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                 0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                        0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                        0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                   0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                    0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                      0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                     0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                      0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                        0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                          0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                      0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                        0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                       0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                        0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                      0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                          0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                   0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2145/Q (MUX21X1)                          0.048      0.127 &    4.194 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_7_/D (DFFX1)      0.048      0.001 &    4.195 r
+  data arrival time                                                                      4.195
+
+  clock core_clk (rise edge)                                       0.000      7.000      7.000
+  clock source latency                                                        0.000      7.000
+  clk_i (in)                                                       0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                      0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                       0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                       0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                      0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_7_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                               0.000      7.200
+  library setup time                                                         -0.051      7.149
+  data required time                                                                     7.149
+  -----------------------------------------------------------------------------------------------
+  data required time                                                                     7.149
+  data arrival time                                                                     -4.195
+  -----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            2.954
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_19_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2158/Q (MUX21X1)                           0.046      0.126 &    4.194 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_19_/D (DFFX1)      0.046      0.001 &    4.195 r
+  data arrival time                                                                       4.195
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_19_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                                0.000      7.200
+  library setup time                                                          -0.051      7.150
+  data required time                                                                      7.150
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.150
+  data arrival time                                                                      -4.195
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.955
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_8_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                            Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                       0.000      0.000      0.000
+  clock network delay (ideal)                                                 0.000      0.000
+  input external delay                                                        0.100      0.100 r
+  io_resp_v_i (in)                                                 0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                 0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                        0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                               0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                 0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                        0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                        0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                   0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                    0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                      0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                     0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                      0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                        0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                          0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                      0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                        0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                       0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                        0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                      0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                          0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                   0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2146/Q (MUX21X1)                          0.047      0.127 &    4.194 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_8_/D (DFFX1)      0.047      0.000 &    4.194 r
+  data arrival time                                                                      4.194
+
+  clock core_clk (rise edge)                                       0.000      7.000      7.000
+  clock source latency                                                        0.000      7.000
+  clk_i (in)                                                       0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                      0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                       0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                       0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                      0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_8_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                               0.000      7.200
+  library setup time                                                         -0.051      7.149
+  data required time                                                                     7.149
+  -----------------------------------------------------------------------------------------------
+  data required time                                                                     7.149
+  data arrival time                                                                     -4.194
+  -----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            2.955
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_26_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2165/Q (MUX21X1)                           0.047      0.127 &    4.194 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_26_/D (DFFX1)      0.047      0.000 &    4.194 r
+  data arrival time                                                                       4.194
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_26_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                                0.000      7.200
+  library setup time                                                          -0.051      7.149
+  data required time                                                                      7.149
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.149
+  data arrival time                                                                      -4.194
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.955
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_18_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2157/Q (MUX21X1)                           0.046      0.126 &    4.194 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_18_/D (DFFX1)      0.046      0.000 &    4.194 r
+  data arrival time                                                                       4.194
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_18_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                                0.000      7.200
+  library setup time                                                          -0.051      7.150
+  data required time                                                                      7.150
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.150
+  data arrival time                                                                      -4.194
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.956
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_22_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2161/Q (MUX21X1)                           0.046      0.126 &    4.194 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_22_/D (DFFX1)      0.046      0.000 &    4.194 r
+  data arrival time                                                                       4.194
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_22_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                                0.000      7.200
+  library setup time                                                          -0.051      7.149
+  data required time                                                                      7.149
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.149
+  data arrival time                                                                      -4.194
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.956
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_11_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2149/Q (MUX21X1)                           0.046      0.126 &    4.194 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_11_/D (DFFX1)      0.046      0.000 &    4.194 r
+  data arrival time                                                                       4.194
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_11_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                                0.000      7.200
+  library setup time                                                          -0.051      7.150
+  data required time                                                                      7.150
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.150
+  data arrival time                                                                      -4.194
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.956
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_20_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2159/Q (MUX21X1)                           0.046      0.126 &    4.194 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_20_/D (DFFX1)      0.046      0.000 &    4.194 r
+  data arrival time                                                                       4.194
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_20_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                                0.000      7.200
+  library setup time                                                          -0.051      7.150
+  data required time                                                                      7.150
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.150
+  data arrival time                                                                      -4.194
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.956
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_27_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2166/Q (MUX21X1)                           0.046      0.126 &    4.193 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_27_/D (DFFX1)      0.046      0.000 &    4.194 r
+  data arrival time                                                                       4.194
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_27_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                                0.000      7.200
+  library setup time                                                          -0.051      7.149
+  data required time                                                                      7.149
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.149
+  data arrival time                                                                      -4.194
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.956
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_4_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                            Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                       0.000      0.000      0.000
+  clock network delay (ideal)                                                 0.000      0.000
+  input external delay                                                        0.100      0.100 r
+  io_resp_v_i (in)                                                 0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                 0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                        0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                               0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                 0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                        0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                        0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                   0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                    0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                      0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                     0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                      0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                        0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                          0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                      0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                        0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                       0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                        0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                      0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                          0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                   0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2142/Q (MUX21X1)                          0.047      0.125 &    4.193 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_4_/D (DFFX1)      0.047      0.000 &    4.193 r
+  data arrival time                                                                      4.193
+
+  clock core_clk (rise edge)                                       0.000      7.000      7.000
+  clock source latency                                                        0.000      7.000
+  clk_i (in)                                                       0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                      0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                       0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                       0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                      0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_4_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                               0.000      7.200
+  library setup time                                                         -0.051      7.149
+  data required time                                                                     7.149
+  -----------------------------------------------------------------------------------------------
+  data required time                                                                     7.149
+  data arrival time                                                                     -4.193
+  -----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            2.956
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_25_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2164/Q (MUX21X1)                           0.046      0.125 &    4.193 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_25_/D (DFFX1)      0.046      0.000 &    4.193 r
+  data arrival time                                                                       4.193
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_25_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                                0.000      7.200
+  library setup time                                                          -0.051      7.150
+  data required time                                                                      7.150
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.150
+  data arrival time                                                                      -4.193
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.957
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_13_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2151/Q (MUX21X1)                           0.046      0.125 &    4.193 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_13_/D (DFFX1)      0.046      0.000 &    4.193 r
+  data arrival time                                                                       4.193
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_13_/CLK (DFFX1)    0.134      0.001 &    7.200 r
+  clock reconvergence pessimism                                                0.000      7.200
+  library setup time                                                          -0.051      7.150
+  data required time                                                                      7.150
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.150
+  data arrival time                                                                      -4.193
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.957
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_2__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                              Trans       Incr       Path
+  -----------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                         0.000      0.000      0.000
+  clock network delay (ideal)                                                                   0.000      0.000
+  input external delay                                                                          0.100      0.100 r
+  io_resp_v_i (in)                                                                   0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                                   0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                                  0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                                          0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                                 0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                                   0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                                  0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                                          0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                                  0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                                          0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                                     0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                                      0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                                        0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                                       0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                                        0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                                          0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                                            0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                                        0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                                          0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                                         0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                                          0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                                        0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U141/ZN (INVX0)                                              0.071      0.043 &    3.581 r
+  core/be/be_mem/dcache/U142/QN (NOR2X0)                                             0.099      0.057 &    3.637 f
+  core/be/be_mem/dcache/U144/Q (AO21X2)                                              0.242      0.196 &    3.834 f
+  core/be/be_mem/dcache/icc_place212/ZN (INVX2)                                      0.119      0.133 &    3.967 r
+  core/be/be_mem/dcache/icc_place376/ZN (INVX8)                                      0.082      0.040 &    4.007 f
+  core/be/be_mem/dcache/icc_clock80/ZN (INVX16)                                      0.052      0.047 &    4.053 r
+  core/be/be_mem/dcache/data_mem_2__data_mem/icc_clock7/Z (NBUFFX16)                 0.050      0.094 &    4.148 r
+  core/be/be_mem/dcache/data_mem_2__data_mem/macro_mem/WEB1 (saed90_64x512_1P_BM)    0.040      0.012 &    4.160 r
+  data arrival time                                                                                        4.160
+
+  clock core_clk (rise edge)                                                         0.000      7.000      7.000
+  clock source latency                                                                          0.000      7.000
+  clk_i (in)                                                                         0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                                        0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                                         0.060      0.055 &    7.066 r
+  CTSINVX16_G1B2I10/ZN (INVX16)                                                      0.085      0.052 &    7.118 f
+  core/be/be_mem/dcache/CTSINVX4_G1B1I2/ZN (INVX32)                                  0.052      0.035 &    7.152 r
+  core/be/be_mem/dcache/data_mem_2__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.052      0.016 &    7.169 r
+  clock reconvergence pessimism                                                                 0.000      7.169
+  library setup time                                                                           -0.050      7.119
+  data required time                                                                                       7.119
+  -----------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       7.119
+  data arrival time                                                                                       -4.160
+  -----------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.959
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_30_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2169/Q (MUX21X1)                           0.047      0.121 &    4.189 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_30_/D (DFFX1)      0.047      0.001 &    4.190 r
+  data arrival time                                                                       4.190
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_30_/CLK (DFFX1)    0.134      0.002 &    7.201 r
+  clock reconvergence pessimism                                                0.000      7.201
+  library setup time                                                          -0.051      7.150
+  data required time                                                                      7.150
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.150
+  data arrival time                                                                      -4.190
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.960
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_17_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2156/Q (MUX21X1)                           0.048      0.124 &    4.192 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_17_/D (DFFX1)      0.048      0.002 &    4.194 r
+  data arrival time                                                                       4.194
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_17_/CLK (DFFX1)    0.134      0.007 &    7.206 r
+  clock reconvergence pessimism                                                0.000      7.206
+  library setup time                                                          -0.051      7.155
+  data required time                                                                      7.155
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.155
+  data arrival time                                                                      -4.194
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.961
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_38_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2178/Q (MUX21X1)                           0.049      0.121 &    4.189 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_38_/D (DFFX1)      0.049      0.000 &    4.189 r
+  data arrival time                                                                       4.189
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_38_/CLK (DFFX1)    0.134      0.002 &    7.202 r
+  clock reconvergence pessimism                                                0.000      7.202
+  library setup time                                                          -0.051      7.150
+  data required time                                                                      7.150
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.150
+  data arrival time                                                                      -4.189
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.961
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_35_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2175/Q (MUX21X1)                           0.047      0.121 &    4.189 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_35_/D (DFFX1)      0.047      0.000 &    4.189 r
+  data arrival time                                                                       4.189
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_35_/CLK (DFFX1)    0.134      0.002 &    7.202 r
+  clock reconvergence pessimism                                                0.000      7.202
+  library setup time                                                          -0.051      7.151
+  data required time                                                                      7.151
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.151
+  data arrival time                                                                      -4.189
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.962
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_28_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2167/Q (MUX21X1)                           0.047      0.121 &    4.189 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_28_/D (DFFX1)      0.047      0.000 &    4.189 r
+  data arrival time                                                                       4.189
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_28_/CLK (DFFX1)    0.134      0.002 &    7.202 r
+  clock reconvergence pessimism                                                0.000      7.202
+  library setup time                                                          -0.051      7.151
+  data required time                                                                      7.151
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.151
+  data arrival time                                                                      -4.189
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.962
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_16_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2155/Q (MUX21X1)                           0.047      0.124 &    4.192 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_16_/D (DFFX1)      0.047      0.000 &    4.192 r
+  data arrival time                                                                       4.192
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_16_/CLK (DFFX1)    0.134      0.006 &    7.205 r
+  clock reconvergence pessimism                                                0.000      7.205
+  library setup time                                                          -0.051      7.154
+  data required time                                                                      7.154
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.154
+  data arrival time                                                                      -4.192
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.962
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/uncached_load_data_r_reg_37_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                             Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.000      0.000      0.000
+  clock network delay (ideal)                                                  0.000      0.000
+  input external delay                                                         0.100      0.100 r
+  io_resp_v_i (in)                                                  0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                                                  0.025      0.018 &    0.118 f
+  U2003/QN (NOR4X0)                                                 0.173      0.099 &    0.218 r
+  icc_place1886/Z (NBUFFX2)                                         0.093      0.108 &    0.326 r
+  U2020/QN (NAND2X0)                                                0.108      0.079 &    0.405 f
+  U2021/ZN (INVX0)                                                  0.079      0.052 &    0.457 r
+  U2022/QN (NOR2X1)                                                 0.434      0.248 &    0.705 f
+  icc_place1930/Z (NBUFFX2)                                         0.246      0.241 &    0.946 f
+  U2030/Q (AO222X1)                                                 0.313      0.268 &    1.215 f
+  uce_1__uce/U17/Q (AO22X1)                                         0.330      0.336 &    1.551 f
+  core/be/be_mem/dcache/icc_place105/Z (NBUFFX2)                    0.133      0.155 &    1.706 f
+  core/be/be_mem/dcache/icc_place106/ZN (INVX0)                     0.292      0.169 &    1.875 r
+  core/be/be_mem/dcache/wbuf/U361/Q (MUX21X1)                       0.060      0.157 &    2.032 r
+  core/be/be_mem/dcache/wbuf/U365/QN (NAND4X0)                      0.200      0.050 &    2.082 f
+  core/be/be_mem/dcache/wbuf/U375/QN (NOR4X0)                       0.155      0.090 &    2.172 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.053      0.115 &    2.286 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.135      0.059 H    2.345 f
+  uce_1__uce/U51/QN (NAND2X0)                                       0.177      0.876 H    3.221 r
+  uce_1__uce/U52/ZN (INVX0)                                         0.100      0.077 &    3.298 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.055      0.102 &    3.400 f
+  uce_1__uce/U72/ZN (INVX0)                                         0.062      0.039 &    3.439 r
+  uce_1__uce/U74/QN (NAND2X0)                                       0.170      0.099 &    3.537 f
+  core/be/be_mem/dcache/U223/QN (NAND4X0)                           0.394      0.201 &    3.739 r
+  core/be/be_mem/dcache/icc_place210/Z (NBUFFX2)                    0.358      0.329 &    4.068 r
+  core/be/be_mem/dcache/U2177/Q (MUX21X1)                           0.047      0.120 &    4.188 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_37_/D (DFFX1)      0.047      0.000 &    4.188 r
+  data arrival time                                                                       4.188
+
+  clock core_clk (rise edge)                                        0.000      7.000      7.000
+  clock source latency                                                         0.000      7.000
+  clk_i (in)                                                        0.000      0.000 &    7.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                                       0.022      0.011 &    7.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                                        0.060      0.055 &    7.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                                        0.105      0.063 &    7.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                                       0.134      0.070 &    7.199 r
+  core/be/be_mem/dcache/uncached_load_data_r_reg_37_/CLK (DFFX1)    0.134      0.002 &    7.202 r
+  clock reconvergence pessimism                                                0.000      7.202
+  library setup time                                                          -0.051      7.151
+  data required time                                                                      7.151
+  ------------------------------------------------------------------------------------------------
+  data required time                                                                      7.151
+  data arrival time                                                                      -4.188
+  ------------------------------------------------------------------------------------------------
+  slack (MET)                                                                             2.963
+
+Report timing status: Processing group REGIN (total endpoints 8445)...20% done.
+Report timing status: Processing group REGIN (total endpoints 8445)...30% done.
+Report timing status: Processing group REGIN (total endpoints 8445)...40% done.
+Report timing status: Processing group REGIN (total endpoints 8445)...50% done.
+Report timing status: Processing group REGIN (total endpoints 8445)...60% done.
+Report timing status: Processing group REGIN (total endpoints 8445)...70% done.
+Report timing status: Processing group REGIN (total endpoints 8445)...80% done.
+Report timing status: Processing group REGIN (total endpoints 8445)...90% done.
+Warning: report_timing has satisfied the max_paths criteria. There are 8415 further endpoints which have paths of interest with slack less than 1000000.000 that were not considered when generating this report. (UITE-502)
+
+Report timing status: Completed...
+1

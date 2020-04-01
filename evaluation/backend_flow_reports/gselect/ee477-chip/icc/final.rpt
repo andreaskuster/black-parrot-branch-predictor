@@ -1,0 +1,920 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : bp_softcore
+Version: M-2016.12-SP5-3
+Date   : Sat Mar 14 10:11:10 2020
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+
+  Startpoint: io_resp_v_i
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                        0.10       0.10 r
+  io_resp_v_i (in)                                                  0.00      0.00       0.10 r
+  io_resp_v_i (net)                             1        27.51                0.00       0.10 r
+  U2002/INP (INVX0)                                                 0.00      0.00 *     0.10 r
+  U2002/ZN (INVX0)                                                  0.11      0.06       0.17 f
+  n44 (net)                                     1        20.25                0.00       0.17 f
+  U2003/IN4 (NOR4X0)                                                0.11      0.00 *     0.17 f
+  U2003/QN (NOR4X0)                                                 0.91      0.44       0.60 r
+  n49 (net)                                     2        75.20                0.00       0.60 r
+  U2020/IN2 (NAND2X0)                                               0.91      0.01 *     0.62 r
+  U2020/QN (NAND2X0)                                                0.30      0.15       0.77 f
+  n50 (net)                                     2        13.30                0.00       0.77 f
+  U2021/INP (INVX0)                                                 0.30      0.00 *     0.77 f
+  U2021/ZN (INVX0)                                                  0.16      0.10       0.86 r
+  n241 (net)                                    2        13.46                0.00       0.86 r
+  U2022/IN2 (NOR2X4)                                                0.16      0.00 *     0.87 r
+  U2022/QN (NOR2X4)                                                 0.06      0.04       0.90 f
+  n2437 (net)                                   1         4.43                0.00       0.90 f
+  dp_ipo1797/INP (NBUFFX8)                                          0.06      0.00 *     0.90 f
+  dp_ipo1797/Z (NBUFFX8)                                            0.10      0.12       1.02 f
+  n2438 (net)                                  16       206.55                0.00       1.02 f
+  dp_ipo1794/INP (NBUFFX4)                                          0.10      0.00 *     1.02 f
+  dp_ipo1794/Z (NBUFFX4)                                            0.10      0.13       1.15 f
+  n2441 (net)                                  22        95.86                0.00       1.15 f
+  U3197/IN3 (AO222X1)                                               0.10      0.00 *     1.15 f
+  U3197/Q (AO222X1)                                                 0.15      0.17       1.32 f
+  mem_resp_li[623] (net)                        1        41.47                0.00       1.32 f
+  uce_1__uce/mem_resp_i[53] (bp_uce_02_3)                                     0.00       1.32 f
+  uce_1__uce/mem_resp_i[53] (net)                        41.47                0.00       1.32 f
+  uce_1__uce/U21/IN4 (AO22X1)                                       0.15      0.00 *     1.33 f
+  uce_1__uce/U21/Q (AO22X1)                                         0.11      0.13       1.46 f
+  uce_1__uce/tag_mem_pkt_o[36] (net)            1        23.42                0.00       1.46 f
+  uce_1__uce/tag_mem_pkt_o[36] (bp_uce_02_3)                                  0.00       1.46 f
+  n2401 (net)                                            23.42                0.00       1.46 f
+  core/tag_mem_pkt_i[79] (bp_core_minimal_02_0)                               0.00       1.46 f
+  core/tag_mem_pkt_i[79] (net)                           23.42                0.00       1.46 f
+  core/be/tag_mem_pkt_i[36] (bp_be_top_02_0)                                  0.00       1.46 f
+  core/be/tag_mem_pkt_i[36] (net)                        23.42                0.00       1.46 f
+  core/be/be_mem/tag_mem_pkt_i[36] (bp_be_mem_top_02_0)                       0.00       1.46 f
+  core/be/be_mem/tag_mem_pkt_i[36] (net)                 23.42                0.00       1.46 f
+  core/be/be_mem/dcache/tag_mem_pkt_i[36] (bp_be_dcache_02_0_0)               0.00       1.46 f
+  core/be/be_mem/dcache/tag_mem_pkt_i[36] (net)          23.42                0.00       1.46 f
+  core/be/be_mem/dcache/dp_ipo6/INP (NBUFFX8)                       0.11      0.00 *     1.46 f
+  core/be/be_mem/dcache/dp_ipo6/Z (NBUFFX8)                         0.09      0.13       1.59 f
+  core/be/be_mem/dcache/n888 (net)             15       196.75                0.00       1.59 f
+  core/be/be_mem/dcache/wbuf/lce_snoop_way_i[2] (bp_be_dcache_wbuf_data_width_p64_paddr_width_p40_ways_p8_sets_p64_0)     0.00     1.59 f
+  core/be/be_mem/dcache/wbuf/lce_snoop_way_i[2] (net)   196.75                0.00       1.59 f
+  core/be/be_mem/dcache/wbuf/dp_ipo5/INP (NBUFFX2)                  0.14      0.05 *     1.64 f
+  core/be/be_mem/dcache/wbuf/dp_ipo5/Z (NBUFFX2)                    0.07      0.09       1.73 f
+  core/be/be_mem/dcache/wbuf/n289 (net)         4        33.40                0.00       1.73 f
+  core/be/be_mem/dcache/wbuf/dp_ipo4/INP (INVX1)                    0.07      0.00 *     1.73 f
+  core/be/be_mem/dcache/wbuf/dp_ipo4/ZN (INVX1)                     0.10      0.06       1.79 r
+  core/be/be_mem/dcache/wbuf/n335 (net)         3        28.67                0.00       1.79 r
+  core/be/be_mem/dcache/wbuf/U380/IN1 (MUX21X1)                     0.10      0.00 *     1.79 r
+  core/be/be_mem/dcache/wbuf/U380/Q (MUX21X1)                       0.05      0.10       1.89 r
+  core/be/be_mem/dcache/wbuf/n283 (net)         1         6.92                0.00       1.89 r
+  core/be/be_mem/dcache/wbuf/U382/IN3 (NAND4X0)                     0.05      0.00 *     1.89 r
+  core/be/be_mem/dcache/wbuf/U382/QN (NAND4X0)                      0.11      0.06       1.95 f
+  core/be/be_mem/dcache/wbuf/n307 (net)         1         8.59                0.00       1.95 f
+  core/be/be_mem/dcache/wbuf/U388/IN3 (NOR4X0)                      0.11      0.00 *     1.95 f
+  core/be/be_mem/dcache/wbuf/U388/QN (NOR4X0)                       0.15      0.09       2.04 r
+  core/be/be_mem/dcache/wbuf/n313 (net)         1         5.54                0.00       2.04 r
+  core/be/be_mem/dcache/wbuf/U389/IN3 (OR3X1)                       0.15      0.00 *     2.04 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.06      0.12       2.16 r
+  core/be/be_mem/dcache/wbuf/lce_snoop_match_o (net)     1    10.23           0.00       2.16 r
+  core/be/be_mem/dcache/wbuf/lce_snoop_match_o (bp_be_dcache_wbuf_data_width_p64_paddr_width_p40_ways_p8_sets_p64_0)     0.00     2.16 r
+  core/be/be_mem/dcache/lce_snoop_match_lo (net)         10.23                0.00       2.16 r
+  core/be/be_mem/dcache/U1191/IN1 (NOR3X0)                          0.06      0.00 *     2.16 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.30      0.15       2.30 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (net)     3    35.31             0.00       2.30 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (bp_be_dcache_02_0_0)            0.00       2.30 f
+  core/be/be_mem/data_mem_pkt_ready_o (net)              35.31                0.00       2.30 f
+  core/be/be_mem/data_mem_pkt_ready_o (bp_be_mem_top_02_0)                    0.00       2.30 f
+  core/be/data_mem_pkt_ready_o (net)                     35.31                0.00       2.30 f
+  core/be/data_mem_pkt_ready_o (bp_be_top_02_0)                               0.00       2.30 f
+  core/data_mem_pkt_ready_o[1] (net)                     35.31                0.00       2.30 f
+  core/data_mem_pkt_ready_o[1] (bp_core_minimal_02_0)                         0.00       2.30 f
+  data_mem_pkt_ready_lo[1] (net)                         35.31                0.00       2.30 f
+  uce_1__uce/data_mem_pkt_ready_i (bp_uce_02_3)                               0.00       2.30 f
+  uce_1__uce/data_mem_pkt_ready_i (net)                  35.31                0.00       2.30 f
+  uce_1__uce/U51/IN2 (NAND2X1)                                      0.30      0.00 *     2.31 f
+  uce_1__uce/U51/QN (NAND2X1)                                       0.14      0.08       2.39 r
+  uce_1__uce/n19 (net)                          2        10.04                0.00       2.39 r
+  uce_1__uce/U52/INP (INVX1)                                        0.14      0.00 *     2.39 r
+  uce_1__uce/U52/ZN (INVX1)                                         0.06      0.04       2.43 f
+  uce_1__uce/n36 (net)                          4         9.78                0.00       2.43 f
+  uce_1__uce/U53/IN5 (OA221X1)                                      0.06      0.00 *     2.43 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.10      0.12       2.55 f
+  uce_1__uce/cache_req_complete_o (net)         2        21.65                0.00       2.55 f
+  uce_1__uce/U72/INP (INVX1)                                        0.10      0.00 *     2.55 f
+  uce_1__uce/U72/ZN (INVX1)                                         0.09      0.06       2.61 r
+  uce_1__uce/n106 (net)                         2        20.92                0.00       2.61 r
+  uce_1__uce/U720/IN3 (NAND3X0)                                     0.09      0.00 *     2.61 r
+  uce_1__uce/U720/QN (NAND3X0)                                      0.48      0.25       2.85 f
+  uce_1__uce/mem_resp_yumi_o (net)              3        79.72                0.00       2.85 f
+  uce_1__uce/mem_resp_yumi_o (bp_uce_02_3)                                    0.00       2.85 f
+  mem_resp_yumi_lo[1] (net)                              79.72                0.00       2.85 f
+  U3128/IN2 (AO22X1)                                                0.48      0.01 *     2.86 f
+  U3128/Q (AO22X1)                                                  0.19      0.23       3.09 f
+  io_resp_yumi_o (net)                          1        55.86                0.00       3.09 f
+  io_resp_yumi_o (out)                                              0.19      0.00 *     3.09 f
+  data arrival time                                                                      3.09
+
+  clock core_clk (rise edge)                                                  7.00       7.00
+  clock network delay (ideal)                                                 0.00       7.00
+  clock uncertainty                                                          -1.00       6.00
+  output external delay                                                      -0.10       5.90
+  data required time                                                                     5.90
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     5.90
+  data arrival time                                                                     -3.09
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            2.81
+
+
+  Startpoint: io_resp_v_i
+              (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                        0.10       0.10 r
+  io_resp_v_i (in)                                                  0.00      0.00       0.10 r
+  io_resp_v_i (net)                             1        27.51                0.00       0.10 r
+  U2002/INP (INVX0)                                                 0.00      0.00 *     0.10 r
+  U2002/ZN (INVX0)                                                  0.11      0.06       0.17 f
+  n44 (net)                                     1        20.25                0.00       0.17 f
+  U2003/IN4 (NOR4X0)                                                0.11      0.00 *     0.17 f
+  U2003/QN (NOR4X0)                                                 0.91      0.44       0.60 r
+  n49 (net)                                     2        75.20                0.00       0.60 r
+  U2020/IN2 (NAND2X0)                                               0.91      0.01 *     0.62 r
+  U2020/QN (NAND2X0)                                                0.30      0.15       0.77 f
+  n50 (net)                                     2        13.30                0.00       0.77 f
+  U2021/INP (INVX0)                                                 0.30      0.00 *     0.77 f
+  U2021/ZN (INVX0)                                                  0.16      0.10       0.86 r
+  n241 (net)                                    2        13.46                0.00       0.86 r
+  U2022/IN2 (NOR2X4)                                                0.16      0.00 *     0.87 r
+  U2022/QN (NOR2X4)                                                 0.06      0.04       0.90 f
+  n2437 (net)                                   1         4.43                0.00       0.90 f
+  dp_ipo1797/INP (NBUFFX8)                                          0.06      0.00 *     0.90 f
+  dp_ipo1797/Z (NBUFFX8)                                            0.10      0.12       1.02 f
+  n2438 (net)                                  16       206.55                0.00       1.02 f
+  dp_ipo1794/INP (NBUFFX4)                                          0.10      0.00 *     1.02 f
+  dp_ipo1794/Z (NBUFFX4)                                            0.10      0.13       1.15 f
+  n2441 (net)                                  22        95.86                0.00       1.15 f
+  U3197/IN3 (AO222X1)                                               0.10      0.00 *     1.15 f
+  U3197/Q (AO222X1)                                                 0.15      0.17       1.32 f
+  mem_resp_li[623] (net)                        1        41.47                0.00       1.32 f
+  uce_1__uce/mem_resp_i[53] (bp_uce_02_3)                                     0.00       1.32 f
+  uce_1__uce/mem_resp_i[53] (net)                        41.47                0.00       1.32 f
+  uce_1__uce/U21/IN4 (AO22X1)                                       0.15      0.00 *     1.33 f
+  uce_1__uce/U21/Q (AO22X1)                                         0.11      0.13       1.46 f
+  uce_1__uce/tag_mem_pkt_o[36] (net)            1        23.42                0.00       1.46 f
+  uce_1__uce/tag_mem_pkt_o[36] (bp_uce_02_3)                                  0.00       1.46 f
+  n2401 (net)                                            23.42                0.00       1.46 f
+  core/tag_mem_pkt_i[79] (bp_core_minimal_02_0)                               0.00       1.46 f
+  core/tag_mem_pkt_i[79] (net)                           23.42                0.00       1.46 f
+  core/be/tag_mem_pkt_i[36] (bp_be_top_02_0)                                  0.00       1.46 f
+  core/be/tag_mem_pkt_i[36] (net)                        23.42                0.00       1.46 f
+  core/be/be_mem/tag_mem_pkt_i[36] (bp_be_mem_top_02_0)                       0.00       1.46 f
+  core/be/be_mem/tag_mem_pkt_i[36] (net)                 23.42                0.00       1.46 f
+  core/be/be_mem/dcache/tag_mem_pkt_i[36] (bp_be_dcache_02_0_0)               0.00       1.46 f
+  core/be/be_mem/dcache/tag_mem_pkt_i[36] (net)          23.42                0.00       1.46 f
+  core/be/be_mem/dcache/dp_ipo6/INP (NBUFFX8)                       0.11      0.00 *     1.46 f
+  core/be/be_mem/dcache/dp_ipo6/Z (NBUFFX8)                         0.09      0.13       1.59 f
+  core/be/be_mem/dcache/n888 (net)             15       196.75                0.00       1.59 f
+  core/be/be_mem/dcache/wbuf/lce_snoop_way_i[2] (bp_be_dcache_wbuf_data_width_p64_paddr_width_p40_ways_p8_sets_p64_0)     0.00     1.59 f
+  core/be/be_mem/dcache/wbuf/lce_snoop_way_i[2] (net)   196.75                0.00       1.59 f
+  core/be/be_mem/dcache/wbuf/dp_ipo5/INP (NBUFFX2)                  0.14      0.05 *     1.64 f
+  core/be/be_mem/dcache/wbuf/dp_ipo5/Z (NBUFFX2)                    0.07      0.09       1.73 f
+  core/be/be_mem/dcache/wbuf/n289 (net)         4        33.40                0.00       1.73 f
+  core/be/be_mem/dcache/wbuf/dp_ipo4/INP (INVX1)                    0.07      0.00 *     1.73 f
+  core/be/be_mem/dcache/wbuf/dp_ipo4/ZN (INVX1)                     0.10      0.06       1.79 r
+  core/be/be_mem/dcache/wbuf/n335 (net)         3        28.67                0.00       1.79 r
+  core/be/be_mem/dcache/wbuf/U380/IN1 (MUX21X1)                     0.10      0.00 *     1.79 r
+  core/be/be_mem/dcache/wbuf/U380/Q (MUX21X1)                       0.05      0.10       1.89 r
+  core/be/be_mem/dcache/wbuf/n283 (net)         1         6.92                0.00       1.89 r
+  core/be/be_mem/dcache/wbuf/U382/IN3 (NAND4X0)                     0.05      0.00 *     1.89 r
+  core/be/be_mem/dcache/wbuf/U382/QN (NAND4X0)                      0.11      0.06       1.95 f
+  core/be/be_mem/dcache/wbuf/n307 (net)         1         8.59                0.00       1.95 f
+  core/be/be_mem/dcache/wbuf/U388/IN3 (NOR4X0)                      0.11      0.00 *     1.95 f
+  core/be/be_mem/dcache/wbuf/U388/QN (NOR4X0)                       0.15      0.09       2.04 r
+  core/be/be_mem/dcache/wbuf/n313 (net)         1         5.54                0.00       2.04 r
+  core/be/be_mem/dcache/wbuf/U389/IN3 (OR3X1)                       0.15      0.00 *     2.04 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)                         0.06      0.12       2.16 r
+  core/be/be_mem/dcache/wbuf/lce_snoop_match_o (net)     1    10.23           0.00       2.16 r
+  core/be/be_mem/dcache/wbuf/lce_snoop_match_o (bp_be_dcache_wbuf_data_width_p64_paddr_width_p40_ways_p8_sets_p64_0)     0.00     2.16 r
+  core/be/be_mem/dcache/lce_snoop_match_lo (net)         10.23                0.00       2.16 r
+  core/be/be_mem/dcache/U1191/IN1 (NOR3X0)                          0.06      0.00 *     2.16 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.30      0.15       2.30 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (net)     3    35.31             0.00       2.30 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (bp_be_dcache_02_0_0)            0.00       2.30 f
+  core/be/be_mem/data_mem_pkt_ready_o (net)              35.31                0.00       2.30 f
+  core/be/be_mem/data_mem_pkt_ready_o (bp_be_mem_top_02_0)                    0.00       2.30 f
+  core/be/data_mem_pkt_ready_o (net)                     35.31                0.00       2.30 f
+  core/be/data_mem_pkt_ready_o (bp_be_top_02_0)                               0.00       2.30 f
+  core/data_mem_pkt_ready_o[1] (net)                     35.31                0.00       2.30 f
+  core/data_mem_pkt_ready_o[1] (bp_core_minimal_02_0)                         0.00       2.30 f
+  data_mem_pkt_ready_lo[1] (net)                         35.31                0.00       2.30 f
+  uce_1__uce/data_mem_pkt_ready_i (bp_uce_02_3)                               0.00       2.30 f
+  uce_1__uce/data_mem_pkt_ready_i (net)                  35.31                0.00       2.30 f
+  uce_1__uce/U51/IN2 (NAND2X1)                                      0.30      0.00 *     2.31 f
+  uce_1__uce/U51/QN (NAND2X1)                                       0.14      0.08       2.39 r
+  uce_1__uce/n19 (net)                          2        10.04                0.00       2.39 r
+  uce_1__uce/U52/INP (INVX1)                                        0.14      0.00 *     2.39 r
+  uce_1__uce/U52/ZN (INVX1)                                         0.06      0.04       2.43 f
+  uce_1__uce/n36 (net)                          4         9.78                0.00       2.43 f
+  uce_1__uce/U53/IN5 (OA221X1)                                      0.06      0.00 *     2.43 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.10      0.12       2.55 f
+  uce_1__uce/cache_req_complete_o (net)         2        21.65                0.00       2.55 f
+  uce_1__uce/U72/INP (INVX1)                                        0.10      0.00 *     2.55 f
+  uce_1__uce/U72/ZN (INVX1)                                         0.09      0.06       2.61 r
+  uce_1__uce/n106 (net)                         2        20.92                0.00       2.61 r
+  uce_1__uce/U74/IN1 (NAND2X2)                                      0.09      0.00 *     2.61 r
+  uce_1__uce/U74/QN (NAND2X2)                                       0.14      0.07       2.68 f
+  uce_1__uce/data_mem_pkt_v_o (net)             4        41.38                0.00       2.68 f
+  uce_1__uce/data_mem_pkt_v_o (bp_uce_02_3)                                   0.00       2.68 f
+  data_mem_pkt_v_li[1] (net)                             41.38                0.00       2.68 f
+  core/data_mem_pkt_v_i[1] (bp_core_minimal_02_0)                             0.00       2.68 f
+  core/data_mem_pkt_v_i[1] (net)                         41.38                0.00       2.68 f
+  core/be/data_mem_pkt_v_i (bp_be_top_02_0)                                   0.00       2.68 f
+  core/be/data_mem_pkt_v_i (net)                         41.38                0.00       2.68 f
+  core/be/be_mem/data_mem_pkt_v_i (bp_be_mem_top_02_0)                        0.00       2.68 f
+  core/be/be_mem/data_mem_pkt_v_i (net)                  41.38                0.00       2.68 f
+  core/be/be_mem/dcache/data_mem_pkt_v_i (bp_be_dcache_02_0_0)                0.00       2.68 f
+  core/be/be_mem/dcache/data_mem_pkt_v_i (net)           41.38                0.00       2.68 f
+  core/be/be_mem/dcache/U1177/IN1 (NAND4X0)                         0.14      0.00 *     2.68 f
+  core/be/be_mem/dcache/U1177/QN (NAND4X0)                          0.09      0.05       2.73 r
+  core/be/be_mem/dcache/n644 (net)              1         3.72                0.00       2.73 r
+  core/be/be_mem/dcache/U1178/IN2 (NAND2X0)                         0.09      0.00 *     2.73 r
+  core/be/be_mem/dcache/U1178/QN (NAND2X0)                          0.73      0.38       3.12 f
+  core/be/be_mem/dcache/n646 (net)              8        83.07                0.00       3.12 f
+  core/be/be_mem/dcache/U1179/IN3 (AO21X1)                          0.73      0.01 *     3.13 f
+  core/be/be_mem/dcache/U1179/Q (AO21X1)                            0.08      0.11       3.23 f
+  core/be/be_mem/dcache/n_1_net_ (net)          1        14.44                0.00       3.23 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/v_i (bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_24)     0.00     3.23 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/v_i (net)    14.44               0.00       3.23 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/U10/INP (INVX0)        0.08      0.00 *     3.24 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/U10/ZN (INVX0)         0.17      0.09       3.33 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/n19 (net)     1    23.81         0.00       3.33 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/U19/INP (NBUFFX16)     0.17      0.00 *     3.33 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/U19/Z (NBUFFX16)       0.08      0.13       3.46 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/n10 (net)     1   217.15         0.00       3.46 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/CSB1 (saed90_64x512_1P_BM)     0.14     0.08 *     3.54 r
+  data arrival time                                                                      3.54
+
+  clock core_clk (rise edge)                                                  7.00       7.00
+  clock network delay (ideal)                                                 0.00       7.00
+  clock uncertainty                                                          -1.00       6.00
+  core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.00     6.00 r
+  library setup time                                                         -0.05       5.95
+  data required time                                                                     5.95
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     5.95
+  data arrival time                                                                     -3.54
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                            2.41
+
+
+  Startpoint: core/be/be_calculator/pipe_mem/csr_shift_reg/shift_r_reg_1__73_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  core/be/be_calculator/pipe_mem/csr_shift_reg/shift_r_reg_1__73_/CLK (DFFX1)     0.00     0.00 #     0.00 r
+  core/be/be_calculator/pipe_mem/csr_shift_reg/shift_r_reg_1__73_/Q (DFFX1)     0.03     0.18     0.18 f
+  core/be/be_calculator/pipe_mem/csr_shift_reg/data_o[73] (net)     1     4.25     0.00     0.18 f
+  core/be/be_calculator/pipe_mem/csr_shift_reg/data_o[73] (bsg_shift_reg_width_p81_stages_p2_0)     0.00     0.18 f
+  core/be/be_calculator/pipe_mem/csr_cmd_o[73] (net)      4.25                0.00       0.18 f
+  core/be/be_calculator/pipe_mem/csr_cmd_o[73] (bp_be_pipe_mem_02_0)          0.00       0.18 f
+  core/be/be_calculator/csr_cmd_o[73] (net)               4.25                0.00       0.18 f
+  core/be/be_calculator/csr_cmd_o[73] (bp_be_calculator_top_02_0)             0.00       0.18 f
+  core/be/csr_cmd[73] (net)                               4.25                0.00       0.18 f
+  core/be/U8/INP (NBUFFX2)                                          0.03      0.00 *     0.18 f
+  core/be/U8/Z (NBUFFX2)                                            0.14      0.12       0.30 f
+  core/be/n8 (net)                             16        88.05                0.00       0.30 f
+  core/be/be_mem/csr_cmd_i[73] (bp_be_mem_top_02_0)                           0.00       0.30 f
+  core/be/be_mem/csr_cmd_i[73] (net)                     88.05                0.00       0.30 f
+  core/be/be_mem/csr/csr_cmd_i[73] (bp_be_csr_02_0)                           0.00       0.30 f
+  core/be/be_mem/csr/csr_cmd_i[73] (net)                 88.05                0.00       0.30 f
+  core/be/be_mem/csr/U22/INP (INVX1)                                0.14      0.00 *     0.30 f
+  core/be/be_mem/csr/U22/ZN (INVX1)                                 0.22      0.13       0.43 r
+  core/be/be_mem/csr/n2521 (net)               12        63.64                0.00       0.43 r
+  core/be/be_mem/csr/U50/IN1 (NOR2X1)                               0.22      0.00 *     0.43 r
+  core/be/be_mem/csr/U50/QN (NOR2X1)                                0.13      0.10       0.53 f
+  core/be/be_mem/csr/n195 (net)                 3        15.46                0.00       0.53 f
+  core/be/be_mem/csr/U51/INP (INVX0)                                0.13      0.00 *     0.53 f
+  core/be/be_mem/csr/U51/ZN (INVX0)                                 0.16      0.10       0.62 r
+  core/be/be_mem/csr/n928 (net)                 5        21.03                0.00       0.62 r
+  core/be/be_mem/csr/U53/IN1 (NOR2X2)                               0.16      0.00 *     0.62 r
+  core/be/be_mem/csr/U53/QN (NOR2X2)                                0.05      0.03       0.65 f
+  core/be/be_mem/csr/n19 (net)                  1         4.59                0.00       0.65 f
+  core/be/be_mem/csr/U54/IN1 (NAND2X1)                              0.05      0.00 *     0.65 f
+  core/be/be_mem/csr/U54/QN (NAND2X1)                               0.08      0.04       0.70 r
+  core/be/be_mem/csr/n83 (net)                  2         8.77                0.00       0.70 r
+  core/be/be_mem/csr/U156/IN1 (NOR2X0)                              0.08      0.00 *     0.70 r
+  core/be/be_mem/csr/U156/QN (NOR2X0)                               0.06      0.04       0.74 f
+  core/be/be_mem/csr/n84 (net)                  1         3.57                0.00       0.74 f
+  core/be/be_mem/csr/U157/IN1 (NOR2X0)                              0.06      0.00 *     0.74 f
+  core/be/be_mem/csr/U157/QN (NOR2X0)                               0.08      0.05       0.78 r
+  core/be/be_mem/csr/n86 (net)                  1         5.35                0.00       0.78 r
+  core/be/be_mem/csr/U159/IN1 (NOR2X1)                              0.08      0.00 *     0.78 r
+  core/be/be_mem/csr/U159/QN (NOR2X1)                               0.05      0.04       0.82 f
+  core/be/be_mem/csr/n1518 (net)                1         4.25                0.00       0.82 f
+  core/be/be_mem/csr/dp_ipo46/INP (NBUFFX8)                         0.05      0.00 *     0.82 f
+  core/be/be_mem/csr/dp_ipo46/Z (NBUFFX8)                           0.08      0.11       0.93 f
+  core/be/be_mem/csr/n1519 (net)               43       167.18                0.00       0.93 f
+  core/be/be_mem/csr/U1202/IN1 (NOR2X1)                             0.08      0.00 *     0.93 f
+  core/be/be_mem/csr/U1202/QN (NOR2X1)                              0.16      0.06       1.00 r
+  core/be/be_mem/csr/n922 (net)                 1        13.49                0.00       1.00 r
+  core/be/be_mem/csr/U1204/IN1 (NAND2X2)                            0.16      0.00 *     1.00 r
+  core/be/be_mem/csr/U1204/QN (NAND2X2)                             0.09      0.06       1.06 f
+  core/be/be_mem/csr/n1602 (net)                3        23.19                0.00       1.06 f
+  core/be/be_mem/csr/U1205/IN1 (NOR2X1)                             0.09      0.00 *     1.06 f
+  core/be/be_mem/csr/U1205/QN (NOR2X1)                              0.16      0.09       1.15 r
+  core/be/be_mem/csr/n1587 (net)                4        21.49                0.00       1.15 r
+  core/be/be_mem/csr/U1206/IN2 (NAND2X2)                            0.16      0.00 *     1.15 r
+  core/be/be_mem/csr/U1206/QN (NAND2X2)                             0.08      0.05       1.20 f
+  core/be/be_mem/csr/n1332 (net)                4        19.35                0.00       1.20 f
+  core/be/be_mem/csr/U1690/INP (INVX0)                              0.08      0.00 *     1.20 f
+  core/be/be_mem/csr/U1690/ZN (INVX0)                               0.05      0.03       1.23 r
+  core/be/be_mem/csr/n1275 (net)                1         3.80                0.00       1.23 r
+  core/be/be_mem/csr/U1693/IN1 (NAND4X0)                            0.05      0.00 *     1.23 r
+  core/be/be_mem/csr/U1693/QN (NAND4X0)                             0.14      0.07       1.30 f
+  core/be/be_mem/csr/n1278 (net)                1        11.74                0.00       1.30 f
+  core/be/be_mem/csr/U1694/IN1 (NAND3X0)                            0.14      0.00 *     1.30 f
+  core/be/be_mem/csr/U1694/QN (NAND3X0)                             0.12      0.08       1.38 r
+  core/be/be_mem/csr/n1280 (net)                1        11.16                0.00       1.38 r
+  core/be/be_mem/csr/U1695/IN1 (NAND2X1)                            0.12      0.00 *     1.38 r
+  core/be/be_mem/csr/U1695/QN (NAND2X1)                             0.07      0.04       1.42 f
+  core/be/be_mem/csr/n1285 (net)                1         5.67                0.00       1.42 f
+  core/be/be_mem/csr/U1698/IN1 (NAND2X1)                            0.07      0.00 *     1.42 f
+  core/be/be_mem/csr/U1698/QN (NAND2X1)                             0.05      0.03       1.45 r
+  core/be/be_mem/csr/n1287 (net)                1         3.63                0.00       1.45 r
+  core/be/be_mem/csr/U1699/IN1 (NAND2X0)                            0.05      0.00 *     1.45 r
+  core/be/be_mem/csr/U1699/QN (NAND2X0)                             0.06      0.04       1.49 f
+  core/be/be_mem/csr/n1295 (net)                1         2.19                0.00       1.49 f
+  core/be/be_mem/csr/U1705/IN1 (AOI21X1)                            0.06      0.00 *     1.49 f
+  core/be/be_mem/csr/U1705/QN (AOI21X1)                             0.04      0.10       1.59 r
+  core/be/be_mem/csr/illegal_instr_o (net)      1         5.91                0.00       1.59 r
+  core/be/be_mem/csr/illegal_instr_o (bp_be_csr_02_0)                         0.00       1.59 r
+  core/be/be_mem/csr_illegal_instr_lo (net)               5.91                0.00       1.59 r
+  core/be/be_mem/U13/IN1 (NAND2X1)                                  0.04      0.00 *     1.59 r
+  core/be/be_mem/U13/QN (NAND2X1)                                   0.07      0.04       1.63 f
+  core/be/be_mem/n8 (net)                       1         8.64                0.00       1.63 f
+  core/be/be_mem/U18/IN1 (NAND2X2)                                  0.07      0.00 *     1.63 f
+  core/be/be_mem/U18/QN (NAND2X2)                                   0.09      0.05       1.69 r
+  core/be/be_mem/exception_ecode_dec_li_illegal_instr_ (net)     5    30.07     0.00     1.69 r
+  core/be/be_mem/csr/exception_ecode_dec_i[2] (bp_be_csr_02_0)                0.00       1.69 r
+  core/be/be_mem/csr/exception_ecode_dec_i[2] (net)      30.07                0.00       1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/i[2] (bsg_priority_encode_width_p16_lo_to_hi_p1_3)     0.00     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/i[2] (net)     30.07                0.00       1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/i[2] (bsg_priority_encode_one_hot_out_width_p16_lo_to_hi_p1_3)     0.00     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/i[2] (net)    30.07               0.00       1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/i[2] (bsg_scan_width_p16_or_p1_lo_to_hi_p1_3)     0.00     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/i[2] (net)    30.07     0.00     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U3/IN1 (OR2X1)     0.09     0.00 *     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U3/Q (OR2X1)     0.06     0.08     1.76 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[2] (net)     3    13.21     0.00     1.76 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U4/IN2 (OR2X1)     0.06     0.00 *     1.76 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U4/Q (OR2X1)     0.08     0.09     1.85 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[3] (net)     3    21.59     0.00     1.85 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U6/IN2 (OR2X1)     0.08     0.00 *     1.86 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U6/Q (OR2X1)     0.06     0.09     1.94 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[5] (net)     3    13.20     0.00     1.94 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U8/IN2 (OR2X1)     0.06     0.00 *     1.94 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U8/Q (OR2X1)     0.05     0.08     2.02 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[7] (net)     2    10.14     0.00     2.02 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U9/IN2 (OR2X1)     0.05     0.00 *     2.02 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U9/Q (OR2X1)     0.05     0.08     2.09 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[8] (net)     3    11.51     0.00     2.09 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U10/IN2 (OR2X1)     0.05     0.00 *     2.09 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U10/Q (OR2X1)     0.05     0.07     2.17 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[9] (net)     3     9.28     0.00     2.17 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U12/IN2 (OR2X1)     0.05     0.00 *     2.17 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U12/Q (OR2X1)     0.05     0.07     2.24 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[11] (net)     2     8.33     0.00     2.24 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U13/IN2 (OR2X1)     0.05     0.00 *     2.24 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U13/Q (OR2X1)     0.07     0.08     2.32 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[12] (net)     3    15.90     0.00     2.32 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U14/IN2 (OR2X1)     0.07     0.00 *     2.32 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U14/Q (OR2X1)     0.05     0.08     2.39 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[14] (net)     3     9.68     0.00     2.39 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U17/IN2 (OR2X1)     0.05     0.00 *     2.39 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U17/Q (OR2X1)     0.03     0.06     2.46 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[15] (net)     1     3.27     0.00     2.46 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[15] (bsg_scan_width_p16_or_p1_lo_to_hi_p1_3)     0.00     2.46 r
+  core/be/be_mem/csr/mcause_exception_enc/a/scan_lo[15] (net)     3.27        0.00       2.46 r
+  core/be/be_mem/csr/mcause_exception_enc/a/U18/IN1 (AND2X1)        0.03      0.00 *     2.46 r
+  core/be/be_mem/csr/mcause_exception_enc/a/U18/Q (AND2X1)          0.03      0.05       2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/a/o[15] (net)     1     3.38        0.00       2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/a/o[15] (bsg_priority_encode_one_hot_out_width_p16_lo_to_hi_p1_3)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/enc_lo[15] (net)     3.38           0.00       2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/i[15] (bsg_encode_one_hot_width_p16_lo_to_hi_p1_3)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/i[15] (net)     3.38              0.00       2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/i[7] (bsg_encode_one_hot_width_p8_11)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/i[7] (net)     3.38     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/i[3] (bsg_encode_one_hot_width_p4_42)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/i[3] (net)     3.38     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/i[1] (bsg_encode_one_hot_width_p2_82)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/i[1] (net)     3.38     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/i[0] (bsg_encode_one_hot_width_p1_158)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/i[0] (net)     3.38     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/U3/INP (NBUFFX2)     0.03     0.00 *     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/U3/Z (NBUFFX2)     0.03     0.05     2.56 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/v_o (net)     2     7.67     0.00     2.56 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/v_o (bsg_encode_one_hot_width_p1_158)     0.00     2.56 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/addr_o[0] (net)     7.67     0.00     2.56 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/U1/IN1 (OR2X1)     0.03     0.00 *     2.56 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/U1/Q (OR2X1)     0.05     0.06     2.62 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/v_o (net)     2     8.56     0.00     2.62 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/v_o (bsg_encode_one_hot_width_p2_82)     0.00     2.62 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/addr_o[1] (net)     8.56     0.00     2.62 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/U1/IN1 (OR2X1)     0.05     0.00 *     2.62 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/U1/Q (OR2X1)     0.05     0.06     2.69 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/v_o (net)     2     9.79     0.00     2.69 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/v_o (bsg_encode_one_hot_width_p4_42)     0.00     2.69 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/addr_o[2] (net)     9.79     0.00     2.69 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/U1/IN1 (OR2X1)     0.05     0.00 *     2.69 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/U1/Q (OR2X1)     0.09     0.08     2.77 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/v_o (net)     5    24.11     0.00     2.77 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/v_o (bsg_encode_one_hot_width_p8_11)     0.00     2.77 r
+  core/be/be_mem/csr/mcause_exception_enc/b/addr_o[3] (net)    24.11          0.00       2.77 r
+  core/be/be_mem/csr/mcause_exception_enc/b/U3/IN1 (OR2X1)          0.09      0.00 *     2.77 r
+  core/be/be_mem/csr/mcause_exception_enc/b/U3/Q (OR2X1)            0.06      0.08       2.84 r
+  core/be/be_mem/csr/mcause_exception_enc/b/v_o (net)     1    12.40          0.00       2.84 r
+  core/be/be_mem/csr/mcause_exception_enc/b/v_o (bsg_encode_one_hot_width_p16_lo_to_hi_p1_3)     0.00     2.84 r
+  core/be/be_mem/csr/mcause_exception_enc/v_o (net)      12.40                0.00       2.84 r
+  core/be/be_mem/csr/mcause_exception_enc/v_o (bsg_priority_encode_width_p16_lo_to_hi_p1_3)     0.00     2.84 r
+  core/be/be_mem/csr/exception_ecode_v_li (net)          12.40                0.00       2.84 r
+  core/be/be_mem/csr/U1249/IN1 (NAND3X0)                            0.06      0.00 *     2.84 r
+  core/be/be_mem/csr/U1249/QN (NAND3X0)                             0.14      0.07       2.92 f
+  core/be/be_mem/csr/n1115 (net)                4        16.97                0.00       2.92 f
+  core/be/be_mem/csr/U1250/INP (INVX1)                              0.14      0.00 *     2.92 f
+  core/be/be_mem/csr/U1250/ZN (INVX1)                               0.13      0.08       3.00 r
+  core/be/be_mem/csr/trap_pkt_o[4] (net)        3        31.68                0.00       3.00 r
+  core/be/be_mem/csr/U1251/IN1 (NOR2X1)                             0.13      0.00 *     3.00 r
+  core/be/be_mem/csr/U1251/QN (NOR2X1)                              0.13      0.09       3.09 f
+  core/be/be_mem/csr/n1202 (net)                3        19.98                0.00       3.09 f
+  core/be/be_mem/csr/U1268/IN1 (AND2X2)                             0.13      0.00 *     3.09 f
+  core/be/be_mem/csr/U1268/Q (AND2X2)                               0.04      0.08       3.18 f
+  core/be/be_mem/csr/trap_pkt_o[2] (net)        1         4.94                0.00       3.18 f
+  core/be/be_mem/csr/trap_pkt_o[2] (bp_be_csr_02_0)                           0.00       3.18 f
+  core/be/be_mem/trap_pkt_o[2] (net)                      4.94                0.00       3.18 f
+  core/be/be_mem/trap_pkt_o[2] (bp_be_mem_top_02_0)                           0.00       3.18 f
+  core/be/n10 (net)                                       4.94                0.00       3.18 f
+  core/be/be_checker/trap_pkt_i[2] (bp_be_checker_top_02_0)                   0.00       3.18 f
+  core/be/be_checker/trap_pkt_i[2] (net)                  4.94                0.00       3.18 f
+  core/be/be_checker/director/trap_pkt_i[2] (bp_be_director_02_0)             0.00       3.18 f
+  core/be/be_checker/director/trap_pkt_i[2] (net)         4.94                0.00       3.18 f
+  core/be/be_checker/director/dp_ipo8/INP (NBUFFX8)                 0.04      0.00 *     3.18 f
+  core/be/be_checker/director/dp_ipo8/Z (NBUFFX8)                   0.10      0.11       3.29 f
+  core/be/be_checker/director/n168 (net)       40       206.81                0.00       3.29 f
+  core/be/be_checker/director/U11/IN1 (OR3X1)                       0.10      0.00 *     3.29 f
+  core/be/be_checker/director/U11/Q (OR3X1)                         0.05      0.08       3.38 f
+  core/be/be_checker/director/n251 (net)        1         8.93                0.00       3.38 f
+  core/be/be_checker/director/dp_ipo6/INP (NBUFFX16)                0.05      0.00 *     3.38 f
+  core/be/be_checker/director/dp_ipo6/Z (NBUFFX16)                  0.07      0.10       3.48 f
+  core/be/be_checker/director/n260 (net)       42       236.87                0.00       3.48 f
+  core/be/be_checker/director/U161/IN1 (NAND2X1)                    0.08      0.02 *     3.50 f
+  core/be/be_checker/director/U161/QN (NAND2X1)                     0.08      0.04       3.53 r
+  core/be/be_checker/director/n106 (net)        1         4.92                0.00       3.53 r
+  core/be/be_checker/director/dp_ipo10/INP (NBUFFX8)                0.08      0.00 *     3.53 r
+  core/be/be_checker/director/dp_ipo10/Z (NBUFFX8)                  0.05      0.09       3.63 r
+  core/be/be_checker/director/n107 (net)        4        32.18                0.00       3.63 r
+  core/be/be_checker/director/U410/IN2 (NAND4X1)                    0.05      0.00 *     3.63 r
+  core/be/be_checker/director/U410/QN (NAND4X1)                     0.30      0.24       3.86 f
+  core/be/be_checker/director/flush_o (net)     7        94.72                0.00       3.86 f
+  core/be/be_checker/director/flush_o (bp_be_director_02_0)                   0.00       3.86 f
+  core/be/be_checker/flush_o (net)                       94.72                0.00       3.86 f
+  core/be/be_checker/flush_o (bp_be_checker_top_02_0)                         0.00       3.86 f
+  core/be/flush (net)                                    94.72                0.00       3.86 f
+  core/be/be_calculator/flush_i (bp_be_calculator_top_02_0)                   0.00       3.86 f
+  core/be/be_calculator/flush_i (net)                    94.72                0.00       3.86 f
+  core/be/be_calculator/U21/IN1 (OR2X1)                             0.30      0.00 *     3.87 f
+  core/be/be_calculator/U21/Q (OR2X1)                               0.10      0.12       3.98 f
+  core/be/be_calculator/exc_stage_n_1__poison_v_ (net)     5    30.60         0.00       3.98 f
+  core/be/be_calculator/pipe_mem/kill_ex1_i (bp_be_pipe_mem_02_0)             0.00       3.98 f
+  core/be/be_calculator/pipe_mem/kill_ex1_i (net)        30.60                0.00       3.98 f
+  core/be/be_calculator/pipe_mem/U139/IN2 (NOR2X2)                  0.10      0.00 *     3.99 f
+  core/be/be_calculator/pipe_mem/U139/QN (NOR2X2)                   0.32      0.16       4.15 r
+  core/be/be_calculator/pipe_mem/mmu_cmd_v_o (net)     3    64.81             0.00       4.15 r
+  core/be/be_calculator/pipe_mem/mmu_cmd_v_o (bp_be_pipe_mem_02_0)            0.00       4.15 r
+  core/be/be_calculator/mmu_cmd_v_o (net)                64.81                0.00       4.15 r
+  core/be/be_calculator/mmu_cmd_v_o (bp_be_calculator_top_02_0)               0.00       4.15 r
+  core/be/mmu_cmd_v (net)                                64.81                0.00       4.15 r
+  core/be/be_mem/mmu_cmd_v_i (bp_be_mem_top_02_0)                             0.00       4.15 r
+  core/be/be_mem/mmu_cmd_v_i (net)                       64.81                0.00       4.15 r
+  core/be/be_mem/U270/IN1 (MUX21X2)                                 0.32      0.01 *     4.15 r
+  core/be/be_mem/U270/Q (MUX21X2)                                   0.10      0.18       4.33 r
+  core/be/be_mem/dcache_pkt_v (net)             2        37.39                0.00       4.33 r
+  core/be/be_mem/dcache/v_i (bp_be_dcache_02_0_0)                             0.00       4.33 r
+  core/be/be_mem/dcache/v_i (net)                        37.39                0.00       4.33 r
+  core/be/be_mem/dcache/U137/IN2 (NAND3X2)                          0.10      0.00 *     4.33 r
+  core/be/be_mem/dcache/U137/QN (NAND3X2)                           0.13      0.18       4.51 f
+  core/be/be_mem/dcache/n664 (net)              9        91.82                0.00       4.51 f
+  core/be/be_mem/dcache/U138/IN2 (NOR2X2)                           0.13      0.01 *     4.52 f
+  core/be/be_mem/dcache/U138/QN (NOR2X2)                            0.23      0.12       4.63 r
+  core/be/be_mem/dcache/n734 (net)             10        41.49                0.00       4.63 r
+  core/be/be_mem/dcache/U1189/IN1 (NOR2X1)                          0.23      0.00 *     4.64 r
+  core/be/be_mem/dcache/U1189/QN (NOR2X1)                           0.44      0.29       4.93 f
+  core/be/be_mem/dcache/n733 (net)             13        91.88                0.00       4.93 f
+  core/be/be_mem/dcache/U1190/INP (INVX1)                           0.44      0.00 *     4.93 f
+  core/be/be_mem/dcache/U1190/ZN (INVX1)                            0.12      0.05       4.98 r
+  core/be/be_mem/dcache/n649 (net)              1         7.15                0.00       4.98 r
+  core/be/be_mem/dcache/U1191/IN2 (NOR3X0)                          0.12      0.00 *     4.98 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.30      0.17       5.15 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (net)     3    35.31             0.00       5.15 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (bp_be_dcache_02_0_0)            0.00       5.15 f
+  core/be/be_mem/data_mem_pkt_ready_o (net)              35.31                0.00       5.15 f
+  core/be/be_mem/data_mem_pkt_ready_o (bp_be_mem_top_02_0)                    0.00       5.15 f
+  core/be/data_mem_pkt_ready_o (net)                     35.31                0.00       5.15 f
+  core/be/data_mem_pkt_ready_o (bp_be_top_02_0)                               0.00       5.15 f
+  core/data_mem_pkt_ready_o[1] (net)                     35.31                0.00       5.15 f
+  core/data_mem_pkt_ready_o[1] (bp_core_minimal_02_0)                         0.00       5.15 f
+  data_mem_pkt_ready_lo[1] (net)                         35.31                0.00       5.15 f
+  uce_1__uce/data_mem_pkt_ready_i (bp_uce_02_3)                               0.00       5.15 f
+  uce_1__uce/data_mem_pkt_ready_i (net)                  35.31                0.00       5.15 f
+  uce_1__uce/U51/IN2 (NAND2X1)                                      0.30      0.00 *     5.15 f
+  uce_1__uce/U51/QN (NAND2X1)                                       0.14      0.08       5.24 r
+  uce_1__uce/n19 (net)                          2        10.04                0.00       5.24 r
+  uce_1__uce/U52/INP (INVX1)                                        0.14      0.00 *     5.24 r
+  uce_1__uce/U52/ZN (INVX1)                                         0.06      0.04       5.28 f
+  uce_1__uce/n36 (net)                          4         9.78                0.00       5.28 f
+  uce_1__uce/U53/IN5 (OA221X1)                                      0.06      0.00 *     5.28 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.10      0.12       5.40 f
+  uce_1__uce/cache_req_complete_o (net)         2        21.65                0.00       5.40 f
+  uce_1__uce/U72/INP (INVX1)                                        0.10      0.00 *     5.40 f
+  uce_1__uce/U72/ZN (INVX1)                                         0.09      0.06       5.46 r
+  uce_1__uce/n106 (net)                         2        20.92                0.00       5.46 r
+  uce_1__uce/U720/IN3 (NAND3X0)                                     0.09      0.00 *     5.46 r
+  uce_1__uce/U720/QN (NAND3X0)                                      0.48      0.25       5.70 f
+  uce_1__uce/mem_resp_yumi_o (net)              3        79.72                0.00       5.70 f
+  uce_1__uce/mem_resp_yumi_o (bp_uce_02_3)                                    0.00       5.70 f
+  mem_resp_yumi_lo[1] (net)                              79.72                0.00       5.70 f
+  U3128/IN2 (AO22X1)                                                0.48      0.01 *     5.71 f
+  U3128/Q (AO22X1)                                                  0.19      0.23       5.94 f
+  io_resp_yumi_o (net)                          1        55.86                0.00       5.94 f
+  io_resp_yumi_o (out)                                              0.19      0.00 *     5.94 f
+  data arrival time                                                                      5.94
+
+  clock core_clk (rise edge)                                                  7.00       7.00
+  clock network delay (ideal)                                                 0.00       7.00
+  clock uncertainty                                                          -1.00       6.00
+  output external delay                                                      -0.10       5.90
+  data required time                                                                     5.90
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     5.90
+  data arrival time                                                                     -5.94
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                      -0.04
+
+
+  Startpoint: core/be/be_calculator/pipe_mem/csr_shift_reg/shift_r_reg_1__73_
+              (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  core/be/be_calculator/pipe_mem/csr_shift_reg/shift_r_reg_1__73_/CLK (DFFX1)     0.00     0.00 #     0.00 r
+  core/be/be_calculator/pipe_mem/csr_shift_reg/shift_r_reg_1__73_/Q (DFFX1)     0.03     0.18     0.18 f
+  core/be/be_calculator/pipe_mem/csr_shift_reg/data_o[73] (net)     1     4.25     0.00     0.18 f
+  core/be/be_calculator/pipe_mem/csr_shift_reg/data_o[73] (bsg_shift_reg_width_p81_stages_p2_0)     0.00     0.18 f
+  core/be/be_calculator/pipe_mem/csr_cmd_o[73] (net)      4.25                0.00       0.18 f
+  core/be/be_calculator/pipe_mem/csr_cmd_o[73] (bp_be_pipe_mem_02_0)          0.00       0.18 f
+  core/be/be_calculator/csr_cmd_o[73] (net)               4.25                0.00       0.18 f
+  core/be/be_calculator/csr_cmd_o[73] (bp_be_calculator_top_02_0)             0.00       0.18 f
+  core/be/csr_cmd[73] (net)                               4.25                0.00       0.18 f
+  core/be/U8/INP (NBUFFX2)                                          0.03      0.00 *     0.18 f
+  core/be/U8/Z (NBUFFX2)                                            0.14      0.12       0.30 f
+  core/be/n8 (net)                             16        88.05                0.00       0.30 f
+  core/be/be_mem/csr_cmd_i[73] (bp_be_mem_top_02_0)                           0.00       0.30 f
+  core/be/be_mem/csr_cmd_i[73] (net)                     88.05                0.00       0.30 f
+  core/be/be_mem/csr/csr_cmd_i[73] (bp_be_csr_02_0)                           0.00       0.30 f
+  core/be/be_mem/csr/csr_cmd_i[73] (net)                 88.05                0.00       0.30 f
+  core/be/be_mem/csr/U22/INP (INVX1)                                0.14      0.00 *     0.30 f
+  core/be/be_mem/csr/U22/ZN (INVX1)                                 0.22      0.13       0.43 r
+  core/be/be_mem/csr/n2521 (net)               12        63.64                0.00       0.43 r
+  core/be/be_mem/csr/U50/IN1 (NOR2X1)                               0.22      0.00 *     0.43 r
+  core/be/be_mem/csr/U50/QN (NOR2X1)                                0.13      0.10       0.53 f
+  core/be/be_mem/csr/n195 (net)                 3        15.46                0.00       0.53 f
+  core/be/be_mem/csr/U51/INP (INVX0)                                0.13      0.00 *     0.53 f
+  core/be/be_mem/csr/U51/ZN (INVX0)                                 0.16      0.10       0.62 r
+  core/be/be_mem/csr/n928 (net)                 5        21.03                0.00       0.62 r
+  core/be/be_mem/csr/U53/IN1 (NOR2X2)                               0.16      0.00 *     0.62 r
+  core/be/be_mem/csr/U53/QN (NOR2X2)                                0.05      0.03       0.65 f
+  core/be/be_mem/csr/n19 (net)                  1         4.59                0.00       0.65 f
+  core/be/be_mem/csr/U54/IN1 (NAND2X1)                              0.05      0.00 *     0.65 f
+  core/be/be_mem/csr/U54/QN (NAND2X1)                               0.08      0.04       0.70 r
+  core/be/be_mem/csr/n83 (net)                  2         8.77                0.00       0.70 r
+  core/be/be_mem/csr/U156/IN1 (NOR2X0)                              0.08      0.00 *     0.70 r
+  core/be/be_mem/csr/U156/QN (NOR2X0)                               0.06      0.04       0.74 f
+  core/be/be_mem/csr/n84 (net)                  1         3.57                0.00       0.74 f
+  core/be/be_mem/csr/U157/IN1 (NOR2X0)                              0.06      0.00 *     0.74 f
+  core/be/be_mem/csr/U157/QN (NOR2X0)                               0.08      0.05       0.78 r
+  core/be/be_mem/csr/n86 (net)                  1         5.35                0.00       0.78 r
+  core/be/be_mem/csr/U159/IN1 (NOR2X1)                              0.08      0.00 *     0.78 r
+  core/be/be_mem/csr/U159/QN (NOR2X1)                               0.05      0.04       0.82 f
+  core/be/be_mem/csr/n1518 (net)                1         4.25                0.00       0.82 f
+  core/be/be_mem/csr/dp_ipo46/INP (NBUFFX8)                         0.05      0.00 *     0.82 f
+  core/be/be_mem/csr/dp_ipo46/Z (NBUFFX8)                           0.08      0.11       0.93 f
+  core/be/be_mem/csr/n1519 (net)               43       167.18                0.00       0.93 f
+  core/be/be_mem/csr/U1202/IN1 (NOR2X1)                             0.08      0.00 *     0.93 f
+  core/be/be_mem/csr/U1202/QN (NOR2X1)                              0.16      0.06       1.00 r
+  core/be/be_mem/csr/n922 (net)                 1        13.49                0.00       1.00 r
+  core/be/be_mem/csr/U1204/IN1 (NAND2X2)                            0.16      0.00 *     1.00 r
+  core/be/be_mem/csr/U1204/QN (NAND2X2)                             0.09      0.06       1.06 f
+  core/be/be_mem/csr/n1602 (net)                3        23.19                0.00       1.06 f
+  core/be/be_mem/csr/U1205/IN1 (NOR2X1)                             0.09      0.00 *     1.06 f
+  core/be/be_mem/csr/U1205/QN (NOR2X1)                              0.16      0.09       1.15 r
+  core/be/be_mem/csr/n1587 (net)                4        21.49                0.00       1.15 r
+  core/be/be_mem/csr/U1206/IN2 (NAND2X2)                            0.16      0.00 *     1.15 r
+  core/be/be_mem/csr/U1206/QN (NAND2X2)                             0.08      0.05       1.20 f
+  core/be/be_mem/csr/n1332 (net)                4        19.35                0.00       1.20 f
+  core/be/be_mem/csr/U1690/INP (INVX0)                              0.08      0.00 *     1.20 f
+  core/be/be_mem/csr/U1690/ZN (INVX0)                               0.05      0.03       1.23 r
+  core/be/be_mem/csr/n1275 (net)                1         3.80                0.00       1.23 r
+  core/be/be_mem/csr/U1693/IN1 (NAND4X0)                            0.05      0.00 *     1.23 r
+  core/be/be_mem/csr/U1693/QN (NAND4X0)                             0.14      0.07       1.30 f
+  core/be/be_mem/csr/n1278 (net)                1        11.74                0.00       1.30 f
+  core/be/be_mem/csr/U1694/IN1 (NAND3X0)                            0.14      0.00 *     1.30 f
+  core/be/be_mem/csr/U1694/QN (NAND3X0)                             0.12      0.08       1.38 r
+  core/be/be_mem/csr/n1280 (net)                1        11.16                0.00       1.38 r
+  core/be/be_mem/csr/U1695/IN1 (NAND2X1)                            0.12      0.00 *     1.38 r
+  core/be/be_mem/csr/U1695/QN (NAND2X1)                             0.07      0.04       1.42 f
+  core/be/be_mem/csr/n1285 (net)                1         5.67                0.00       1.42 f
+  core/be/be_mem/csr/U1698/IN1 (NAND2X1)                            0.07      0.00 *     1.42 f
+  core/be/be_mem/csr/U1698/QN (NAND2X1)                             0.05      0.03       1.45 r
+  core/be/be_mem/csr/n1287 (net)                1         3.63                0.00       1.45 r
+  core/be/be_mem/csr/U1699/IN1 (NAND2X0)                            0.05      0.00 *     1.45 r
+  core/be/be_mem/csr/U1699/QN (NAND2X0)                             0.06      0.04       1.49 f
+  core/be/be_mem/csr/n1295 (net)                1         2.19                0.00       1.49 f
+  core/be/be_mem/csr/U1705/IN1 (AOI21X1)                            0.06      0.00 *     1.49 f
+  core/be/be_mem/csr/U1705/QN (AOI21X1)                             0.04      0.10       1.59 r
+  core/be/be_mem/csr/illegal_instr_o (net)      1         5.91                0.00       1.59 r
+  core/be/be_mem/csr/illegal_instr_o (bp_be_csr_02_0)                         0.00       1.59 r
+  core/be/be_mem/csr_illegal_instr_lo (net)               5.91                0.00       1.59 r
+  core/be/be_mem/U13/IN1 (NAND2X1)                                  0.04      0.00 *     1.59 r
+  core/be/be_mem/U13/QN (NAND2X1)                                   0.07      0.04       1.63 f
+  core/be/be_mem/n8 (net)                       1         8.64                0.00       1.63 f
+  core/be/be_mem/U18/IN1 (NAND2X2)                                  0.07      0.00 *     1.63 f
+  core/be/be_mem/U18/QN (NAND2X2)                                   0.09      0.05       1.69 r
+  core/be/be_mem/exception_ecode_dec_li_illegal_instr_ (net)     5    30.07     0.00     1.69 r
+  core/be/be_mem/csr/exception_ecode_dec_i[2] (bp_be_csr_02_0)                0.00       1.69 r
+  core/be/be_mem/csr/exception_ecode_dec_i[2] (net)      30.07                0.00       1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/i[2] (bsg_priority_encode_width_p16_lo_to_hi_p1_3)     0.00     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/i[2] (net)     30.07                0.00       1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/i[2] (bsg_priority_encode_one_hot_out_width_p16_lo_to_hi_p1_3)     0.00     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/i[2] (net)    30.07               0.00       1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/i[2] (bsg_scan_width_p16_or_p1_lo_to_hi_p1_3)     0.00     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/i[2] (net)    30.07     0.00     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U3/IN1 (OR2X1)     0.09     0.00 *     1.69 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U3/Q (OR2X1)     0.06     0.08     1.76 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[2] (net)     3    13.21     0.00     1.76 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U4/IN2 (OR2X1)     0.06     0.00 *     1.76 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U4/Q (OR2X1)     0.08     0.09     1.85 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[3] (net)     3    21.59     0.00     1.85 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U6/IN2 (OR2X1)     0.08     0.00 *     1.86 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U6/Q (OR2X1)     0.06     0.09     1.94 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[5] (net)     3    13.20     0.00     1.94 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U8/IN2 (OR2X1)     0.06     0.00 *     1.94 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U8/Q (OR2X1)     0.05     0.08     2.02 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[7] (net)     2    10.14     0.00     2.02 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U9/IN2 (OR2X1)     0.05     0.00 *     2.02 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U9/Q (OR2X1)     0.05     0.08     2.09 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[8] (net)     3    11.51     0.00     2.09 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U10/IN2 (OR2X1)     0.05     0.00 *     2.09 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U10/Q (OR2X1)     0.05     0.07     2.17 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[9] (net)     3     9.28     0.00     2.17 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U12/IN2 (OR2X1)     0.05     0.00 *     2.17 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U12/Q (OR2X1)     0.05     0.07     2.24 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[11] (net)     2     8.33     0.00     2.24 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U13/IN2 (OR2X1)     0.05     0.00 *     2.24 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U13/Q (OR2X1)     0.07     0.08     2.32 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[12] (net)     3    15.90     0.00     2.32 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U14/IN2 (OR2X1)     0.07     0.00 *     2.32 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U14/Q (OR2X1)     0.05     0.08     2.39 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[14] (net)     3     9.68     0.00     2.39 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U17/IN2 (OR2X1)     0.05     0.00 *     2.39 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/U17/Q (OR2X1)     0.03     0.06     2.46 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[15] (net)     1     3.27     0.00     2.46 r
+  core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan/o[15] (bsg_scan_width_p16_or_p1_lo_to_hi_p1_3)     0.00     2.46 r
+  core/be/be_mem/csr/mcause_exception_enc/a/scan_lo[15] (net)     3.27        0.00       2.46 r
+  core/be/be_mem/csr/mcause_exception_enc/a/U18/IN1 (AND2X1)        0.03      0.00 *     2.46 r
+  core/be/be_mem/csr/mcause_exception_enc/a/U18/Q (AND2X1)          0.03      0.05       2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/a/o[15] (net)     1     3.38        0.00       2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/a/o[15] (bsg_priority_encode_one_hot_out_width_p16_lo_to_hi_p1_3)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/enc_lo[15] (net)     3.38           0.00       2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/i[15] (bsg_encode_one_hot_width_p16_lo_to_hi_p1_3)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/i[15] (net)     3.38              0.00       2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/i[7] (bsg_encode_one_hot_width_p8_11)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/i[7] (net)     3.38     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/i[3] (bsg_encode_one_hot_width_p4_42)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/i[3] (net)     3.38     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/i[1] (bsg_encode_one_hot_width_p2_82)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/i[1] (net)     3.38     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/i[0] (bsg_encode_one_hot_width_p1_158)     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/i[0] (net)     3.38     0.00     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/U3/INP (NBUFFX2)     0.03     0.00 *     2.51 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/U3/Z (NBUFFX2)     0.03     0.05     2.56 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/v_o (net)     2     7.67     0.00     2.56 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right/v_o (bsg_encode_one_hot_width_p1_158)     0.00     2.56 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/addr_o[0] (net)     7.67     0.00     2.56 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/U1/IN1 (OR2X1)     0.03     0.00 *     2.56 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/U1/Q (OR2X1)     0.05     0.06     2.62 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/v_o (net)     2     8.56     0.00     2.62 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/v_o (bsg_encode_one_hot_width_p2_82)     0.00     2.62 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/addr_o[1] (net)     8.56     0.00     2.62 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/U1/IN1 (OR2X1)     0.05     0.00 *     2.62 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/U1/Q (OR2X1)     0.05     0.06     2.69 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/v_o (net)     2     9.79     0.00     2.69 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/v_o (bsg_encode_one_hot_width_p4_42)     0.00     2.69 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/addr_o[2] (net)     9.79     0.00     2.69 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/U1/IN1 (OR2X1)     0.05     0.00 *     2.69 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/U1/Q (OR2X1)     0.09     0.08     2.77 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/v_o (net)     5    24.11     0.00     2.77 r
+  core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/v_o (bsg_encode_one_hot_width_p8_11)     0.00     2.77 r
+  core/be/be_mem/csr/mcause_exception_enc/b/addr_o[3] (net)    24.11          0.00       2.77 r
+  core/be/be_mem/csr/mcause_exception_enc/b/U3/IN1 (OR2X1)          0.09      0.00 *     2.77 r
+  core/be/be_mem/csr/mcause_exception_enc/b/U3/Q (OR2X1)            0.06      0.08       2.84 r
+  core/be/be_mem/csr/mcause_exception_enc/b/v_o (net)     1    12.40          0.00       2.84 r
+  core/be/be_mem/csr/mcause_exception_enc/b/v_o (bsg_encode_one_hot_width_p16_lo_to_hi_p1_3)     0.00     2.84 r
+  core/be/be_mem/csr/mcause_exception_enc/v_o (net)      12.40                0.00       2.84 r
+  core/be/be_mem/csr/mcause_exception_enc/v_o (bsg_priority_encode_width_p16_lo_to_hi_p1_3)     0.00     2.84 r
+  core/be/be_mem/csr/exception_ecode_v_li (net)          12.40                0.00       2.84 r
+  core/be/be_mem/csr/U1249/IN1 (NAND3X0)                            0.06      0.00 *     2.84 r
+  core/be/be_mem/csr/U1249/QN (NAND3X0)                             0.14      0.07       2.92 f
+  core/be/be_mem/csr/n1115 (net)                4        16.97                0.00       2.92 f
+  core/be/be_mem/csr/U1250/INP (INVX1)                              0.14      0.00 *     2.92 f
+  core/be/be_mem/csr/U1250/ZN (INVX1)                               0.13      0.08       3.00 r
+  core/be/be_mem/csr/trap_pkt_o[4] (net)        3        31.68                0.00       3.00 r
+  core/be/be_mem/csr/U1251/IN1 (NOR2X1)                             0.13      0.00 *     3.00 r
+  core/be/be_mem/csr/U1251/QN (NOR2X1)                              0.13      0.09       3.09 f
+  core/be/be_mem/csr/n1202 (net)                3        19.98                0.00       3.09 f
+  core/be/be_mem/csr/U1268/IN1 (AND2X2)                             0.13      0.00 *     3.09 f
+  core/be/be_mem/csr/U1268/Q (AND2X2)                               0.04      0.08       3.18 f
+  core/be/be_mem/csr/trap_pkt_o[2] (net)        1         4.94                0.00       3.18 f
+  core/be/be_mem/csr/trap_pkt_o[2] (bp_be_csr_02_0)                           0.00       3.18 f
+  core/be/be_mem/trap_pkt_o[2] (net)                      4.94                0.00       3.18 f
+  core/be/be_mem/trap_pkt_o[2] (bp_be_mem_top_02_0)                           0.00       3.18 f
+  core/be/n10 (net)                                       4.94                0.00       3.18 f
+  core/be/be_checker/trap_pkt_i[2] (bp_be_checker_top_02_0)                   0.00       3.18 f
+  core/be/be_checker/trap_pkt_i[2] (net)                  4.94                0.00       3.18 f
+  core/be/be_checker/director/trap_pkt_i[2] (bp_be_director_02_0)             0.00       3.18 f
+  core/be/be_checker/director/trap_pkt_i[2] (net)         4.94                0.00       3.18 f
+  core/be/be_checker/director/dp_ipo8/INP (NBUFFX8)                 0.04      0.00 *     3.18 f
+  core/be/be_checker/director/dp_ipo8/Z (NBUFFX8)                   0.10      0.11       3.29 f
+  core/be/be_checker/director/n168 (net)       40       206.81                0.00       3.29 f
+  core/be/be_checker/director/U11/IN1 (OR3X1)                       0.10      0.00 *     3.29 f
+  core/be/be_checker/director/U11/Q (OR3X1)                         0.05      0.08       3.38 f
+  core/be/be_checker/director/n251 (net)        1         8.93                0.00       3.38 f
+  core/be/be_checker/director/dp_ipo6/INP (NBUFFX16)                0.05      0.00 *     3.38 f
+  core/be/be_checker/director/dp_ipo6/Z (NBUFFX16)                  0.07      0.10       3.48 f
+  core/be/be_checker/director/n260 (net)       42       236.87                0.00       3.48 f
+  core/be/be_checker/director/U161/IN1 (NAND2X1)                    0.08      0.02 *     3.50 f
+  core/be/be_checker/director/U161/QN (NAND2X1)                     0.08      0.04       3.53 r
+  core/be/be_checker/director/n106 (net)        1         4.92                0.00       3.53 r
+  core/be/be_checker/director/dp_ipo10/INP (NBUFFX8)                0.08      0.00 *     3.53 r
+  core/be/be_checker/director/dp_ipo10/Z (NBUFFX8)                  0.05      0.09       3.63 r
+  core/be/be_checker/director/n107 (net)        4        32.18                0.00       3.63 r
+  core/be/be_checker/director/U410/IN2 (NAND4X1)                    0.05      0.00 *     3.63 r
+  core/be/be_checker/director/U410/QN (NAND4X1)                     0.30      0.24       3.86 f
+  core/be/be_checker/director/flush_o (net)     7        94.72                0.00       3.86 f
+  core/be/be_checker/director/flush_o (bp_be_director_02_0)                   0.00       3.86 f
+  core/be/be_checker/flush_o (net)                       94.72                0.00       3.86 f
+  core/be/be_checker/flush_o (bp_be_checker_top_02_0)                         0.00       3.86 f
+  core/be/flush (net)                                    94.72                0.00       3.86 f
+  core/be/be_calculator/flush_i (bp_be_calculator_top_02_0)                   0.00       3.86 f
+  core/be/be_calculator/flush_i (net)                    94.72                0.00       3.86 f
+  core/be/be_calculator/U21/IN1 (OR2X1)                             0.30      0.00 *     3.87 f
+  core/be/be_calculator/U21/Q (OR2X1)                               0.10      0.12       3.98 f
+  core/be/be_calculator/exc_stage_n_1__poison_v_ (net)     5    30.60         0.00       3.98 f
+  core/be/be_calculator/pipe_mem/kill_ex1_i (bp_be_pipe_mem_02_0)             0.00       3.98 f
+  core/be/be_calculator/pipe_mem/kill_ex1_i (net)        30.60                0.00       3.98 f
+  core/be/be_calculator/pipe_mem/U139/IN2 (NOR2X2)                  0.10      0.00 *     3.99 f
+  core/be/be_calculator/pipe_mem/U139/QN (NOR2X2)                   0.32      0.16       4.15 r
+  core/be/be_calculator/pipe_mem/mmu_cmd_v_o (net)     3    64.81             0.00       4.15 r
+  core/be/be_calculator/pipe_mem/mmu_cmd_v_o (bp_be_pipe_mem_02_0)            0.00       4.15 r
+  core/be/be_calculator/mmu_cmd_v_o (net)                64.81                0.00       4.15 r
+  core/be/be_calculator/mmu_cmd_v_o (bp_be_calculator_top_02_0)               0.00       4.15 r
+  core/be/mmu_cmd_v (net)                                64.81                0.00       4.15 r
+  core/be/be_mem/mmu_cmd_v_i (bp_be_mem_top_02_0)                             0.00       4.15 r
+  core/be/be_mem/mmu_cmd_v_i (net)                       64.81                0.00       4.15 r
+  core/be/be_mem/U270/IN1 (MUX21X2)                                 0.32      0.01 *     4.15 r
+  core/be/be_mem/U270/Q (MUX21X2)                                   0.10      0.18       4.33 r
+  core/be/be_mem/dcache_pkt_v (net)             2        37.39                0.00       4.33 r
+  core/be/be_mem/dcache/v_i (bp_be_dcache_02_0_0)                             0.00       4.33 r
+  core/be/be_mem/dcache/v_i (net)                        37.39                0.00       4.33 r
+  core/be/be_mem/dcache/U137/IN2 (NAND3X2)                          0.10      0.00 *     4.33 r
+  core/be/be_mem/dcache/U137/QN (NAND3X2)                           0.13      0.18       4.51 f
+  core/be/be_mem/dcache/n664 (net)              9        91.82                0.00       4.51 f
+  core/be/be_mem/dcache/U138/IN2 (NOR2X2)                           0.13      0.01 *     4.52 f
+  core/be/be_mem/dcache/U138/QN (NOR2X2)                            0.23      0.12       4.63 r
+  core/be/be_mem/dcache/n734 (net)             10        41.49                0.00       4.63 r
+  core/be/be_mem/dcache/U1189/IN1 (NOR2X1)                          0.23      0.00 *     4.64 r
+  core/be/be_mem/dcache/U1189/QN (NOR2X1)                           0.44      0.29       4.93 f
+  core/be/be_mem/dcache/n733 (net)             13        91.88                0.00       4.93 f
+  core/be/be_mem/dcache/U1190/INP (INVX1)                           0.44      0.00 *     4.93 f
+  core/be/be_mem/dcache/U1190/ZN (INVX1)                            0.12      0.05       4.98 r
+  core/be/be_mem/dcache/n649 (net)              1         7.15                0.00       4.98 r
+  core/be/be_mem/dcache/U1191/IN2 (NOR3X0)                          0.12      0.00 *     4.98 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                           0.30      0.17       5.15 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (net)     3    35.31             0.00       5.15 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (bp_be_dcache_02_0_0)            0.00       5.15 f
+  core/be/be_mem/data_mem_pkt_ready_o (net)              35.31                0.00       5.15 f
+  core/be/be_mem/data_mem_pkt_ready_o (bp_be_mem_top_02_0)                    0.00       5.15 f
+  core/be/data_mem_pkt_ready_o (net)                     35.31                0.00       5.15 f
+  core/be/data_mem_pkt_ready_o (bp_be_top_02_0)                               0.00       5.15 f
+  core/data_mem_pkt_ready_o[1] (net)                     35.31                0.00       5.15 f
+  core/data_mem_pkt_ready_o[1] (bp_core_minimal_02_0)                         0.00       5.15 f
+  data_mem_pkt_ready_lo[1] (net)                         35.31                0.00       5.15 f
+  uce_1__uce/data_mem_pkt_ready_i (bp_uce_02_3)                               0.00       5.15 f
+  uce_1__uce/data_mem_pkt_ready_i (net)                  35.31                0.00       5.15 f
+  uce_1__uce/U51/IN2 (NAND2X1)                                      0.30      0.00 *     5.15 f
+  uce_1__uce/U51/QN (NAND2X1)                                       0.14      0.08       5.24 r
+  uce_1__uce/n19 (net)                          2        10.04                0.00       5.24 r
+  uce_1__uce/U52/INP (INVX1)                                        0.14      0.00 *     5.24 r
+  uce_1__uce/U52/ZN (INVX1)                                         0.06      0.04       5.28 f
+  uce_1__uce/n36 (net)                          4         9.78                0.00       5.28 f
+  uce_1__uce/U53/IN5 (OA221X1)                                      0.06      0.00 *     5.28 f
+  uce_1__uce/U53/Q (OA221X1)                                        0.10      0.12       5.40 f
+  uce_1__uce/cache_req_complete_o (net)         2        21.65                0.00       5.40 f
+  uce_1__uce/U72/INP (INVX1)                                        0.10      0.00 *     5.40 f
+  uce_1__uce/U72/ZN (INVX1)                                         0.09      0.06       5.46 r
+  uce_1__uce/n106 (net)                         2        20.92                0.00       5.46 r
+  uce_1__uce/U74/IN1 (NAND2X2)                                      0.09      0.00 *     5.46 r
+  uce_1__uce/U74/QN (NAND2X2)                                       0.14      0.07       5.53 f
+  uce_1__uce/data_mem_pkt_v_o (net)             4        41.38                0.00       5.53 f
+  uce_1__uce/data_mem_pkt_v_o (bp_uce_02_3)                                   0.00       5.53 f
+  data_mem_pkt_v_li[1] (net)                             41.38                0.00       5.53 f
+  core/data_mem_pkt_v_i[1] (bp_core_minimal_02_0)                             0.00       5.53 f
+  core/data_mem_pkt_v_i[1] (net)                         41.38                0.00       5.53 f
+  core/be/data_mem_pkt_v_i (bp_be_top_02_0)                                   0.00       5.53 f
+  core/be/data_mem_pkt_v_i (net)                         41.38                0.00       5.53 f
+  core/be/be_mem/data_mem_pkt_v_i (bp_be_mem_top_02_0)                        0.00       5.53 f
+  core/be/be_mem/data_mem_pkt_v_i (net)                  41.38                0.00       5.53 f
+  core/be/be_mem/dcache/data_mem_pkt_v_i (bp_be_dcache_02_0_0)                0.00       5.53 f
+  core/be/be_mem/dcache/data_mem_pkt_v_i (net)           41.38                0.00       5.53 f
+  core/be/be_mem/dcache/U1177/IN1 (NAND4X0)                         0.14      0.00 *     5.53 f
+  core/be/be_mem/dcache/U1177/QN (NAND4X0)                          0.09      0.05       5.58 r
+  core/be/be_mem/dcache/n644 (net)              1         3.72                0.00       5.58 r
+  core/be/be_mem/dcache/U1178/IN2 (NAND2X0)                         0.09      0.00 *     5.58 r
+  core/be/be_mem/dcache/U1178/QN (NAND2X0)                          0.73      0.38       5.96 f
+  core/be/be_mem/dcache/n646 (net)              8        83.07                0.00       5.96 f
+  core/be/be_mem/dcache/U1179/IN3 (AO21X1)                          0.73      0.01 *     5.98 f
+  core/be/be_mem/dcache/U1179/Q (AO21X1)                            0.08      0.11       6.08 f
+  core/be/be_mem/dcache/n_1_net_ (net)          1        14.44                0.00       6.08 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/v_i (bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_24)     0.00     6.08 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/v_i (net)    14.44               0.00       6.08 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/U10/INP (INVX0)        0.08      0.00 *     6.08 f
+  core/be/be_mem/dcache/data_mem_0__data_mem/U10/ZN (INVX0)         0.17      0.09       6.18 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/n19 (net)     1    23.81         0.00       6.18 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/U19/INP (NBUFFX16)     0.17      0.00 *     6.18 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/U19/Z (NBUFFX16)       0.08      0.13       6.31 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/n10 (net)     1   217.15         0.00       6.31 r
+  core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/CSB1 (saed90_64x512_1P_BM)     0.14     0.08 *     6.38 r
+  data arrival time                                                                      6.38
+
+  clock core_clk (rise edge)                                                  7.00       7.00
+  clock network delay (ideal)                                                 0.00       7.00
+  clock uncertainty                                                          -1.00       6.00
+  core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)     0.00     6.00 r
+  library setup time                                                         -0.05       5.95
+  data required time                                                                     5.95
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                     5.95
+  data arrival time                                                                     -6.38
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                      -0.43
+
+
+1

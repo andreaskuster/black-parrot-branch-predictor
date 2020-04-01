@@ -1,0 +1,1140 @@
+****************************************
+Report : timing
+	-path_type full_clock
+	-delay_type min
+	-slack_lesser_than 1000000.000
+	-max_paths 30
+	-group REGOUT
+	-transition_time
+	-sort_by slack
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 11:11:09 2020
+****************************************
+
+Report timing status: Started...
+Report timing status: Processing group REGOUT
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_62_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[62]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_62_/CLK (DFFX1)    0.148    0.004 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_62_/Q (DFFX1)    0.041    0.188 &    0.410 r
+  U1867/Q (AND2X1)                               0.113      0.100 &    0.509 r
+  io_cmd_o[62] (out)                             0.113     -0.014 &    0.495 r
+  data arrival time                                                    0.495
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.495
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.595
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_76_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[76]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_76_/CLK (DFFX1)    0.148    0.004 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_76_/Q (DFFX1)    0.045    0.190 &    0.412 r
+  U1895/Q (AND2X1)                               0.116      0.101 &    0.513 r
+  io_cmd_o[76] (out)                             0.116     -0.017 &    0.497 r
+  data arrival time                                                    0.497
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.497
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.597
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_70_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[70]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_70_/CLK (DFFX1)    0.148    0.005 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_70_/Q (DFFX1)    0.043    0.189 &    0.411 r
+  U1883/Q (AND2X1)                               0.104      0.095 &    0.507 r
+  io_cmd_o[70] (out)                             0.104     -0.009 &    0.497 r
+  data arrival time                                                    0.497
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.497
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.597
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_81_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[81]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_81_/CLK (DFFX1)    0.148    0.005 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_81_/Q (DFFX1)    0.043    0.189 &    0.411 r
+  U1905/Q (AND2X1)                               0.128      0.107 &    0.518 r
+  io_cmd_o[81] (out)                             0.128     -0.020 &    0.498 r
+  data arrival time                                                    0.498
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.498
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.598
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_90_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[90]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                    0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_90_/CLK (DFFX1)    0.134    0.012 &    0.211 r
+  fifo_1__mem_fifo/dff/data_r_reg_90_/Q (DFFX1)    0.049    0.191 &    0.403 r
+  U1923/Q (AND2X1)                               0.217      0.139 &    0.542 r
+  io_cmd_o[90] (out)                             0.217     -0.040 &    0.502 r
+  data arrival time                                                    0.502
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.502
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.602
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_66_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[66]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_66_/CLK (DFFX1)    0.148    0.004 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_66_/Q (DFFX1)    0.043    0.188 &    0.411 r
+  U1875/Q (AND2X1)                               0.120      0.103 &    0.514 r
+  io_cmd_o[66] (out)                             0.120     -0.011 &    0.502 r
+  data arrival time                                                    0.502
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.502
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.602
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_68_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[68]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_68_/CLK (DFFX1)    0.148    0.004 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_68_/Q (DFFX1)    0.042    0.188 &    0.410 r
+  U1879/Q (AND2X1)                               0.132      0.109 &    0.519 r
+  io_cmd_o[68] (out)                             0.133     -0.016 &    0.503 r
+  data arrival time                                                    0.503
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.503
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.603
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_80_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[80]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_80_/CLK (DFFX1)    0.148    0.005 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_80_/Q (DFFX1)    0.048    0.192 &    0.415 r
+  U1903/Q (AND2X1)                               0.124      0.104 &    0.519 r
+  io_cmd_o[80] (out)                             0.124     -0.016 &    0.503 r
+  data arrival time                                                    0.503
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.503
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.603
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_78_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[78]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_78_/CLK (DFFX1)    0.148    0.004 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_78_/Q (DFFX1)    0.044    0.189 &    0.411 r
+  U1899/Q (AND2X1)                               0.129      0.107 &    0.518 r
+  io_cmd_o[78] (out)                             0.129     -0.015 &    0.503 r
+  data arrival time                                                    0.503
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.503
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.603
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_82_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[82]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                    0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_82_/CLK (DFFX1)    0.134    0.012 &    0.212 r
+  fifo_1__mem_fifo/dff/data_r_reg_82_/Q (DFFX1)    0.041    0.186 &    0.398 r
+  U1907/Q (AND2X1)                               0.213      0.139 &    0.537 r
+  io_cmd_o[82] (out)                             0.213     -0.033 &    0.504 r
+  data arrival time                                                    0.504
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.504
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.604
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_67_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[67]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_67_/CLK (DFFX1)    0.148    0.005 &    0.223 r
+  fifo_1__mem_fifo/dff/data_r_reg_67_/Q (DFFX1)    0.046    0.191 &    0.413 r
+  U1877/Q (AND2X1)                               0.119      0.103 &    0.516 r
+  io_cmd_o[67] (out)                             0.119     -0.012 &    0.504 r
+  data arrival time                                                    0.504
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.504
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.604
+
+Report timing status: Processing group REGOUT (total endpoints 232)...10% done.
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_59_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[59]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_59_/CLK (DFFX1)    0.148    0.004 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_59_/Q (DFFX1)    0.050    0.193 &    0.415 r
+  U1861/Q (AND2X1)                               0.122      0.105 &    0.520 r
+  io_cmd_o[59] (out)                             0.122     -0.015 &    0.505 r
+  data arrival time                                                    0.505
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.505
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.605
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_65_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[65]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_65_/CLK (DFFX1)    0.148    0.005 &    0.223 r
+  fifo_1__mem_fifo/dff/data_r_reg_65_/Q (DFFX1)    0.052    0.194 &    0.417 r
+  U1873/Q (AND2X1)                               0.124      0.105 &    0.521 r
+  io_cmd_o[65] (out)                             0.124     -0.015 &    0.506 r
+  data arrival time                                                    0.506
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.506
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.606
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_69_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[69]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_69_/CLK (DFFX1)    0.148    0.004 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_69_/Q (DFFX1)    0.046    0.190 &    0.413 r
+  U1881/Q (AND2X1)                               0.115      0.101 &    0.513 r
+  io_cmd_o[69] (out)                             0.115     -0.007 &    0.507 r
+  data arrival time                                                    0.507
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.507
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.607
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_71_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[71]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_71_/CLK (DFFX1)    0.148    0.004 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_71_/Q (DFFX1)    0.045    0.190 &    0.412 r
+  U1885/Q (AND2X1)                               0.101      0.095 &    0.507 r
+  io_cmd_o[71] (out)                             0.101     -0.000 &    0.507 r
+  data arrival time                                                    0.507
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.507
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.607
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_73_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[73]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_73_/CLK (DFFX1)    0.148    0.004 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_73_/Q (DFFX1)    0.046    0.191 &    0.413 r
+  U1889/Q (AND2X1)                               0.123      0.105 &    0.518 r
+  io_cmd_o[73] (out)                             0.123     -0.010 &    0.508 r
+  data arrival time                                                    0.508
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.508
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.608
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_104_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[104]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                               Trans       Incr       Path
+  ----------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock source latency                                           0.000      0.000
+  clk_i (in)                                          0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                         0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                          0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                          0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                         0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_104_/CLK (DFFX1)    0.134      0.009 &    0.209 r
+  fifo_1__mem_fifo/dff/data_r_reg_104_/Q (DFFX1)      0.083      0.210 &    0.418 r
+  U1951/Q (AND2X1)                                    0.150      0.117 &    0.535 r
+  io_cmd_o[104] (out)                                 0.150     -0.027 &    0.508 r
+  data arrival time                                                         0.508
+
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock network delay (ideal)                                    0.000      0.000
+  clock reconvergence pessimism                                  0.000      0.000
+  output external delay                                         -0.100     -0.100
+  data required time                                                       -0.100
+  ----------------------------------------------------------------------------------
+  data required time                                                       -0.100
+  data arrival time                                                        -0.508
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                               0.608
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_120_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[120]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                               Trans       Incr       Path
+  ----------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock source latency                                           0.000      0.000
+  clk_i (in)                                          0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                         0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                          0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                          0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                         0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_120_/CLK (DFFX1)    0.134      0.012 &    0.211 r
+  fifo_1__mem_fifo/dff/data_r_reg_120_/Q (DFFX1)      0.040      0.186 &    0.397 r
+  U1983/Q (AND2X1)                                    0.181      0.123 &    0.521 r
+  io_cmd_o[120] (out)                                 0.182     -0.013 &    0.508 r
+  data arrival time                                                         0.508
+
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock network delay (ideal)                                    0.000      0.000
+  clock reconvergence pessimism                                  0.000      0.000
+  output external delay                                         -0.100     -0.100
+  data required time                                                       -0.100
+  ----------------------------------------------------------------------------------
+  data required time                                                       -0.100
+  data arrival time                                                        -0.508
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                               0.608
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_63_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[63]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                    0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_63_/CLK (DFFX1)    0.134    0.008 &    0.207 r
+  fifo_1__mem_fifo/dff/data_r_reg_63_/Q (DFFX1)    0.053    0.194 &    0.401 r
+  U1869/Q (AND2X1)                               0.187      0.129 &    0.530 r
+  io_cmd_o[63] (out)                             0.187     -0.021 &    0.508 r
+  data arrival time                                                    0.508
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.508
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.608
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_102_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[102]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                               Trans       Incr       Path
+  ----------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock source latency                                           0.000      0.000
+  clk_i (in)                                          0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                         0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                          0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                          0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                         0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_102_/CLK (DFFX1)    0.134      0.009 &    0.208 r
+  fifo_1__mem_fifo/dff/data_r_reg_102_/Q (DFFX1)      0.073      0.204 &    0.413 r
+  U1947/Q (AND2X1)                                    0.151      0.116 &    0.528 r
+  io_cmd_o[102] (out)                                 0.151     -0.018 &    0.510 r
+  data arrival time                                                         0.510
+
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock network delay (ideal)                                    0.000      0.000
+  clock reconvergence pessimism                                  0.000      0.000
+  output external delay                                         -0.100     -0.100
+  data required time                                                       -0.100
+  ----------------------------------------------------------------------------------
+  data required time                                                       -0.100
+  data arrival time                                                        -0.510
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                               0.610
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_72_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[72]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_72_/CLK (DFFX1)    0.148    0.004 &    0.222 r
+  fifo_1__mem_fifo/dff/data_r_reg_72_/Q (DFFX1)    0.044    0.189 &    0.412 r
+  U1887/Q (AND2X1)                               0.113      0.099 &    0.511 r
+  io_cmd_o[72] (out)                             0.113     -0.001 &    0.510 r
+  data arrival time                                                    0.510
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.510
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.610
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_96_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[96]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                    0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_96_/CLK (DFFX1)    0.134    0.008 &    0.207 r
+  fifo_1__mem_fifo/dff/data_r_reg_96_/Q (DFFX1)    0.067    0.201 &    0.409 r
+  U1935/Q (AND2X1)                               0.144      0.112 &    0.521 r
+  io_cmd_o[96] (out)                             0.144     -0.010 &    0.511 r
+  data arrival time                                                    0.511
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.511
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.611
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_107_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[107]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                               Trans       Incr       Path
+  ----------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock source latency                                           0.000      0.000
+  clk_i (in)                                          0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                         0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                          0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                          0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                         0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_107_/CLK (DFFX1)    0.134      0.010 &    0.210 r
+  fifo_1__mem_fifo/dff/data_r_reg_107_/Q (DFFX1)      0.075      0.205 &    0.415 r
+  U1957/Q (AND2X1)                                    0.161      0.113 &    0.528 r
+  io_cmd_o[107] (out)                                 0.162     -0.017 &    0.511 r
+  data arrival time                                                         0.511
+
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock network delay (ideal)                                    0.000      0.000
+  clock reconvergence pessimism                                  0.000      0.000
+  output external delay                                         -0.100     -0.100
+  data required time                                                       -0.100
+  ----------------------------------------------------------------------------------
+  data required time                                                       -0.100
+  data arrival time                                                        -0.511
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                               0.611
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_58_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[58]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                    0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_58_/CLK (DFFX1)    0.134    0.012 &    0.212 r
+  fifo_1__mem_fifo/dff/data_r_reg_58_/Q (DFFX1)    0.041    0.186 &    0.398 r
+  U1858/Q (AND2X1)                               0.194      0.131 &    0.529 r
+  io_cmd_o[58] (out)                             0.194     -0.015 &    0.513 r
+  data arrival time                                                    0.513
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.513
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.613
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_64_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[64]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX16_G1B1I30_1/ZN (INVX8)                 0.147      0.089 &    0.218 r
+  fifo_1__mem_fifo/dff/data_r_reg_64_/CLK (DFFX1)    0.148    0.005 &    0.223 r
+  fifo_1__mem_fifo/dff/data_r_reg_64_/Q (DFFX1)    0.050    0.193 &    0.416 r
+  U1871/Q (AND2X1)                               0.110      0.099 &    0.515 r
+  io_cmd_o[64] (out)                             0.110     -0.000 &    0.515 r
+  data arrival time                                                    0.515
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.515
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.615
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_108_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[108]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                               Trans       Incr       Path
+  ----------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock source latency                                           0.000      0.000
+  clk_i (in)                                          0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                         0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                          0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                          0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                         0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_108_/CLK (DFFX1)    0.134      0.012 &    0.211 r
+  fifo_1__mem_fifo/dff/data_r_reg_108_/Q (DFFX1)      0.046      0.189 &    0.401 r
+  U1959/Q (AND2X1)                                    0.193      0.129 &    0.530 r
+  io_cmd_o[108] (out)                                 0.193     -0.015 &    0.515 r
+  data arrival time                                                         0.515
+
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock network delay (ideal)                                    0.000      0.000
+  clock reconvergence pessimism                                  0.000      0.000
+  output external delay                                         -0.100     -0.100
+  data required time                                                       -0.100
+  ----------------------------------------------------------------------------------
+  data required time                                                       -0.100
+  data arrival time                                                        -0.515
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                               0.615
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_116_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[116]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                               Trans       Incr       Path
+  ----------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock source latency                                           0.000      0.000
+  clk_i (in)                                          0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                         0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                          0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                          0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                         0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_116_/CLK (DFFX1)    0.134      0.012 &    0.211 r
+  fifo_1__mem_fifo/dff/data_r_reg_116_/Q (DFFX1)      0.068      0.202 &    0.413 r
+  U1975/Q (AND2X1)                                    0.170      0.122 &    0.535 r
+  io_cmd_o[116] (out)                                 0.171     -0.020 &    0.515 r
+  data arrival time                                                         0.515
+
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock network delay (ideal)                                    0.000      0.000
+  clock reconvergence pessimism                                  0.000      0.000
+  output external delay                                         -0.100     -0.100
+  data required time                                                       -0.100
+  ----------------------------------------------------------------------------------
+  data required time                                                       -0.100
+  data arrival time                                                        -0.515
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                               0.615
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_121_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[121]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                               Trans       Incr       Path
+  ----------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock source latency                                           0.000      0.000
+  clk_i (in)                                          0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                         0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                          0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                          0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                         0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_121_/CLK (DFFX1)    0.134      0.011 &    0.211 r
+  fifo_1__mem_fifo/dff/data_r_reg_121_/Q (DFFX1)      0.062      0.199 &    0.409 r
+  U1985/Q (AND2X1)                                    0.167      0.120 &    0.529 r
+  io_cmd_o[121] (out)                                 0.167     -0.012 &    0.517 r
+  data arrival time                                                         0.517
+
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock network delay (ideal)                                    0.000      0.000
+  clock reconvergence pessimism                                  0.000      0.000
+  output external delay                                         -0.100     -0.100
+  data required time                                                       -0.100
+  ----------------------------------------------------------------------------------
+  data required time                                                       -0.100
+  data arrival time                                                        -0.517
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                               0.617
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_118_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[118]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                               Trans       Incr       Path
+  ----------------------------------------------------------------------------------
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock source latency                                           0.000      0.000
+  clk_i (in)                                          0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                         0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                          0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                          0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                         0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_118_/CLK (DFFX1)    0.134      0.010 &    0.210 r
+  fifo_1__mem_fifo/dff/data_r_reg_118_/Q (DFFX1)      0.063      0.199 &    0.409 r
+  U1979/Q (AND2X1)                                    0.171      0.122 &    0.530 r
+  io_cmd_o[118] (out)                                 0.172     -0.012 &    0.518 r
+  data arrival time                                                         0.518
+
+  clock core_clk (rise edge)                          0.000      0.000      0.000
+  clock network delay (ideal)                                    0.000      0.000
+  clock reconvergence pessimism                                  0.000      0.000
+  output external delay                                         -0.100     -0.100
+  data required time                                                       -0.100
+  ----------------------------------------------------------------------------------
+  data required time                                                       -0.100
+  data arrival time                                                        -0.518
+  ----------------------------------------------------------------------------------
+  slack (MET)                                                               0.618
+
+
+  Startpoint: fifo_1__mem_fifo/dff/data_r_reg_60_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: io_cmd_o[60]
+               (output port clocked by core_clk)
+  Path Group: REGOUT
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock source latency                                      0.000      0.000
+  clk_i (in)                                     0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I1/ZN (INVX32)                    0.022      0.011 &    0.011 f
+  CTSINVX8_G1B3I4/ZN (INVX8)                     0.060      0.055 &    0.066 r
+  CTSINVX8_G1B2I2/ZN (INVX4)                     0.105      0.063 &    0.129 f
+  CTSINVX8_G1B1I34/ZN (INVX8)                    0.134      0.070 &    0.199 r
+  fifo_1__mem_fifo/dff/data_r_reg_60_/CLK (DFFX1)    0.134    0.012 &    0.211 r
+  fifo_1__mem_fifo/dff/data_r_reg_60_/Q (DFFX1)    0.047    0.190 &    0.402 r
+  U1863/Q (AND2X1)                               0.223      0.143 &    0.545 r
+  io_cmd_o[60] (out)                             0.223     -0.027 &    0.518 r
+  data arrival time                                                    0.518
+
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  clock reconvergence pessimism                             0.000      0.000
+  output external delay                                    -0.100     -0.100
+  data required time                                                  -0.100
+  -----------------------------------------------------------------------------
+  data required time                                                  -0.100
+  data arrival time                                                   -0.518
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          0.618
+
+Report timing status: Processing group REGOUT (total endpoints 232)...20% done.
+Report timing status: Processing group REGOUT (total endpoints 232)...30% done.
+Report timing status: Processing group REGOUT (total endpoints 232)...40% done.
+Report timing status: Processing group REGOUT (total endpoints 232)...50% done.
+Report timing status: Processing group REGOUT (total endpoints 232)...60% done.
+Report timing status: Processing group REGOUT (total endpoints 232)...70% done.
+Report timing status: Processing group REGOUT (total endpoints 232)...80% done.
+Report timing status: Processing group REGOUT (total endpoints 232)...90% done.
+Report timing status: Processing group REGOUT (total endpoints 232)...100% done.
+Warning: report_timing has satisfied the max_paths criteria. There are 202 further endpoints which have paths of interest with slack less than 1000000.000 that were not considered when generating this report. (UITE-502)
+
+Report timing status: Completed...
+1

@@ -1,0 +1,19 @@
+
+
+                         StarRC (TM)
+             Copyright (c) 1999-2015 Synopsys, Inc.
+                      All Rights Reserved
+
+
+ExecName: /home/projects/vlsi/common/ee477/synopsys/starrc/J-2014.12-SP3-3/amd64_starrc/bin/StarXtract
+Version: J-2014.12-SP3-3
+Built on: Nov 19 2015 20:49:40
+Start Time: Thu Mar 12 14:09:58 2020
+
+Host ............ linuxsrv01.ece.uw.edu
+
+  
+text_count_file Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=106.7 
+PartitionPP     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=106.7 
+  
+Done          Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=106.7 

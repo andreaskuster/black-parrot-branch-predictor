@@ -1,0 +1,136 @@
+
+  Loading design 'bp_softcore'
+
+
+Warning: Port 'io_resp_i[50]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[49]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[48]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[47]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[46]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[45]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[44]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[9]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[8]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[7]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[6]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[5]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'io_resp_i[4]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[50]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[49]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[48]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[47]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[46]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[45]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[44]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[9]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[8]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[7]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[6]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[5]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+Warning: Port 'mem_resp_i[4]' cannot inherit its location, because the port does not connect with any leaf cell pins. Please check the floorplan. (PSYN-1042)
+
+
+Information: Library Manufacturing Grid(GridResolution) : 5
+Information: Time Unit from Milkyway design library: 'ns' 
+Information: Design Library and main library timing units are matched - 1.000 ns. 
+Information: Resistance Unit from Milkyway design library: 'kohm' 
+Warning: Mismatch in the main library and the Milkyway library resistance units. In the main library it is 1000.000 kohm and in the Milkyway design library it is 1.000 kohm. Check and correct the resistance units in the .tf and .db files. (PSYN-476)
+Information: Capacitance Unit from Milkyway design library: 'pf' 
+Warning: Mismatch in the main and the Milkyway library capacitance units. In the main library it is 0.001 pf and in the Milkyway design library it is 1.000 pf. Check and correct the capacitance units in the .tf and .db files. (PSYN-477)
+Warning: Inconsistent library data found for layer PO. (RCEX-018)
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is detail route TLU+. (RCEX-015)
+Information: Start mixed mode parasitic extraction. (RCEX-023)
+Information: Start rc extraction...
+Information: extraction with 4 threads (RCEX-208)
+Warning: Net 'core/be/be_mem/dcache/stat_mem/n1' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/be/be_mem/dcache/tag_mem/n2' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/fe/mem/icache/stat_mem/n1' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/fe/mem/icache/data_mems_7__data_mem/n2' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/fe/mem/icache/data_mems_6__data_mem/n2' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/fe/mem/icache/data_mems_5__data_mem/n2' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/fe/mem/icache/data_mems_4__data_mem/n2' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/fe/mem/icache/data_mems_3__data_mem/n2' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/fe/mem/icache/data_mems_2__data_mem/n2' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/fe/mem/icache/data_mems_1__data_mem/n2' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/fe/mem/icache/data_mems_0__data_mem/n2' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/fe/mem/icache/tag_mem/n2' is not fully connected and will be estimated. (RCEX-060)
+Warning: Net 'core/be/be_checker/scheduler/int_regfile/rf/n1' is not fully connected and will be estimated. (RCEX-060)
+Information: Parasitic source is LPE. (RCEX-040)
+Information: Parasitic mode is RealRC. (RCEX-041)
+Information: Using virtual shield extraction. (RCEX-081)
+Information: Extraction mode is MIN_MAX. (RCEX-042)
+Information: Extraction derate is 25/25/25. (RCEX-043)
+Information: Coupling capacitances are explicitly created. (RCEX-044)
+Information: Start back annotation for parasitic extraction. (RCEX-023)
+Information: End back annotation for parasitic extraction. (RCEX-023)
+Information: Start timing update for parasitic extraction. (RCEX-023)
+Information: End timing update for parasitic extraction. (RCEX-023)
+Information: End parasitic extraction. (RCEX-023)
+Information: Start rc update...
+****************************************************************
+Information: TLUPlus based RC computation is enabled. (RCEX-141)
+****************************************************************
+Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-007)
+Information: The RC model used is TLU+. (RCEX-015)
+Information: Library Derived Cap for layer M1 : 0.22 0.19 (RCEX-011)
+Information: Library Derived Res for layer M1 : 6.4e-07 6.4e-07 (RCEX-011)
+Information: Library Derived Cap for layer M2 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M2 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M3 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M3 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M4 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M4 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M5 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M5 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M6 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M6 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M7 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M7 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M8 : 0.25 0.21 (RCEX-011)
+Information: Library Derived Res for layer M8 : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Library Derived Cap for layer M9 : 0.3 0.23 (RCEX-011)
+Information: Library Derived Res for layer M9 : 6.2e-08 6.2e-08 (RCEX-011)
+Information: Library Derived Horizontal Cap : 0.25 0.21 (RCEX-011)
+Information: Library Derived Horizontal Res : 4.8e-07 4.8e-07 (RCEX-011)
+Information: Library Derived Vertical Cap : 0.25 0.21 (RCEX-011)
+Information: Library Derived Vertical Res : 5.6e-07 5.6e-07 (RCEX-011)
+Information: Using derived R and C coefficients. (RCEX-008)
+Information: Using region-based R and C coefficients. (RCEX-013)
+Information: Library Derived Via Res : 8e-07 8e-07 (RCEX-011)
+Information: End rc update.
+Information: Updating graph... (UID-83)
+
+************************************************************
+SI options:
+Delta Delay Computation:           true
+Static Noise Computation:          false
+Timing window analysis for SI:     false
+Min Delta Delay for SI:            true
+Analysis Effort:                   medium
+Max Transition Mode:               normal_slew
+Static Noise Thresholds:           0.35 (0.42V) above low
+                                   0.35 (0.42V) below high
+Route xtalk prevention:            true
+Route xtalk prevention threshold:  0.25
+************************************************************
+
+Information: Input delay ('rise') on clock port 'core_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'core_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'core_clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'core_clk' will be added to the clock's propagated skew. (TIM-112)
+ 
+****************************************
+Report : clock tree
+Design : bp_softcore
+Version: M-2016.12-SP5-3
+Date   : Fri Mar 13 12:10:05 2020
+****************************************
+
+Information: Float pin scale factor for the 'max' operating condition of scenario 'default' is set to 1.000 (CTS-375)
+
+======================= Clock Tree Summary ========================
+Clock                Sinks     CTBuffers ClkCells  Skew      LongestPath TotalDRC   BufferArea
+-----------------------------------------------------------------------------------------------
+core_clk             11748     105       105       0.1519    0.4264      24          1749.1968
+1

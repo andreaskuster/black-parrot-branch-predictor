@@ -1,0 +1,343 @@
+report_timing -group FEEDTHROUGH -delay_type max -path_type full_clock -max_paths 100 -transition_time -nets -attributes -nosplit 
+ 
+****************************************
+Report : timing
+        -path full_clock
+        -delay max
+        -nets
+        -group FEEDTHROUGH
+        -max_paths 100
+        -transition_time
+Design : bp_softcore
+Version: O-2018.06-SP4
+Date   : Sat Mar 14 13:20:26 2020
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: Inactive.
+
+  Startpoint: io_resp_v_i
+              (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.10       0.10 r
+  io_resp_v_i (in)                                        0.00      0.00       0.10 r
+  io_resp_v_i (net)                             1                   0.00       0.10 r
+  U2002/ZN (INVX0)                                        0.03      0.02 *     0.12 f
+  n44 (net)                                     1                   0.00       0.12 f
+  U2003/QN (NOR4X0)                                       0.21      0.11 *     0.23 r
+  n49 (net)                                     2                   0.00       0.23 r
+  U2020/QN (NAND2X0)                                      0.17      0.11 *     0.34 f
+  n50 (net)                                     2                   0.00       0.34 f
+  U2021/ZN (INVX0)                                        0.09      0.05 *     0.39 r
+  n241 (net)                                    2                   0.00       0.39 r
+  U2022/QN (NOR2X0)                                       0.34      0.20 *     0.60 f
+  n248 (net)                                    1                   0.00       0.60 f
+  U2062/Z (NBUFFX2)                                       0.59      0.39 *     0.99 f
+  n479 (net)                                   50                   0.00       0.99 f
+  U2168/Z (NBUFFX2)                                       0.13      0.20 *     1.20 f
+  n500 (net)                                   24                   0.00       1.20 f
+  U2028/Q (AO222X1)                                       0.10      0.15 *     1.34 f
+  mem_resp_li[622] (net)                        1                   0.00       1.34 f
+  uce_1__uce/mem_resp_i[52] (bp_uce_02_3)                           0.00       1.34 f
+  uce_1__uce/mem_resp_i[52] (net)                                   0.00       1.34 f
+  uce_1__uce/U19/Q (AO22X1)                               0.14      0.15 *     1.49 f
+  uce_1__uce/data_mem_pkt_o[515] (net)          2                   0.00       1.49 f
+  uce_1__uce/data_mem_pkt_o[515] (bp_uce_02_3)                      0.00       1.49 f
+  data_mem_pkt_li[1037] (net)                                       0.00       1.49 f
+  core/data_mem_pkt_i[1038] (bp_core_minimal_02_0)                  0.00       1.49 f
+  core/data_mem_pkt_i[1038] (net)                                   0.00       1.49 f
+  core/be/data_mem_pkt_i[515] (bp_be_top_02_0)                      0.00       1.49 f
+  core/be/data_mem_pkt_i[515] (net)                                 0.00       1.49 f
+  core/be/be_mem/data_mem_pkt_i[515] (bp_be_mem_top_02_0)           0.00       1.49 f
+  core/be/be_mem/data_mem_pkt_i[515] (net)                          0.00       1.49 f
+  core/be/be_mem/dcache/data_mem_pkt_i[515] (bp_be_dcache_02_0_0)     0.00     1.49 f
+  core/be/be_mem/dcache/data_mem_pkt_i[515] (net)                   0.00       1.49 f
+  core/be/be_mem/dcache/U251/Z (NBUFFX2)                  0.59      0.37 *     1.87 f
+  core/be/be_mem/dcache/n1241 (net)            40                   0.00       1.87 f
+  core/be/be_mem/dcache/wbuf/lce_snoop_way_i[1] (bp_be_dcache_wbuf_data_width_p64_paddr_width_p40_ways_p8_sets_p64_0)     0.00     1.87 f
+  core/be/be_mem/dcache/wbuf/lce_snoop_way_i[1] (net)               0.00       1.87 f
+  core/be/be_mem/dcache/wbuf/U165/ZN (INVX0)              0.19      0.12 *     1.99 r
+  core/be/be_mem/dcache/wbuf/n331 (net)         3                   0.00       1.99 r
+  core/be/be_mem/dcache/wbuf/U379/Q (MUX21X1)             0.06      0.11 *     2.09 r
+  core/be/be_mem/dcache/wbuf/n285 (net)         1                   0.00       2.09 r
+  core/be/be_mem/dcache/wbuf/U382/QN (NAND4X0)            0.08      0.05 *     2.14 f
+  core/be/be_mem/dcache/wbuf/n307 (net)         1                   0.00       2.14 f
+  core/be/be_mem/dcache/wbuf/U388/QN (NOR4X0)             0.14      0.08 *     2.22 r
+  core/be/be_mem/dcache/wbuf/n313 (net)         1                   0.00       2.22 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)               0.05      0.11 *     2.33 r
+  core/be/be_mem/dcache/wbuf/lce_snoop_match_o (net)     1          0.00       2.33 r
+  core/be/be_mem/dcache/wbuf/lce_snoop_match_o (bp_be_dcache_wbuf_data_width_p64_paddr_width_p40_ways_p8_sets_p64_0)     0.00     2.33 r
+  core/be/be_mem/dcache/lce_snoop_match_lo (net)                    0.00       2.33 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                 0.16      0.07 *     2.40 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (net)     3            0.00       2.40 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (bp_be_dcache_02_0_0)     0.00     2.40 f
+  core/be/be_mem/data_mem_pkt_ready_o (net)                         0.00       2.40 f
+  core/be/be_mem/data_mem_pkt_ready_o (bp_be_mem_top_02_0)          0.00       2.40 f
+  core/be/data_mem_pkt_ready_o (net)                                0.00       2.40 f
+  core/be/data_mem_pkt_ready_o (bp_be_top_02_0)                     0.00       2.40 f
+  core/data_mem_pkt_ready_o[1] (net)                                0.00       2.40 f
+  core/data_mem_pkt_ready_o[1] (bp_core_minimal_02_0)               0.00       2.40 f
+  data_mem_pkt_ready_lo[1] (net)                                    0.00       2.40 f
+  uce_1__uce/data_mem_pkt_ready_i (bp_uce_02_3)                     0.00       2.40 f
+  uce_1__uce/data_mem_pkt_ready_i (net)                             0.00       2.40 f
+  uce_1__uce/U51/QN (NAND2X0)                             0.11      0.07 *     2.47 r
+  uce_1__uce/n19 (net)                          2                   0.00       2.47 r
+  uce_1__uce/U52/ZN (INVX0)                               0.10      0.07 *     2.55 f
+  uce_1__uce/n36 (net)                          4                   0.00       2.55 f
+  uce_1__uce/U53/Q (OA221X1)                              0.07      0.11 *     2.66 f
+  uce_1__uce/cache_req_complete_o (net)         2                   0.00       2.66 f
+  uce_1__uce/U72/ZN (INVX0)                               0.07      0.05 *     2.70 r
+  uce_1__uce/n106 (net)                         2                   0.00       2.70 r
+  uce_1__uce/U720/QN (NAND3X0)                            0.22      0.12 *     2.82 f
+  uce_1__uce/mem_resp_yumi_o (net)              3                   0.00       2.82 f
+  uce_1__uce/mem_resp_yumi_o (bp_uce_02_3)                          0.00       2.82 f
+  mem_resp_yumi_lo[1] (net)                                         0.00       2.82 f
+  U3127/Q (OA221X1)                                       0.12      0.16 *     2.99 f
+  mem_resp_yumi_o (net)                         1                   0.00       2.99 f
+  mem_resp_yumi_o (out)                                   0.12      0.00 *     2.99 f
+  data arrival time                                                            2.99
+
+  clock core_clk (rise edge)                                        7.00       7.00
+  clock network delay (ideal)                                       0.00       7.00
+  clock uncertainty                                                -1.00       6.00
+  output external delay                                            -0.10       5.90
+  data required time                                                           5.90
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           5.90
+  data arrival time                                                           -2.99
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.91
+
+
+  Startpoint: io_resp_v_i
+              (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.10       0.10 r
+  io_resp_v_i (in)                                        0.00      0.00       0.10 r
+  io_resp_v_i (net)                             1                   0.00       0.10 r
+  U2002/ZN (INVX0)                                        0.03      0.02 *     0.12 f
+  n44 (net)                                     1                   0.00       0.12 f
+  U2003/QN (NOR4X0)                                       0.21      0.11 *     0.23 r
+  n49 (net)                                     2                   0.00       0.23 r
+  U2020/QN (NAND2X0)                                      0.17      0.11 *     0.34 f
+  n50 (net)                                     2                   0.00       0.34 f
+  U2021/ZN (INVX0)                                        0.09      0.05 *     0.39 r
+  n241 (net)                                    2                   0.00       0.39 r
+  U2022/QN (NOR2X0)                                       0.34      0.20 *     0.60 f
+  n248 (net)                                    1                   0.00       0.60 f
+  U2062/Z (NBUFFX2)                                       0.59      0.39 *     0.99 f
+  n479 (net)                                   50                   0.00       0.99 f
+  U2168/Z (NBUFFX2)                                       0.13      0.20 *     1.20 f
+  n500 (net)                                   24                   0.00       1.20 f
+  U2028/Q (AO222X1)                                       0.10      0.15 *     1.34 f
+  mem_resp_li[622] (net)                        1                   0.00       1.34 f
+  uce_1__uce/mem_resp_i[52] (bp_uce_02_3)                           0.00       1.34 f
+  uce_1__uce/mem_resp_i[52] (net)                                   0.00       1.34 f
+  uce_1__uce/U19/Q (AO22X1)                               0.14      0.15 *     1.49 f
+  uce_1__uce/data_mem_pkt_o[515] (net)          2                   0.00       1.49 f
+  uce_1__uce/data_mem_pkt_o[515] (bp_uce_02_3)                      0.00       1.49 f
+  data_mem_pkt_li[1037] (net)                                       0.00       1.49 f
+  core/data_mem_pkt_i[1038] (bp_core_minimal_02_0)                  0.00       1.49 f
+  core/data_mem_pkt_i[1038] (net)                                   0.00       1.49 f
+  core/be/data_mem_pkt_i[515] (bp_be_top_02_0)                      0.00       1.49 f
+  core/be/data_mem_pkt_i[515] (net)                                 0.00       1.49 f
+  core/be/be_mem/data_mem_pkt_i[515] (bp_be_mem_top_02_0)           0.00       1.49 f
+  core/be/be_mem/data_mem_pkt_i[515] (net)                          0.00       1.49 f
+  core/be/be_mem/dcache/data_mem_pkt_i[515] (bp_be_dcache_02_0_0)     0.00     1.49 f
+  core/be/be_mem/dcache/data_mem_pkt_i[515] (net)                   0.00       1.49 f
+  core/be/be_mem/dcache/U251/Z (NBUFFX2)                  0.59      0.37 *     1.87 f
+  core/be/be_mem/dcache/n1241 (net)            40                   0.00       1.87 f
+  core/be/be_mem/dcache/wbuf/lce_snoop_way_i[1] (bp_be_dcache_wbuf_data_width_p64_paddr_width_p40_ways_p8_sets_p64_0)     0.00     1.87 f
+  core/be/be_mem/dcache/wbuf/lce_snoop_way_i[1] (net)               0.00       1.87 f
+  core/be/be_mem/dcache/wbuf/U165/ZN (INVX0)              0.19      0.12 *     1.99 r
+  core/be/be_mem/dcache/wbuf/n331 (net)         3                   0.00       1.99 r
+  core/be/be_mem/dcache/wbuf/U379/Q (MUX21X1)             0.06      0.11 *     2.09 r
+  core/be/be_mem/dcache/wbuf/n285 (net)         1                   0.00       2.09 r
+  core/be/be_mem/dcache/wbuf/U382/QN (NAND4X0)            0.08      0.05 *     2.14 f
+  core/be/be_mem/dcache/wbuf/n307 (net)         1                   0.00       2.14 f
+  core/be/be_mem/dcache/wbuf/U388/QN (NOR4X0)             0.14      0.08 *     2.22 r
+  core/be/be_mem/dcache/wbuf/n313 (net)         1                   0.00       2.22 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)               0.05      0.11 *     2.33 r
+  core/be/be_mem/dcache/wbuf/lce_snoop_match_o (net)     1          0.00       2.33 r
+  core/be/be_mem/dcache/wbuf/lce_snoop_match_o (bp_be_dcache_wbuf_data_width_p64_paddr_width_p40_ways_p8_sets_p64_0)     0.00     2.33 r
+  core/be/be_mem/dcache/lce_snoop_match_lo (net)                    0.00       2.33 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)                 0.16      0.07 *     2.40 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (net)     3            0.00       2.40 f
+  core/be/be_mem/dcache/data_mem_pkt_ready_o (bp_be_dcache_02_0_0)     0.00     2.40 f
+  core/be/be_mem/data_mem_pkt_ready_o (net)                         0.00       2.40 f
+  core/be/be_mem/data_mem_pkt_ready_o (bp_be_mem_top_02_0)          0.00       2.40 f
+  core/be/data_mem_pkt_ready_o (net)                                0.00       2.40 f
+  core/be/data_mem_pkt_ready_o (bp_be_top_02_0)                     0.00       2.40 f
+  core/data_mem_pkt_ready_o[1] (net)                                0.00       2.40 f
+  core/data_mem_pkt_ready_o[1] (bp_core_minimal_02_0)               0.00       2.40 f
+  data_mem_pkt_ready_lo[1] (net)                                    0.00       2.40 f
+  uce_1__uce/data_mem_pkt_ready_i (bp_uce_02_3)                     0.00       2.40 f
+  uce_1__uce/data_mem_pkt_ready_i (net)                             0.00       2.40 f
+  uce_1__uce/U51/QN (NAND2X0)                             0.11      0.07 *     2.47 r
+  uce_1__uce/n19 (net)                          2                   0.00       2.47 r
+  uce_1__uce/U52/ZN (INVX0)                               0.10      0.07 *     2.55 f
+  uce_1__uce/n36 (net)                          4                   0.00       2.55 f
+  uce_1__uce/U53/Q (OA221X1)                              0.07      0.11 *     2.66 f
+  uce_1__uce/cache_req_complete_o (net)         2                   0.00       2.66 f
+  uce_1__uce/U72/ZN (INVX0)                               0.07      0.05 *     2.70 r
+  uce_1__uce/n106 (net)                         2                   0.00       2.70 r
+  uce_1__uce/U720/QN (NAND3X0)                            0.22      0.12 *     2.82 f
+  uce_1__uce/mem_resp_yumi_o (net)              3                   0.00       2.82 f
+  uce_1__uce/mem_resp_yumi_o (bp_uce_02_3)                          0.00       2.82 f
+  mem_resp_yumi_lo[1] (net)                                         0.00       2.82 f
+  U3128/Q (AO22X1)                                        0.08      0.14 *     2.96 f
+  io_resp_yumi_o (net)                          1                   0.00       2.96 f
+  io_resp_yumi_o (out)                                    0.08      0.00 *     2.96 f
+  data arrival time                                                            2.96
+
+  clock core_clk (rise edge)                                        7.00       7.00
+  clock network delay (ideal)                                       0.00       7.00
+  clock uncertainty                                                -1.00       6.00
+  output external delay                                            -0.10       5.90
+  data required time                                                           5.90
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           5.90
+  data arrival time                                                           -2.96
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  2.94
+
+
+  Startpoint: mem_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: io_cmd_v_o (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.10       0.10 f
+  mem_cmd_ready_i (in)                                    0.00      0.00       0.10 f
+  mem_cmd_ready_i (net)                         1                   0.00       0.10 f
+  U3121/Q (AND3X1)                                        0.13      0.12 *     0.22 f
+  arb_ready_li (net)                            2                   0.00       0.22 f
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)       0.00       0.22 f
+  mem_arbiter/ready_i (net)                                         0.00       0.22 f
+  mem_arbiter/U1/Q (AND2X1)                               0.06      0.09 *     0.31 f
+  mem_arbiter/grants_o[1] (net)                 2                   0.00       0.31 f
+  mem_arbiter/grants_o[1] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)     0.00     0.31 f
+  fifo_yumi_li[1] (net)                                             0.00       0.31 f
+  U1993/QN (NOR2X0)                                       0.28      0.14 *     0.45 r
+  n237 (net)                                    2                   0.00       0.45 r
+  U1994/ZN (INVX0)                                        0.08      0.04 *     0.49 f
+  n40 (net)                                     1                   0.00       0.49 f
+  U1995/QN (NAND2X0)                                      0.13      0.07 *     0.57 r
+  n236 (net)                                    2                   0.00       0.57 r
+  U3122/QN (NOR2X0)                                       0.08      0.06 *     0.63 f
+  io_cmd_v_o (net)                              1                   0.00       0.63 f
+  io_cmd_v_o (out)                                        0.08      0.00 *     0.63 f
+  data arrival time                                                            0.63
+
+  clock core_clk (rise edge)                                        7.00       7.00
+  clock network delay (ideal)                                       0.00       7.00
+  clock uncertainty                                                -1.00       6.00
+  output external delay                                            -0.10       5.90
+  data required time                                                           5.90
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           5.90
+  data arrival time                                                           -0.63
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  5.27
+
+
+  Startpoint: mem_cmd_ready_i
+              (input port clocked by core_clk)
+  Endpoint: mem_cmd_v_o
+            (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+
+Attributes:
+    d - dont_touch
+    u - dont_use
+   mo - map_only
+   so - size_only
+    i - ideal_net or ideal_network
+  inf - infeasible path
+
+  Point                                       Fanout     Trans      Incr       Path      Attributes
+  ---------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.10       0.10 f
+  mem_cmd_ready_i (in)                                    0.00      0.00       0.10 f
+  mem_cmd_ready_i (net)                         1                   0.00       0.10 f
+  U3121/Q (AND3X1)                                        0.13      0.12 *     0.22 f
+  arb_ready_li (net)                            2                   0.00       0.22 f
+  mem_arbiter/ready_i (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)       0.00       0.22 f
+  mem_arbiter/ready_i (net)                                         0.00       0.22 f
+  mem_arbiter/U1/Q (AND2X1)                               0.06      0.09 *     0.31 f
+  mem_arbiter/grants_o[1] (net)                 2                   0.00       0.31 f
+  mem_arbiter/grants_o[1] (bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0)     0.00     0.31 f
+  fifo_yumi_li[1] (net)                                             0.00       0.31 f
+  U1993/QN (NOR2X0)                                       0.28      0.14 *     0.45 r
+  n237 (net)                                    2                   0.00       0.45 r
+  U3123/QN (NOR2X0)                                       0.14      0.10 *     0.56 f
+  mem_cmd_v_o (net)                             1                   0.00       0.56 f
+  mem_cmd_v_o (out)                                       0.14      0.00 *     0.56 f
+  data arrival time                                                            0.56
+
+  clock core_clk (rise edge)                                        7.00       7.00
+  clock network delay (ideal)                                       0.00       7.00
+  clock uncertainty                                                -1.00       6.00
+  output external delay                                            -0.10       5.90
+  data required time                                                           5.90
+  ---------------------------------------------------------------------------------------------------------
+  data required time                                                           5.90
+  data arrival time                                                           -0.56
+  ---------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                  5.34
+
+
+
+

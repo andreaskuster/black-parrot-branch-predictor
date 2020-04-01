@@ -1,0 +1,7 @@
+Information: Checking 'out_of_table_range'.
+Warning: There are 4849 out_of_range ramps.
+Warning: There are 715 out_of_range loads.
+Information: Checking 'missing_table'.
+Information: Checking 'missing_function'.
+Warning: There are 5 library cells without function.
+0

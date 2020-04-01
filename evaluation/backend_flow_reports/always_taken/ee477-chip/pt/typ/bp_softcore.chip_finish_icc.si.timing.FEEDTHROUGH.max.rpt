@@ -1,0 +1,199 @@
+****************************************
+Report : timing
+	-path_type full_clock
+	-delay_type max
+	-slack_lesser_than 1000000.000
+	-max_paths 30
+	-group FEEDTHROUGH
+	-transition_time
+	-sort_by slack
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Fri Mar 13 12:28:47 2020
+****************************************
+
+Report timing status: Started...
+Report timing status: Processing group FEEDTHROUGH
+Report timing status: Processing group FEEDTHROUGH (total endpoints 4)...10% done.
+Report timing status: Processing group FEEDTHROUGH (total endpoints 4)...20% done.
+Report timing status: Processing group FEEDTHROUGH (total endpoints 4)...30% done.
+Report timing status: Processing group FEEDTHROUGH (total endpoints 4)...40% done.
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: mem_resp_yumi_o
+               (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  input external delay                                      0.100      0.100 r
+  io_resp_v_i (in)                               0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                               0.026      0.019 &    0.119 f
+  U2003/QN (NOR4X0)                              0.157      0.092 &    0.211 r
+  icc_place1902/Z (NBUFFX2)                      0.114      0.115 &    0.326 r
+  U2020/QN (NAND2X0)                             0.106      0.083 &    0.408 f
+  U2021/ZN (INVX0)                               0.083      0.059 &    0.467 r
+  U2022/QN (NOR2X1)                              0.423      0.235 &    0.702 f
+  icc_place1938/Z (NBUFFX2)                      0.159      0.191 &    0.893 f
+  U2028/Q (AO222X1)                              0.296      0.248 &    1.141 f
+  uce_1__uce/U19/Q (AO22X1)                      0.491      0.423 &    1.564 f
+  core/be/be_mem/dcache/icc_place109/ZN (INVX0)    0.426    0.306 &    1.870 r
+  core/be/be_mem/dcache/wbuf/U379/Q (MUX21X1)    0.061      0.197 &    2.067 r
+  core/be/be_mem/dcache/wbuf/U382/QN (NAND4X0)    0.087     0.045 &    2.112 f
+  core/be/be_mem/dcache/wbuf/U388/QN (NOR4X0)    0.124      0.078 &    2.191 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)      0.069      0.124 &    2.315 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)        0.159      0.076 &    2.391 f
+  uce_1__uce/U51/QN (NAND2X0)                    0.109      0.072 &    2.463 r
+  uce_1__uce/U52/ZN (INVX0)                      0.087      0.063 &    2.526 f
+  uce_1__uce/U53/Q (OA221X1)                     0.058      0.101 &    2.627 f
+  uce_1__uce/U72/ZN (INVX0)                      0.065      0.041 &    2.668 r
+  uce_1__uce/U720/QN (NAND3X1)                   0.235      0.191 &    2.859 f
+  U3127/Q (OA221X1)                              0.057      0.154 &    3.013 f
+  mem_resp_yumi_o (out)                          0.057      0.000 &    3.013 f
+  data arrival time                                                    3.013
+
+  clock core_clk (rise edge)                     0.000      7.000      7.000
+  clock network delay (ideal)                               0.000      7.000
+  clock reconvergence pessimism                             0.000      7.000
+  output external delay                                    -0.100      6.900
+  data required time                                                   6.900
+  -----------------------------------------------------------------------------
+  data required time                                                   6.900
+  data arrival time                                                   -3.013
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          3.887
+
+
+  Startpoint: io_resp_v_i
+               (input port clocked by core_clk)
+  Endpoint: io_resp_yumi_o
+               (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  input external delay                                      0.100      0.100 r
+  io_resp_v_i (in)                               0.000      0.000 &    0.100 r
+  U2002/ZN (INVX0)                               0.026      0.019 &    0.119 f
+  U2003/QN (NOR4X0)                              0.157      0.092 &    0.211 r
+  icc_place1902/Z (NBUFFX2)                      0.114      0.115 &    0.326 r
+  U2020/QN (NAND2X0)                             0.106      0.083 &    0.408 f
+  U2021/ZN (INVX0)                               0.083      0.059 &    0.467 r
+  U2022/QN (NOR2X1)                              0.423      0.235 &    0.702 f
+  icc_place1938/Z (NBUFFX2)                      0.159      0.191 &    0.893 f
+  U2028/Q (AO222X1)                              0.296      0.248 &    1.141 f
+  uce_1__uce/U19/Q (AO22X1)                      0.491      0.423 &    1.564 f
+  core/be/be_mem/dcache/icc_place109/ZN (INVX0)    0.426    0.306 &    1.870 r
+  core/be/be_mem/dcache/wbuf/U379/Q (MUX21X1)    0.061      0.197 &    2.067 r
+  core/be/be_mem/dcache/wbuf/U382/QN (NAND4X0)    0.087     0.045 &    2.112 f
+  core/be/be_mem/dcache/wbuf/U388/QN (NOR4X0)    0.124      0.078 &    2.191 r
+  core/be/be_mem/dcache/wbuf/U389/Q (OR3X1)      0.069      0.124 &    2.315 r
+  core/be/be_mem/dcache/U1191/QN (NOR3X0)        0.159      0.076 &    2.391 f
+  uce_1__uce/U51/QN (NAND2X0)                    0.109      0.072 &    2.463 r
+  uce_1__uce/U52/ZN (INVX0)                      0.087      0.063 &    2.526 f
+  uce_1__uce/U53/Q (OA221X1)                     0.058      0.101 &    2.627 f
+  uce_1__uce/U72/ZN (INVX0)                      0.065      0.041 &    2.668 r
+  uce_1__uce/U720/QN (NAND3X1)                   0.235      0.191 &    2.859 f
+  U3128/Q (AO22X1)                               0.058      0.153 &    3.012 f
+  io_resp_yumi_o (out)                           0.058      0.000 &    3.012 f
+  data arrival time                                                    3.012
+
+  clock core_clk (rise edge)                     0.000      7.000      7.000
+  clock network delay (ideal)                               0.000      7.000
+  clock reconvergence pessimism                             0.000      7.000
+  output external delay                                    -0.100      6.900
+  data required time                                                   6.900
+  -----------------------------------------------------------------------------
+  data required time                                                   6.900
+  data arrival time                                                   -3.012
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          3.888
+
+
+  Startpoint: mem_cmd_ready_i
+               (input port clocked by core_clk)
+  Endpoint: io_cmd_v_o (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  input external delay                                      0.100      0.100 f
+  mem_cmd_ready_i (in)                           0.000      0.000 &    0.100 f
+  U3121/Q (AND3X1)                               0.248      0.180 &    0.280 f
+  mem_arbiter/U1/Q (AND2X1)                      0.067      0.168 &    0.447 f
+  U1993/QN (NOR2X0)                              0.529      0.250 &    0.697 r
+  U1994/ZN (INVX0)                               0.131      0.270 &    0.967 f
+  U1995/QN (NAND2X0)                             0.187      0.109 &    1.075 r
+  U3122/QN (NOR2X0)                              0.109      0.076 &    1.151 f
+  io_cmd_v_o (out)                               0.109      0.018 &    1.169 f
+  data arrival time                                                    1.169
+
+  clock core_clk (rise edge)                     0.000      7.000      7.000
+  clock network delay (ideal)                               0.000      7.000
+  clock reconvergence pessimism                             0.000      7.000
+  output external delay                                    -0.100      6.900
+  data required time                                                   6.900
+  -----------------------------------------------------------------------------
+  data required time                                                   6.900
+  data arrival time                                                   -1.169
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          5.731
+
+
+  Startpoint: mem_cmd_ready_i
+               (input port clocked by core_clk)
+  Endpoint: mem_cmd_v_o
+               (output port clocked by core_clk)
+  Path Group: FEEDTHROUGH
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.010
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                          Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock core_clk (rise edge)                     0.000      0.000      0.000
+  clock network delay (ideal)                               0.000      0.000
+  input external delay                                      0.100      0.100 f
+  mem_cmd_ready_i (in)                           0.000      0.000 &    0.100 f
+  U3121/Q (AND3X1)                               0.248      0.180 &    0.280 f
+  mem_arbiter/U1/Q (AND2X1)                      0.067      0.168 &    0.447 f
+  U1993/QN (NOR2X0)                              0.529      0.250 &    0.697 r
+  U3123/QN (NOR2X0)                              0.189      0.335 &    1.032 f
+  mem_cmd_v_o (out)                              0.189      0.019 &    1.050 f
+  data arrival time                                                    1.050
+
+  clock core_clk (rise edge)                     0.000      7.000      7.000
+  clock network delay (ideal)                               0.000      7.000
+  clock reconvergence pessimism                             0.000      7.000
+  output external delay                                    -0.100      6.900
+  data required time                                                   6.900
+  -----------------------------------------------------------------------------
+  data required time                                                   6.900
+  data arrival time                                                   -1.050
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          5.850
+
+Report timing status: Processing group FEEDTHROUGH (total endpoints 4)...100% done.
+
+Report timing status: Completed...
+1

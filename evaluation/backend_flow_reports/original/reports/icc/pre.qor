@@ -1,0 +1,60 @@
+***********************************************
+Report          : create_qor_snapshot (flat_dp_place)
+Design          : bp_softcore
+Version         : M-2016.12-SP5-3
+Date            : Wed Mar 11 16:26:47 2020
+Time unit       : 1.0e-09 Second(ns)
+Capacitance unit: N/A
+Voltage unit    : 1 Volt
+Power unit      : N/A
+Location        : /home/jlewis24/final_project/ee477-chip/snapshot
+***********************************************
+No. of scenario = 1
+--------------------------------------------------
+WNS of each timing group:                
+--------------------------------------------------
+core_clk                                    -1.124 
+REGOUT                                      -0.116 
+--------------------------------------------------
+Setup WNS:                                  -1.124 
+Setup TNS:                                -655.649
+Number of setup violations:                   1513  
+Hold WNS:                                   -0.822  
+Hold TNS:                                -9736.075  
+Number of hold violations:                   14745  
+Number of max trans violations:               2179  
+Number of max cap violations:                 1272  
+Number of min pulse width violations:            0  
+Route drc violations:                            0
+--------------------------------------------------
+Area:                                      2477749
+Cell count:                                  62950
+Buf/inv cell count:                           8729
+Std cell utilization:                       33.83%
+CPU/ELAPSE(hr):                          0.06/0.09
+Mem(Mb):                                       820
+Host name:                               linuxsrv01.ece.uw.edu
+--------------------------------------------------
+Histogram:           
+--------------------------------------------------
+Max violations:      1513 
+   above ~ -0.7  ---  315 
+    -0.6 ~ -0.7  ---   67 
+    -0.5 ~ -0.6  ---   89 
+    -0.4 ~ -0.5  ---  118 
+    -0.3 ~ -0.4  ---  130 
+    -0.2 ~ -0.3  ---  403 
+    -0.1 ~ -0.2  ---  138 
+       0 ~ -0.1  ---  253 
+--------------------------------------------------
+Min violations:      16579 
+  -0.06 ~ above  --- 16219 
+  -0.05 ~ -0.06  ---   59 
+  -0.04 ~ -0.05  ---   76 
+  -0.03 ~ -0.04  ---   43 
+  -0.02 ~ -0.03  ---   66 
+  -0.01 ~ -0.02  ---   50 
+      0 ~ -0.01  ---   66 
+--------------------------------------------------
+Snapshot report (index) is created and can be viewed using file "/home/jlewis24/final_project/ee477-chip/snapshot/index.html"
+1

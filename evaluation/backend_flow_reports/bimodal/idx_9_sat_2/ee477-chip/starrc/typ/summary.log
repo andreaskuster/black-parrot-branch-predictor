@@ -1,0 +1,1171 @@
+
+
+                         StarRC (TM)
+             Copyright (c) 1999-2015 Synopsys, Inc.
+                      All Rights Reserved
+
+
+ExecName: /home/projects/vlsi/common/ee477/synopsys/starrc/J-2014.12-SP3-3/amd64_starrc/bin/StarXtract
+Version: J-2014.12-SP3-3
+Built on: Nov 19 2015 20:49:40
+Start Time: Thu Mar 12 14:09:19 2020
+
+Host ............ linuxsrv01.ece.uw.edu
+
+xTractorName:/home/projects/vlsi/common/ee477/synopsys/starrc/J-2014.12-SP3-3/amd64_starrc/bin/xTractor
+Version: J-2014.12-SP3-3
+Built on: Nov 19 2015 20:49:55
+Start Time: Thu Mar 12 14:09:19 2020
+
+Block ........... chip_finish_icc
+Star Directory .. /home/jlewis24/final_project/ee477-chip/reports/starrc/typ
+Milkyway DB ..... /home/jlewis24/final_project/ee477-chip/bp_softcore_mwlib
+ Ref Libs Report is skipped.
+
+Map Layers:  Thu Mar 12 14:09:23 2020
+WARNING: MAPPING_FILE layer "metal1_pin" is not a valid database layer and will be removed.
+ (SX-1813)
+WARNING: MAPPING_FILE layer "metal2_pin" is not a valid database layer and will be removed.
+ (SX-1813)
+WARNING: MAPPING_FILE layer "metal3_pin" is not a valid database layer and will be removed.
+ (SX-1813)
+WARNING: MAPPING_FILE layer "metal4_pin" is not a valid database layer and will be removed.
+ (SX-1813)
+WARNING: MAPPING_FILE layer "metal5_pin" is not a valid database layer and will be removed.
+ (SX-1813)
+WARNING: MAPPING_FILE layer "metal6_pin" is not a valid database layer and will be removed.
+ (SX-1813)
+WARNING: MAPPING_FILE layer "metal7_pin" is not a valid database layer and will be removed.
+ (SX-1813)
+WARNING: MAPPING_FILE layer "metal8_pin" is not a valid database layer and will be removed.
+ (SX-1813)
+WARNING: MAPPING_FILE layer "metal9_pin" is not a valid database layer and will be removed.
+ (SX-1813)
+WARNING: Runset via layer CO connects down to DIFF[DIFF] that has a different picture level than
+         that of via's GRD from-layer POLY (SX-1822)
+  Warnings: 10    Errors: 0    (See file summary/layers.sum)
+  Layers        Elp=00:00:01 Cpu=00:00:00 Usr=0.7    Sys=0.1    Mem=218.4 
+Done
+
+Create Models:  Thu Mar 12 14:09:24 2020
+  Warnings: 0    Errors: 0
+  Models        Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=94.4  
+Done
+
+Build HN:  Thu Mar 12 14:09:24 2020
+WARNING: Top library path
+         '/home/jlewis24/final_project/ee477-chip/reports/starrc/typ/bp_softcore_mwlib' in
+ reference
+         library control file is inconsistent with current library path
+         '/home/jlewis24/final_project/ee477-chip/bp_softcore_mwlib'. (MW-212)
+  Warnings: 1    Errors: 0    (See file summary/hn.sum)
+  HN            Elp=00:00:08 Cpu=00:00:07 Usr=6.5    Sys=0.5    Mem=316.2 
+Done
+
+Process Cells:  Thu Mar 12 14:09:32 2020
+WARNING: Top library path
+         '/home/jlewis24/final_project/ee477-chip/reports/starrc/typ/bp_softcore_mwlib' in
+ reference
+         library control file is inconsistent with current library path
+         '/home/jlewis24/final_project/ee477-chip/bp_softcore_mwlib'. (MW-212)
+  Warnings: 1    Errors: 0    (See file summary/cells.sum)
+  Cells         Elp=00:00:09 Cpu=00:00:06 Usr=5.9    Sys=0.5    Mem=281.1 
+Done
+
+Translate DB:  Thu Mar 12 14:09:41 2020
+  Warnings: 0    Errors: 0
+  Translate     Elp=00:00:03 Cpu=00:00:02 Usr=2.3    Sys=0.2    Mem=144.1 
+Done
+
+Partition_part1 DB:  Thu Mar 12 14:09:45 2020
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.414
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.414
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.414
+Completed  40%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.414
+Completed  60%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.582
+Completed  80%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.934
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.934
+  Warnings: 0    Errors: 0
+  Partition_part1 Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=111.8 
+Done
+
+Partition_part2 DB:  Thu Mar 12 14:09:45 2020
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.504
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.504
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.504
+Completed  40%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.73
+Completed  60%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.793
+Completed  80%  Time=00:00:00  RemainingTime=00:00:00  Mem=112.043
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=112.043
+  Warnings: 0    Errors: 0
+  Partition_part2 Elp=00:00:00 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=111.9 
+Done
+
+Partition_part3 DB:  Thu Mar 12 14:09:45 2020
+Completed   0%  Time=00:00:00  RemainingTime=00:00:02  Mem=111.52
+Completed  10%  Time=00:00:00  RemainingTime=00:00:01  Mem=111.52
+Completed  20%  Time=00:00:00  RemainingTime=00:00:01  Mem=111.895
+Completed  40%  Time=00:00:00  RemainingTime=00:00:01  Mem=112.082
+Completed  60%  Time=00:00:01  RemainingTime=00:00:00  Mem=112.59
+Completed  80%  Time=00:00:01  RemainingTime=00:00:01  Mem=112.949
+Completed 100%  Time=00:00:02  RemainingTime=00:00:00  Mem=112.949
+  Warnings: 0    Errors: 0
+  Partition_part3 Elp=00:00:03 Cpu=00:00:02 Usr=2.1    Sys=0.0    Mem=112.8 
+Done
+
+Partition_part4 DB:  Thu Mar 12 14:09:49 2020
+Completed   0%  Time=00:00:00  RemainingTime=00:00:02  Mem=111.586
+Completed  10%  Time=00:00:00  RemainingTime=00:00:02  Mem=111.648
+Completed  20%  Time=00:00:00  RemainingTime=00:00:02  Mem=111.961
+Completed  40%  Time=00:00:01  RemainingTime=00:00:01  Mem=112.398
+Completed  60%  Time=00:00:01  RemainingTime=00:00:01  Mem=112.898
+Completed  80%  Time=00:00:02  RemainingTime=00:00:00  Mem=113.242
+Completed 100%  Time=00:00:02  RemainingTime=00:00:00  Mem=113.305
+  Warnings: 0    Errors: 0
+  Partition_part4 Elp=00:00:03 Cpu=00:00:02 Usr=2.8    Sys=0.1    Mem=113.2 
+Done
+
+Partition_part5 DB:  Thu Mar 12 14:09:52 2020
+Completed   0%  Time=00:00:00  RemainingTime=00:00:02  Mem=111.648
+Completed  10%  Time=00:00:00  RemainingTime=00:00:02  Mem=111.648
+Completed  20%  Time=00:00:00  RemainingTime=00:00:02  Mem=112.086
+Completed  40%  Time=00:00:01  RemainingTime=00:00:01  Mem=112.773
+Completed  60%  Time=00:00:01  RemainingTime=00:00:02  Mem=113.445
+Completed  80%  Time=00:00:02  RemainingTime=00:00:01  Mem=113.57
+Completed 100%  Time=00:00:03  RemainingTime=00:00:00  Mem=113.633
+  Warnings: 0    Errors: 0
+  Partition_part5 Elp=00:00:03 Cpu=00:00:03 Usr=3.2    Sys=0.0    Mem=113.5 
+Done
+
+Partition_part6 DB:  Thu Mar 12 14:09:55 2020
+Completed   0%  Time=00:00:00  RemainingTime=00:00:01  Mem=111.52
+Completed  10%  Time=00:00:00  RemainingTime=00:00:01  Mem=111.52
+Completed  20%  Time=00:00:00  RemainingTime=00:00:01  Mem=111.707
+Completed  40%  Time=00:00:00  RemainingTime=00:00:01  Mem=112.09
+Completed  60%  Time=00:00:00  RemainingTime=00:00:01  Mem=112.277
+Completed  80%  Time=00:00:01  RemainingTime=00:00:00  Mem=112.559
+Completed 100%  Time=00:00:01  RemainingTime=00:00:00  Mem=112.559
+  Warnings: 0    Errors: 0
+  Partition_part6 Elp=00:00:02 Cpu=00:00:01 Usr=1.4    Sys=0.0    Mem=112.5 
+Done
+
+Partition_part7 DB:  Thu Mar 12 14:09:57 2020
+Completed   0%  Time=00:00:00  RemainingTime=00:00:01  Mem=111.504
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.504
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.504
+Completed  40%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.566
+Completed  60%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.715
+Completed  80%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.777
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.777
+  Warnings: 0    Errors: 0
+  Partition_part7 Elp=00:00:00 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=111.7 
+Done
+
+Partition_part8 DB:  Thu Mar 12 14:09:57 2020
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.41
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.41
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.41
+Completed  40%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.41
+Completed  60%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.492
+Completed  80%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.555
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=111.555
+  Warnings: 0    Errors: 0
+  Partition_part8 Elp=00:00:01 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=111.5 
+Done
+
+PartitionPP:  Thu Mar 12 14:09:58 2020
+  Warnings: 0    Errors: 0
+  PartitionPP   Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=106.7 
+Done
+
+Netlist Setup:  Thu Mar 12 14:09:58 2020
+  Warnings: 0    Errors: 0
+  NetlistSetup  Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=130.6 
+Done
+
+Netlist Assembly Setup:  Thu Mar 12 14:10:00 2020
+  Warnings: 0    Errors: 0
+  NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=99.6  
+Done
+
+Clean Directory:  Thu Mar 12 14:10:02 2020
+  Warnings: 0    Errors: 0
+  CleanDirectory Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=94.4  
+Done
+
+xTract_part1 DB:  Thu Mar 12 14:10:05 2020
+Extracting partition 13
+Completed   0%  Time=00:00:00  RemainingTime=00:00:50  Mem=901.602
+Completed   1%  Time=00:00:00  RemainingTime=00:00:32  Mem=903.039
+Completed   2%  Time=00:00:00  RemainingTime=00:00:25  Mem=904.227
+Completed   3%  Time=00:00:00  RemainingTime=00:00:20  Mem=904.727
+Completed   4%  Time=00:00:01  RemainingTime=00:00:21  Mem=908.102
+Completed   5%  Time=00:00:01  RemainingTime=00:00:20  Mem=909.914
+Completed  10%  Time=00:00:02  RemainingTime=00:00:17  Mem=918.164
+Completed  15%  Time=00:00:04  RemainingTime=00:00:22  Mem=938.539
+Completed  20%  Time=00:00:05  RemainingTime=00:00:21  Mem=950.789
+Completed  25%  Time=00:00:06  RemainingTime=00:00:20  Mem=965.164
+Completed  30%  Time=00:00:07  RemainingTime=00:00:17  Mem=972.352
+Completed  35%  Time=00:00:09  RemainingTime=00:00:16  Mem=990.289
+Completed  40%  Time=00:00:09  RemainingTime=00:00:15  Mem=999.602
+Completed  45%  Time=00:00:11  RemainingTime=00:00:14  Mem=1015.04
+Completed  50%  Time=00:00:12  RemainingTime=00:00:13  Mem=1028.1
+Completed  55%  Time=00:00:13  RemainingTime=00:00:11  Mem=1035.66
+Completed  60%  Time=00:00:14  RemainingTime=00:00:10  Mem=1042.29
+Completed  65%  Time=00:00:15  RemainingTime=00:00:09  Mem=1052.04
+Completed  70%  Time=00:00:16  RemainingTime=00:00:07  Mem=1060.98
+Completed  75%  Time=00:00:18  RemainingTime=00:00:05  Mem=1073.04
+Completed  80%  Time=00:00:19  RemainingTime=00:00:04  Mem=1081.79
+Completed  85%  Time=00:00:22  RemainingTime=00:00:03  Mem=1111.1
+Completed  90%  Time=00:00:24  RemainingTime=00:00:02  Mem=1134.1
+Completed  95%  Time=00:00:25  RemainingTime=00:00:01  Mem=1141.91
+Completed 100%  Time=00:00:26  RemainingTime=00:00:00  Mem=1150.98
+Extracted 6810056 capacitors, 564253 resistors, 0 reluctors, 561304 nodes
+Reduced to 177670 nodes,  (68.3469%)
+Reduced to 164417 resistors,  (70.8611%)
+Reduced to 893266 capacitors: 746513 Cc and 146753 Cg (86.8831%)
+Extracting partition 17
+Completed   0%  Time=00:00:00  RemainingTime=00:00:25  Mem=849.996
+Completed   1%  Time=00:00:00  RemainingTime=00:00:15  Mem=850.621
+Completed   2%  Time=00:00:00  RemainingTime=00:00:12  Mem=851.309
+Completed   3%  Time=00:00:00  RemainingTime=00:00:10  Mem=852.121
+Completed   4%  Time=00:00:00  RemainingTime=00:00:10  Mem=853.059
+Completed   5%  Time=00:00:00  RemainingTime=00:00:09  Mem=854.121
+Completed  10%  Time=00:00:01  RemainingTime=00:00:10  Mem=861.559
+Completed  15%  Time=00:00:02  RemainingTime=00:00:13  Mem=874.176
+Completed  20%  Time=00:00:03  RemainingTime=00:00:12  Mem=883.988
+Completed  25%  Time=00:00:03  RemainingTime=00:00:12  Mem=891.551
+Completed  30%  Time=00:00:04  RemainingTime=00:00:10  Mem=898.238
+Completed  35%  Time=00:00:05  RemainingTime=00:00:09  Mem=904.426
+Completed  40%  Time=00:00:05  RemainingTime=00:00:08  Mem=911.613
+Completed  45%  Time=00:00:06  RemainingTime=00:00:07  Mem=920.113
+Completed  50%  Time=00:00:07  RemainingTime=00:00:07  Mem=933.801
+Completed  55%  Time=00:00:08  RemainingTime=00:00:07  Mem=953.863
+Completed  60%  Time=00:00:09  RemainingTime=00:00:06  Mem=960.613
+Completed  65%  Time=00:00:10  RemainingTime=00:00:05  Mem=971.238
+Completed  70%  Time=00:00:10  RemainingTime=00:00:04  Mem=976.363
+Completed  75%  Time=00:00:11  RemainingTime=00:00:04  Mem=984.926
+Completed  80%  Time=00:00:13  RemainingTime=00:00:03  Mem=1005.05
+Completed  85%  Time=00:00:15  RemainingTime=00:00:02  Mem=1020.86
+Completed  90%  Time=00:00:16  RemainingTime=00:00:01  Mem=1028.49
+Completed  95%  Time=00:00:17  RemainingTime=00:00:00  Mem=1040.68
+Completed 100%  Time=00:00:17  RemainingTime=00:00:00  Mem=1046.99
+Extracted 3534715 capacitors, 503992 resistors, 0 reluctors, 495643 nodes
+Reduced to 158394 nodes,  (68.0427%)
+Reduced to 144824 resistors,  (71.2646%)
+Reduced to 627601 capacitors: 500228 Cc and 127373 Cg (82.2447%)
+Extracting partition 18
+Completed   0%  Time=00:00:00  RemainingTime=00:00:29  Mem=843.41
+Completed   1%  Time=00:00:00  RemainingTime=00:00:35  Mem=848.973
+Completed   2%  Time=00:00:00  RemainingTime=00:00:29  Mem=851.41
+Completed   3%  Time=00:00:01  RemainingTime=00:00:25  Mem=853.223
+Completed   4%  Time=00:00:01  RemainingTime=00:00:21  Mem=854.41
+Completed   5%  Time=00:00:01  RemainingTime=00:00:18  Mem=855.285
+Completed  10%  Time=00:00:01  RemainingTime=00:00:13  Mem=860.473
+Completed  15%  Time=00:00:02  RemainingTime=00:00:14  Mem=871.098
+Completed  20%  Time=00:00:03  RemainingTime=00:00:14  Mem=885.098
+Completed  25%  Time=00:00:04  RemainingTime=00:00:12  Mem=892.098
+Completed  30%  Time=00:00:04  RemainingTime=00:00:11  Mem=898.035
+Completed  35%  Time=00:00:05  RemainingTime=00:00:10  Mem=905.66
+Completed  40%  Time=00:00:06  RemainingTime=00:00:10  Mem=916.66
+Completed  45%  Time=00:00:08  RemainingTime=00:00:10  Mem=935.66
+Completed  50%  Time=00:00:09  RemainingTime=00:00:10  Mem=948.91
+Completed  55%  Time=00:00:11  RemainingTime=00:00:09  Mem=964.285
+Completed  60%  Time=00:00:12  RemainingTime=00:00:08  Mem=975.66
+Completed  65%  Time=00:00:13  RemainingTime=00:00:07  Mem=985.223
+Completed  70%  Time=00:00:15  RemainingTime=00:00:07  Mem=1004.91
+Completed  75%  Time=00:00:16  RemainingTime=00:00:05  Mem=1012.41
+Completed  80%  Time=00:00:17  RemainingTime=00:00:04  Mem=1024.47
+Completed  85%  Time=00:00:18  RemainingTime=00:00:03  Mem=1032.66
+Completed  90%  Time=00:00:20  RemainingTime=00:00:02  Mem=1042.66
+Completed  95%  Time=00:00:21  RemainingTime=00:00:01  Mem=1051.16
+Completed 100%  Time=00:00:22  RemainingTime=00:00:00  Mem=1058.6
+Extracted 5242500 capacitors, 501721 resistors, 0 reluctors, 496459 nodes
+Reduced to 156153 nodes,  (68.5466%)
+Reduced to 143933 resistors,  (71.3121%)
+Reduced to 721906 capacitors: 594622 Cc and 127284 Cg (86.2297%)
+Extracting partition 23
+Completed   0%  Time=00:00:00  RemainingTime=00:00:45  Mem=780.805
+Completed   1%  Time=00:00:01  RemainingTime=00:00:53  Mem=790.805
+Completed   2%  Time=00:00:01  RemainingTime=00:00:38  Mem=791.93
+Completed   3%  Time=00:00:01  RemainingTime=00:00:31  Mem=793.43
+Completed   4%  Time=00:00:01  RemainingTime=00:00:29  Mem=795.992
+Completed   5%  Time=00:00:01  RemainingTime=00:00:29  Mem=799.055
+Completed  10%  Time=00:00:02  RemainingTime=00:00:22  Mem=807.867
+Completed  15%  Time=00:00:03  RemainingTime=00:00:19  Mem=818.867
+Completed  20%  Time=00:00:04  RemainingTime=00:00:16  Mem=826.93
+Completed  25%  Time=00:00:04  RemainingTime=00:00:14  Mem=833.805
+Completed  30%  Time=00:00:06  RemainingTime=00:00:14  Mem=851.242
+Completed  35%  Time=00:00:06  RemainingTime=00:00:13  Mem=856.617
+Completed  40%  Time=00:00:08  RemainingTime=00:00:11  Mem=863.805
+Completed  45%  Time=00:00:08  RemainingTime=00:00:10  Mem=870.305
+Completed  50%  Time=00:00:09  RemainingTime=00:00:08  Mem=876.18
+Completed  55%  Time=00:00:09  RemainingTime=00:00:08  Mem=885.492
+Completed  60%  Time=00:00:10  RemainingTime=00:00:07  Mem=894.867
+Completed  65%  Time=00:00:11  RemainingTime=00:00:06  Mem=903.617
+Completed  70%  Time=00:00:12  RemainingTime=00:00:05  Mem=918.875
+Completed  75%  Time=00:00:13  RemainingTime=00:00:04  Mem=925.875
+Completed  80%  Time=00:00:13  RemainingTime=00:00:04  Mem=931.375
+Completed  85%  Time=00:00:14  RemainingTime=00:00:02  Mem=936.938
+Completed  90%  Time=00:00:15  RemainingTime=00:00:01  Mem=946.562
+Completed  95%  Time=00:00:15  RemainingTime=00:00:01  Mem=949.312
+Completed 100%  Time=00:00:15  RemainingTime=00:00:00  Mem=954.312
+Extracted 3658822 capacitors, 428296 resistors, 0 reluctors, 422138 nodes
+Reduced to 135647 nodes,  (67.8667%)
+Reduced to 124848 resistors,  (70.8501%)
+Reduced to 550970 capacitors: 444044 Cc and 106926 Cg (84.9413%)
+Extracting partition 14
+Completed   0%  Time=00:00:00  RemainingTime=00:00:10  Mem=680.676
+Completed   1%  Time=00:00:00  RemainingTime=00:00:07  Mem=681.238
+Completed   2%  Time=00:00:00  RemainingTime=00:00:06  Mem=681.676
+Completed   3%  Time=00:00:00  RemainingTime=00:00:06  Mem=682.551
+Completed   4%  Time=00:00:00  RemainingTime=00:00:05  Mem=682.863
+Completed   5%  Time=00:00:00  RemainingTime=00:00:06  Mem=683.738
+Completed  10%  Time=00:00:02  RemainingTime=00:00:16  Mem=702.738
+Completed  15%  Time=00:00:02  RemainingTime=00:00:14  Mem=708.301
+Completed  20%  Time=00:00:03  RemainingTime=00:00:12  Mem=714.176
+Completed  25%  Time=00:00:03  RemainingTime=00:00:11  Mem=719.301
+Completed  30%  Time=00:00:04  RemainingTime=00:00:09  Mem=724.301
+Completed  35%  Time=00:00:04  RemainingTime=00:00:08  Mem=728.926
+Completed  40%  Time=00:00:05  RemainingTime=00:00:08  Mem=738.863
+Completed  45%  Time=00:00:06  RemainingTime=00:00:07  Mem=742.676
+Completed  50%  Time=00:00:06  RemainingTime=00:00:06  Mem=746.238
+Completed  55%  Time=00:00:06  RemainingTime=00:00:06  Mem=749.738
+Completed  60%  Time=00:00:07  RemainingTime=00:00:04  Mem=752.988
+Completed  65%  Time=00:00:07  RemainingTime=00:00:04  Mem=755.801
+Completed  70%  Time=00:00:07  RemainingTime=00:00:04  Mem=758.988
+Completed  75%  Time=00:00:08  RemainingTime=00:00:03  Mem=765.613
+Completed  80%  Time=00:00:09  RemainingTime=00:00:02  Mem=772.051
+Completed  85%  Time=00:00:09  RemainingTime=00:00:02  Mem=776.738
+Completed  90%  Time=00:00:10  RemainingTime=00:00:01  Mem=781.801
+Completed  95%  Time=00:00:13  RemainingTime=00:00:01  Mem=812.301
+Completed 100%  Time=00:00:13  RemainingTime=00:00:00  Mem=813.426
+Extracted 2856599 capacitors, 313642 resistors, 0 reluctors, 313420 nodes
+Reduced to 102416 nodes,  (67.3231%)
+Reduced to 94077 resistors,  (70.005%)
+Reduced to 441944 capacitors: 358720 Cc and 83224 Cg (84.529%)
+Extracting partition 19
+Completed   0%  Time=00:00:00  RemainingTime=00:00:13  Mem=684.02
+Completed   1%  Time=00:00:00  RemainingTime=00:00:11  Mem=685.02
+Completed   2%  Time=00:00:00  RemainingTime=00:00:11  Mem=686.207
+Completed   3%  Time=00:00:00  RemainingTime=00:00:11  Mem=687.395
+Completed   4%  Time=00:00:00  RemainingTime=00:00:11  Mem=688.512
+Completed   5%  Time=00:00:00  RemainingTime=00:00:11  Mem=689.324
+Completed  10%  Time=00:00:01  RemainingTime=00:00:09  Mem=694.137
+Completed  15%  Time=00:00:02  RemainingTime=00:00:12  Mem=703.387
+Completed  20%  Time=00:00:02  RemainingTime=00:00:10  Mem=706.637
+Completed  25%  Time=00:00:03  RemainingTime=00:00:09  Mem=714.262
+Completed  30%  Time=00:00:03  RemainingTime=00:00:09  Mem=723.137
+Completed  35%  Time=00:00:04  RemainingTime=00:00:07  Mem=728.637
+Completed  40%  Time=00:00:04  RemainingTime=00:00:07  Mem=733.762
+Completed  45%  Time=00:00:05  RemainingTime=00:00:06  Mem=739.324
+Completed  50%  Time=00:00:05  RemainingTime=00:00:06  Mem=745.574
+Completed  55%  Time=00:00:06  RemainingTime=00:00:05  Mem=755.137
+Completed  60%  Time=00:00:07  RemainingTime=00:00:05  Mem=765.074
+Completed  65%  Time=00:00:08  RemainingTime=00:00:04  Mem=771.199
+Completed  70%  Time=00:00:09  RemainingTime=00:00:03  Mem=781.699
+Completed  75%  Time=00:00:10  RemainingTime=00:00:03  Mem=794.387
+Completed  80%  Time=00:00:11  RemainingTime=00:00:03  Mem=802.637
+Completed  85%  Time=00:00:12  RemainingTime=00:00:02  Mem=811.262
+Completed  90%  Time=00:00:14  RemainingTime=00:00:01  Mem=821.074
+Completed  95%  Time=00:00:15  RemainingTime=00:00:01  Mem=828.824
+Completed 100%  Time=00:00:17  RemainingTime=00:00:00  Mem=841.449
+Extracted 4464958 capacitors, 357068 resistors, 0 reluctors, 355460 nodes
+Reduced to 113265 nodes,  (68.1357%)
+Reduced to 104207 resistors,  (70.8159%)
+Reduced to 528313 capacitors: 436456 Cc and 91857 Cg (88.1676%)
+Extracting partition 12
+Completed   0%  Time=00:00:00  RemainingTime=00:00:42  Mem=657.684
+Completed   1%  Time=00:00:00  RemainingTime=00:00:32  Mem=661.496
+Completed   2%  Time=00:00:00  RemainingTime=00:00:26  Mem=663.496
+Completed   3%  Time=00:00:00  RemainingTime=00:00:22  Mem=664.746
+Completed   4%  Time=00:00:00  RemainingTime=00:00:19  Mem=665.809
+Completed   5%  Time=00:00:01  RemainingTime=00:00:16  Mem=666.559
+Completed  10%  Time=00:00:01  RemainingTime=00:00:12  Mem=670.746
+Completed  15%  Time=00:00:01  RemainingTime=00:00:10  Mem=674.746
+Completed  20%  Time=00:00:02  RemainingTime=00:00:08  Mem=679.434
+Completed  25%  Time=00:00:02  RemainingTime=00:00:08  Mem=683.371
+Completed  30%  Time=00:00:03  RemainingTime=00:00:07  Mem=687.371
+Completed  35%  Time=00:00:03  RemainingTime=00:00:07  Mem=693.434
+Completed  40%  Time=00:00:04  RemainingTime=00:00:06  Mem=699.621
+Completed  45%  Time=00:00:04  RemainingTime=00:00:06  Mem=703.809
+Completed  50%  Time=00:00:04  RemainingTime=00:00:05  Mem=707.371
+Completed  55%  Time=00:00:05  RemainingTime=00:00:04  Mem=709.871
+Completed  60%  Time=00:00:05  RemainingTime=00:00:04  Mem=714.309
+Completed  65%  Time=00:00:06  RemainingTime=00:00:03  Mem=721.996
+Completed  70%  Time=00:00:06  RemainingTime=00:00:03  Mem=726.434
+Completed  75%  Time=00:00:07  RemainingTime=00:00:02  Mem=732.246
+Completed  80%  Time=00:00:07  RemainingTime=00:00:02  Mem=736.934
+Completed  85%  Time=00:00:08  RemainingTime=00:00:01  Mem=741.996
+Completed  90%  Time=00:00:08  RemainingTime=00:00:01  Mem=749.996
+Completed  95%  Time=00:00:09  RemainingTime=00:00:01  Mem=755.121
+Completed 100%  Time=00:00:10  RemainingTime=00:00:00  Mem=759.496
+Extracted 1910256 capacitors, 273892 resistors, 0 reluctors, 271904 nodes
+Reduced to 88736 nodes,  (67.365%)
+Reduced to 80220 resistors,  (70.7111%)
+Reduced to 319591 capacitors: 249674 Cc and 69917 Cg (83.2697%)
+Extracting partition 22
+Completed   0%  Time=00:00:00  RemainingTime=00:00:05  Mem=646.566
+Completed   1%  Time=00:00:00  RemainingTime=00:00:24  Mem=653.254
+Completed   2%  Time=00:00:00  RemainingTime=00:00:17  Mem=653.691
+Completed   3%  Time=00:00:00  RemainingTime=00:00:14  Mem=654.379
+Completed   4%  Time=00:00:00  RemainingTime=00:00:12  Mem=654.941
+Completed   5%  Time=00:00:00  RemainingTime=00:00:11  Mem=655.504
+Completed  10%  Time=00:00:00  RemainingTime=00:00:09  Mem=658.879
+Completed  15%  Time=00:00:01  RemainingTime=00:00:07  Mem=662.629
+Completed  20%  Time=00:00:01  RemainingTime=00:00:06  Mem=666.879
+Completed  25%  Time=00:00:02  RemainingTime=00:00:08  Mem=680.191
+Completed  30%  Time=00:00:02  RemainingTime=00:00:07  Mem=683.691
+Completed  35%  Time=00:00:03  RemainingTime=00:00:06  Mem=688.004
+Completed  40%  Time=00:00:04  RemainingTime=00:00:05  Mem=695.441
+Completed  45%  Time=00:00:04  RemainingTime=00:00:05  Mem=700.629
+Completed  50%  Time=00:00:04  RemainingTime=00:00:05  Mem=703.879
+Completed  55%  Time=00:00:05  RemainingTime=00:00:04  Mem=711.754
+Completed  60%  Time=00:00:05  RemainingTime=00:00:04  Mem=715.004
+Completed  65%  Time=00:00:06  RemainingTime=00:00:03  Mem=719.191
+Completed  70%  Time=00:00:06  RemainingTime=00:00:03  Mem=725.754
+Completed  75%  Time=00:00:07  RemainingTime=00:00:02  Mem=731.934
+Completed  80%  Time=00:00:07  RemainingTime=00:00:02  Mem=735.996
+Completed  85%  Time=00:00:08  RemainingTime=00:00:02  Mem=743.496
+Completed  90%  Time=00:00:09  RemainingTime=00:00:01  Mem=750.621
+Completed  95%  Time=00:00:09  RemainingTime=00:00:01  Mem=755.496
+Completed 100%  Time=00:00:10  RemainingTime=00:00:00  Mem=759.246
+Extracted 1993729 capacitors, 287566 resistors, 0 reluctors, 284784 nodes
+Reduced to 93807 nodes,  (67.0603%)
+Reduced to 84056 resistors,  (70.7698%)
+Reduced to 334133 capacitors: 261878 Cc and 72255 Cg (83.2408%)
+Extracting partition 16
+Completed   0%  Time=00:00:00  RemainingTime=00:00:13  Mem=614.078
+Completed   1%  Time=00:00:00  RemainingTime=00:00:10  Mem=615.016
+Completed   2%  Time=00:00:00  RemainingTime=00:00:13  Mem=616.828
+Completed   3%  Time=00:00:00  RemainingTime=00:00:13  Mem=618.266
+Completed   4%  Time=00:00:00  RemainingTime=00:00:12  Mem=619.203
+Completed   5%  Time=00:00:00  RemainingTime=00:00:11  Mem=620.016
+Completed  10%  Time=00:00:01  RemainingTime=00:00:09  Mem=626.078
+Completed  15%  Time=00:00:01  RemainingTime=00:00:08  Mem=629.766
+Completed  20%  Time=00:00:01  RemainingTime=00:00:07  Mem=633.141
+Completed  25%  Time=00:00:01  RemainingTime=00:00:06  Mem=636.328
+Completed  30%  Time=00:00:02  RemainingTime=00:00:05  Mem=639.641
+Completed  35%  Time=00:00:02  RemainingTime=00:00:04  Mem=642.828
+Completed  40%  Time=00:00:02  RemainingTime=00:00:05  Mem=649.266
+Completed  45%  Time=00:00:03  RemainingTime=00:00:04  Mem=655.453
+Completed  50%  Time=00:00:03  RemainingTime=00:00:04  Mem=661.391
+Completed  55%  Time=00:00:04  RemainingTime=00:00:03  Mem=666.078
+Completed  60%  Time=00:00:04  RemainingTime=00:00:03  Mem=672.453
+Completed  65%  Time=00:00:05  RemainingTime=00:00:03  Mem=679.641
+Completed  70%  Time=00:00:06  RemainingTime=00:00:02  Mem=688.641
+Completed  75%  Time=00:00:06  RemainingTime=00:00:02  Mem=695.703
+Completed  80%  Time=00:00:08  RemainingTime=00:00:02  Mem=710.516
+Completed  85%  Time=00:00:09  RemainingTime=00:00:01  Mem=720.266
+Completed  90%  Time=00:00:09  RemainingTime=00:00:01  Mem=725.266
+Completed  95%  Time=00:00:10  RemainingTime=00:00:00  Mem=732.703
+Completed 100%  Time=00:00:10  RemainingTime=00:00:00  Mem=738.391
+Extracted 2101286 capacitors, 320596 resistors, 0 reluctors, 311587 nodes
+Reduced to 98099 nodes,  (68.5163%)
+Reduced to 90745 resistors,  (71.6949%)
+Reduced to 380992 capacitors: 302411 Cc and 78581 Cg (81.8686%)
+Extracting partition 21
+Completed   0%  Time=00:00:00  RemainingTime=00:00:09  Mem=518.684
+Completed   1%  Time=00:00:00  RemainingTime=00:00:08  Mem=519.184
+Completed   2%  Time=00:00:00  RemainingTime=00:00:08  Mem=519.746
+Completed   3%  Time=00:00:00  RemainingTime=00:00:07  Mem=520.184
+Completed   4%  Time=00:00:00  RemainingTime=00:00:06  Mem=520.621
+Completed   5%  Time=00:00:00  RemainingTime=00:00:07  Mem=521.871
+Completed  10%  Time=00:00:00  RemainingTime=00:00:06  Mem=525.371
+Completed  15%  Time=00:00:00  RemainingTime=00:00:05  Mem=527.246
+Completed  20%  Time=00:00:01  RemainingTime=00:00:04  Mem=529.934
+Completed  25%  Time=00:00:01  RemainingTime=00:00:03  Mem=531.934
+Completed  30%  Time=00:00:01  RemainingTime=00:00:04  Mem=537.059
+Completed  35%  Time=00:00:02  RemainingTime=00:00:03  Mem=540.309
+Completed  40%  Time=00:00:02  RemainingTime=00:00:04  Mem=546.184
+Completed  45%  Time=00:00:03  RemainingTime=00:00:03  Mem=556.121
+Completed  50%  Time=00:00:03  RemainingTime=00:00:03  Mem=560.059
+Completed  55%  Time=00:00:03  RemainingTime=00:00:03  Mem=562.746
+Completed  60%  Time=00:00:03  RemainingTime=00:00:03  Mem=566.871
+Completed  65%  Time=00:00:04  RemainingTime=00:00:02  Mem=570.559
+Completed  70%  Time=00:00:04  RemainingTime=00:00:02  Mem=572.121
+Completed  75%  Time=00:00:04  RemainingTime=00:00:02  Mem=574.371
+Completed  80%  Time=00:00:05  RemainingTime=00:00:01  Mem=579.934
+Completed  85%  Time=00:00:05  RemainingTime=00:00:01  Mem=584.184
+Completed  90%  Time=00:00:06  RemainingTime=00:00:01  Mem=591.934
+Completed  95%  Time=00:00:06  RemainingTime=00:00:01  Mem=595.434
+Completed 100%  Time=00:00:07  RemainingTime=00:00:00  Mem=600.246
+Extracted 1473976 capacitors, 184012 resistors, 0 reluctors, 180030 nodes
+Reduced to 56060 nodes,  (68.8607%)
+Reduced to 51615 resistors,  (71.9502%)
+Reduced to 226346 capacitors: 181293 Cc and 45053 Cg (84.6438%)
+Extracting partition 24
+Completed   0%  Time=00:00:00  RemainingTime=00:00:11  Mem=513.793
+Completed   1%  Time=00:00:00  RemainingTime=00:00:11  Mem=514.98
+Completed   2%  Time=00:00:00  RemainingTime=00:00:11  Mem=515.98
+Completed   3%  Time=00:00:00  RemainingTime=00:00:11  Mem=516.98
+Completed   4%  Time=00:00:00  RemainingTime=00:00:11  Mem=518.105
+Completed   5%  Time=00:00:00  RemainingTime=00:00:10  Mem=519.043
+Completed  10%  Time=00:00:00  RemainingTime=00:00:09  Mem=522.48
+Completed  15%  Time=00:00:01  RemainingTime=00:00:08  Mem=526.855
+Completed  20%  Time=00:00:01  RemainingTime=00:00:07  Mem=531.16
+Completed  25%  Time=00:00:02  RemainingTime=00:00:05  Mem=533.785
+Completed  30%  Time=00:00:02  RemainingTime=00:00:05  Mem=536.285
+Completed  35%  Time=00:00:02  RemainingTime=00:00:05  Mem=539.785
+Completed  40%  Time=00:00:02  RemainingTime=00:00:05  Mem=544.348
+Completed  45%  Time=00:00:03  RemainingTime=00:00:04  Mem=549.223
+Completed  50%  Time=00:00:03  RemainingTime=00:00:04  Mem=560.035
+Completed  55%  Time=00:00:04  RemainingTime=00:00:03  Mem=563.16
+Completed  60%  Time=00:00:04  RemainingTime=00:00:04  Mem=572.723
+Completed  65%  Time=00:00:05  RemainingTime=00:00:03  Mem=579.418
+Completed  70%  Time=00:00:05  RemainingTime=00:00:03  Mem=584.105
+Completed  75%  Time=00:00:06  RemainingTime=00:00:02  Mem=587.793
+Completed  80%  Time=00:00:06  RemainingTime=00:00:02  Mem=591.543
+Completed  85%  Time=00:00:07  RemainingTime=00:00:01  Mem=595.543
+Completed  90%  Time=00:00:07  RemainingTime=00:00:01  Mem=599.355
+Completed  95%  Time=00:00:08  RemainingTime=00:00:00  Mem=601.98
+Completed 100%  Time=00:00:08  RemainingTime=00:00:00  Mem=613.23
+Extracted 2297752 capacitors, 216201 resistors, 0 reluctors, 216061 nodes
+Reduced to 70618 nodes,  (67.3157%)
+Reduced to 65480 resistors,  (69.7134%)
+Reduced to 317375 capacitors: 260304 Cc and 57071 Cg (86.1876%)
+Extracting partition 8
+Completed   0%  Time=00:00:00  RemainingTime=00:00:28  Mem=510.105
+Completed   1%  Time=00:00:00  RemainingTime=00:00:20  Mem=511.16
+Completed   2%  Time=00:00:00  RemainingTime=00:00:20  Mem=512.66
+Completed   3%  Time=00:00:00  RemainingTime=00:00:18  Mem=513.723
+Completed   4%  Time=00:00:00  RemainingTime=00:00:16  Mem=514.723
+Completed   5%  Time=00:00:00  RemainingTime=00:00:15  Mem=516.223
+Completed  10%  Time=00:00:01  RemainingTime=00:00:11  Mem=521.973
+Completed  15%  Time=00:00:01  RemainingTime=00:00:10  Mem=527.41
+Completed  20%  Time=00:00:02  RemainingTime=00:00:09  Mem=532.223
+Completed  25%  Time=00:00:02  RemainingTime=00:00:08  Mem=536.41
+Completed  30%  Time=00:00:03  RemainingTime=00:00:07  Mem=548.16
+Completed  35%  Time=00:00:03  RemainingTime=00:00:06  Mem=551.223
+Completed  40%  Time=00:00:03  RemainingTime=00:00:06  Mem=554.348
+Completed  45%  Time=00:00:03  RemainingTime=00:00:05  Mem=555.473
+Completed  50%  Time=00:00:04  RemainingTime=00:00:04  Mem=557.285
+Completed  55%  Time=00:00:04  RemainingTime=00:00:04  Mem=563.035
+Completed  60%  Time=00:00:04  RemainingTime=00:00:04  Mem=564.535
+Completed  65%  Time=00:00:04  RemainingTime=00:00:03  Mem=565.973
+Completed  70%  Time=00:00:05  RemainingTime=00:00:02  Mem=569.035
+Completed  75%  Time=00:00:05  RemainingTime=00:00:02  Mem=572.785
+Completed  80%  Time=00:00:05  RemainingTime=00:00:02  Mem=577.66
+Completed  85%  Time=00:00:06  RemainingTime=00:00:01  Mem=580.848
+Completed  90%  Time=00:00:06  RemainingTime=00:00:01  Mem=583.473
+Completed  95%  Time=00:00:06  RemainingTime=00:00:01  Mem=587.41
+Completed 100%  Time=00:00:06  RemainingTime=00:00:00  Mem=588.473
+Extracted 1482145 capacitors, 179108 resistors, 0 reluctors, 176736 nodes
+Reduced to 55437 nodes,  (68.6329%)
+Reduced to 49642 resistors,  (72.2838%)
+Reduced to 219282 capacitors: 175386 Cc and 43896 Cg (85.2051%)
+Extracting partition 11
+Completed   0%  Time=00:00:00  RemainingTime=00:00:22  Mem=459.555
+Completed   1%  Time=00:00:00  RemainingTime=00:00:15  Mem=460.68
+Completed   2%  Time=00:00:00  RemainingTime=00:00:12  Mem=461.492
+Completed   3%  Time=00:00:00  RemainingTime=00:00:10  Mem=462.492
+Completed   4%  Time=00:00:00  RemainingTime=00:00:09  Mem=463.172
+Completed   5%  Time=00:00:00  RemainingTime=00:00:08  Mem=463.984
+Completed  10%  Time=00:00:00  RemainingTime=00:00:06  Mem=466.922
+Completed  15%  Time=00:00:00  RemainingTime=00:00:05  Mem=469.422
+Completed  20%  Time=00:00:01  RemainingTime=00:00:04  Mem=470.984
+Completed  25%  Time=00:00:01  RemainingTime=00:00:03  Mem=471.922
+Completed  30%  Time=00:00:01  RemainingTime=00:00:03  Mem=473.859
+Completed  35%  Time=00:00:01  RemainingTime=00:00:02  Mem=474.609
+Completed  40%  Time=00:00:01  RemainingTime=00:00:02  Mem=475.609
+Completed  45%  Time=00:00:01  RemainingTime=00:00:02  Mem=479.234
+Completed  50%  Time=00:00:01  RemainingTime=00:00:02  Mem=480.297
+Completed  55%  Time=00:00:02  RemainingTime=00:00:01  Mem=483.797
+Completed  60%  Time=00:00:02  RemainingTime=00:00:02  Mem=486.93
+Completed  65%  Time=00:00:02  RemainingTime=00:00:02  Mem=488.305
+Completed  70%  Time=00:00:02  RemainingTime=00:00:01  Mem=489.617
+Completed  75%  Time=00:00:02  RemainingTime=00:00:01  Mem=490.867
+Completed  80%  Time=00:00:03  RemainingTime=00:00:00  Mem=492.43
+Completed  85%  Time=00:00:03  RemainingTime=00:00:00  Mem=494.617
+Completed  90%  Time=00:00:03  RemainingTime=00:00:00  Mem=497.367
+Completed  95%  Time=00:00:03  RemainingTime=00:00:00  Mem=498.992
+Completed 100%  Time=00:00:03  RemainingTime=00:00:00  Mem=499.555
+Extracted 679716 capacitors, 109884 resistors, 0 reluctors, 107559 nodes
+Reduced to 32532 nodes,  (69.7543%)
+Reduced to 29988 resistors,  (72.7094%)
+Reduced to 110368 capacitors: 84404 Cc and 25964 Cg (83.7626%)
+Extracting partition 7
+Completed   0%  Time=00:00:00  RemainingTime=00:00:14  Mem=456.078
+Completed   1%  Time=00:00:00  RemainingTime=00:00:11  Mem=456.828
+Completed   2%  Time=00:00:00  RemainingTime=00:00:10  Mem=458.016
+Completed   3%  Time=00:00:00  RemainingTime=00:00:10  Mem=459.32
+Completed   4%  Time=00:00:00  RemainingTime=00:00:11  Mem=460.945
+Completed   5%  Time=00:00:00  RemainingTime=00:00:10  Mem=461.883
+Completed  10%  Time=00:00:00  RemainingTime=00:00:09  Mem=466.633
+Completed  15%  Time=00:00:01  RemainingTime=00:00:08  Mem=472.945
+Completed  20%  Time=00:00:01  RemainingTime=00:00:08  Mem=477.891
+Completed  25%  Time=00:00:02  RemainingTime=00:00:06  Mem=481.953
+Completed  30%  Time=00:00:02  RemainingTime=00:00:06  Mem=485.453
+Completed  35%  Time=00:00:02  RemainingTime=00:00:05  Mem=488.266
+Completed  40%  Time=00:00:02  RemainingTime=00:00:05  Mem=490.641
+Completed  45%  Time=00:00:03  RemainingTime=00:00:04  Mem=493.516
+Completed  50%  Time=00:00:03  RemainingTime=00:00:03  Mem=495.078
+Completed  55%  Time=00:00:03  RemainingTime=00:00:03  Mem=496.516
+Completed  60%  Time=00:00:03  RemainingTime=00:00:03  Mem=497.453
+Completed  65%  Time=00:00:03  RemainingTime=00:00:02  Mem=498.328
+Completed  70%  Time=00:00:04  RemainingTime=00:00:01  Mem=501.328
+Completed  75%  Time=00:00:04  RemainingTime=00:00:01  Mem=502.641
+Completed  80%  Time=00:00:04  RemainingTime=00:00:01  Mem=503.578
+Completed  85%  Time=00:00:04  RemainingTime=00:00:01  Mem=504.516
+Completed  89%  Time=00:00:04  RemainingTime=00:00:00  Mem=505.578
+Completed  94%  Time=00:00:04  RemainingTime=00:00:00  Mem=506.578
+Completed  99%  Time=00:00:04  RemainingTime=00:00:00  Mem=506.953
+Completed 100%  Time=00:00:04  RemainingTime=00:00:00  Mem=506.953
+Extracted 1031599 capacitors, 123577 resistors, 0 reluctors, 121751 nodes
+Reduced to 35091 nodes,  (71.1781%)
+Reduced to 31326 resistors,  (74.6506%)
+Reduced to 136013 capacitors: 107738 Cc and 28275 Cg (86.8153%)
+Extracting partition 28
+Completed   0%  Time=00:00:00  RemainingTime=00:00:21  Mem=448.176
+Completed   1%  Time=00:00:00  RemainingTime=00:00:13  Mem=448.738
+Completed   2%  Time=00:00:00  RemainingTime=00:00:10  Mem=449.176
+Completed   3%  Time=00:00:00  RemainingTime=00:00:09  Mem=449.613
+Completed   4%  Time=00:00:00  RemainingTime=00:00:09  Mem=450.051
+Completed   5%  Time=00:00:00  RemainingTime=00:00:09  Mem=450.426
+Completed  10%  Time=00:00:00  RemainingTime=00:00:08  Mem=453.363
+Completed  15%  Time=00:00:01  RemainingTime=00:00:07  Mem=456.801
+Completed  20%  Time=00:00:01  RemainingTime=00:00:06  Mem=459.738
+Completed  25%  Time=00:00:01  RemainingTime=00:00:06  Mem=462.738
+Completed  30%  Time=00:00:02  RemainingTime=00:00:05  Mem=466.113
+Completed  35%  Time=00:00:02  RemainingTime=00:00:04  Mem=468.988
+Completed  40%  Time=00:00:02  RemainingTime=00:00:04  Mem=470.801
+Completed  45%  Time=00:00:02  RemainingTime=00:00:04  Mem=473.363
+Completed  50%  Time=00:00:02  RemainingTime=00:00:03  Mem=474.613
+Completed  55%  Time=00:00:03  RemainingTime=00:00:02  Mem=475.801
+Completed  60%  Time=00:00:03  RemainingTime=00:00:02  Mem=479.301
+Completed  65%  Time=00:00:03  RemainingTime=00:00:02  Mem=480.801
+Completed  70%  Time=00:00:03  RemainingTime=00:00:02  Mem=481.551
+Completed  75%  Time=00:00:03  RemainingTime=00:00:01  Mem=482.426
+Completed  80%  Time=00:00:03  RemainingTime=00:00:01  Mem=483.863
+Completed  85%  Time=00:00:04  RemainingTime=00:00:00  Mem=486.309
+Completed  90%  Time=00:00:04  RemainingTime=00:00:00  Mem=487.184
+Completed  95%  Time=00:00:04  RemainingTime=00:00:00  Mem=489.684
+Completed 100%  Time=00:00:04  RemainingTime=00:00:00  Mem=490.559
+Extracted 1006107 capacitors, 104636 resistors, 0 reluctors, 103342 nodes
+Reduced to 33113 nodes,  (67.9578%)
+Reduced to 28869 resistors,  (72.4101%)
+Reduced to 115989 capacitors: 91207 Cc and 24782 Cg (88.4715%)
+Extracting partition 9
+Completed   0%  Time=00:00:00  RemainingTime=00:00:02  Mem=383.352
+Completed   1%  Time=00:00:00  RemainingTime=00:00:01  Mem=383.477
+Completed   2%  Time=00:00:00  RemainingTime=00:00:01  Mem=383.539
+Completed   3%  Time=00:00:00  RemainingTime=00:00:01  Mem=383.602
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=383.664
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=383.727
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=384.289
+Completed  15%  Time=00:00:00  RemainingTime=00:00:01  Mem=385.039
+Completed  20%  Time=00:00:00  RemainingTime=00:00:01  Mem=387.477
+Completed  25%  Time=00:00:00  RemainingTime=00:00:01  Mem=388.602
+Completed  30%  Time=00:00:00  RemainingTime=00:00:01  Mem=389.906
+Completed  35%  Time=00:00:00  RemainingTime=00:00:01  Mem=391.281
+Completed  40%  Time=00:00:00  RemainingTime=00:00:02  Mem=392.469
+Completed  45%  Time=00:00:01  RemainingTime=00:00:01  Mem=394.969
+Completed  50%  Time=00:00:01  RemainingTime=00:00:01  Mem=395.844
+Completed  55%  Time=00:00:01  RemainingTime=00:00:01  Mem=396.469
+Completed  60%  Time=00:00:01  RemainingTime=00:00:01  Mem=397.281
+Completed  65%  Time=00:00:01  RemainingTime=00:00:01  Mem=398.219
+Completed  70%  Time=00:00:01  RemainingTime=00:00:01  Mem=398.906
+Completed  75%  Time=00:00:01  RemainingTime=00:00:01  Mem=400.469
+Completed  80%  Time=00:00:01  RemainingTime=00:00:01  Mem=402.094
+Completed  85%  Time=00:00:01  RemainingTime=00:00:01  Mem=403.781
+Completed  90%  Time=00:00:02  RemainingTime=00:00:00  Mem=408.719
+Completed  95%  Time=00:00:02  RemainingTime=00:00:00  Mem=409.344
+Completed 100%  Time=00:00:02  RemainingTime=00:00:00  Mem=409.406
+Extracted 497737 capacitors, 62205 resistors, 0 reluctors, 63373 nodes
+Reduced to 23052 nodes,  (63.6249%)
+Reduced to 20329 resistors,  (67.3193%)
+Reduced to 89887 capacitors: 72217 Cc and 17670 Cg (81.9409%)
+Extracting partition 27
+Completed   0%  Time=00:00:00  RemainingTime=00:00:02  Mem=388.938
+Completed   1%  Time=00:00:00  RemainingTime=00:00:02  Mem=389.062
+Completed   2%  Time=00:00:00  RemainingTime=00:00:02  Mem=389.25
+Completed   3%  Time=00:00:00  RemainingTime=00:00:02  Mem=389.375
+Completed   4%  Time=00:00:00  RemainingTime=00:00:02  Mem=389.625
+Completed   5%  Time=00:00:00  RemainingTime=00:00:02  Mem=389.812
+Completed  10%  Time=00:00:00  RemainingTime=00:00:03  Mem=391.062
+Completed  15%  Time=00:00:00  RemainingTime=00:00:03  Mem=392.062
+Completed  20%  Time=00:00:00  RemainingTime=00:00:03  Mem=393.312
+Completed  25%  Time=00:00:00  RemainingTime=00:00:03  Mem=394.5
+Completed  30%  Time=00:00:00  RemainingTime=00:00:03  Mem=395.625
+Completed  35%  Time=00:00:01  RemainingTime=00:00:02  Mem=397.617
+Completed  40%  Time=00:00:01  RemainingTime=00:00:02  Mem=399.43
+Completed  45%  Time=00:00:01  RemainingTime=00:00:02  Mem=401.117
+Completed  50%  Time=00:00:01  RemainingTime=00:00:02  Mem=402.43
+Completed  55%  Time=00:00:01  RemainingTime=00:00:02  Mem=404.242
+Completed  60%  Time=00:00:01  RemainingTime=00:00:02  Mem=405.992
+Completed  65%  Time=00:00:01  RemainingTime=00:00:02  Mem=407.055
+Completed  70%  Time=00:00:02  RemainingTime=00:00:00  Mem=409.062
+Completed  75%  Time=00:00:02  RemainingTime=00:00:00  Mem=410.625
+Completed  80%  Time=00:00:02  RemainingTime=00:00:00  Mem=411.75
+Completed  85%  Time=00:00:02  RemainingTime=00:00:00  Mem=412.562
+Completed  90%  Time=00:00:02  RemainingTime=00:00:00  Mem=413.062
+Completed  95%  Time=00:00:02  RemainingTime=00:00:00  Mem=414.625
+Completed 100%  Time=00:00:02  RemainingTime=00:00:00  Mem=415.562
+Extracted 742914 capacitors, 58322 resistors, 0 reluctors, 55781 nodes
+Reduced to 13852 nodes,  (75.1672%)
+Reduced to 12075 resistors,  (79.296%)
+Reduced to 52385 capacitors: 41300 Cc and 11085 Cg (92.9487%)
+Extracting partition 29
+Completed   0%  Time=00:00:00  RemainingTime=00:00:01  Mem=363.738
+Completed   1%  Time=00:00:00  RemainingTime=00:00:01  Mem=363.801
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=363.863
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=363.926
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=363.988
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=364.051
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=364.363
+Completed  15%  Time=00:00:00  RemainingTime=00:00:00  Mem=365.801
+Completed  20%  Time=00:00:00  RemainingTime=00:00:01  Mem=366.676
+Completed  25%  Time=00:00:00  RemainingTime=00:00:01  Mem=367.613
+Completed  30%  Time=00:00:00  RemainingTime=00:00:01  Mem=368.238
+Completed  35%  Time=00:00:00  RemainingTime=00:00:01  Mem=368.863
+Completed  40%  Time=00:00:00  RemainingTime=00:00:01  Mem=369.613
+Completed  45%  Time=00:00:00  RemainingTime=00:00:01  Mem=370.301
+Completed  50%  Time=00:00:00  RemainingTime=00:00:01  Mem=370.988
+Completed  55%  Time=00:00:00  RemainingTime=00:00:01  Mem=372.863
+Completed  60%  Time=00:00:00  RemainingTime=00:00:01  Mem=373.301
+Completed  65%  Time=00:00:00  RemainingTime=00:00:01  Mem=373.676
+Completed  70%  Time=00:00:00  RemainingTime=00:00:01  Mem=373.738
+Completed  75%  Time=00:00:00  RemainingTime=00:00:01  Mem=373.801
+Completed  80%  Time=00:00:00  RemainingTime=00:00:01  Mem=373.988
+Completed  84%  Time=00:00:00  RemainingTime=00:00:01  Mem=374.301
+Completed  89%  Time=00:00:00  RemainingTime=00:00:00  Mem=374.676
+Completed  94%  Time=00:00:00  RemainingTime=00:00:00  Mem=374.988
+Completed  99%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.738
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=375.863
+Extracted 140735 capacitors, 34438 resistors, 0 reluctors, 34545 nodes
+Reduced to 12216 nodes,  (64.6374%)
+Reduced to 10452 resistors,  (69.6498%)
+Reduced to 28912 capacitors: 20540 Cc and 8372 Cg (79.4564%)
+Extracting partition 3
+Completed   0%  Time=00:00:00  RemainingTime=00:00:03  Mem=194.656
+Completed   1%  Time=00:00:00  RemainingTime=00:00:02  Mem=194.844
+Completed   2%  Time=00:00:00  RemainingTime=00:00:02  Mem=194.969
+Completed   3%  Time=00:00:00  RemainingTime=00:00:02  Mem=195.094
+Completed   4%  Time=00:00:00  RemainingTime=00:00:01  Mem=195.219
+Completed   5%  Time=00:00:00  RemainingTime=00:00:01  Mem=195.281
+Completed  10%  Time=00:00:00  RemainingTime=00:00:01  Mem=198.219
+Completed  15%  Time=00:00:00  RemainingTime=00:00:01  Mem=199.469
+Completed  20%  Time=00:00:00  RemainingTime=00:00:01  Mem=200.531
+Completed  25%  Time=00:00:00  RemainingTime=00:00:01  Mem=201.469
+Completed  30%  Time=00:00:00  RemainingTime=00:00:01  Mem=202.094
+Completed  35%  Time=00:00:00  RemainingTime=00:00:01  Mem=203.531
+Completed  40%  Time=00:00:00  RemainingTime=00:00:01  Mem=204.281
+Completed  45%  Time=00:00:00  RemainingTime=00:00:01  Mem=204.656
+Completed  50%  Time=00:00:00  RemainingTime=00:00:01  Mem=205.156
+Completed  54%  Time=00:00:00  RemainingTime=00:00:01  Mem=205.977
+Completed  59%  Time=00:00:00  RemainingTime=00:00:01  Mem=206.227
+Completed  64%  Time=00:00:00  RemainingTime=00:00:01  Mem=206.477
+Completed  69%  Time=00:00:00  RemainingTime=00:00:01  Mem=206.727
+Completed  74%  Time=00:00:00  RemainingTime=00:00:01  Mem=206.977
+Completed  79%  Time=00:00:00  RemainingTime=00:00:01  Mem=207.227
+Completed  84%  Time=00:00:00  RemainingTime=00:00:01  Mem=207.477
+Completed  89%  Time=00:00:00  RemainingTime=00:00:01  Mem=207.602
+Completed  94%  Time=00:00:00  RemainingTime=00:00:01  Mem=207.727
+Completed  99%  Time=00:00:00  RemainingTime=00:00:00  Mem=207.789
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=207.789
+Extracted 175812 capacitors, 27958 resistors, 0 reluctors, 27585 nodes
+Reduced to 7794 nodes,  (71.7455%)
+Reduced to 7039 resistors,  (74.8229%)
+Reduced to 24238 capacitors: 18038 Cc and 6200 Cg (86.2137%)
+Extracting partition 33
+Completed   0%  Time=00:00:00  RemainingTime=00:00:01  Mem=189.195
+Completed   1%  Time=00:00:00  RemainingTime=00:00:01  Mem=189.195
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.195
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.195
+Completed   3%  Time=00:00:00  RemainingTime=00:00:01  Mem=189.195
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.195
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.195
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.195
+Completed  15%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.195
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.195
+Completed  24%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.195
+Completed  29%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.195
+Completed  34%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.195
+Completed  39%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.449
+Completed  44%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.824
+Completed  49%  Time=00:00:00  RemainingTime=00:00:00  Mem=190.324
+Completed  54%  Time=00:00:00  RemainingTime=00:00:00  Mem=190.699
+Completed  58%  Time=00:00:00  RemainingTime=00:00:00  Mem=192.949
+Completed  63%  Time=00:00:00  RemainingTime=00:00:00  Mem=193.262
+Completed  68%  Time=00:00:00  RemainingTime=00:00:00  Mem=194.199
+Completed  73%  Time=00:00:00  RemainingTime=00:00:00  Mem=195.199
+Completed  78%  Time=00:00:00  RemainingTime=00:00:00  Mem=195.887
+Completed  83%  Time=00:00:00  RemainingTime=00:00:00  Mem=196.637
+Completed  88%  Time=00:00:00  RemainingTime=00:00:00  Mem=196.762
+Completed  93%  Time=00:00:00  RemainingTime=00:00:00  Mem=197.012
+Completed  97%  Time=00:00:00  RemainingTime=00:00:00  Mem=197.199
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=197.262
+Extracted 180921 capacitors, 19993 resistors, 0 reluctors, 19602 nodes
+Reduced to 5671 nodes,  (71.0693%)
+Reduced to 4734 resistors,  (76.3217%)
+Reduced to 19484 capacitors: 15220 Cc and 4264 Cg (89.2307%)
+Extracting partition 34
+Completed   0%  Time=00:00:00  RemainingTime=00:00:01  Mem=180.73
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  14%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  19%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  24%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  29%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  33%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  38%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  43%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  48%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  52%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  57%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  62%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  67%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  72%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  76%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  81%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  86%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  91%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed  95%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.73
+Extracted 18786 capacitors, 3598 resistors, 0 reluctors, 4120 nodes
+Reduced to 1500 nodes,  (63.5922%)
+Reduced to 957 resistors,  (73.4019%)
+Reduced to 3512 capacitors: 2603 Cc and 909 Cg (81.3052%)
+Extracting partition 4
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  15%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  25%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  30%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  35%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  40%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  45%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  50%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  55%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  60%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  65%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  70%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  75%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  80%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  85%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  90%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed  95%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=180.676
+Extracted 20123 capacitors, 3704 resistors, 0 reluctors, 4232 nodes
+Reduced to 1565 nodes,  (63.0198%)
+Reduced to 1002 resistors,  (72.9482%)
+Reduced to 3404 capacitors: 2477 Cc and 927 Cg (83.084%)
+Extracting partition 6
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed  15%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed  19%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed  24%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed  29%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed  34%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.363
+Completed  39%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.617
+Completed  44%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.805
+Completed  48%  Time=00:00:00  RemainingTime=00:00:00  Mem=185.18
+Completed  53%  Time=00:00:00  RemainingTime=00:00:00  Mem=185.367
+Completed  58%  Time=00:00:00  RemainingTime=00:00:00  Mem=185.68
+Completed  63%  Time=00:00:00  RemainingTime=00:00:00  Mem=185.93
+Completed  68%  Time=00:00:00  RemainingTime=00:00:00  Mem=187.93
+Completed  73%  Time=00:00:00  RemainingTime=00:00:00  Mem=188.18
+Completed  77%  Time=00:00:00  RemainingTime=00:00:00  Mem=188.492
+Completed  82%  Time=00:00:00  RemainingTime=00:00:00  Mem=188.742
+Completed  87%  Time=00:00:00  RemainingTime=00:00:00  Mem=188.93
+Completed  92%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.117
+Completed  97%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.305
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=189.68
+Extracted 121075 capacitors, 15297 resistors, 0 reluctors, 15922 nodes
+Reduced to 5457 nodes,  (65.7267%)
+Reduced to 4820 resistors,  (68.4906%)
+Reduced to 14430 capacitors: 10170 Cc and 4260 Cg (88.0818%)
+Extracting partition 26
+Completed   0%  Time=00:00:00  RemainingTime=00:00:01  Mem=183.289
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  15%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  24%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  29%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  34%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  39%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  44%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  49%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  53%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  58%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  63%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.289
+Completed  68%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.355
+Completed  73%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.605
+Completed  78%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.793
+Completed  83%  Time=00:00:00  RemainingTime=00:00:00  Mem=183.98
+Completed  87%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.105
+Completed  92%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.293
+Completed  97%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.738
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=184.926
+Extracted 126354 capacitors, 12155 resistors, 0 reluctors, 12568 nodes
+Reduced to 4208 nodes,  (66.5181%)
+Reduced to 3772 resistors,  (68.9675%)
+Reduced to 11767 capacitors: 8604 Cc and 3163 Cg (90.6873%)
+Extracting partition 2
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed   9%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  14%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  19%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  23%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  28%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  33%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  38%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  42%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  47%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  52%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  56%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  61%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  66%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  71%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  75%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  80%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  85%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  89%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  94%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed  99%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.957
+Extracted 93534 capacitors, 10956 resistors, 0 reluctors, 11269 nodes
+Reduced to 3936 nodes,  (65.0723%)
+Reduced to 3608 resistors,  (67.0683%)
+Reduced to 10475 capacitors: 7277 Cc and 3198 Cg (88.8009%)
+Extracting partition 32
+Completed   0%  Time=00:00:00  RemainingTime=00:00:01  Mem=182.973
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  10%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  15%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  20%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  25%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  30%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  35%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  40%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  44%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  49%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  54%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  59%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  64%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  69%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  74%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  79%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  84%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  88%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  93%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed  98%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.973
+Extracted 141149 capacitors, 10769 resistors, 0 reluctors, 11468 nodes
+Reduced to 4231 nodes,  (63.106%)
+Reduced to 3504 resistors,  (67.4622%)
+Reduced to 14582 capacitors: 11486 Cc and 3096 Cg (89.6691%)
+Extracting partition 1
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed   9%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  14%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  18%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  23%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  27%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  32%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  36%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  41%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  45%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  50%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  55%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  59%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  64%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  68%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  73%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  77%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  82%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  86%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  91%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed  95%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=182.262
+Extracted 47910 capacitors, 7913 resistors, 0 reluctors, 8181 nodes
+Reduced to 2857 nodes,  (65.0776%)
+Reduced to 2581 resistors,  (67.3828%)
+Reduced to 6802 capacitors: 4494 Cc and 2308 Cg (85.8025%)
+Extracting partition 31
+Completed   0%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed   1%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed   2%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed   3%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed   4%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed   5%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed   9%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  14%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  18%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  23%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  27%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  32%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  36%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  41%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  45%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  50%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  55%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  59%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  64%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  68%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  73%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  77%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  82%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  86%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  91%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed  95%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Completed 100%  Time=00:00:00  RemainingTime=00:00:00  Mem=181.133
+Extracted 51732 capacitors, 6758 resistors, 0 reluctors, 7019 nodes
+Reduced to 2464 nodes,  (64.8953%)
+Reduced to 2184 resistors,  (67.6827%)
+Reduced to 7126 capacitors: 5233 Cc and 1893 Cg (86.2252%)
+  Warnings: 0    Errors: 0
+  xTract_part1  Elp=00:04:59 Cpu=00:04:43 Usr=259.2  Sys=24.3   Mem=1159.0
+Done
+
+xTract Post Process DB:  Thu Mar 12 14:15:08 2020
+  Warnings: 0    Errors: 0
+  xTractPP      Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=90.4  
+Done
+
+Report Violations:  Thu Mar 12 14:15:11 2020
+  Warnings: 0    Errors: 0
+  ReportViolations Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=0.0   
+Done
+
+Netlist_part1 DB:  Thu Mar 12 14:15:14 2020
+Completed   0%  Time=00:00:00  RemainingTime=00:00:56  Mem=143.355
+Completed  10%  Time=00:00:02  RemainingTime=00:00:18  Mem=154.652
+Completed  20%  Time=00:00:04  RemainingTime=00:00:16  Mem=160.848
+Completed  40%  Time=00:00:07  RemainingTime=00:00:11  Mem=171.996
+Completed  60%  Time=00:00:11  RemainingTime=00:00:08  Mem=186.355
+Completed  80%  Time=00:00:15  RemainingTime=00:00:04  Mem=197.355
+Completed 100%  Time=00:00:19  RemainingTime=00:00:00  Mem=206.863
+  Warnings: 0    Errors: 0
+  Netlist_part1 Elp=00:00:21 Cpu=00:00:19 Usr=19.4   Sys=0.4    Mem=206.7 
+Done
+
+Netlist_assembly1 DB:  Thu Mar 12 14:15:39 2020
+Completed   0%  Time=00:00:00  RemainingTime=00:00:33  Mem=143.246
+Completed  10%  Time=00:00:01  RemainingTime=00:00:15  Mem=150.246
+Completed  20%  Time=00:00:03  RemainingTime=00:00:11  Mem=154.207
+Completed  40%  Time=00:00:05  RemainingTime=00:00:08  Mem=159.895
+Completed  60%  Time=00:00:08  RemainingTime=00:00:05  Mem=166.824
+Completed  80%  Time=00:00:11  RemainingTime=00:00:03  Mem=174.645
+Completed 100%  Time=00:00:15  RemainingTime=00:00:00  Mem=180.082
+  Warnings: 0    Errors: 0
+  Netlist_assembly1 Elp=00:00:16 Cpu=00:00:15 Usr=15.2   Sys=0.3    Mem=179.8 
+Done
+
+Netlist_merge_begin DB:  Thu Mar 12 14:15:57 2020
+  Warnings: 0    Errors: 0
+  Netlist_merge_begin Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=84.9  
+Done
+
+Netlist_merge_end DB:  Thu Mar 12 14:15:59 2020
+  Warnings: 0    Errors: 0
+  Netlist_merge_end Elp=00:00:02 Cpu=00:00:00 Usr=0.0    Sys=0.2    Mem=84.9  
+Done
+  
+Layers               Elp=00:00:01 Cpu=00:00:00 Usr=0.7    Sys=0.1    Mem=218.4 
+Models               Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=94.4  
+HN                   Elp=00:00:08 Cpu=00:00:07 Usr=6.5    Sys=0.5    Mem=316.2 
+Cells                Elp=00:00:09 Cpu=00:00:06 Usr=5.9    Sys=0.5    Mem=281.1 
+Translate            Elp=00:00:03 Cpu=00:00:02 Usr=2.3    Sys=0.2    Mem=144.1 
+Partition_part1      Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=111.8 
+Partition_part2      Elp=00:00:00 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=111.9 
+Partition_part3      Elp=00:00:03 Cpu=00:00:02 Usr=2.1    Sys=0.0    Mem=112.8 
+Partition_part4      Elp=00:00:03 Cpu=00:00:02 Usr=2.8    Sys=0.1    Mem=113.2 
+Partition_part5      Elp=00:00:03 Cpu=00:00:03 Usr=3.2    Sys=0.0    Mem=113.5 
+Partition_part6      Elp=00:00:02 Cpu=00:00:01 Usr=1.4    Sys=0.0    Mem=112.5 
+Partition_part7      Elp=00:00:00 Cpu=00:00:00 Usr=0.3    Sys=0.0    Mem=111.7 
+Partition_part8      Elp=00:00:01 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=111.5 
+PartitionPP          Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=106.7 
+NetlistSetup         Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=130.6 
+NetlistAssemblySetup Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=99.6  
+CleanDirectory       Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=94.4  
+xTract_part1         Elp=00:04:59 Cpu=00:04:43 Usr=259.2  Sys=24.3   Mem=1159.0
+xTractPP             Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=90.4  
+ReportViolations     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=0.0   
+Netlist_part1        Elp=00:00:21 Cpu=00:00:19 Usr=19.4   Sys=0.4    Mem=206.7 
+Netlist_assembly1    Elp=00:00:16 Cpu=00:00:15 Usr=15.2   Sys=0.3    Mem=179.8 
+Netlist_merge_begin  Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=84.9  
+Netlist_merge_end    Elp=00:00:02 Cpu=00:00:00 Usr=0.0    Sys=0.2    Mem=84.9  
+  
+Done          Elp=00:06:11 Cpu=00:05:46 Usr=319.7  Sys=26.6   Mem=1159.0
+
+End Time: Thu Mar 12 14:16:05 2020
+
+
+
+RUN-TIME SUMMARY:
+----------------------------------------------------------------------------------------------
+CPU#   | STAGE SUMMARY                                            |END TIME        |HOST NAME
+----------------------------------------------------------------------------------------------
+CPU_01 |*Layers              Elp=00:00:01 Cpu=00:00:00 Mem=218.4  |Mar 12 14:09:24 |linuxsrv01.ece.uw.edu
+CPU_01 |*Models              Elp=00:00:00 Cpu=00:00:00 Mem=94.4   |Mar 12 14:09:24 |linuxsrv01.ece.uw.edu
+CPU_01 |*HN                  Elp=00:00:08 Cpu=00:00:07 Mem=316.2  |Mar 12 14:09:32 |linuxsrv01.ece.uw.edu
+CPU_01 |*Cells               Elp=00:00:09 Cpu=00:00:06 Mem=281.1  |Mar 12 14:09:41 |linuxsrv01.ece.uw.edu
+CPU_01 |*Translate           Elp=00:00:03 Cpu=00:00:02 Mem=144.1  |Mar 12 14:09:44 |linuxsrv01.ece.uw.edu
+CPU_01 |*Partition_DP        Elp=00:00:13 Cpu=00:00:10 Mem=113.5  |Mar 12 14:09:58 |linuxsrv01.ece.uw.edu
+CPU_01 |*PartitionPP         Elp=00:00:00 Cpu=00:00:00 Mem=106.7  |Mar 12 14:09:58 |linuxsrv01.ece.uw.edu
+CPU_01 |*xTract_DP           Elp=00:05:06 Cpu=00:04:43 Mem=1159   |Mar 12 14:15:04 |linuxsrv01.ece.uw.edu
+CPU_01 |*xTractPP            Elp=00:00:00 Cpu=00:00:00 Mem=90.4   |Mar 12 14:15:09 |linuxsrv01.ece.uw.edu
+CPU_01 |*ReportViolations    Elp=00:00:00 Cpu=00:00:00 Mem=0      |Mar 12 14:15:12 |linuxsrv01.ece.uw.edu
+CPU_01 |*Netlist_DP          Elp=00:00:47 Cpu=00:00:35 Mem=206.7  |Mar 12 14:16:01 |linuxsrv01.ece.uw.edu
+----------------------------------------------------------------------------------------------
+Start Time: Thu Mar 12 14:09:23 2020
+End Time: Thu Mar 12 14:16:05 2020
+----------------------------------------------------------------------------------------------
+Overall:         Elp=00:06:42  Cpu=00:05:46
+PreXtraction:    Elp=00:00:35  Cpu=00:00:27
+Xtraction:       Elp=00:05:06  Cpu=00:04:43
+PostXtraction:   Elp=00:01:01  Cpu=00:00:35
+----------------------------------------------------------------------------------------------
+
+
+
+Message Summary:
+----------------------------------------------------------------------------------------------
+SX-1813 (x   9)|Warning      |MAPPING_FILE LAYER "()" IS NOT A VALID DATABASE LAYER AND WILL BE REMOVED.
+SX-1822 (x   1)|Warning      |RUNSET VIA LAYER () CONNECTS DOWN TO ()[()] THAT HAS A DIFFERENT PICTURE LEVEL THAN THAT OF VIA'S GRD FROM-LAYER () 
+
