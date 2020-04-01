@@ -7,8 +7,8 @@ cache:
 before_install:
   - sudo apt-get update
   - sudo apt-get -y install git make autoconf g++
-  - if [ ! -d "$HOME/verilator" ]; then git clone https://github.com/verilator/verilator.git fi
-  - cd verilator && if [git pull != "Already up to date."]; then cd verilator && autoconf && ./configure && make -j2 && sudo make install && cd .. fi
+  - if [ ! -d $HOME/verilator ]; then git clone https://github.com/verilator/verilator.git; fi
+  - cd verilator && if [ "$(git pull)" != "Already up to date." ]; then autoconf && ./configure && make -j2 && sudo make install; fi && cd ..
 install:
   - pip install -r requirements.txt
 script:
