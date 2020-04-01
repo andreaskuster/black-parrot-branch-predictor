@@ -1,11 +1,14 @@
 language: python
 python:
   - "3.8"
+cache:
+  directories:
+    -  $TRAVIS_BUILD_DIR/verilator
 before_install:
   - sudo apt-get update
   - sudo apt-get -y install git make autoconf g++
-  - git clone https://github.com/verilator/verilator.git
-  - cd verilator && autoconf && ./configure && make -j2 && sudo make install && cd ..
+  - if [ ! -f verilator/.git ]; then git clone https://github.com/verilator/verilator.git; fi
+  - cd $TRAVIS_BUILD_DIR/verilator && if [ "$(git pull)" != "Already up to date." ] || [ ! -f INSTALLED ]; then autoconf && ./configure && make -j2 && sudo make install && touch INSTALLED; fi && cd ..
 install:
   - pip install -r requirements.txt
 script:

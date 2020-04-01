@@ -4,3 +4,4 @@ networkx
 matplotlib
 pydot
 graphviz
+coverage

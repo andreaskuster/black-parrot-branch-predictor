@@ -32,6 +32,8 @@ TOPLEVEL_LANG ?= verilog
 
 SIM ?= verilator
 VERILATOR_TRACE=1
+# RTL coverage: EXTRA_ARGS+=--coverage
+# python coverage: COVERAGE=1
 
 PWD=$(shell pwd)
 
