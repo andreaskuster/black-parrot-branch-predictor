@@ -188,7 +188,7 @@ size of the branch history table plus the size of the branch history.
 __Performance__ (backend flow):
 
 | test case | instr/s |
-|           |         |
+|    ---    |  ---    |
 | Towers    | 75.65   |
 | Vvadd     | 56.24   |
 | Median    | 45.15   |
@@ -196,7 +196,7 @@ __Performance__ (backend flow):
 
 __Power__ (backend flow):
 | test case |  mJ/s |
-|           |       |
+|    ---    |  ---  |
 | Towers    | 0.75  |
 | Vvadd     | 1     |
 | Median    | 1.586 |
@@ -231,7 +231,7 @@ size of the branch history table plus the size of the branch history.
 __Performance__ (backend flow):
 
 | test case | instr/s |
-|           |         |
+|    ---    |  ---    |
 | Towers    | 80.45   |
 | Vvadd     | 72.84   |
 | Median    | 37.51   |
@@ -240,7 +240,7 @@ __Performance__ (backend flow):
 __Power__ (backend flow):
 
 | test case |  mJ/s  |
-|           |        |
+|    ---    |  ---   |
 | Towers    | 0.8589 |
 | Vvadd     | 0.8937 |
 | Median    | 1.802  |
@@ -275,7 +275,7 @@ size of the branch history tables plus the size of the branch history.
 __Performance__ (backend flow):
 
 | test case | instr/s |
-|           |         |
+|    ---    |  ---    |
 | Towers    | 78.02   |
 | Vvadd     | 77.29   |
 | Median    | 39.38   |
@@ -284,7 +284,7 @@ __Performance__ (backend flow):
 __Power__ (backend flow):
 
 | test case |  mJ/s  |
-|           |        |
+|    ---    |  ---   |
 | Towers    | 0.77   |
 | Vvadd     | 0.7568 |
 | Median    | 1.508  |
@@ -319,7 +319,7 @@ size of the correlation table plus the branch history table.
 __Performance__ (backend flow):
 
 | test case | instr/s |
-|           |         |
+|    ---    |  ---    |
 | Towers    | 81.04   |
 | Vvadd     | 80.38   |
 | Median    | 45.12   |
@@ -328,7 +328,7 @@ __Performance__ (backend flow):
 __Power__ (backend flow):
 
 | test case |  mJ/s   |
-|           |         |
+|    ---    |  ---    |
 | Towers    | 0.7959  |
 | Vvadd     | 0.78999 |
 | Median    | 1.427   |
