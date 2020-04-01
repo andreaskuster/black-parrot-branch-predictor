@@ -1,0 +1,10 @@
+-fs_adjust xt_charmode_caps
+-xout2spf
+-i xout
+-o xout_adjusted
+-num_parts 40
+-bidirectional
+-skip_xtract_pp xout_split
+-hn_file hnfile.hn
+-net_info_file netlist.netinfo
+-inter_pic_level_connections

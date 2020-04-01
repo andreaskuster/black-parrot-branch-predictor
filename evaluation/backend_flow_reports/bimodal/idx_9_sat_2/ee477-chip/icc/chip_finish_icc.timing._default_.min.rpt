@@ -1,0 +1,25 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 10
+        -input_pins
+        -nets
+        -group **default**
+        -max_paths 500
+        -transition_time
+        -capacitance
+Design : bp_softcore
+Version: M-2016.12-SP5-3
+Date   : Thu Mar 12 14:00:18 2020
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+
+Information: Percent of Arnoldi-based delays = 31.13%
+No paths.
+
+1

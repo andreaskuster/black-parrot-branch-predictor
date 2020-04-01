@@ -1,0 +1,56 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.285714) for the clock net 'clk_i' conflicts with the annotated value (0.200000). Using the annotated value. (PWR-12)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : bp_softcore
+Version: O-2018.06-SP4
+Date   : Sun Mar 15 16:23:40 2020
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_typ (File: /home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/stdview/stdcells.db)
+    saed90_16x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_16x64_1P_bit/saed90_16x64_1P_bit.db)
+    saed90_64x512_1P_BM (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_64x512_1P_BM/saed90_64x512_1P_BM.db)
+    saed90_248x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_248x64_1P_bit/saed90_248x64_1P_bit.db)
+    saed90_64x32_2P (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_64x32_2P/saed90_64x32_2P.db)
+    saed90_8x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_8x64_1P_bit/saed90_8x64_1P_bit.db)
+
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  52.6778 mW   (96%)
+  Net Switching Power  =   2.3033 mW    (4%)
+                         ---------
+Total Dynamic Power    =  54.9811 mW  (100%)
+
+Cell Leakage Power     =   6.7233 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box      1.6970e+04          144.5652        1.7430e+09        1.8857e+04  (  30.56%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       3.3205e+04          224.0323        1.7455e+09        3.5174e+04  (  57.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.5063e+03        1.9347e+03        3.2347e+09        7.6757e+03  (  12.44%)
+--------------------------------------------------------------------------------------------------
+Total          5.2681e+04 uW     2.3033e+03 uW     6.7233e+09 pW     6.1707e+04 uW
+1

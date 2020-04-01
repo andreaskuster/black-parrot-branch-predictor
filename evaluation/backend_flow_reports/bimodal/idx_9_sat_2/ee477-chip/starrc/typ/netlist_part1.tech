@@ -1,0 +1,51 @@
+-stage_id 3
+-ordered_names_for_subckt subckt
+-hn_file hnfile.hn
+-net_info_file netlist.netinfo
+-pin_file idx.pins
+-idx_nm_file idx.nm
+-inter_pic_level_connections
+-index_file idx
+-i xout
+-netlist_header_file netlist.hdr
+-output_form 3
+-skip_intranet_caps
+-keep_intranet_caps
+-xout2spef
+-xout2spf
+-instance_section 2
+-declare_pins
+-declare_instance_ports
+-c_unit 1e-15
+-r_unit 1
+-t_unit 1e-09
+-v_unit 1e-09
+-l_unit 1
+-abs_cap_threshold 3e-15
+-rel_cap_threshold 0.03
+-netlist_tail_comment 1
+-net_command_file select_nets
+-o .TMP_part1
+-rename_pin_ports _
+-rename_instance_ports _
+-process_corner 2
+-layer_map_section
+-layer_info layer_info
+-suppress_print_extra_geometry_info
+-port_map
+-skip_isolated_subnode
+-overlap_dist 2
+-case_sensitive
+-fine_dbu
+-skip_xtract_pp xout
+-dp_partition_id 1
+-partition_id 1
+-dp_suffix _part
+-instance_section 0
+-dp_skip_footer
+-num_parts 40
+-bidirectional
+-xout_offset_file xout_offset
+-num_cores 1
+-random_access_xout
+-use_input_database_dbu_on_suffix

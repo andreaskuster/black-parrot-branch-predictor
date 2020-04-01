@@ -1,0 +1,56 @@
+report_timing -path_type end -max_paths 30 -transition_time -nets -attributes -nosplit 
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+        -nets
+        -max_paths 30
+        -transition_time
+Design : bp_softcore
+Version: O-2018.06-SP4
+Date   : Sun Mar 15 15:54:02 2020
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: Inactive.
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__31_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__27_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__30_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__25_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__28_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__20_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__29_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__26_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__23_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__18_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__24_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__3_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__9_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__5_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__19_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__21_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__22_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__11_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__7_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__4_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_0__26_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__8_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_0__27_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_0__28_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_0__25_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__6_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_0__4_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_0__30_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_0__24_/D (DFFX1)     5.84 r *     5.93     0.09
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem_reg_2__1_/D (DFFX1)     5.84 r *     5.93     0.09
+
+
+

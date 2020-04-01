@@ -1,0 +1,57 @@
+****************************************
+Report : clock timing
+	-type skew
+	-verbose
+	-nworst 1
+	-setup
+	-crosstalk_delta
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Fri Mar 13 12:54:00 2020
+****************************************
+
+  Clock: core_clk
+
+  Startpoint: core/be/be_mem/csr/dcsr_reg/data_r_reg_2_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/mem_reg_3__67_
+               (rising edge-triggered flip-flop clocked by core_clk)
+
+
+  Point                                                                 DTrans   Trans    Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000
+  clock source latency                                                                             0.000      0.000
+  clk_i (in)                                                                     0.000             0.000 &    0.000 r
+  CTSINVX8_G1B4I2/INP (INVX16)                                          0.002    0.083    0.002    0.032 &    0.032 r
+  CTSINVX8_G1B4I2/ZN (INVX16)                                                    0.084             0.044 &    0.076 f
+  CTSINVX8_G1B3I1/INP (INVX8)                                           0.000    0.095    0.000    0.019 &    0.095 f
+  CTSINVX8_G1B3I1/ZN (INVX8)                                                     0.079             0.045 &    0.140 r
+  CTSINVX16_G1B2I7/INP (INVX4)                                          0.000    0.079    0.000    0.001 &    0.141 r
+  CTSINVX16_G1B2I7/ZN (INVX4)                                                    0.194             0.097 &    0.238 f
+  core/be/CTSINVX16_G1B1I63/INP (INVX8)                                 0.000    0.213    0.000    0.036 &    0.274 f
+  core/be/CTSINVX16_G1B1I63/ZN (INVX8)                                           0.247             0.137 &    0.411 r
+  core/be/be_mem/csr/dcsr_reg/data_r_reg_2_/CLK (DFFX1)                 0.000    0.248    0.000    0.010 &    0.422 r
+  startpoint clock latency                                                                                    0.422
+
+  clock core_clk (rise edge)                                                     0.000
+  clock source latency                                                                             0.000      0.000
+  clk_i (in)                                                                     0.000             0.000 &    0.000 r
+  CTSINVX8_G1B4I2/INP (INVX16)                                         -0.004    0.069   -0.002    0.023 &    0.023 r
+  CTSINVX8_G1B4I2/ZN (INVX16)                                                    0.070             0.037 &    0.060 f
+  CTSINVX8_G1B3I3/INP (INVX32)                                          0.000    0.070    0.000    0.007 &    0.067 f
+  CTSINVX8_G1B3I3/ZN (INVX32)                                                    0.047             0.018 &    0.085 r
+  CTSINVX16_G1B2I12/INP (INVX8)                                         0.000    0.047    0.000    0.006 &    0.092 r
+  CTSINVX16_G1B2I12/ZN (INVX8)                                                   0.075             0.043 &    0.134 f
+  CTSINVX16_G1B1I44_1/INP (INVX8)                                       0.000    0.075    0.000    0.003 &    0.137 f
+  CTSINVX16_G1B1I44_1/ZN (INVX8)                                                 0.154             0.082 &    0.219 r
+  core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/mem_reg_3__67_/CLK (DFFX1)    0.000    0.155    0.000    0.001 &    0.221 r
+  endpoint clock latency                                                                                      0.221
+  --------------------------------------------------------------------------------------------------
+  startpoint clock latency                                                                  0.422
+  endpoint clock latency                                                                   -0.221
+  clock reconvergence pessimism                                                            -0.013
+  --------------------------------------------------------------------------------------------------
+  skew                                                                                      0.188
+
+1

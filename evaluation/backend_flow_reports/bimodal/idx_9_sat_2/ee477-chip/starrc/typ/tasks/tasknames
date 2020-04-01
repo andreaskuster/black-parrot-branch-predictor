@@ -1,0 +1,631 @@
+Taskno 1
+Jobname pre_translate
+Options 
+Message Pre Translate
+Dir .
+CpuPref 1
+Dependencies 
+Level 1
+Endtask
+
+Taskno 2
+Jobname pre_xtractor
+Options 
+Message Pre Xtractor
+Dir .
+CpuPref 1
+Dependencies 1 
+Level 2
+Endtask
+
+Taskno 3
+Jobname adjust_num_parts
+Options 
+Message Adjust Num Parts
+Dir .
+CpuPref 1
+Dependencies 2 
+Level 3
+Endtask
+
+Taskno 4
+Jobname partition
+Options -part_tag _sub1 -xin_name xin
+Message partition_sub1
+Dir .
+PartNum 1
+Dependencies 3 
+Level 4
+Endtask
+
+Taskno 5
+Jobname partition
+Options -part_tag _sub2 -xin_name xin
+Message partition_sub2
+Dir .
+PartNum 2
+Dependencies 3 
+Level 4
+Endtask
+
+Taskno 6
+Jobname partition
+Options -part_tag _sub3 -xin_name xin
+Message partition_sub3
+Dir .
+PartNum 3
+Dependencies 3 
+Level 4
+Endtask
+
+Taskno 7
+Jobname partition
+Options -part_tag _sub4 -xin_name xin
+Message partition_sub4
+Dir .
+PartNum 4
+Dependencies 3 
+Level 4
+Endtask
+
+Taskno 8
+Jobname partition
+Options -part_tag _sub5 -xin_name xin
+Message partition_sub5
+Dir .
+PartNum 5
+Dependencies 3 
+Level 4
+Endtask
+
+Taskno 9
+Jobname partition
+Options -part_tag _sub6 -xin_name xin
+Message partition_sub6
+Dir .
+PartNum 6
+Dependencies 3 
+Level 4
+Endtask
+
+Taskno 10
+Jobname partition
+Options -part_tag _sub7 -xin_name xin
+Message partition_sub7
+Dir .
+PartNum 7
+Dependencies 3 
+Level 4
+Endtask
+
+Taskno 11
+Jobname partition
+Options -part_tag _sub8 -xin_name xin
+Message partition_sub8
+Dir .
+PartNum 8
+Dependencies 3 
+Level 4
+Endtask
+
+Taskno 12
+Jobname post_partition
+Options -i xin
+Message Partition post process
+Dir .
+Dependencies 4 5 6 7 8 9 10 11 
+Level 5
+Endtask
+
+Taskno 13
+Jobname netlist_setup
+Options 
+Message Netlist Setup
+Dir .
+Dependencies 12 
+Level 6
+Endtask
+
+Taskno 14
+Jobname netlist_assembly_setup
+Options 
+Message Netlist Assembly Setup
+Dir .
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 15
+Jobname clean_directory
+Options 
+Message Clean Directory
+Dir .
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 16
+Jobname xtractor
+Options  -part_tag _part1
+Message xtractor_part1
+Dir .
+PartNum 1
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 17
+Jobname xtractor
+Options  -part_tag _part2
+Message xtractor_part2
+Dir .
+PartNum 2
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 18
+Jobname xtractor
+Options  -part_tag _part3
+Message xtractor_part3
+Dir .
+PartNum 3
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 19
+Jobname xtractor
+Options  -part_tag _part4
+Message xtractor_part4
+Dir .
+PartNum 4
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 20
+Jobname xtractor
+Options  -part_tag _part5
+Message xtractor_part5
+Dir .
+PartNum 5
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 21
+Jobname xtractor
+Options  -part_tag _part6
+Message xtractor_part6
+Dir .
+PartNum 6
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 22
+Jobname xtractor
+Options  -part_tag _part7
+Message xtractor_part7
+Dir .
+PartNum 7
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 23
+Jobname xtractor
+Options  -part_tag _part8
+Message xtractor_part8
+Dir .
+PartNum 8
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 24
+Jobname xtractor
+Options  -part_tag _part9
+Message xtractor_part9
+Dir .
+PartNum 9
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 25
+Jobname xtractor
+Options  -part_tag _part10
+Message xtractor_part10
+Dir .
+PartNum 10
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 26
+Jobname xtractor
+Options  -part_tag _part11
+Message xtractor_part11
+Dir .
+PartNum 11
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 27
+Jobname xtractor
+Options  -part_tag _part12
+Message xtractor_part12
+Dir .
+PartNum 12
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 28
+Jobname xtractor
+Options  -part_tag _part13
+Message xtractor_part13
+Dir .
+PartNum 13
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 29
+Jobname xtractor
+Options  -part_tag _part14
+Message xtractor_part14
+Dir .
+PartNum 14
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 30
+Jobname xtractor
+Options  -part_tag _part15
+Message xtractor_part15
+Dir .
+PartNum 15
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 31
+Jobname xtractor
+Options  -part_tag _part16
+Message xtractor_part16
+Dir .
+PartNum 16
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 32
+Jobname xtractor
+Options  -part_tag _part17
+Message xtractor_part17
+Dir .
+PartNum 17
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 33
+Jobname xtractor
+Options  -part_tag _part18
+Message xtractor_part18
+Dir .
+PartNum 18
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 34
+Jobname xtractor
+Options  -part_tag _part19
+Message xtractor_part19
+Dir .
+PartNum 19
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 35
+Jobname xtractor
+Options  -part_tag _part20
+Message xtractor_part20
+Dir .
+PartNum 20
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 36
+Jobname xtractor
+Options  -part_tag _part21
+Message xtractor_part21
+Dir .
+PartNum 21
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 37
+Jobname xtractor
+Options  -part_tag _part22
+Message xtractor_part22
+Dir .
+PartNum 22
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 38
+Jobname xtractor
+Options  -part_tag _part23
+Message xtractor_part23
+Dir .
+PartNum 23
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 39
+Jobname xtractor
+Options  -part_tag _part24
+Message xtractor_part24
+Dir .
+PartNum 24
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 40
+Jobname xtractor
+Options  -part_tag _part25
+Message xtractor_part25
+Dir .
+PartNum 25
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 41
+Jobname xtractor
+Options  -part_tag _part26
+Message xtractor_part26
+Dir .
+PartNum 26
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 42
+Jobname xtractor
+Options  -part_tag _part27
+Message xtractor_part27
+Dir .
+PartNum 27
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 43
+Jobname xtractor
+Options  -part_tag _part28
+Message xtractor_part28
+Dir .
+PartNum 28
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 44
+Jobname xtractor
+Options  -part_tag _part29
+Message xtractor_part29
+Dir .
+PartNum 29
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 45
+Jobname xtractor
+Options  -part_tag _part30
+Message xtractor_part30
+Dir .
+PartNum 30
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 46
+Jobname xtractor
+Options  -part_tag _part31
+Message xtractor_part31
+Dir .
+PartNum 31
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 47
+Jobname xtractor
+Options  -part_tag _part32
+Message xtractor_part32
+Dir .
+PartNum 32
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 48
+Jobname xtractor
+Options  -part_tag _part33
+Message xtractor_part33
+Dir .
+PartNum 33
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 49
+Jobname xtractor
+Options  -part_tag _part34
+Message xtractor_part34
+Dir .
+PartNum 34
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 50
+Jobname xtractor
+Options  -part_tag _part35
+Message xtractor_part35
+Dir .
+PartNum 35
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 51
+Jobname xtractor
+Options  -part_tag _part36
+Message xtractor_part36
+Dir .
+PartNum 36
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 52
+Jobname xtractor
+Options  -part_tag _part37
+Message xtractor_part37
+Dir .
+PartNum 37
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 53
+Jobname xtractor
+Options  -part_tag _part38
+Message xtractor_part38
+Dir .
+PartNum 38
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 54
+Jobname xtractor
+Options  -part_tag _part39
+Message xtractor_part39
+Dir .
+PartNum 39
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 55
+Jobname xtractor
+Options  -part_tag _part40
+Message xtractor_part40
+Dir .
+PartNum 40
+Dependencies 13 
+Level 7
+Endtask
+
+Taskno 56
+Jobname process_xtract_charmode
+Options 
+Message xTract Characterization
+Dir .
+Dependencies 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 
+Level 8
+Endtask
+
+Taskno 57
+Jobname process_merge_fstile
+Options  -part_tag merge_fsreport -dp_id 40
+Message FSmerge_fsreport
+Dir .
+Dependencies 56 
+Level 9
+Endtask
+
+Taskno 58
+Jobname split_netlister
+Options 
+Message split_netlister
+Dir .
+CpuPref 1
+Dependencies 57 
+Level 10
+Endtask
+
+Taskno 59
+Jobname report_violations
+Options 
+Message Report Violations
+Dir .
+Dependencies 58 
+Level 11
+Endtask
+
+Taskno 60
+Jobname netlister
+Options  -part_tag _part1
+Message netlister_part1
+Dir .
+PartNum 1
+Dependencies 58 
+Level 11
+Endtask
+
+Taskno 61
+Jobname assembly
+Options  -part_tag _assembly1
+Message netlister_assembly1
+Dir .
+PartNum 1
+Dependencies 58 
+Level 11
+Endtask
+
+Taskno 62
+Jobname netlister_merge
+Options  -part_tag _merge_begin
+Message netlister_merge_begin
+Dir .
+Dependencies 58 
+Level 11
+Endtask
+
+Taskno 63
+Jobname netlister_merge
+Options  -part_tag _merge_end
+Message netlister_merge_end
+Dir .
+Dependencies 60 61 62 
+Level 12
+Endtask
+
+Taskno 64
+Jobname post_xtractor
+Options 
+Message Post Xtractor
+Dir .
+CpuPref 1
+Dependencies 63 
+Level 13
+Endtask
+

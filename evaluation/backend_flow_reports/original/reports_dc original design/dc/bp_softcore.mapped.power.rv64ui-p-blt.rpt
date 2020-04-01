@@ -1,0 +1,59 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: The derived toggle rate value (0.285714) for the clock net 'clk_i' conflicts with the annotated value (0.200000). Using the annotated value. (PWR-12)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : bp_softcore
+Version: O-2018.06-SP4
+Date   : Tue Mar 10 15:33:30 2020
+****************************************
+
+
+Library(s) Used:
+
+    saed90nm_typ (File: /home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/stdview/stdcells.db)
+    saed90_16x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_16x64_1P_bit/saed90_16x64_1P_bit.db)
+    saed90_64x512_1P_BM (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_64x512_1P_BM/saed90_64x512_1P_BM.db)
+    saed90_248x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_248x64_1P_bit/saed90_248x64_1P_bit.db)
+    saed90_64x32_2P (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_64x32_2P/saed90_64x32_2P.db)
+    saed90_8x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_8x64_1P_bit/saed90_8x64_1P_bit.db)
+
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 1.2  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+Warning: Cannot report correlated power unless power prediction mode is set. (PWR-727)
+Power Breakdown
+---------------
+
+                             Cell        Driven Net  Tot Dynamic      Cell
+                             Internal    Switching   Power (uW)       Leakage
+Cell                         Power (uW)  Power (uW)  (% Cell/Tot)     Power (pW)
+--------------------------------------------------------------------------------
+Netlist Power                4.172e+04   1.363e+03   4.308e+04 (97%)  6.127e+09
+Estimated Clock Tree Power   N/A         N/A          (N/A)           N/A
+--------------------------------------------------------------------------------
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box      1.1137e+04           31.3831        1.7430e+09        1.2912e+04  (  26.24%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       2.9213e+04          158.4567        1.5251e+09        3.0897e+04  (  62.79%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  1.3694e+03        1.1728e+03        2.8593e+09        5.4014e+03  (  10.98%)
+--------------------------------------------------------------------------------------------------
+Total          4.1720e+04 uW     1.3627e+03 uW     6.1273e+09 pW     4.9210e+04 uW
+1

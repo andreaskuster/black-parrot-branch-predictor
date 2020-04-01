@@ -1,0 +1,136 @@
+****************************************
+Report : noise
+	-nworst_pins 10
+	-verbose
+	-nosplit
+	-low
+	-above
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Fri Mar 13 12:53:55 2020
+****************************************
+
+ analysis mode: report_at_source
+ slack type: height
+
+ noise_region: above_low
+ pin name (net name)       width    height     slack
+ -----------------------------------------------------
+ core/fe/mem/icache/data_mems_5__data_mem/icc_place28/INP (core/fe/mem/icache/data_mems_5__data_mem/n680)
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n6    0.358    0.406
+ core/fe/mem/icache/hit    0.404     0.080
+ core/fe/mem/icache/tag_mem_data_li[27]    0.353    0.060
+ core/fe/mem/icache/tag_mem_data_lo[78]    0.152    0.096
+ core/fe/mem/icache/data_set_select_mux/n295    0.431    0.017
+ Propagated:
+ core/fe/mem/icache/data_mems_5__data_mem/icc_place42/ZN        -        -
+ Total:                    0.335     0.660    -0.360
+
+ core/be/be_mem/dcache/data_mem_6__data_mem/icc_place2/INP (core/be/be_mem/dcache/data_mem_6__data_mem/n166)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_2__data_mem/n125    0.326    0.228
+ core/be/be_mem/dcache/data_mem_2__data_mem/n79    0.279    0.126
+ core/be/be_mem/dcache/data_mem_data_lo[395]    0.230    0.127
+ core/be/be_mem/dcache/data_mem_2__data_mem/n87    0.299    0.112
+ core/be/be_mem/dcache/data_mem_2__data_mem/n339    0.245    0.024
+ Propagated:
+ core/be/be_mem/dcache/data_mem_6__data_mem/icc_place93/ZN        -        -
+ Total:                    0.289     0.617    -0.317
+
+ core/be/be_mem/dcache/data_mem_6__data_mem/icc_place58/INP (core/be/be_mem/dcache/n1493)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_2__data_mem/n93    0.238    0.230
+ core/be/be_mem/dcache/data_mem_data_lo[395]    0.165    0.185
+ core/be/be_mem/dcache/data_mem_6__data_mem/n72    0.283    0.081
+ core/be/be_mem/dcache/ld_data_way_picked[7]    0.367    0.032
+ core/be/be_mem/dcache/n2540    0.323    0.021
+ Propagated:
+ core/be/be_mem/dcache/U1360/Q        -        -
+ Total:                    0.231     0.549    -0.249
+
+ mem_cmd_o[548] (mem_cmd_o[548])
+ Aggressors:
+ mem_resp_i[466]           0.007     0.331
+ mem_resp_i[478]           0.007     0.319
+ io_resp_i[276]            0.007     0.069
+ Propagated:
+ U4121/ZN                      -         -
+ Total:                    0.007     0.719    -0.239
+
+ core/be/be_mem/dcache/data_mem_6__data_mem/icc_place16/INP (core/be/be_mem/dcache/n1548)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_6__data_mem/n50    0.343    0.226
+ core/be/be_mem/dcache/data_mem_2__data_mem/n103    0.325    0.103
+ core/be/be_mem/dcache/data_mem_6__data_mem/n308    0.267    0.052
+ core/be/be_mem/dcache/n1542    0.549    0.026
+ core/be/be_mem/dcache/data_mem_mask_li[3]    0.347    0.026
+ core/be/be_mem/dcache/data_mem_mask_li[6]    0.418    0.022
+ core/be/be_mem/dcache/n2578    0.293    0.021
+ core/be/be_mem/dcache/data_mem_data_lo[134]    0.239    0.021
+ core/be/be_mem/dcache/n1202    0.373    0.017
+ core/be/be_mem/dcache/data_mem_6__data_mem/n310    0.259    0.019
+ Propagated:
+ core/be/be_mem/dcache/U1400/Q        -        -
+ Total:                    0.338     0.533    -0.233
+
+ core/be/be_mem/dcache/data_mem_6__data_mem/icc_place75/INP (core/be/be_mem/dcache/n1532)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_2__data_mem/n105    0.338    0.159
+ core/be/be_mem/dcache/data_mem_2__data_mem/n281    0.268    0.113
+ core/be/be_mem/dcache/data_mem_2__data_mem/n336    0.250    0.074
+ core/be/be_mem/dcache/n1526    0.602    0.041
+ core/be/be_mem/dcache/data_mem_data_li[193]    0.248    0.054
+ core/be/be_mem/dcache/n2634    0.536    0.022
+ core/be/be_mem/dcache/n1355    0.250    0.031
+ core/be/be_mem/dcache/n1500    0.270    0.020
+ core/be/be_mem/dcache/data_mem_3__data_mem/n3    0.252    0.015
+ Propagated:
+ core/be/be_mem/dcache/U1386/Q        -        -
+ Total:                    0.320     0.529    -0.229
+
+ io_cmd_o[216] (io_cmd_o[216])
+ Aggressors:
+ mem_resp_i[353]           0.009     0.433
+ io_resp_i[561]            0.009     0.169
+ mem_resp_i[196]           0.008     0.066
+ mem_resp_i[449]           0.008     0.037
+ Propagated:
+ U4369/ZN                      -         -
+ Total:                    0.009     0.704    -0.224
+
+ core/be/be_mem/dcache/data_mem_6__data_mem/icc_place10/INP (core/be/be_mem/dcache/n1520)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_2__data_mem/n95    0.316    0.163
+ core/be/be_mem/dcache/data_mem_6__data_mem/n44    0.339    0.125
+ core/be/be_mem/dcache/n1524    0.277    0.064
+ core/be/be_mem/dcache/data_mem_6__data_mem/n72    0.334    0.057
+ core/be/be_mem/dcache/data_mem_2__data_mem/n81    0.300    0.047
+ core/be/be_mem/dcache/n2543    0.468    0.028
+ core/be/be_mem/dcache/n1536    0.553    0.015
+ Propagated:
+ core/be/be_mem/dcache/U1382/Q        -        -
+ Total:                    0.333     0.499    -0.199
+
+ uce_1__uce/U553/IN2 (mem_resp_li[1043])
+ Aggressors:
+ io_resp_i[83]             0.061     0.332
+ io_resp_i[60]             0.060     0.128
+ io_resp_i[375]            0.057     0.038
+ io_resp_i[65]             0.061     0.035
+ Propagated:
+ U2292/Q                       -         -
+ Total:                    0.061     0.496    -0.196
+
+ io_cmd_o[346] (io_cmd_o[346])
+ Aggressors:
+ mem_resp_i[565]           0.009     0.320
+ mem_resp_i[440]           0.009     0.319
+ mem_resp_i[386]           0.009     0.035
+ io_resp_i[565]            0.009     0.028
+ Propagated:
+ U4629/ZN                      -         -
+ Total:                    0.009     0.674    -0.194
+
+
+1

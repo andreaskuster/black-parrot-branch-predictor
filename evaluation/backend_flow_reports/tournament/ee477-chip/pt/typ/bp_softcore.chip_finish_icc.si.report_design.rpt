@@ -1,0 +1,85 @@
+****************************************
+Report : design
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 16:00:13 2020
+****************************************
+
+Design Attribute                         Value
+---------------------------------------------------------------------------
+Operating Conditions:
+  analysis_type                          on_chip_variation
+  operating_condition_min_name           TYPICAL
+  process_min                            1
+  temperature_min                        25
+  voltage_min                            1.2
+  tree_type_min                          balanced_case
+
+  operating_condition_max_name           TYPICAL
+  process_max                            1
+  temperature_max                        25
+  voltage_max                            1.2
+  tree_type_max                          balanced_case
+
+Wire Load:                               (use report_wire_load for more information)
+  wire_load_mode                         enclosed
+  wire_load_model_max                    4000000
+  wire_load_model_library_max            saed90nm_typ
+  wire_load_selection_type_max           automatic-by-area
+  wire_load_model_min                    4000000
+  wire_load_model_library_min            saed90nm_typ
+  wire_load_selection_type_min           automatic-by-area
+  wire_load_selection_group_max          predcaps
+  wire_load_selection_group_min          predcaps
+  wire_load_min_block_size               0
+
+Design Rules:
+  max_capacitance                        --
+  min_capacitance                        --
+  max_fanout                             --
+  max_transition                         --
+  static_integrity                       --
+  dynamic_integrity                      --
+  delay_penalty_limit                    --
+  max_area                               --
+
+Timing Ranges:
+  early_rise_clk_net_derate_factor       0.99
+  early_fall_clk_net_derate_factor       0.99
+  early_rise_data_net_derate_factor      0.99
+  early_fall_data_net_derate_factor      0.99
+  early_rise_clk_net_delta_derate_factor 0.99
+  early_fall_clk_net_delta_derate_factor 0.99
+  early_rise_data_net_delta_derate_factor
+                                         0.99
+  early_fall_data_net_delta_derate_factor
+                                         0.99
+  early_rise_clk_cell_derate_factor      0.99
+  early_fall_clk_cell_derate_factor      0.99
+  early_rise_data_cell_derate_factor     0.99
+  early_fall_data_cell_derate_factor     0.99
+  early_rise_cell_check_derate_factor    --
+  early_fall_cell_check_derate_factor    --
+  late_rise_clk_net_derate_factor        1.01
+  late_fall_clk_net_derate_factor        1.01
+  late_rise_data_net_derate_factor       1.01
+  late_fall_data_net_derate_factor       1.01
+  late_rise_clk_net_delta_derate_factor  1.01
+  late_fall_clk_net_delta_derate_factor  1.01
+  late_rise_data_net_delta_derate_factor 1.01
+  late_fall_data_net_delta_derate_factor 1.01
+  late_rise_clk_cell_derate_factor       1.01
+  late_fall_clk_cell_derate_factor       1.01
+  late_rise_data_cell_derate_factor      1.01
+  late_fall_data_cell_derate_factor      1.01
+  late_rise_cell_check_derate_factor     --
+  late_fall_cell_check_derate_factor     --
+
+Pin Input Delays:
+None specified.
+
+Pin Output Delays:
+None specified.
+Fast Analysis:                           disabled
+
+1

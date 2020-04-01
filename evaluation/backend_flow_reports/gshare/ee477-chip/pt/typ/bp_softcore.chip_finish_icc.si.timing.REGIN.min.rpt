@@ -1,0 +1,1161 @@
+****************************************
+Report : timing
+	-path_type full_clock
+	-delay_type min
+	-slack_lesser_than 1000000.000
+	-max_paths 30
+	-group REGIN
+	-transition_time
+	-sort_by slack
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Fri Mar 13 18:08:35 2020
+****************************************
+
+Report timing status: Started...
+Report timing status: Processing group REGIN
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_312__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3467/Q (AO221X1)              0.035      0.079 &    0.179 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_312__0_/D (DFFX1)      0.035      0.000 &    0.179 f
+  data arrival time                                                                                               0.179
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_312__0_/CLK (DFFX1)    0.238      0.004 &    0.366 r
+  clock reconvergence pessimism                                                                        0.000      0.366
+  library hold time                                                                                    0.021      0.387
+  data required time                                                                                              0.387
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.387
+  data arrival time                                                                                              -0.179
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.208
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_313__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3465/Q (AO221X1)               0.032      0.077 &    0.177 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_313__0_/D (DFFX1)       0.032     -0.000 &    0.177 f
+  data arrival time                                                                                                0.177
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_313__0_/CLK (DFFX1)     0.222      0.005 &    0.363 r
+  clock reconvergence pessimism                                                                         0.000      0.363
+  library hold time                                                                                     0.020      0.383
+  data required time                                                                                               0.383
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.383
+  data arrival time                                                                                               -0.177
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.206
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_368__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3349/Q (AO221X1)               0.033      0.079 &    0.179 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_368__0_/D (DFFX1)       0.033      0.000 &    0.179 f
+  data arrival time                                                                                                0.179
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  core/fe/CTSINVX8_G1B2I9/ZN (INVX8)                                                         0.130      0.087 &    0.203 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I33/ZN (INVX8)    0.193      0.117 &    0.321 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_368__0_/CLK (DFFX1)     0.193      0.004 &    0.324 r
+  clock reconvergence pessimism                                                                         0.000      0.324
+  library hold time                                                                                     0.018      0.342
+  data required time                                                                                               0.342
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.342
+  data arrival time                                                                                               -0.179
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.163
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_304__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3484/Q (AO221X1)               0.033      0.080 &    0.180 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_304__0_/D (DFFX1)       0.033      0.000 &    0.180 f
+  data arrival time                                                                                                0.180
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  core/fe/CTSINVX8_G1B2I9/ZN (INVX8)                                                         0.130      0.087 &    0.203 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I33/ZN (INVX8)    0.193      0.117 &    0.321 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_304__0_/CLK (DFFX1)     0.193      0.004 &    0.324 r
+  clock reconvergence pessimism                                                                         0.000      0.324
+  library hold time                                                                                     0.018      0.342
+  data required time                                                                                               0.342
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.342
+  data arrival time                                                                                               -0.180
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.163
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_272__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3552/Q (AO221X1)               0.034      0.079 &    0.179 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_272__0_/D (DFFX1)       0.034      0.000 &    0.179 f
+  data arrival time                                                                                                0.179
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  core/fe/CTSINVX8_G1B2I9/ZN (INVX8)                                                         0.130      0.087 &    0.203 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I33/ZN (INVX8)    0.193      0.117 &    0.321 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_272__0_/CLK (DFFX1)     0.193      0.003 &    0.323 r
+  clock reconvergence pessimism                                                                         0.000      0.323
+  library hold time                                                                                     0.018      0.341
+  data required time                                                                                               0.341
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.341
+  data arrival time                                                                                               -0.179
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.162
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_273__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3550/Q (AO221X1)               0.034      0.079 &    0.179 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_273__0_/D (DFFX1)       0.034      0.000 &    0.179 f
+  data arrival time                                                                                                0.179
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  core/fe/CTSINVX8_G1B2I9/ZN (INVX8)                                                         0.130      0.087 &    0.203 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I33/ZN (INVX8)    0.193      0.117 &    0.321 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_273__0_/CLK (DFFX1)     0.193      0.002 &    0.323 r
+  clock reconvergence pessimism                                                                         0.000      0.323
+  library hold time                                                                                     0.018      0.341
+  data required time                                                                                               0.341
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.341
+  data arrival time                                                                                               -0.179
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.162
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_305__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3482/Q (AO221X1)               0.035      0.081 &    0.181 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_305__0_/D (DFFX1)       0.035      0.000 &    0.181 f
+  data arrival time                                                                                                0.181
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  core/fe/CTSINVX8_G1B2I9/ZN (INVX8)                                                         0.130      0.087 &    0.203 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I33/ZN (INVX8)    0.193      0.117 &    0.321 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_305__0_/CLK (DFFX1)     0.194      0.004 &    0.324 r
+  clock reconvergence pessimism                                                                         0.000      0.324
+  library hold time                                                                                     0.018      0.342
+  data required time                                                                                               0.342
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.342
+  data arrival time                                                                                               -0.181
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.162
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_369__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3347/Q (AO221X1)               0.037      0.082 &    0.182 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_369__0_/D (DFFX1)       0.037      0.000 &    0.182 f
+  data arrival time                                                                                                0.182
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  core/fe/CTSINVX8_G1B2I9/ZN (INVX8)                                                         0.130      0.087 &    0.203 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I33/ZN (INVX8)    0.193      0.117 &    0.321 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_369__0_/CLK (DFFX1)     0.193      0.003 &    0.324 r
+  clock reconvergence pessimism                                                                         0.000      0.324
+  library hold time                                                                                     0.017      0.341
+  data required time                                                                                               0.341
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.341
+  data arrival time                                                                                               -0.182
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.159
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_506__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place95/Z (NBUFFX2)        0.055      0.090 &    0.190 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3051/Q (AO221X1)              0.032      0.061 &    0.251 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_506__0_/D (DFFX1)      0.032      0.000 &    0.251 f
+  data arrival time                                                                                               0.251
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_506__0_/CLK (DFFX1)    0.238      0.004 &    0.366 r
+  clock reconvergence pessimism                                                                        0.000      0.366
+  library hold time                                                                                    0.022      0.388
+  data required time                                                                                              0.388
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.388
+  data arrival time                                                                                              -0.251
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.137
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_345__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place95/Z (NBUFFX2)        0.055      0.090 &    0.190 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3397/Q (AO221X1)              0.032      0.061 &    0.251 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_345__0_/D (DFFX1)      0.032      0.000 &    0.251 f
+  data arrival time                                                                                               0.251
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_345__0_/CLK (DFFX1)    0.238      0.004 &    0.366 r
+  clock reconvergence pessimism                                                                        0.000      0.366
+  library hold time                                                                                    0.022      0.388
+  data required time                                                                                              0.388
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.388
+  data arrival time                                                                                              -0.251
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.137
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_507__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place95/Z (NBUFFX2)        0.055      0.090 &    0.190 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3049/Q (AO221X1)              0.033      0.062 &    0.252 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_507__0_/D (DFFX1)      0.033     -0.000 &    0.252 f
+  data arrival time                                                                                               0.252
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_507__0_/CLK (DFFX1)    0.238      0.004 &    0.366 r
+  clock reconvergence pessimism                                                                        0.000      0.366
+  library hold time                                                                                    0.021      0.388
+  data required time                                                                                              0.388
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.388
+  data arrival time                                                                                              -0.252
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.136
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_344__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place95/Z (NBUFFX2)        0.055      0.090 &    0.190 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3399/Q (AO221X1)              0.034      0.063 &    0.253 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_344__0_/D (DFFX1)      0.034      0.000 &    0.253 f
+  data arrival time                                                                                               0.253
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_344__0_/CLK (DFFX1)    0.238      0.004 &    0.366 r
+  clock reconvergence pessimism                                                                        0.000      0.366
+  library hold time                                                                                    0.021      0.387
+  data required time                                                                                              0.387
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.387
+  data arrival time                                                                                              -0.253
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.134
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_347__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place95/Z (NBUFFX2)        0.055      0.090 &    0.190 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3393/Q (AO221X1)              0.035      0.063 &    0.253 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_347__0_/D (DFFX1)      0.035     -0.000 &    0.253 f
+  data arrival time                                                                                               0.253
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_347__0_/CLK (DFFX1)    0.238      0.003 &    0.366 r
+  clock reconvergence pessimism                                                                        0.000      0.366
+  library hold time                                                                                    0.021      0.387
+  data required time                                                                                              0.387
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.387
+  data arrival time                                                                                              -0.253
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.134
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_346__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place95/Z (NBUFFX2)        0.055      0.090 &    0.190 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3395/Q (AO221X1)              0.035      0.063 &    0.253 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_346__0_/D (DFFX1)      0.035      0.000 &    0.253 f
+  data arrival time                                                                                               0.253
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_346__0_/CLK (DFFX1)    0.238      0.003 &    0.366 r
+  clock reconvergence pessimism                                                                        0.000      0.366
+  library hold time                                                                                    0.021      0.387
+  data required time                                                                                              0.387
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.387
+  data arrival time                                                                                              -0.253
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.134
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_318__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place95/Z (NBUFFX2)        0.055      0.090 &    0.190 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3455/Q (AO221X1)              0.035      0.063 &    0.253 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_318__0_/D (DFFX1)      0.035      0.000 &    0.253 f
+  data arrival time                                                                                               0.253
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_318__0_/CLK (DFFX1)    0.238      0.003 &    0.366 r
+  clock reconvergence pessimism                                                                        0.000      0.366
+  library hold time                                                                                    0.021      0.387
+  data required time                                                                                              0.387
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.387
+  data arrival time                                                                                              -0.253
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.133
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_319__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place95/Z (NBUFFX2)        0.055      0.090 &    0.190 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3453/Q (AO221X1)              0.037      0.064 &    0.254 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_319__0_/D (DFFX1)      0.037     -0.001 &    0.253 f
+  data arrival time                                                                                               0.253
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_319__0_/CLK (DFFX1)    0.238      0.003 &    0.365 r
+  clock reconvergence pessimism                                                                        0.000      0.365
+  library hold time                                                                                    0.021      0.386
+  data required time                                                                                              0.386
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.386
+  data arrival time                                                                                              -0.253
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.133
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_438__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3198/Q (AO221X1)               0.032      0.062 &    0.255 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_438__0_/D (DFFX1)       0.032      0.000 &    0.255 f
+  data arrival time                                                                                                0.255
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_438__0_/CLK (DFFX1)     0.222      0.005 &    0.363 r
+  clock reconvergence pessimism                                                                         0.000      0.363
+  library hold time                                                                                     0.021      0.383
+  data required time                                                                                               0.383
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.383
+  data arrival time                                                                                               -0.255
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.128
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_470__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3130/Q (AO221X1)               0.032      0.062 &    0.255 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_470__0_/D (DFFX1)       0.032      0.000 &    0.255 f
+  data arrival time                                                                                                0.255
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_470__0_/CLK (DFFX1)     0.222      0.005 &    0.362 r
+  clock reconvergence pessimism                                                                         0.000      0.362
+  library hold time                                                                                     0.021      0.383
+  data required time                                                                                               0.383
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.383
+  data arrival time                                                                                               -0.255
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.128
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_469__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3132/Q (AO221X1)               0.032      0.062 &    0.255 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_469__0_/D (DFFX1)       0.032      0.000 &    0.255 f
+  data arrival time                                                                                                0.255
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_469__0_/CLK (DFFX1)     0.223      0.005 &    0.362 r
+  clock reconvergence pessimism                                                                         0.000      0.362
+  library hold time                                                                                     0.021      0.382
+  data required time                                                                                               0.382
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.382
+  data arrival time                                                                                               -0.255
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.128
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_180__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3749/Q (AO221X1)               0.033      0.062 &    0.255 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_180__0_/D (DFFX1)       0.033      0.000 &    0.255 f
+  data arrival time                                                                                                0.255
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_180__0_/CLK (DFFX1)     0.223      0.004 &    0.362 r
+  clock reconvergence pessimism                                                                         0.000      0.362
+  library hold time                                                                                     0.020      0.382
+  data required time                                                                                               0.382
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.382
+  data arrival time                                                                                               -0.255
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.127
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_437__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3200/Q (AO221X1)               0.034      0.064 &    0.256 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_437__0_/D (DFFX1)       0.034      0.000 &    0.256 f
+  data arrival time                                                                                                0.256
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_437__0_/CLK (DFFX1)     0.222      0.005 &    0.363 r
+  clock reconvergence pessimism                                                                         0.000      0.363
+  library hold time                                                                                     0.020      0.383
+  data required time                                                                                               0.383
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.383
+  data arrival time                                                                                               -0.256
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.127
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_468__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3134/Q (AO221X1)               0.034      0.063 &    0.256 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_468__0_/D (DFFX1)       0.034      0.000 &    0.256 f
+  data arrival time                                                                                                0.256
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_468__0_/CLK (DFFX1)     0.222      0.005 &    0.362 r
+  clock reconvergence pessimism                                                                         0.000      0.362
+  library hold time                                                                                     0.020      0.382
+  data required time                                                                                               0.382
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.382
+  data arrival time                                                                                               -0.256
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.126
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_439__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3196/Q (AO221X1)               0.034      0.064 &    0.257 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_439__0_/D (DFFX1)       0.034      0.000 &    0.257 f
+  data arrival time                                                                                                0.257
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_439__0_/CLK (DFFX1)     0.222      0.005 &    0.363 r
+  clock reconvergence pessimism                                                                         0.000      0.363
+  library hold time                                                                                     0.020      0.383
+  data required time                                                                                               0.383
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.383
+  data arrival time                                                                                               -0.257
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.126
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_436__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3202/Q (AO221X1)               0.034      0.064 &    0.257 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_436__0_/D (DFFX1)       0.034      0.000 &    0.257 f
+  data arrival time                                                                                                0.257
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_436__0_/CLK (DFFX1)     0.222      0.005 &    0.363 r
+  clock reconvergence pessimism                                                                         0.000      0.363
+  library hold time                                                                                     0.020      0.383
+  data required time                                                                                               0.383
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.383
+  data arrival time                                                                                               -0.257
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.126
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_215__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3675/Q (AO221X1)               0.035      0.064 &    0.257 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_215__0_/D (DFFX1)       0.035      0.000 &    0.257 f
+  data arrival time                                                                                                0.257
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_215__0_/CLK (DFFX1)     0.222      0.005 &    0.363 r
+  clock reconvergence pessimism                                                                         0.000      0.363
+  library hold time                                                                                     0.020      0.383
+  data required time                                                                                               0.383
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.383
+  data arrival time                                                                                               -0.257
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.126
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_398__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place131/Z (NBUFFX2)       0.076      0.100 &    0.200 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3284/Q (AO221X1)              0.034      0.065 &    0.264 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_398__0_/D (DFFX1)      0.034     -0.000 &    0.264 f
+  data arrival time                                                                                               0.264
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_398__0_/CLK (DFFX1)    0.238      0.006 &    0.369 r
+  clock reconvergence pessimism                                                                        0.000      0.369
+  library hold time                                                                                    0.021      0.390
+  data required time                                                                                              0.390
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.390
+  data arrival time                                                                                              -0.264
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.126
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_181__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3747/Q (AO221X1)               0.035      0.064 &    0.257 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_181__0_/D (DFFX1)       0.035     -0.000 &    0.257 f
+  data arrival time                                                                                                0.257
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_181__0_/CLK (DFFX1)     0.223      0.005 &    0.362 r
+  clock reconvergence pessimism                                                                         0.000      0.362
+  library hold time                                                                                     0.020      0.382
+  data required time                                                                                               0.382
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.382
+  data arrival time                                                                                               -0.257
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.125
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_471__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                      Trans       Incr       Path
+  -------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock network delay (ideal)                                                                           0.000      0.000
+  input external delay                                                                                  0.100      0.100 f
+  reset_i (in)                                                                               0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place139/Z (NBUFFX2)        0.062      0.093 &    0.193 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3128/Q (AO221X1)               0.035      0.064 &    0.257 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_471__0_/D (DFFX1)       0.035     -0.000 &    0.257 f
+  data arrival time                                                                                                0.257
+
+  clock core_clk (rise edge)                                                                 0.000      0.000      0.000
+  clock source latency                                                                                  0.000      0.000
+  clk_i (in)                                                                                 0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                 0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                 0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                0.171      0.109 &    0.226 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/CTSINVX16_G1B1I43/ZN (INVX8)    0.222      0.132 &    0.357 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_471__0_/CLK (DFFX1)     0.223      0.004 &    0.362 r
+  clock reconvergence pessimism                                                                         0.000      0.362
+  library hold time                                                                                     0.020      0.381
+  data required time                                                                                               0.381
+  -------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                               0.381
+  data arrival time                                                                                               -0.257
+  -------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                                -0.125
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_399__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place131/Z (NBUFFX2)       0.076      0.100 &    0.200 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3281/Q (AO221X1)              0.035      0.066 &    0.265 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_399__0_/D (DFFX1)      0.035      0.000 &    0.265 f
+  data arrival time                                                                                               0.265
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_399__0_/CLK (DFFX1)    0.238      0.006 &    0.368 r
+  clock reconvergence pessimism                                                                        0.000      0.368
+  library hold time                                                                                    0.021      0.389
+  data required time                                                                                              0.389
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.389
+  data arrival time                                                                                              -0.265
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.124
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_110__0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                                                     Trans       Incr       Path
+  ------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock network delay (ideal)                                                                          0.000      0.000
+  input external delay                                                                                 0.100      0.100 f
+  reset_i (in)                                                                              0.000      0.000 &    0.100 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/icc_place131/Z (NBUFFX2)       0.076      0.100 &    0.200 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/U3897/Q (AO221X1)              0.036      0.066 &    0.266 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_110__0_/D (DFFX1)      0.036     -0.000 &    0.266 f
+  data arrival time                                                                                               0.266
+
+  clock core_clk (rise edge)                                                                0.000      0.000      0.000
+  clock source latency                                                                                 0.000      0.000
+  clk_i (in)                                                                                0.000      0.000 &    0.000 r
+  CTSINVX4_G1B4I3/ZN (INVX8)                                                                0.075      0.066 &    0.066 f
+  CTSINVX8_G1B3I2/ZN (INVX8)                                                                0.086      0.050 &    0.116 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                               0.171      0.109 &    0.226 f
+  core/fe/pc_gen/CTSINVX16_G1B1I79/ZN (INVX8)                                               0.238      0.137 &    0.363 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gshare_bp/bht_reg_110__0_/CLK (DFFX1)    0.238      0.006 &    0.368 r
+  clock reconvergence pessimism                                                                        0.000      0.368
+  library hold time                                                                                    0.021      0.389
+  data required time                                                                                              0.389
+  ------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                              0.389
+  data arrival time                                                                                              -0.266
+  ------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                               -0.124
+
+Report timing status: Processing group REGIN (total endpoints 8448)...10% done.
+Report timing status: Processing group REGIN (total endpoints 8448)...20% done.
+Report timing status: Processing group REGIN (total endpoints 8448)...30% done.
+Report timing status: Processing group REGIN (total endpoints 8448)...40% done.
+Report timing status: Processing group REGIN (total endpoints 8448)...50% done.
+Report timing status: Processing group REGIN (total endpoints 8448)...60% done.
+Report timing status: Processing group REGIN (total endpoints 8448)...70% done.
+Report timing status: Processing group REGIN (total endpoints 8448)...80% done.
+Report timing status: Processing group REGIN (total endpoints 8448)...90% done.
+Warning: report_timing has satisfied the max_paths criteria. There are 8418 further endpoints which have paths of interest with slack less than 1000000.000 that were not considered when generating this report. (UITE-502)
+
+Report timing status: Completed...
+1

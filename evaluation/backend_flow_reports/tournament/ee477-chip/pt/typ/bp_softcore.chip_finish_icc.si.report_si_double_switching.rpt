@@ -1,0 +1,13 @@
+****************************************
+Report : si_double_switching
+	-nosplit
+	-rise
+	-fall
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 16:00:14 2020
+****************************************
+
+There are no double switching violations detected.
+
+1

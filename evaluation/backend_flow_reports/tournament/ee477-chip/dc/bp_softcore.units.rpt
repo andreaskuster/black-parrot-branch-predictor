@@ -1,0 +1,18 @@
+report_units                                     
+************************************
+Report : units
+Design : bp_softcore
+Version: O-2018.06-SP4
+Date   : Sat Mar 14 13:20:24 2020
+
+************************************
+Units
+------------------------------------
+Time_unit            : 1.0e-09 Second(ns)
+Capacitive_load_unit : 1.0e-15 Farad(fF)
+Resistance_unit      : 1.0e+6 Ohm(MOhm)
+Voltage_unit         : 1 Volt
+Power_unit           : N/A
+Current_unit         : 1.0e-06 Amp(uA)
+
+

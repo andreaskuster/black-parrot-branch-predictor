@@ -156,8 +156,6 @@ predictor to be good for workloads with very little correlation between sequenti
 should show better accuracy for smaller branch history table sizes, since this hash function does not spread very widely
 and therefore we expect less collisions.  
 
-__Predictions per Cycle / Critical Path__: TODO
-
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history table.
 
@@ -181,13 +179,30 @@ nicely over the whole hash image, we expect this predictor to perform very well 
 Furthermore, because of the broad spread, we expect that this predictor can improve a lot over larger branch history table
 sizes.
 
-__Predictions per Cycle / Critical Path__: TODO
-
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history table plus the size of the branch history.
 
 __Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
 size of the branch history table plus the size of the branch history.
+
+__Performance__ (backend flow):
+
+| test case | instr/s |
+|           |         |
+| Towers    | 75.65   |
+| Vvadd     | 56.24   |
+| Median    | 45.15   |
+
+
+__Power__ (backend flow):
+| test case |  mJ/s |
+|           |       |
+| Towers    | 0.75  |
+| Vvadd     | 1     |
+| Median    | 1.586 |
+
+
+Area (backend flow): 61448.6913 nm^2
 
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_gshare/README.md)
@@ -207,13 +222,31 @@ the branch address (bimodal). We therefore expect the result of this predictor t
 theory, in these of a workload that fits very well the combination of history bits and address bits selected for this 
 implementation, it could also outperform the others.
 
-__Predictions per Cycle / Critical Path__: TODO
-
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history table plus the size of the branch history.
 
 __Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
 size of the branch history table plus the size of the branch history.
+
+__Performance__ (backend flow):
+
+| test case | instr/s |
+|           |         |
+| Towers    | 80.45   |
+| Vvadd     | 72.84   |
+| Median    | 37.51   |
+
+
+__Power__ (backend flow):
+
+| test case |  mJ/s  |
+|           |        |
+| Towers    | 0.8589 |
+| Vvadd     | 0.8937 |
+| Median    | 1.802  |
+
+Area (backend flow): 61044.9405 nm^2
+
 
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_gselect/README.md)
@@ -232,14 +265,32 @@ to either of them, depending on the correctness of their previous predictions.
 __Accuracy__: While this branch prediction uses two branch predictors internally, it mostly gets the best result out of
 both words. We therefore expect this one to perform reasonably close to the maximum value of both internal branch predictors.
 
-__Predictions per Cycle / Critical Path__: TODO
-
-
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the branch history tables plus the size of the branch history.
 
 __Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
 size of the branch history tables plus the size of the branch history.
+
+
+__Performance__ (backend flow):
+
+| test case | instr/s |
+|           |         |
+| Towers    | 78.02   |
+| Vvadd     | 77.29   |
+| Median    | 39.38   |
+
+
+__Power__ (backend flow):
+
+| test case |  mJ/s  |
+|           |        |
+| Towers    | 0.77   |
+| Vvadd     | 0.7568 |
+| Median    | 1.508  |
+
+Area (backend flow): 117722.4186 nm^2
+
 
 
 More detailed evaluations and the integration into black-parrot can be found:
@@ -258,14 +309,31 @@ counters.
 __Accuracy__: Since this predictor basically stores all the information given to him (and uses it), it should outperform 
 all others (with the grain of salt for using a lot more area/power). 
 
-__Predictions per Cycle / Critical Path__: TODO
-
 __Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
 size of the correlation table plus the branch history table.
 
 __Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
 size of the correlation table plus the branch history table.
 
+
+__Performance__ (backend flow):
+
+| test case | instr/s |
+|           |         |
+| Towers    | 81.04   |
+| Vvadd     | 80.38   |
+| Median    | 45.12   |
+
+
+__Power__ (backend flow):
+
+| test case |  mJ/s   |
+|           |         |
+| Towers    | 0.7959  |
+| Vvadd     | 0.78999 |
+| Median    | 1.427   |
+
+Area (backend flow): 196948.6813 nm^2
 
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_two_level_local/README.md)

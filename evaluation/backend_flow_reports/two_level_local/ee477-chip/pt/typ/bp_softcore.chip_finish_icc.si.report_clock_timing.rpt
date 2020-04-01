@@ -1,0 +1,57 @@
+****************************************
+Report : clock timing
+	-type skew
+	-verbose
+	-nworst 1
+	-setup
+	-crosstalk_delta
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sun Mar 15 20:40:13 2020
+****************************************
+
+  Clock: core_clk
+
+  Startpoint: core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_two_level_local_bp/bct_reg_6__4_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/fe/mem/icache/data_mems_7__data_mem/macro_mem
+               (rising edge-triggered flip-flop clocked by core_clk)
+
+
+  Point                                                                                    DTrans   Trans    Delta     Incr       Path
+  ---------------------------------------------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                                        0.000
+  clock source latency                                                                                                0.000      0.000
+  clk_i (in)                                                                                        0.000             0.000 &    0.000 r
+  CTSINVX4_G1B4I2/INP (INVX4)                                                              0.000    0.006    0.000    0.001 &    0.001 r
+  CTSINVX4_G1B4I2/ZN (INVX4)                                                                        0.117             0.047 &    0.048 f
+  CTSINVX16_G1B3I5/INP (INVX16)                                                            0.000    0.131    0.000    0.025 &    0.073 f
+  CTSINVX16_G1B3I5/ZN (INVX16)                                                                      0.093             0.043 &    0.116 r
+  CTSINVX16_G1B2I5/INP (INVX4)                                                             0.000    0.099    0.000    0.008 &    0.124 r
+  CTSINVX16_G1B2I5/ZN (INVX4)                                                                       0.184             0.113 &    0.237 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_two_level_local_bp/CTSINVX16_G1B1I67/INP (INVX8)    0.000    0.186    0.000    0.007 &    0.243 f
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_two_level_local_bp/CTSINVX16_G1B1I67/ZN (INVX8)    0.237           0.133 &    0.376 r
+  core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_two_level_local_bp/bct_reg_6__4_/CLK (DFFX1)    0.000    0.237    0.000    0.007 &    0.383 r
+  startpoint clock latency                                                                                                       0.383
+
+  clock core_clk (rise edge)                                                                        0.000
+  clock source latency                                                                                                0.000      0.000
+  clk_i (in)                                                                                        0.000             0.000 &    0.000 r
+  CTSINVX4_G1B4I3/INP (INVX4)                                                              0.000    0.061    0.000    0.022 &    0.022 r
+  CTSINVX4_G1B4I3/ZN (INVX4)                                                                        0.051             0.035 &    0.057 f
+  CTSINVX4_G1B3I2/INP (INVX2)                                                              0.000    0.051    0.000    0.002 &    0.059 f
+  CTSINVX4_G1B3I2/ZN (INVX2)                                                                        0.112             0.058 &    0.117 r
+  core/fe/mem/icache/CTSINVX4_G1B2I9/INP (INVX8)                                           0.000    0.113    0.000    0.005 &    0.122 r
+  core/fe/mem/icache/CTSINVX4_G1B2I9/ZN (INVX8)                                                     0.106             0.067 &    0.189 f
+  core/fe/mem/icache/CTSINVX4_G1B1I9/INP (INVX32)                                          0.000    0.106    0.000    0.006 &    0.195 f
+  core/fe/mem/icache/CTSINVX4_G1B1I9/ZN (INVX32)                                                    0.054             0.018 &    0.212 r
+  core/fe/mem/icache/data_mems_7__data_mem/macro_mem/CE1 (saed90_64x512_1P_BM)             0.000    0.054    0.000    0.012 &    0.224 r
+  endpoint clock latency                                                                                                         0.224
+  ---------------------------------------------------------------------------------------------------------------------
+  startpoint clock latency                                                                                     0.383
+  endpoint clock latency                                                                                      -0.224
+  clock reconvergence pessimism                                                                               -0.000
+  ---------------------------------------------------------------------------------------------------------------------
+  skew                                                                                                         0.160
+
+1

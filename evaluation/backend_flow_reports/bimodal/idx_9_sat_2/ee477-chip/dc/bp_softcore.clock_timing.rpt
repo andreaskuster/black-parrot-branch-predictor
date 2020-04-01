@@ -1,0 +1,43 @@
+report_clock_timing -type summary                
+ 
+****************************************
+Report : clock timing
+        -type summary
+Design : bp_softcore
+Version: O-2018.06-SP4
+Date   : Thu Mar 12 12:09:11 2020
+****************************************
+
+  Clock: core_clk
+----------------------------------------------------------------------------
+  Maximum setup launch latency:
+      uce_0__uce/cache_req_v_r_reg/CLK                       0.00      wr-+
+
+  Minimum setup capture latency:
+      uce_0__uce/cache_req_v_r_reg/CLK                       0.00      wr-+
+
+  Minimum hold launch latency:
+      uce_0__uce/cache_req_v_r_reg/CLK                       0.00      br-+
+
+  Maximum hold capture latency:
+      uce_0__uce/cache_req_v_r_reg/CLK                       0.00      br-+
+
+  Maximum active transition:
+      uce_0__uce/cache_req_v_r_reg/CLK                       0.00      wr-+
+
+  Minimum active transition:
+      uce_0__uce/cache_req_v_r_reg/CLK                       0.00      wr-+
+
+  Maximum setup skew:
+      clint/clint_slice/bsg_rtc_strobe/C_reg/data_r_reg_0_/CLK         wr-+
+      clint/clint_slice/bsg_rtc_strobe/C_reg/data_r_reg_1_/CLK
+                                                             0.00      wr-+
+
+  Maximum hold skew:
+      clint/clint_slice/bsg_rtc_strobe/C_reg/data_r_reg_0_/CLK         br-+
+      clint/clint_slice/bsg_rtc_strobe/C_reg/data_r_reg_1_/CLK
+                                                             0.00      br-+
+----------------------------------------------------------------------------
+
+
+

@@ -1,0 +1,4021 @@
+****************************************
+Report : noise
+	-all_violators
+	-verbose
+	-nosplit
+	-low
+	-above
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 11:32:55 2020
+****************************************
+
+ analysis mode: report_at_source
+ slack type: height
+
+ noise_region: above_low
+ pin name (net name)       width    height     slack
+ -----------------------------------------------------
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place44/INP (core/be/be_mem/dcache/n1626)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n52    0.334    0.195
+ core/be/be_mem/dcache/data_mem_7__data_mem/n112    0.285    0.162
+ core/be/be_mem/dcache/n2526    0.437    0.055
+ core/be/be_mem/dcache/n1527    0.437    0.031
+ core/be/be_mem/dcache/n1722    0.264    0.029
+ core/be/be_mem/dcache/data_mem_7__data_mem/n86    0.265    0.026
+ core/be/be_mem/dcache/data_mem_4__data_mem/n97    0.277    0.025
+ core/be/be_mem/dcache/n1602    0.457    0.019
+ Propagated:
+ core/be/be_mem/dcache/U1313/Q        -        -
+ Total:                    0.331     0.543    -0.243
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place16/INP (core/be/be_mem/dcache/n2505)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n84    0.237    0.248
+ core/be/be_mem/dcache/data_mem_7__data_mem/n86    0.231    0.084
+ core/be/be_mem/dcache/data_mem_4__data_mem/n99    0.224    0.050
+ core/be/be_mem/dcache/data_mem_7__data_mem/n126    0.254    0.032
+ core/be/be_mem/dcache/n1454    0.199    0.036
+ core/be/be_mem/dcache/n1740    0.215    0.029
+ core/be/be_mem/dcache/data_mem_4__data_mem/n131    0.221    0.027
+ core/be/be_mem/dcache/data_mem_data_lo[328]    0.116    0.030
+ Propagated:
+ core/be/be_mem/dcache/U1522/Q        -        -
+ Total:                    0.225     0.535    -0.235
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place42/INP (core/be/be_mem/dcache/n1604)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_5__data_mem/n105    0.259    0.152
+ core/be/be_mem/dcache/data_mem_5__data_mem/n69    0.259    0.150
+ core/be/be_mem/dcache/data_mem_4__data_mem/n248    0.213    0.087
+ core/be/be_mem/dcache/data_mem_data_lo[455]    0.195    0.077
+ core/be/be_mem/dcache/n1613    0.402    0.039
+ core/be/be_mem/dcache/n1547    0.230    0.024
+ Propagated:
+ core/be/be_mem/dcache/U1309/Q        -        -
+ Total:                    0.251     0.529    -0.229
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place22/INP (core/be/be_mem/dcache/n1620)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_5__data_mem/n85    0.266    0.153
+ core/be/be_mem/dcache/data_mem_5__data_mem/n55    0.262    0.136
+ core/be/be_mem/dcache/data_mem_data_lo[66]    0.251    0.074
+ core/be/be_mem/dcache/n1178    0.290    0.045
+ core/be/be_mem/dcache/n1557    0.248    0.038
+ core/be/be_mem/dcache/data_mem_data_lo[261]    0.198    0.036
+ core/be/be_mem/dcache/data_mem_7__data_mem/n295    0.318    0.025
+ core/be/be_mem/dcache/n897    0.310    0.015
+ Propagated:
+ core/be/be_mem/dcache/U1323/Q        -        -
+ Total:                    0.263     0.522    -0.222
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place57/INP (core/be/be_mem/dcache/n1631)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[459]    0.206    0.194
+ core/be/be_mem/dcache/ld_data_way_picked[12]    0.344    0.083
+ core/be/be_mem/dcache/data_mem_7__data_mem/n60    0.239    0.098
+ core/be/be_mem/dcache/n2532    0.454    0.050
+ core/be/be_mem/dcache/data_mem_7__data_mem/n114    0.286    0.045
+ core/be/be_mem/dcache/n795    0.718    0.026
+ core/be/be_mem/dcache/data_mem_4__data_mem/n29    0.285    0.024
+ Propagated:
+ core/be/be_mem/dcache/U1317/Q        -        -
+ Total:                    0.294     0.520    -0.220
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U50/IN1 (core/be/be_mem/dcache/data_mem_data_lo[45])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[302]    0.144    0.199
+ core/be/be_mem/dcache/data_mem_data_lo[305]    0.146    0.193
+ core/be/be_mem/dcache/data_mem_data_lo[24]    0.146    0.049
+ core/be/be_mem/dcache/data_mem_data_lo[7]    0.156    0.069
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[45]        -        -
+ Total:                    0.147     0.511    -0.211
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U118/IN2 (core/be/be_mem/dcache/data_mem_data_lo[45])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[302]    0.144    0.199
+ core/be/be_mem/dcache/data_mem_data_lo[305]    0.146    0.193
+ core/be/be_mem/dcache/data_mem_data_lo[24]    0.146    0.049
+ core/be/be_mem/dcache/data_mem_data_lo[7]    0.156    0.069
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[45]        -        -
+ Total:                    0.147     0.511    -0.211
+
+ core/be/be_mem/dcache/U2256/IN2 (core/be/be_mem/dcache/data_mem_data_lo[45])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[302]    0.144    0.199
+ core/be/be_mem/dcache/data_mem_data_lo[305]    0.146    0.193
+ core/be/be_mem/dcache/data_mem_data_lo[24]    0.146    0.049
+ core/be/be_mem/dcache/data_mem_data_lo[7]    0.156    0.069
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[45]        -        -
+ Total:                    0.148     0.507    -0.207
+
+ core/be/be_mem/U316/IN2 (core/be/be_mem/dcache_data[15])
+ Aggressors:
+ core/be/be_mem/dcache_data[42]    0.557    0.134
+ mem_cmd_lo[77]            0.446     0.092
+ core/be/be_mem/dcache_data[41]    0.551    0.061
+ core/be/be_mem/dcache_pkt[61]    0.569    0.048
+ core/be/be_mem/dcache_ptag[3]    0.544    0.048
+ core/be/be_mem/dcache_data[14]    0.689    0.039
+ core/be/be_mem/dcache/final_data[51]    0.476    0.024
+ core/be/mem_resp[38]      0.447     0.020
+ mem_cmd_lo[66]            0.451     0.019
+ core/be/be_mem/ptw/ppn_n[10]    0.395    0.019
+ Propagated:
+ core/be/be_mem/dcache/U1934/QN        -        -
+ Total:                    0.528     0.504    -0.204
+
+ core/be/be_mem/ptw/dcache_data_reg/U61/IN1 (core/be/be_mem/dcache_data[15])
+ Aggressors:
+ core/be/be_mem/dcache_data[42]    0.557    0.134
+ mem_cmd_lo[77]            0.446     0.092
+ core/be/be_mem/dcache_data[41]    0.551    0.061
+ core/be/be_mem/dcache_pkt[61]    0.569    0.048
+ core/be/be_mem/dcache_ptag[3]    0.544    0.048
+ core/be/be_mem/dcache_data[14]    0.689    0.039
+ core/be/be_mem/dcache/final_data[51]    0.476    0.024
+ core/be/mem_resp[38]      0.447     0.020
+ mem_cmd_lo[66]            0.451     0.019
+ core/be/be_mem/ptw/ppn_n[10]    0.395    0.019
+ Propagated:
+ core/be/be_mem/dcache/U1934/QN        -        -
+ Total:                    0.528     0.504    -0.204
+
+ io_cmd_o[299] (io_cmd_o[299])
+ Aggressors:
+ io_resp_i[453]            0.008     0.320
+ mem_resp_i[247]           0.008     0.245
+ io_resp_i[472]            0.008     0.059
+ mem_resp_i[472]           0.008     0.053
+ Propagated:
+ U4539/ZN                      -         -
+ Total:                    0.008     0.676    -0.196
+
+ core/fe/mem/icache/data_set_select_mux/U131/IN4 (core/fe/mem/icache/ld_data_tv_r[339])
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n303    0.298    0.107
+ core/fe/mem/icache/data_mem_data_li[204]    0.237    0.111
+ core/fe/mem/icache/n1862    0.246    0.094
+ core/fe/mem/icache/ld_data_tv_r[372]    0.606    0.042
+ core/fe/mem/icache/data_mems_7__data_mem/n13    0.240    0.061
+ core/fe/mem/icache/n1497    0.439    0.024
+ core/fe/mem/icache/data_mems_5__data_mem/n65    0.313    0.022
+ core/fe/mem/icache/data_mems_5__data_mem/n47    0.326    0.017
+ core/fe/mem/icache/ld_data_tv_r[369]    0.583    0.012
+ core/fe/mem/icache/data_mems_5__data_mem/n41    0.317    0.016
+ core/fe/mem/icache/data_set_select_mux/n312    0.247    0.014
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__19_/Q        -        -
+ Total:                    0.293     0.495    -0.195
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place26/INP (core/be/be_mem/dcache/n1602)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[450]    0.209    0.185
+ core/be/be_mem/dcache/data_mem_data_lo[70]    0.280    0.072
+ core/be/be_mem/dcache/data_mem_7__data_mem/n80    0.284    0.090
+ core/be/be_mem/dcache/data_mem_7__data_mem/n112    0.260    0.053
+ core/be/be_mem/dcache/data_mem_4__data_mem/n43    0.270    0.035
+ core/be/be_mem/dcache/data_mem_5__data_mem/n93    0.239    0.024
+ core/be/be_mem/dcache/n1626    0.497    0.017
+ core/be/be_mem/dcache/data_mem_5__data_mem/n73    0.237    0.017
+ Propagated:
+ core/be/be_mem/dcache/U1322/Q        -        -
+ Total:                    0.255     0.492    -0.192
+
+ mem_cmd_o[332] (mem_cmd_o[332])
+ Aggressors:
+ io_resp_i[365]            0.009     0.384
+ io_resp_i[549]            0.009     0.147
+ mem_resp_i[364]           0.009     0.132
+ Propagated:
+ U3693/ZN                      -         -
+ Total:                    0.009     0.663    -0.183
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U80/IN2 (core/be/be_mem/dcache/data_mem_data_lo[137])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[341]    0.085    0.088
+ core/be/be_mem/dcache/data_mem_5__data_mem/n130    0.114    0.048
+ core/be/be_mem/dcache/data_mem_2__data_mem/n337    0.111    0.044
+ core/be/be_mem/dcache/data_mem_5__data_mem/n128    0.111    0.037
+ core/be/be_mem/dcache/data_mem_data_lo[353]    0.085    0.058
+ core/be/be_mem/dcache/data_mem_data_lo[346]    0.084    0.041
+ core/be/be_mem/dcache/data_mem_data_lo[332]    0.077    0.057
+ core/be/be_mem/dcache/data_mem_data_lo[397]    0.060    0.067
+ core/be/be_mem/dcache/data_mem_data_lo[342]    0.084    0.028
+ core/be/be_mem/dcache/data_mem_data_lo[360]    0.083    0.016
+ core/be/be_mem/dcache/data_mem_mask_li[5]    0.343    0.006
+ core/be/be_mem/dcache/data_mem_data_lo[365]    0.082    0.011
+ Propagated:
+ core/be/be_mem/dcache/data_mem_2__data_mem/macro_mem/O1[9]        -        -
+ Total:                    0.088     0.483    -0.183
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U11/IN1 (core/be/be_mem/dcache/data_mem_data_lo[137])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[341]    0.085    0.088
+ core/be/be_mem/dcache/data_mem_5__data_mem/n130    0.114    0.048
+ core/be/be_mem/dcache/data_mem_2__data_mem/n337    0.111    0.044
+ core/be/be_mem/dcache/data_mem_5__data_mem/n128    0.111    0.037
+ core/be/be_mem/dcache/data_mem_data_lo[353]    0.085    0.058
+ core/be/be_mem/dcache/data_mem_data_lo[346]    0.084    0.041
+ core/be/be_mem/dcache/data_mem_data_lo[332]    0.077    0.057
+ core/be/be_mem/dcache/data_mem_data_lo[397]    0.060    0.067
+ core/be/be_mem/dcache/data_mem_data_lo[342]    0.084    0.028
+ core/be/be_mem/dcache/data_mem_data_lo[360]    0.083    0.016
+ core/be/be_mem/dcache/data_mem_mask_li[5]    0.343    0.006
+ core/be/be_mem/dcache/data_mem_data_lo[365]    0.082    0.011
+ Propagated:
+ core/be/be_mem/dcache/data_mem_2__data_mem/macro_mem/O1[9]        -        -
+ Total:                    0.088     0.483    -0.183
+
+ core/be/be_mem/dcache/U2356/IN2 (core/be/be_mem/dcache/data_mem_data_lo[137])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[341]    0.085    0.088
+ core/be/be_mem/dcache/data_mem_5__data_mem/n130    0.114    0.048
+ core/be/be_mem/dcache/data_mem_2__data_mem/n337    0.112    0.045
+ core/be/be_mem/dcache/data_mem_5__data_mem/n128    0.112    0.037
+ core/be/be_mem/dcache/data_mem_data_lo[353]    0.085    0.058
+ core/be/be_mem/dcache/data_mem_data_lo[346]    0.084    0.041
+ core/be/be_mem/dcache/data_mem_data_lo[332]    0.077    0.057
+ core/be/be_mem/dcache/data_mem_data_lo[397]    0.060    0.067
+ core/be/be_mem/dcache/data_mem_data_lo[342]    0.084    0.028
+ core/be/be_mem/dcache/data_mem_data_lo[360]    0.083    0.016
+ core/be/be_mem/dcache/data_mem_mask_li[5]    0.344    0.006
+ core/be/be_mem/dcache/data_mem_data_lo[365]    0.082    0.011
+ Propagated:
+ core/be/be_mem/dcache/data_mem_2__data_mem/macro_mem/O1[9]        -        -
+ Total:                    0.088     0.482    -0.182
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place2/INP (core/be/be_mem/dcache/n2517)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n94    0.286    0.211
+ core/be/be_mem/dcache/data_mem_5__data_mem/n89    0.247    0.159
+ core/be/be_mem/dcache/data_mem_4__data_mem/n109    0.241    0.034
+ core/be/be_mem/dcache/data_mem_data_lo[266]    0.167    0.032
+ core/be/be_mem/dcache/n1622    0.429    0.021
+ core/be/be_mem/dcache/n1737    0.228    0.024
+ core/be/be_mem/dcache/n1529    0.220    0.012
+ Propagated:
+ core/be/be_mem/dcache/U1528/Q        -        -
+ Total:                    0.265     0.481    -0.181
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place74/INP (core/be/be_mem/dcache/n1607)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n29    0.308    0.162
+ core/be/be_mem/dcache/n2532    0.475    0.125
+ core/be/be_mem/dcache/data_mem_data_lo[459]    0.190    0.091
+ core/be/be_mem/dcache/data_mem_7__data_mem/n134    0.276    0.037
+ core/be/be_mem/dcache/data_mem_7__data_mem/n80    0.313    0.035
+ core/be/be_mem/dcache/n2533    0.431    0.028
+ Propagated:
+ core/be/be_mem/dcache/U1320/Q        -        -
+ Total:                    0.334     0.477    -0.177
+
+ io_cmd_o[453] (io_cmd_o[453])
+ Aggressors:
+ mem_resp_i[183]           0.007     0.369
+ io_resp_i[183]            0.007     0.160
+ mem_resp_i[158]           0.007     0.074
+ io_resp_i[75]             0.007     0.050
+ Propagated:
+ U4847/ZN                      -         -
+ Total:                    0.007     0.654    -0.174
+
+ io_cmd_o[469] (io_cmd_o[469])
+ Aggressors:
+ io_resp_i[463]            0.008     0.330
+ mem_resp_i[183]           0.008     0.234
+ io_resp_i[75]             0.008     0.049
+ io_resp_i[409]            0.008     0.038
+ mem_resp_i[75]            0.008     0.032
+ Propagated:
+ U4879/ZN                      -         -
+ Total:                    0.008     0.651    -0.171
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place20/INP (core/be/be_mem/dcache/n1611)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n111    0.283    0.194
+ core/be/be_mem/dcache/data_mem_4__data_mem/n105    0.283    0.125
+ core/be/be_mem/dcache/data_mem_7__data_mem/n74    0.292    0.054
+ core/be/be_mem/dcache/data_mem_data_lo[134]    0.244    0.035
+ core/be/be_mem/dcache/n2715    0.338    0.022
+ core/be/be_mem/dcache/n1479    0.238    0.023
+ core/be/be_mem/dcache/data_mem_5__data_mem/n51    0.252    0.015
+ core/be/be_mem/dcache/data_mem_4__data_mem/n248    0.209    0.016
+ Propagated:
+ core/be/be_mem/dcache/U1310/Q        -        -
+ Total:                    0.279     0.470    -0.170
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place23/INP (core/be/be_mem/dcache/n1511)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_5__data_mem/n101    0.293    0.133
+ core/be/be_mem/dcache/data_mem_7__data_mem/n106    0.301    0.069
+ core/be/be_mem/dcache/n2563    0.438    0.058
+ core/be/be_mem/dcache/ld_data_way_picked[12]    0.360    0.042
+ core/be/be_mem/dcache/data_mem_4__data_mem/n301    0.230    0.055
+ core/be/be_mem/dcache/data_mem_7__data_mem/n64    0.286    0.040
+ core/be/be_mem/dcache/data_mem_7__data_mem/n130    0.288    0.019
+ core/be/be_mem/dcache/data_mem_4__data_mem/n117    0.289    0.018
+ core/be/be_mem/dcache/n2509    0.256    0.018
+ core/be/be_mem/dcache/n1406    0.239    0.015
+ Propagated:
+ core/be/be_mem/dcache/U1344/Q        -        -
+ Total:                    0.307     0.467    -0.167
+
+ core/fe/mem/icache/U1204/IN1 (core/fe/mem/icache/ld_data_tv_r[339])
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n303    0.270    0.099
+ core/fe/mem/icache/data_mem_data_li[204]    0.209    0.105
+ core/fe/mem/icache/n1862    0.218    0.089
+ core/fe/mem/icache/ld_data_tv_r[372]    0.584    0.036
+ core/fe/mem/icache/data_mems_7__data_mem/n13    0.211    0.058
+ core/fe/mem/icache/n1497    0.406    0.022
+ core/fe/mem/icache/data_mems_5__data_mem/n65    0.285    0.020
+ core/fe/mem/icache/data_mems_5__data_mem/n47    0.298    0.015
+ core/fe/mem/icache/ld_data_tv_r[369]    0.560    0.010
+ core/fe/mem/icache/data_mems_5__data_mem/n41    0.288    0.014
+ core/fe/mem/icache/data_set_select_mux/n312    0.218    0.013
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__19_/Q        -        -
+ Total:                    0.262     0.458    -0.158
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place39/INP (core/be/be_mem/dcache/n2568)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_5__data_mem/n109    0.257    0.094
+ core/be/be_mem/dcache/data_mem_4__data_mem/n71    0.314    0.074
+ core/be/be_mem/dcache/n1493    0.230    0.075
+ core/be/be_mem/dcache/n1619    0.504    0.054
+ core/be/be_mem/dcache/data_mem_4__data_mem/n158    0.222    0.062
+ core/be/be_mem/dcache/n2566    0.475    0.036
+ core/be/be_mem/dcache/n1484    0.443    0.029
+ core/be/be_mem/dcache/n2623    0.310    0.015
+ core/be/be_mem/dcache/n1421    0.224    0.017
+ Propagated:
+ core/be/be_mem/dcache/U1556/Q        -        -
+ Total:                    0.316     0.457    -0.157
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place52/INP (core/be/be_mem/dcache/n1527)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n133    0.271    0.172
+ core/be/be_mem/dcache/data_mem_4__data_mem/n97    0.255    0.124
+ core/be/be_mem/dcache/data_mem_7__data_mem/n52    0.298    0.036
+ core/be/be_mem/dcache/n1626    0.493    0.027
+ core/be/be_mem/dcache/data_mem_7__data_mem/n86    0.241    0.036
+ core/be/be_mem/dcache/n1733    0.222    0.034
+ core/be/be_mem/dcache/n2527    0.431    0.021
+ Propagated:
+ core/be/be_mem/dcache/U1294/Q        -        -
+ Total:                    0.284     0.449    -0.149
+
+ core/fe/mem/icache/data_set_select_mux/U188/IN4 (core/fe/mem/icache/ld_data_tv_r[350])
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n301    0.234    0.111
+ core/fe/mem/icache/data_mems_4__data_mem/n170    0.332    0.086
+ core/fe/mem/icache/data_mems_7__data_mem/n5    0.228    0.105
+ core/fe/mem/icache/data_mems_4__data_mem/n289    0.220    0.051
+ core/fe/mem/icache/n1871    0.353    0.022
+ core/fe/mem/icache/data_mems_5__data_mem/n33    0.313    0.022
+ core/fe/mem/icache/n1841    0.233    0.021
+ core/fe/mem/icache/n1685    0.482    0.013
+ core/fe/mem/icache/data_set_select_mux/n12    0.247    0.018
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__30_/Q        -        -
+ Total:                    0.267     0.448    -0.148
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_clock17/INP (core/be/be_mem/dcache/data_mem_1__data_mem/n426)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[198]    0.280    0.302
+ core/be/be_mem/dcache/data_mem_5__data_mem/n180    0.248    0.059
+ core/be/be_mem/dcache/data_mem_5__data_mem/n230    0.247    0.050
+ core/be/be_mem/dcache/data_mem_data_li[440]    0.254    0.035
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place376/ZN        -        -
+ Total:                    0.270     0.446    -0.146
+
+ io_cmd_o[307] (io_cmd_o[307])
+ Aggressors:
+ io_resp_i[293]            0.008     0.284
+ io_resp_i[299]            0.008     0.262
+ mem_resp_i[343]           0.007     0.080
+ Propagated:
+ U4555/ZN                      -         -
+ Total:                    0.008     0.625    -0.145
+
+ io_cmd_o[390] (io_cmd_o[390])
+ Aggressors:
+ io_resp_i[325]            0.011     0.277
+ io_resp_i[200]            0.011     0.246
+ io_resp_i[368]            0.011     0.058
+ mem_resp_i[549]           0.011     0.038
+ Propagated:
+ U4721/ZN                      -         -
+ Total:                    0.011     0.619    -0.139
+
+ core/be/be_mem/U304/IN2 (core/be/be_mem/dcache_data[4])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[33]    0.608    0.200
+ core/be/be_mem/dcache_data[52]    0.609    0.145
+ core/be/be_mem/dcache_data[6]    0.776    0.032
+ core/be/be_mem/dcache_pkt[49]    0.592    0.029
+ core/be/be_mem/dcache/n1720    0.484    0.017
+ uce_1__uce/dirty_tag_r[5]    0.531    0.016
+ Propagated:
+ core/be/be_mem/dcache/U1887/QN        -        -
+ Total:                    0.612     0.439    -0.139
+
+ core/be/be_mem/ptw/dcache_data_reg/U68/IN1 (core/be/be_mem/dcache_data[4])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[33]    0.608    0.200
+ core/be/be_mem/dcache_data[52]    0.609    0.145
+ core/be/be_mem/dcache_data[6]    0.776    0.032
+ core/be/be_mem/dcache_pkt[49]    0.592    0.029
+ core/be/be_mem/dcache/n1720    0.484    0.017
+ uce_1__uce/dirty_tag_r[5]    0.531    0.016
+ Propagated:
+ core/be/be_mem/dcache/U1887/QN        -        -
+ Total:                    0.612     0.439    -0.139
+
+ mem_cmd_o[310] (mem_cmd_o[310])
+ Aggressors:
+ io_resp_i[305]            0.008     0.417
+ io_resp_i[325]            0.008     0.116
+ io_resp_i[321]            0.008     0.082
+ Propagated:
+ U3649/ZN                      -         -
+ Total:                    0.008     0.615    -0.135
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U761/IN1 (core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3755)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1064    0.376    0.199
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1065    0.355    0.136
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[967]    0.356    0.029
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[964]    0.345    0.020
+ io_cmd_o[45]              0.559     0.015
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3247    0.353    0.019
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[963]    0.340    0.016
+ Propagated:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U745/QN        -        -
+ Total:                    0.371     0.435    -0.135
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place43/INP (core/be/be_mem/dcache/n2527)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n133    0.278    0.168
+ core/be/be_mem/dcache/data_mem_data_lo[449]    0.196    0.119
+ core/be/be_mem/dcache/data_mem_7__data_mem/n120    0.284    0.051
+ core/be/be_mem/dcache/data_mem_4__data_mem/n59    0.257    0.037
+ core/be/be_mem/dcache/n1527    0.415    0.022
+ core/be/be_mem/dcache/n1463    0.214    0.023
+ Propagated:
+ core/be/be_mem/dcache/U1533/Q        -        -
+ Total:                    0.258     0.420    -0.120
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place85/INP (core/be/be_mem/dcache/n2563)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n60    0.212    0.219
+ core/be/be_mem/dcache/n1511    0.497    0.050
+ core/be/be_mem/dcache/data_mem_4__data_mem/n117    0.242    0.053
+ core/be/be_mem/dcache/ld_data_way_picked[12]    0.303    0.044
+ core/be/be_mem/dcache/n1520    0.211    0.041
+ core/be/be_mem/dcache/n2509    0.203    0.014
+ Propagated:
+ core/be/be_mem/dcache/U1561/Q        -        -
+ Total:                    0.259     0.420    -0.120
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U130/IN2 (core/be/be_mem/dcache/data_mem_data_lo[56])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[40]    0.132    0.078
+ core/be/be_mem/dcache/data_mem_data_lo[505]    0.087    0.183
+ core/be/be_mem/dcache/data_mem_data_lo[19]    0.105    0.071
+ core/be/be_mem/dcache/data_mem_data_lo[184]    0.156    0.048
+ core/be/be_mem/dcache/data_mem_7__data_mem/n9    0.110    0.037
+ core/be/be_mem/dcache/data_mem_7__data_mem/n4    0.110    0.028
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[56]        -        -
+ Total:                    0.108     0.418    -0.118
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U62/IN1 (core/be/be_mem/dcache/data_mem_data_lo[56])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[40]    0.132    0.078
+ core/be/be_mem/dcache/data_mem_data_lo[505]    0.087    0.183
+ core/be/be_mem/dcache/data_mem_data_lo[19]    0.105    0.071
+ core/be/be_mem/dcache/data_mem_data_lo[184]    0.156    0.048
+ core/be/be_mem/dcache/data_mem_7__data_mem/n9    0.110    0.037
+ core/be/be_mem/dcache/data_mem_7__data_mem/n4    0.110    0.028
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[56]        -        -
+ Total:                    0.108     0.418    -0.118
+
+ core/be/be_mem/dcache/U2268/IN2 (core/be/be_mem/dcache/data_mem_data_lo[56])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[40]    0.132    0.078
+ core/be/be_mem/dcache/data_mem_data_lo[505]    0.087    0.183
+ core/be/be_mem/dcache/data_mem_data_lo[19]    0.104    0.071
+ core/be/be_mem/dcache/data_mem_data_lo[184]    0.156    0.048
+ core/be/be_mem/dcache/data_mem_7__data_mem/n9    0.110    0.037
+ core/be/be_mem/dcache/data_mem_7__data_mem/n4    0.110    0.027
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[56]        -        -
+ Total:                    0.108     0.418    -0.118
+
+ core/fe/mem/icache/data_mems_0__data_mem/icc_clock7/INP (core/fe/mem/icache/n1622)
+ Aggressors:
+ core/fe/mem/icache/data_mems_0__data_mem/n36    0.294    0.219
+ core/fe/mem/icache/n484    0.400    0.123
+ core/fe/mem/icache/n1538    0.354    0.037
+ core/fe/mem/icache/data_mems_6__data_mem/n20    0.238    0.038
+ core/fe/mem/icache/n419    0.451    0.018
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U37/Q        -        -
+ Total:                    0.326     0.417    -0.117
+
+ core/be/be_mem/ptw/dcache_data_reg/U49/IN1 (core/be/be_mem/dcache_data[30])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[38]    0.501    0.225
+ core/be/be_mem/dcache_pkt[40]    0.485    0.095
+ core/be/be_mem/dcache_pkt[51]    0.506    0.046
+ core/be/be_mem/dcache_data[19]    0.886    0.033
+ io_cmd_o[17]              0.868     0.016
+ Propagated:
+ core/be/be_mem/dcache/U328/QN        -        -
+ Total:                    0.543     0.416    -0.116
+
+ core/be/be_mem/U332/IN2 (core/be/be_mem/dcache_data[30])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[38]    0.501    0.225
+ core/be/be_mem/dcache_pkt[40]    0.485    0.095
+ core/be/be_mem/dcache_pkt[51]    0.505    0.046
+ core/be/be_mem/dcache_data[19]    0.886    0.033
+ io_cmd_o[17]              0.868     0.016
+ Propagated:
+ core/be/be_mem/dcache/U328/QN        -        -
+ Total:                    0.543     0.416    -0.116
+
+ core/be/be_mem/dcache/icc_place182/INP (core/be/be_mem/dcache/data_mem_addr_li[4])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_li[425]    0.346    0.132
+ core/be/be_mem/dcache/data_mem_mask_li[0]    0.556    0.079
+ core/be/be_mem/dcache/data_mem_data_li[424]    0.340    0.052
+ core/be/be_mem/dcache/data_mem_mask_li[6]    0.632    0.028
+ core/be/be_mem/dcache/n915    0.456    0.028
+ core/be/be_mem/dcache/data_mem_data_lo[497]    0.354    0.020
+ core/be/be_mem/dcache/data_mem_0__data_mem/n26    0.385    0.021
+ core/be/be_mem/dcache/n1196    0.335    0.016
+ core/be/be_mem/dcache/data_mem_data_lo[390]    0.303    0.015
+ core/be/be_mem/dcache/data_mem_data_lo[430]    0.308    0.013
+ core/be/be_mem/dcache/data_mem_data_lo[387]    0.211    0.023
+ Propagated:
+ core/be/be_mem/dcache/U1863/Q        -        -
+ Total:                    0.405     0.414    -0.114
+
+ core/be/be_mem/ptw/dcache_data_reg/U62/IN1 (core/be/be_mem/dcache_data[10])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[8]    0.480    0.174
+ core/be/be_mem/dcache_pkt[78]    0.568    0.130
+ core/be/be_mem/dcache_data[46]    0.486    0.064
+ core/be/be_mem/dcache_pkt[52]    0.453    0.045
+ core/be/be_mem/dcache_data[24]    0.900    0.027
+ Propagated:
+ core/be/be_mem/dcache/U1914/QN        -        -
+ Total:                    0.506     0.413    -0.113
+
+ core/be/be_mem/U311/IN2 (core/be/be_mem/dcache_data[10])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[8]    0.480    0.174
+ core/be/be_mem/dcache_pkt[78]    0.568    0.130
+ core/be/be_mem/dcache_data[46]    0.486    0.064
+ core/be/be_mem/dcache_pkt[52]    0.453    0.045
+ core/be/be_mem/dcache_data[24]    0.900    0.027
+ Propagated:
+ core/be/be_mem/dcache/U1914/QN        -        -
+ Total:                    0.506     0.413    -0.113
+
+ core/be/be_mem/ptw/dcache_data_reg/U56/IN1 (core/be/be_mem/dcache_data[19])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[34]    0.530    0.203
+ core/be/be_mem/dcache_pkt[51]    0.513    0.088
+ core/be/be_mem/dcache_pkt[40]    0.480    0.043
+ core/be/be_mem/dcache_data[30]    0.883    0.033
+ core/be/be_mem/dcache_ptag[2]    0.491    0.024
+ tag_mem_pkt_li[49]        0.573     0.021
+ Propagated:
+ core/be/be_mem/dcache/U332/QN        -        -
+ Total:                    0.549     0.413    -0.113
+
+ core/be/be_mem/U320/IN2 (core/be/be_mem/dcache_data[19])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[34]    0.530    0.203
+ core/be/be_mem/dcache_pkt[51]    0.513    0.088
+ core/be/be_mem/dcache_pkt[40]    0.480    0.043
+ core/be/be_mem/dcache_data[30]    0.883    0.033
+ core/be/be_mem/dcache_ptag[2]    0.491    0.024
+ tag_mem_pkt_li[49]        0.573     0.021
+ Propagated:
+ core/be/be_mem/dcache/U332/QN        -        -
+ Total:                    0.549     0.413    -0.113
+
+ io_cmd_o[233] (io_cmd_o[233])
+ Aggressors:
+ io_resp_i[419]            0.008     0.193
+ mem_resp_i[419]           0.008     0.190
+ mem_resp_i[266]           0.008     0.158
+ mem_resp_i[326]           0.008     0.050
+ io_resp_i[462]            0.008     0.030
+ Propagated:
+ U4407/ZN                      -         -
+ Total:                    0.008     0.592    -0.112
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place94/INP (core/be/be_mem/dcache/n1634)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n266    0.262    0.149
+ core/be/be_mem/dcache/data_mem_data_lo[454]    0.216    0.081
+ core/be/be_mem/dcache/data_mem_4__data_mem/n282    0.219    0.071
+ core/be/be_mem/dcache/data_mem_7__data_mem/n316    0.227    0.068
+ core/be/be_mem/dcache/ld_data_way_picked[1]    0.330    0.020
+ core/be/be_mem/dcache/n2546    0.274    0.021
+ Propagated:
+ core/be/be_mem/dcache/U1330/Q        -        -
+ Total:                    0.244     0.411    -0.111
+
+ core/fe/mem/icache/icc_place64/INP (core/fe/mem/icache/data_mem_addr_li[1])
+ Aggressors:
+ core/fe/mem/icache/data_mem_data_lo[352]    0.255    0.097
+ core/fe/mem/icache/n1862    0.285    0.066
+ core/fe/mem/icache/data_mems_5__data_mem/n25    0.311    0.058
+ core/fe/mem/icache/ld_data_way_picked[5]    0.306    0.056
+ core/fe/mem/icache/data_mems_5__data_mem/n67    0.294    0.045
+ core/fe/mem/icache/ld_data_way_picked[1]    0.294    0.032
+ core/fe/mem/icache/data_mems_5__data_mem/n77    0.315    0.020
+ core/fe/mem/icache/data_mems_5__data_mem/n285    0.271    0.021
+ core/fe/mem/icache/data_mems_0__data_mem/n280    0.315    0.015
+ core/fe/mem/icache/ld_data_way_picked[10]    0.356    0.010
+ Propagated:
+ core/fe/mem/icache/U987/Q        -        -
+ Total:                    0.288     0.410    -0.110
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place68/INP (core/be/be_mem/dcache/n2504)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n76    0.264    0.152
+ core/be/be_mem/dcache/data_mem_4__data_mem/n49    0.253    0.114
+ core/be/be_mem/dcache/n1587    0.422    0.040
+ core/be/be_mem/dcache/n2650    0.339    0.037
+ core/be/be_mem/dcache/data_mem_4__data_mem/n21    0.222    0.036
+ core/be/be_mem/dcache/n1691    0.208    0.030
+ core/be/be_mem/dcache/n2531    0.198    0.030
+ Propagated:
+ core/be/be_mem/dcache/U1524/Q        -        -
+ Total:                    0.274     0.410    -0.110
+
+ core/be/be_mem/dcache/icc_place181/INP (core/be/be_mem/dcache/data_mem_addr_li[4])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_li[425]    0.324    0.130
+ core/be/be_mem/dcache/data_mem_mask_li[0]    0.533    0.075
+ core/be/be_mem/dcache/data_mem_data_li[424]    0.318    0.051
+ core/be/be_mem/dcache/data_mem_mask_li[6]    0.609    0.027
+ core/be/be_mem/dcache/n915    0.432    0.027
+ core/be/be_mem/dcache/data_mem_data_lo[497]    0.333    0.021
+ core/be/be_mem/dcache/data_mem_0__data_mem/n26    0.362    0.020
+ core/be/be_mem/dcache/n1196    0.312    0.016
+ core/be/be_mem/dcache/data_mem_data_lo[390]    0.224    0.021
+ core/be/be_mem/dcache/data_mem_data_lo[430]    0.195    0.023
+ core/be/be_mem/dcache/data_mem_data_lo[387]    0.302    0.012
+ Propagated:
+ core/be/be_mem/dcache/U1863/Q        -        -
+ Total:                    0.377     0.410    -0.110
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place43/INP (core/be/be_mem/dcache/n1587)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n39    0.278    0.173
+ core/be/be_mem/dcache/data_mem_4__data_mem/n231    0.200    0.066
+ core/be/be_mem/dcache/data_mem_4__data_mem/n21    0.250    0.053
+ core/be/be_mem/dcache/n2504    0.388    0.043
+ core/be/be_mem/dcache/data_mem_4__data_mem/n49    0.274    0.047
+ core/be/be_mem/dcache/data_mem_7__data_mem/n74    0.283    0.027
+ Propagated:
+ core/be/be_mem/dcache/U1306/Q        -        -
+ Total:                    0.273     0.410    -0.110
+
+ core/fe/mem/icache/U1193/IN1 (core/fe/mem/icache/ld_data_tv_r[350])
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n301    0.212    0.105
+ core/fe/mem/icache/data_mems_4__data_mem/n170    0.309    0.079
+ core/fe/mem/icache/data_mems_7__data_mem/n5    0.205    0.100
+ core/fe/mem/icache/data_mems_4__data_mem/n289    0.197    0.048
+ core/fe/mem/icache/n1871    0.331    0.020
+ core/fe/mem/icache/data_mems_5__data_mem/n33    0.291    0.020
+ core/fe/mem/icache/n1841    0.209    0.020
+ core/fe/mem/icache/n1685    0.463    0.012
+ core/fe/mem/icache/data_set_select_mux/n12    0.223    0.017
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__30_/Q        -        -
+ Total:                    0.237     0.409    -0.109
+
+ core/be/be_mem/dcache/U2874/IN1 (core/be/be_mem/dcache/n1014)
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[223]    0.065    0.122
+ core/be/be_mem/dcache/n1007    0.138    0.080
+ core/be/be_mem/dcache/tag_mem_data_lo[224]    0.066    0.067
+ core/be/be_mem/dcache/tag_mem_data_lo[236]    0.068    0.057
+ core/be/be_mem/dcache/tag_mem_data_lo[181]    0.060    0.039
+ core/be/be_mem/dcache/tag_mem_data_lo[128]    0.052    0.039
+ Propagated:
+ core/be/be_mem/dcache/U2870/Q        -        -
+ Total:                    0.078     0.404    -0.104
+
+ core/fe/mem/icache/data_set_select_mux/U127/IN2 (core/fe/mem/icache/data_set_select_mux/n95)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n14    0.320    0.199
+ core/fe/mem/icache/data_set_select_mux/n71    0.421    0.086
+ core/fe/mem/icache/data_mem_addr_li[3]    0.527    0.052
+ core/fe/mem/icache/n1431    0.484    0.027
+ core/fe/mem/icache/data_set_select_mux/n302    0.229    0.022
+ core/fe/mem/icache/data_mem_data_li[196]    0.225    0.017
+ core/fe/mem/icache/data_mems_4__data_mem/n22    0.285    0.011
+ Propagated:
+ core/fe/mem/icache/data_set_select_mux/U124/Q        -        -
+ Total:                    0.370     0.403    -0.103
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_clock71/INP (core/fe/mem/icache/data_mems_2__data_mem/n45)
+ Aggressors:
+ core/fe/mem/icache/data_mems_2__data_mem/n49    0.756    0.123
+ core/fe/mem/icache/tag_mem/n62    0.292    0.052
+ core/fe/mem/icache/tag_mem/n17    0.302    0.049
+ core/fe/mem/icache/tag_mem/n82    0.295    0.041
+ core/fe/mem/icache/tag_mem/n129    0.296    0.038
+ core/fe/mem/icache/tag_mem/n116    0.299    0.037
+ core/fe/mem/icache/tag_mem/n80    0.292    0.035
+ core/fe/mem/icache/tag_mem/n124    0.301    0.028
+ core/fe/mem/icache/tag_mem/n78    0.294    0.015
+ Propagated:
+ core/fe/mem/icache/data_mems_2__data_mem/icc_clock26/ZN        -        -
+ Total:                    0.437     0.402    -0.102
+
+ core/be/be_mem/U321/IN2 (core/be/be_mem/dcache_data[20])
+ Aggressors:
+ core/be/be_mem/dcache_data[24]    0.981    0.120
+ tag_mem_pkt_li[63]        0.611     0.074
+ core/be/be_mem/dcache_data[46]    0.537    0.037
+ core/be/be_mem/dcache_pkt[42]    0.537    0.037
+ core/be/be_mem/dcache_pkt[64]    0.476    0.029
+ core/be/be_mem/dcache_pkt[9]    0.536    0.027
+ core/be/mmu_cmd[48]       0.370     0.031
+ core/be/be_mem/dcache_pkt[78]    0.602    0.025
+ tag_mem_pkt_li[42]        0.599     0.022
+ Propagated:
+ core/be/be_mem/dcache/U403/QN        -        -
+ Total:                    0.673     0.402    -0.102
+
+ core/be/be_mem/ptw/dcache_data_reg/U8/IN1 (core/be/be_mem/dcache_data[20])
+ Aggressors:
+ core/be/be_mem/dcache_data[24]    0.981    0.120
+ tag_mem_pkt_li[63]        0.611     0.074
+ core/be/be_mem/dcache_data[46]    0.537    0.037
+ core/be/be_mem/dcache_pkt[42]    0.537    0.037
+ core/be/be_mem/dcache_pkt[64]    0.476    0.029
+ core/be/be_mem/dcache_pkt[9]    0.536    0.027
+ core/be/mmu_cmd[48]       0.370     0.031
+ core/be/be_mem/dcache_pkt[78]    0.602    0.025
+ tag_mem_pkt_li[42]        0.599     0.022
+ Propagated:
+ core/be/be_mem/dcache/U403/QN        -        -
+ Total:                    0.673     0.402    -0.102
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place2/INP (core/be/be_mem/dcache/data_mem_1__data_mem/n611)
+ Aggressors:
+ SYNOPSYS_UNCONNECTED_95    0.061    0.076
+ core/be/be_mem/dcache/tag_mem_data_lo[133]    0.058    0.049
+ SYNOPSYS_UNCONNECTED_71    0.040    0.092
+ core/be/be_mem/dcache/tag_mem_data_lo[147]    0.060    0.034
+ SYNOPSYS_UNCONNECTED_68    0.062    0.037
+ SYNOPSYS_UNCONNECTED_103    0.057    0.040
+ SYNOPSYS_UNCONNECTED_49    0.048    0.051
+ core/be/be_checker/scheduler/int_regfile/rs2_reg_data[3]    0.055    0.021
+ core/be/n87               0.195     0.010
+ core/be/be_checker/scheduler/int_regfile/n125    0.107    0.012
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place72/Z        -        -
+ Total:                    0.054     0.401    -0.101
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_clock48/INP (core/fe/mem/icache/data_mems_2__data_mem/n39)
+ Aggressors:
+ core/fe/mem/icache/data_mems_1__data_mem/n589    0.379    0.221
+ core/fe/mem/icache/n47    0.317     0.158
+ core/fe/mem/icache/tag_mem_data_li[11]    0.288    0.021
+ Propagated:
+ core/fe/mem/icache/data_mems_2__data_mem/icc_clock49/ZN        -        -
+ Total:                    0.350     0.400    -0.100
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U104/IN1 (core/be/be_mem/dcache/data_mem_data_lo[96])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[84]    0.160    0.105
+ core/be/be_mem/dcache/data_mem_data_lo[350]    0.093    0.132
+ core/be/be_mem/dcache/data_mem_data_lo[286]    0.099    0.092
+ core/be/be_mem/dcache/data_mem_data_lo[102]    0.180    0.014
+ core/be/be_mem/dcache/data_mem_data_lo[66]    0.140    0.018
+ core/be/be_mem/dcache/data_mem_data_lo[293]    0.115    0.034
+ core/be/be_mem/dcache/data_mem_data_lo[119]    0.159    0.005
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[32]        -        -
+ Total:                    0.119     0.395    -0.095
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U36/IN2 (core/be/be_mem/dcache/data_mem_data_lo[96])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[84]    0.160    0.105
+ core/be/be_mem/dcache/data_mem_data_lo[350]    0.093    0.132
+ core/be/be_mem/dcache/data_mem_data_lo[286]    0.099    0.092
+ core/be/be_mem/dcache/data_mem_data_lo[102]    0.180    0.014
+ core/be/be_mem/dcache/data_mem_data_lo[66]    0.140    0.018
+ core/be/be_mem/dcache/data_mem_data_lo[293]    0.115    0.034
+ core/be/be_mem/dcache/data_mem_data_lo[119]    0.159    0.005
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[32]        -        -
+ Total:                    0.119     0.395    -0.095
+
+ core/be/be_mem/dcache/U2311/IN2 (core/be/be_mem/dcache/data_mem_data_lo[96])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[84]    0.160    0.105
+ core/be/be_mem/dcache/data_mem_data_lo[350]    0.093    0.132
+ core/be/be_mem/dcache/data_mem_data_lo[286]    0.099    0.092
+ core/be/be_mem/dcache/data_mem_data_lo[102]    0.180    0.014
+ core/be/be_mem/dcache/data_mem_data_lo[66]    0.140    0.018
+ core/be/be_mem/dcache/data_mem_data_lo[293]    0.115    0.034
+ core/be/be_mem/dcache/data_mem_data_lo[119]    0.159    0.005
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[32]        -        -
+ Total:                    0.119     0.394    -0.094
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U131/IN2 (core/be/be_mem/dcache/data_mem_data_lo[57])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[510]    0.085    0.276
+ core/be/be_mem/dcache/data_mem_0__data_mem/n74    0.108    0.041
+ core/be/be_mem/dcache/data_mem_data_lo[46]    0.134    0.023
+ core/be/be_mem/dcache/data_mem_data_lo[25]    0.112    0.018
+ core/be/be_mem/dcache/data_mem_data_lo[247]    0.121    0.020
+ core/be/be_mem/dcache/data_mem_7__data_mem/n13    0.106    0.015
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[57]        -        -
+ Total:                    0.094     0.393    -0.093
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U63/IN1 (core/be/be_mem/dcache/data_mem_data_lo[57])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[510]    0.085    0.276
+ core/be/be_mem/dcache/data_mem_0__data_mem/n74    0.108    0.041
+ core/be/be_mem/dcache/data_mem_data_lo[46]    0.134    0.023
+ core/be/be_mem/dcache/data_mem_data_lo[25]    0.112    0.018
+ core/be/be_mem/dcache/data_mem_data_lo[247]    0.121    0.020
+ core/be/be_mem/dcache/data_mem_7__data_mem/n13    0.106    0.015
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[57]        -        -
+ Total:                    0.094     0.393    -0.093
+
+ core/be/be_mem/dcache/U2269/IN2 (core/be/be_mem/dcache/data_mem_data_lo[57])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[510]    0.085    0.276
+ core/be/be_mem/dcache/data_mem_0__data_mem/n74    0.108    0.040
+ core/be/be_mem/dcache/data_mem_data_lo[46]    0.134    0.023
+ core/be/be_mem/dcache/data_mem_data_lo[25]    0.112    0.018
+ core/be/be_mem/dcache/data_mem_data_lo[247]    0.121    0.020
+ core/be/be_mem/dcache/data_mem_7__data_mem/n13    0.105    0.015
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[57]        -        -
+ Total:                    0.094     0.393    -0.093
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U12/IN1 (core/be/be_mem/dcache/data_mem_data_lo[10])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[12]    0.195    0.144
+ core/be/be_mem/dcache/data_mem_data_lo[28]    0.148    0.016
+ core/be/be_mem/dcache/data_mem_data_lo[277]    0.105    0.068
+ core/be/be_mem/dcache/data_mem_data_lo[264]    0.076    0.100
+ core/be/be_mem/dcache/data_mem_4__data_mem/n181    0.131    0.024
+ core/be/be_mem/dcache/data_mem_data_lo[74]    0.153    0.020
+ core/be/be_mem/dcache/data_mem_data_lo[293]    0.096    0.019
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[10]        -        -
+ Total:                    0.136     0.392    -0.092
+
+ core/be/be_mem/dcache/U2217/IN2 (core/be/be_mem/dcache/data_mem_data_lo[10])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[12]    0.195    0.144
+ core/be/be_mem/dcache/data_mem_data_lo[28]    0.148    0.016
+ core/be/be_mem/dcache/data_mem_data_lo[277]    0.105    0.068
+ core/be/be_mem/dcache/data_mem_data_lo[264]    0.076    0.100
+ core/be/be_mem/dcache/data_mem_4__data_mem/n181    0.131    0.024
+ core/be/be_mem/dcache/data_mem_data_lo[74]    0.153    0.020
+ core/be/be_mem/dcache/data_mem_data_lo[293]    0.096    0.019
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[10]        -        -
+ Total:                    0.136     0.392    -0.092
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U81/IN2 (core/be/be_mem/dcache/data_mem_data_lo[10])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[12]    0.195    0.144
+ core/be/be_mem/dcache/data_mem_data_lo[28]    0.148    0.016
+ core/be/be_mem/dcache/data_mem_data_lo[277]    0.105    0.068
+ core/be/be_mem/dcache/data_mem_data_lo[264]    0.076    0.100
+ core/be/be_mem/dcache/data_mem_4__data_mem/n181    0.131    0.024
+ core/be/be_mem/dcache/data_mem_data_lo[74]    0.153    0.020
+ core/be/be_mem/dcache/data_mem_data_lo[293]    0.096    0.019
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[10]        -        -
+ Total:                    0.136     0.392    -0.092
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place230/INP (core/be/be_mem/dcache/n2599)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n25    0.246    0.191
+ core/be/be_mem/dcache/data_mem_7__data_mem/n72    0.264    0.130
+ core/be/be_mem/dcache/data_mem_4__data_mem/n23    0.214    0.057
+ core/be/be_mem/dcache/n2779    0.396    0.012
+ core/be/be_mem/dcache/n2595    0.273    0.013
+ Propagated:
+ core/be/be_mem/dcache/U1717/Q        -        -
+ Total:                    0.248     0.392    -0.092
+
+ core/be/be_mem/ptw/dcache_data_reg/U5/IN1 (core/be/be_mem/dcache_data[12])
+ Aggressors:
+ core/be/be_mem/dcache_data[13]    0.768    0.156
+ core/be/be_mem/dcache_data[32]    0.571    0.162
+ core/be/be_mem/dcache_pkt[36]    0.534    0.028
+ core/be/mem_resp[40]      0.447     0.026
+ core/be/be_mem/dcache_pkt_v    0.461    0.019
+ Propagated:
+ core/be/be_mem/dcache/U1922/QN        -        -
+ Total:                    0.633     0.391    -0.091
+
+ core/be/be_mem/U313/IN2 (core/be/be_mem/dcache_data[12])
+ Aggressors:
+ core/be/be_mem/dcache_data[13]    0.768    0.156
+ core/be/be_mem/dcache_data[32]    0.570    0.162
+ core/be/be_mem/dcache_pkt[36]    0.534    0.028
+ core/be/mem_resp[40]      0.447     0.026
+ core/be/be_mem/dcache_pkt_v    0.461    0.019
+ Propagated:
+ core/be/be_mem/dcache/U1922/QN        -        -
+ Total:                    0.633     0.391    -0.091
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_clock12/INP (core/be/be_mem/dcache/n2656)
+ Aggressors:
+ core/be/be_mem/dcache/final_data[11]    0.441    0.059
+ core/be/be_mem/dcache/ld_data_way_picked[57]    0.435    0.054
+ core/be/be_mem/dcache/data_mem_3__data_mem/n344    0.293    0.058
+ core/be/be_mem/dcache/n2751    0.436    0.044
+ core/be/be_mem/dcache/data_mem_data_li[443]    0.243    0.043
+ core/be/be_mem/dcache/ld_data_way_picked[62]    0.424    0.024
+ core/be/be_mem/dcache/data_mem_data_lo[377]    0.198    0.036
+ core/be/be_mem/dcache/n2664    0.544    0.018
+ core/be/be_mem/dcache/n2667    0.503    0.018
+ core/be/be_mem/dcache/data_mem_0__data_mem/n724    0.309    0.021
+ core/be/be_mem/dcache/n2755    0.379    0.013
+ core/be/be_mem/dcache/wbuf/n221    0.298    0.011
+ core/be/be_mem/dcache/read_mux_butterfly/data_stage_1__507_    0.266    0.012
+ Propagated:
+ core/be/be_mem/dcache/U1743/Q        -        -
+ Total:                    0.371     0.389    -0.089
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place72/INP (core/be/be_mem/dcache/n1613)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n55    0.254    0.109
+ core/be/be_mem/dcache/data_mem_5__data_mem/n69    0.224    0.103
+ core/be/be_mem/dcache/n1604    0.443    0.033
+ core/be/be_mem/dcache/n2593    0.314    0.038
+ core/be/be_mem/dcache/data_mem_7__data_mem/n126    0.251    0.041
+ core/be/be_mem/dcache/data_mem_data_lo[264]    0.163    0.033
+ core/be/be_mem/dcache/data_mem_data_lo[455]    0.165    0.033
+ Propagated:
+ core/be/be_mem/dcache/U1311/Q        -        -
+ Total:                    0.252     0.389    -0.089
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place18/INP (core/be/be_mem/dcache/n1616)
+ Aggressors:
+ core/be/be_mem/dcache/n1619    0.472    0.097
+ core/be/be_mem/dcache/data_mem_7__data_mem/n106    0.254    0.095
+ core/be/be_mem/dcache/data_mem_7__data_mem/n22    0.248    0.090
+ core/be/be_mem/dcache/ld_data_way_picked[12]    0.306    0.059
+ core/be/be_mem/dcache/data_mem_4__data_mem/n101    0.249    0.047
+ Propagated:
+ core/be/be_mem/dcache/U1316/Q        -        -
+ Total:                    0.315     0.388    -0.088
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_clock16/INP (core/be/be_mem/dcache/data_mem_1__data_mem/n436)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[193]    0.300    0.206
+ core/be/be_mem/dcache/n2720    0.561    0.126
+ core/be/be_mem/dcache/n917    0.324    0.029
+ core/be/be_mem/dcache/read_mux_butterfly/data_stage_1__65_    0.301    0.026
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place85/ZN        -        -
+ Total:                    0.387     0.387    -0.087
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place40/INP (core/be/be_mem/dcache/n2526)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n80    0.264    0.126
+ core/be/be_mem/dcache/data_mem_5__data_mem/n63    0.222    0.090
+ core/be/be_mem/dcache/data_mem_7__data_mem/n120    0.264    0.057
+ core/be/be_mem/dcache/n1626    0.485    0.043
+ core/be/be_mem/dcache/data_mem_7__data_mem/n52    0.285    0.047
+ core/be/be_mem/dcache/n2511    0.207    0.024
+ Propagated:
+ core/be/be_mem/dcache/U1532/Q        -        -
+ Total:                    0.278     0.387    -0.087
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place32/INP (core/be/be_mem/dcache/n2532)
+ Aggressors:
+ core/be/be_mem/dcache/n1607    0.514    0.108
+ core/be/be_mem/dcache/data_mem_5__data_mem/n91    0.234    0.090
+ core/be/be_mem/dcache/n1631    0.487    0.050
+ core/be/be_mem/dcache/data_mem_data_lo[459]    0.171    0.061
+ core/be/be_mem/dcache/data_mem_4__data_mem/n115    0.272    0.026
+ core/be/be_mem/dcache/data_mem_7__data_mem/n134    0.241    0.027
+ core/be/be_mem/dcache/n2511    0.224    0.024
+ Propagated:
+ core/be/be_mem/dcache/U1531/Q        -        -
+ Total:                    0.337     0.386    -0.086
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_place28/INP (core/fe/mem/icache/n419)
+ Aggressors:
+ core/fe/mem/icache/data_mems_0__data_mem/n36    0.300    0.223
+ core/fe/mem/icache/data_mem_data_li[511]    0.202    0.058
+ core/fe/mem/icache/n442    0.373    0.033
+ core/fe/mem/icache/n423    0.348    0.025
+ core/fe/mem/icache/data_mems_1__data_mem/n556    0.220    0.029
+ core/fe/mem/icache/n1622    0.488    0.016
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U164/Q        -        -
+ Total:                    0.296     0.384    -0.084
+
+ io_cmd_o[339] (io_cmd_o[339])
+ Aggressors:
+ io_resp_i[343]            0.007     0.389
+ mem_resp_i[409]           0.007     0.172
+ Propagated:
+ U4619/ZN                      -         -
+ Total:                    0.007     0.562    -0.082
+
+ core/fe/mem/icache/data_mems_5__data_mem/icc_place69/INP (core/fe/mem/icache/n1499)
+ Aggressors:
+ core/fe/mem/icache/data_mems_5__data_mem/n4    0.223    0.143
+ core/fe/mem/icache/data_mem_data_li[204]    0.180    0.117
+ core/fe/mem/icache/ld_data_tv_r[372]    0.562    0.031
+ core/fe/mem/icache/n1517    0.199    0.045
+ core/fe/mem/icache/clk_i_G1B4I73    0.190    0.032
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__22_    0.204    0.025
+ core/fe/mem/icache/n1527    0.186    0.023
+ core/fe/mem/icache/data_mems_5__data_mem/n47    0.269    0.016
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U387/Q        -        -
+ Total:                    0.218     0.382    -0.082
+
+ core/fe/mem/icache/icc_place91/INP (core/fe/mem/icache/data_mem_addr_li[1])
+ Aggressors:
+ core/fe/mem/icache/data_mem_data_lo[352]    0.271    0.075
+ core/fe/mem/icache/n1862    0.270    0.064
+ core/fe/mem/icache/data_mems_5__data_mem/n25    0.294    0.057
+ core/fe/mem/icache/ld_data_way_picked[5]    0.290    0.055
+ core/fe/mem/icache/data_mems_5__data_mem/n67    0.278    0.044
+ core/fe/mem/icache/ld_data_way_picked[1]    0.277    0.031
+ core/fe/mem/icache/data_mems_5__data_mem/n77    0.299    0.019
+ core/fe/mem/icache/data_mems_5__data_mem/n285    0.255    0.020
+ core/fe/mem/icache/data_mems_0__data_mem/n280    0.299    0.015
+ core/fe/mem/icache/ld_data_way_picked[10]    0.339    0.009
+ Propagated:
+ core/fe/mem/icache/U987/Q        -        -
+ Total:                    0.280     0.381    -0.081
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U2286/IN4 (core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n5308)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2194]    0.370    0.077
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2076]    0.393    0.074
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2359    0.410    0.048
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n4505    0.420    0.042
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2734    0.368    0.044
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2263    0.420    0.035
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2255]    0.411    0.023
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[3122]    0.409    0.020
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[3056]    0.427    0.018
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n5432    0.410    0.016
+ Propagated:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U2285/QN        -        -
+ Total:                    0.397     0.381    -0.081
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U933/IN1 (core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3939)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3751    0.300    0.181
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1610    0.287    0.122
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1496    0.297    0.042
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[965]    0.300    0.018
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1509]    0.277    0.016
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[473]    0.269    0.012
+ Propagated:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U917/QN        -        -
+ Total:                    0.294     0.380    -0.080
+
+ core/be/be_mem/ptw/dcache_data_reg/U66/IN1 (core/be/be_mem/dcache_data[6])
+ Aggressors:
+ core/be/be_mem/dcache_data[52]    0.582    0.178
+ core/be/be_mem/dcache_data[36]    0.493    0.084
+ core/be/be_mem/dcache_data[43]    0.551    0.049
+ core/be/be_mem/dcache_data[4]    0.786    0.032
+ uce_1__uce/dirty_tag_r[5]    0.503    0.020
+ core/be/be_mem/dcache/n1720    0.456    0.016
+ Propagated:
+ core/be/be_mem/dcache/U1897/QN        -        -
+ Total:                    0.566     0.379    -0.079
+
+ core/be/be_mem/U306/IN2 (core/be/be_mem/dcache_data[6])
+ Aggressors:
+ core/be/be_mem/dcache_data[52]    0.582    0.178
+ core/be/be_mem/dcache_data[36]    0.493    0.084
+ core/be/be_mem/dcache_data[43]    0.551    0.049
+ core/be/be_mem/dcache_data[4]    0.786    0.032
+ uce_1__uce/dirty_tag_r[5]    0.503    0.020
+ core/be/be_mem/dcache/n1720    0.456    0.016
+ Propagated:
+ core/be/be_mem/dcache/U1897/QN        -        -
+ Total:                    0.566     0.379    -0.079
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U117/IN2 (core/be/be_mem/dcache/data_mem_data_lo[44])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[300]    0.127    0.241
+ core/be/be_mem/dcache/data_mem_data_lo[305]    0.143    0.121
+ core/be/be_mem/dcache/data_mem_data_lo[43]    0.183    0.017
+ core/be/be_mem/dcache/data_mem_data_lo[45]    0.236    0.013
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[44]        -        -
+ Total:                    0.134     0.379    -0.079
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U49/IN1 (core/be/be_mem/dcache/data_mem_data_lo[44])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[300]    0.127    0.241
+ core/be/be_mem/dcache/data_mem_data_lo[305]    0.143    0.121
+ core/be/be_mem/dcache/data_mem_data_lo[43]    0.183    0.017
+ core/be/be_mem/dcache/data_mem_data_lo[45]    0.236    0.013
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[44]        -        -
+ Total:                    0.134     0.379    -0.079
+
+ core/be/be_mem/dcache/U2255/IN2 (core/be/be_mem/dcache/data_mem_data_lo[44])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[300]    0.127    0.241
+ core/be/be_mem/dcache/data_mem_data_lo[305]    0.143    0.121
+ core/be/be_mem/dcache/data_mem_data_lo[43]    0.183    0.017
+ core/be/be_mem/dcache/data_mem_data_lo[45]    0.235    0.013
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[44]        -        -
+ Total:                    0.134     0.379    -0.079
+
+ mem_cmd_o[374] (mem_cmd_o[374])
+ Aggressors:
+ mem_resp_i[206]           0.006     0.233
+ mem_resp_i[236]           0.006     0.149
+ io_resp_i[206]            0.006     0.088
+ io_resp_i[202]            0.006     0.087
+ Propagated:
+ U3777/ZN                      -         -
+ Total:                    0.006     0.557    -0.077
+
+ core/fe/mem/icache/data_set_select_mux/U314/IN4 (core/fe/mem/icache/ld_data_tv_r[372])
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n92    0.286    0.131
+ core/fe/mem/icache/ld_data_tv_r[339]    0.604    0.043
+ core/fe/mem/icache/data_set_select_mux/n312    0.273    0.061
+ core/fe/mem/icache/n1499    0.449    0.036
+ core/fe/mem/icache/data_mems_5__data_mem/n39    0.313    0.027
+ core/fe/mem/icache/data_mems_5__data_mem/n65    0.337    0.025
+ core/fe/mem/icache/n1673    0.457    0.018
+ core/fe/mem/icache/data_mems_4__data_mem/n265    0.258    0.021
+ core/fe/mem/icache/data_mems_4__data_mem/n284    0.257    0.019
+ core/fe/mem/icache/n1456    0.401    0.013
+ core/fe/mem/icache/data_mem_data_li[204]    0.255    0.016
+ core/fe/mem/icache/data_set_select_mux/n67    0.439    0.012
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__52_/Q        -        -
+ Total:                    0.332     0.377    -0.077
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place39/INP (core/be/be_mem/dcache/n1598)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n21    0.276    0.157
+ core/be/be_mem/dcache/n2609    0.396    0.057
+ core/be/be_mem/dcache/data_mem_4__data_mem/n296    0.224    0.060
+ core/be/be_mem/dcache/data_mem_7__data_mem/n76    0.299    0.024
+ core/be/be_mem/dcache/n2528    0.240    0.025
+ core/be/be_mem/dcache/data_mem_7__data_mem/n86    0.266    0.021
+ core/be/be_mem/dcache/data_mem_7__data_mem/n345    0.225    0.017
+ core/be/be_mem/dcache/data_mem_4__data_mem/n107    0.260    0.014
+ core/be/be_mem/dcache/data_mem_4__data_mem/n181    0.223    0.014
+ Propagated:
+ core/be/be_mem/dcache/U1307/Q        -        -
+ Total:                    0.280     0.375    -0.075
+
+ core/be/be_mem/ptw/dcache_data_reg/U54/IN1 (core/be/be_mem/dcache_data[25])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[8]    0.485    0.162
+ core/be/mmu_cmd[31]       0.328     0.073
+ core/be/be_mem/dcache_pkt[40]    0.457    0.060
+ mem_cmd_lo[78]            0.448     0.040
+ mem_cmd_lo[73]            0.407     0.039
+ core/be/be_mem/csr/n875    0.829    0.013
+ Propagated:
+ core/be/be_mem/dcache/U315/QN        -        -
+ Total:                    0.438     0.375    -0.075
+
+ core/be/be_mem/U327/IN2 (core/be/be_mem/dcache_data[25])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[8]    0.485    0.162
+ core/be/mmu_cmd[31]       0.328     0.073
+ core/be/be_mem/dcache_pkt[40]    0.457    0.060
+ mem_cmd_lo[78]            0.448     0.040
+ mem_cmd_lo[73]            0.407     0.039
+ core/be/be_mem/csr/n875    0.829    0.013
+ Propagated:
+ core/be/be_mem/dcache/U315/QN        -        -
+ Total:                    0.438     0.375    -0.075
+
+ core/be/be_mem/ptw/dcache_data_reg/U55/IN1 (core/be/be_mem/dcache_data[24])
+ Aggressors:
+ core/be/be_mem/dcache_data[20]    0.988    0.119
+ core/be/be_mem/csr/add_x_7/n182    0.419    0.053
+ core/be/be_mem/dcache_data[46]    0.539    0.040
+ core/be/be_mem/dcache_data[10]    0.687    0.037
+ tag_mem_pkt_li[63]        0.607     0.038
+ core/be/be_mem/dcache_pkt[52]    0.509    0.039
+ core/be/be_mem/dcache_pkt[64]    0.478    0.029
+ mem_cmd_lo[64]            0.477     0.017
+ Propagated:
+ core/be/be_mem/dcache/U326/QN        -        -
+ Total:                    0.677     0.372    -0.072
+
+ core/be/be_mem/U326/IN2 (core/be/be_mem/dcache_data[24])
+ Aggressors:
+ core/be/be_mem/dcache_data[20]    0.988    0.119
+ core/be/be_mem/csr/add_x_7/n182    0.419    0.053
+ core/be/be_mem/dcache_data[46]    0.539    0.040
+ core/be/be_mem/dcache_data[10]    0.687    0.037
+ tag_mem_pkt_li[63]        0.607     0.038
+ core/be/be_mem/dcache_pkt[52]    0.508    0.039
+ core/be/be_mem/dcache_pkt[64]    0.478    0.029
+ mem_cmd_lo[64]            0.477     0.017
+ Propagated:
+ core/be/be_mem/dcache/U326/QN        -        -
+ Total:                    0.677     0.372    -0.072
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place29/INP (core/be/be_mem/dcache/n1596)
+ Aggressors:
+ core/be/be_mem/dcache/n1622    0.388    0.064
+ core/be/be_mem/dcache/data_mem_5__data_mem/n39    0.194    0.079
+ core/be/be_mem/dcache/data_mem_5__data_mem/n89    0.199    0.056
+ core/be/be_mem/dcache/data_mem_4__data_mem/n95    0.196    0.044
+ core/be/be_mem/dcache/data_mem_data_lo[262]    0.136    0.040
+ core/be/be_mem/dcache/n2503    0.180    0.028
+ core/be/be_mem/dcache/data_mem_5__data_mem/n47    0.188    0.023
+ core/be/be_mem/dcache/data_mem_7__data_mem/n128    0.209    0.018
+ core/be/be_mem/dcache/n1490    0.177    0.019
+ Propagated:
+ core/be/be_mem/dcache/U1308/Q        -        -
+ Total:                    0.221     0.371    -0.071
+
+ core/be/be_mem/U362/IN2 (core/be/be_mem/dcache_data[58])
+ Aggressors:
+ core/be/be_mem/dcache_data[60]    0.342    0.148
+ core/be/be_mem/dcache_pkt[31]    0.344    0.112
+ core/be/mmu_cmd[37]       0.180     0.063
+ core/be/be_mem/dcache_data[55]    0.312    0.029
+ core/be/be_mem/dcache_pkt[79]    0.310    0.017
+ Propagated:
+ core/be/be_mem/dcache/U1969/Q        -        -
+ Total:                    0.311     0.368    -0.068
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U43/IN1 (core/be/be_mem/dcache/data_mem_data_lo[39])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[288]    0.134    0.214
+ core/be/be_mem/dcache/data_mem_5__data_mem/n128    0.143    0.065
+ core/be/be_mem/dcache/data_mem_data_lo[40]    0.180    0.019
+ core/be/be_mem/dcache/data_mem_data_lo[2]    0.168    0.018
+ core/be/be_mem/dcache/data_mem_data_lo[24]    0.176    0.008
+ core/be/be_mem/dcache/data_mem_7__data_mem/n299    0.150    0.020
+ core/be/be_mem/dcache/data_mem_7__data_mem/n19    0.158    0.018
+ core/be/be_mem/dcache/data_mem_7__data_mem/n349    0.153    0.013
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[39]        -        -
+ Total:                    0.143     0.368    -0.068
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U112/IN2 (core/be/be_mem/dcache/data_mem_data_lo[39])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[288]    0.134    0.214
+ core/be/be_mem/dcache/data_mem_5__data_mem/n128    0.143    0.065
+ core/be/be_mem/dcache/data_mem_data_lo[40]    0.180    0.019
+ core/be/be_mem/dcache/data_mem_data_lo[2]    0.168    0.018
+ core/be/be_mem/dcache/data_mem_data_lo[24]    0.176    0.008
+ core/be/be_mem/dcache/data_mem_7__data_mem/n299    0.150    0.020
+ core/be/be_mem/dcache/data_mem_7__data_mem/n19    0.158    0.018
+ core/be/be_mem/dcache/data_mem_7__data_mem/n349    0.153    0.013
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[39]        -        -
+ Total:                    0.143     0.368    -0.068
+
+ core/be/be_mem/dcache/U2248/IN2 (core/be/be_mem/dcache/data_mem_data_lo[39])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[288]    0.134    0.214
+ core/be/be_mem/dcache/data_mem_5__data_mem/n128    0.142    0.065
+ core/be/be_mem/dcache/data_mem_data_lo[40]    0.180    0.019
+ core/be/be_mem/dcache/data_mem_data_lo[2]    0.168    0.018
+ core/be/be_mem/dcache/data_mem_data_lo[24]    0.176    0.008
+ core/be/be_mem/dcache/data_mem_7__data_mem/n299    0.149    0.020
+ core/be/be_mem/dcache/data_mem_7__data_mem/n19    0.158    0.018
+ core/be/be_mem/dcache/data_mem_7__data_mem/n349    0.153    0.013
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[39]        -        -
+ Total:                    0.142     0.367    -0.067
+
+ core/be/be_mem/dcache/icc_place185/INP (core/be/be_mem/dcache/data_mem_addr_li[3])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_li[414]    0.356    0.074
+ core/be/be_mem/dcache/data_mem_7__data_mem/n358    0.456    0.062
+ core/be/be_mem/dcache/data_mem_7__data_mem/n132    0.413    0.051
+ core/be/be_mem/dcache/data_mem_data_lo[143]    0.419    0.034
+ core/be/be_mem/dcache/data_mem_mask_li[3]    0.688    0.023
+ core/be/be_mem/dcache/n2746    0.590    0.024
+ core/be/be_mem/dcache/data_mem_7__data_mem/n134    0.399    0.022
+ core/be/be_mem/dcache/n846    0.767    0.015
+ core/be/be_mem/dcache/data_mem_4__data_mem/n115    0.431    0.019
+ core/be/be_mem/dcache/data_mem_4__data_mem/n295    0.351    0.016
+ core/be/be_mem/dcache/n2532    0.606    0.011
+ core/be/be_mem/dcache/data_mem_2__data_mem/n378    0.403    0.013
+ core/be/be_mem/dcache/data_mem_4__data_mem/n117    0.408    0.013
+ core/be/be_mem/dcache/data_mem_7__data_mem/n130    0.407    0.013
+ core/be/be_mem/dcache/read_mux_butterfly/data_stage_1__368_    0.390    0.012
+ Propagated:
+ core/be/be_mem/dcache/U1862/Q        -        -
+ Total:                    0.450     0.367    -0.067
+
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/U35/IN4 (core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/n323)
+ Aggressors:
+ core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/mem[183]    0.332    0.220
+ core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth/n229    0.277    0.113
+ uce_0__uce/cache_req_metadata_r[2]    0.368    0.033
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/n326    0.463    0.027
+ Propagated:
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/U34/QN        -        -
+ Total:                    0.318     0.366    -0.066
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place31/INP (core/be/be_mem/dcache/n1619)
+ Aggressors:
+ core/be/be_mem/dcache/n1616    0.454    0.102
+ core/be/be_mem/dcache/n2533    0.421    0.097
+ core/be/be_mem/dcache/n2568    0.495    0.049
+ core/be/be_mem/dcache/data_mem_5__data_mem/n109    0.251    0.038
+ core/be/be_mem/dcache/n2516    0.254    0.029
+ core/be/be_mem/dcache/data_mem_4__data_mem/n158    0.217    0.027
+ core/be/be_mem/dcache/n1493    0.225    0.025
+ Propagated:
+ core/be/be_mem/dcache/U1324/Q        -        -
+ Total:                    0.381     0.366    -0.066
+
+ core/fe/mem/icache/data_mems_1__data_mem/icc_place89/INP (core/fe/mem/icache/n1664)
+ Aggressors:
+ core/fe/mem/icache/final_data[4]    0.233    0.082
+ core/fe/mem/icache/final_data[9]    0.270    0.064
+ core/fe/mem/icache/data_mems_0__data_mem/n285    0.241    0.065
+ core/fe/mem/icache/tag_mem_addr_li[3]    0.209    0.046
+ core/fe/mem/icache/data_mems_5__data_mem/n327    0.231    0.034
+ core/fe/mem/icache/n1716    0.392    0.022
+ core/fe/mem/icache/n1724    0.367    0.021
+ core/fe/mem/icache/data_mems_6__data_mem/n158    0.298    0.016
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__284_    0.248    0.013
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U119/Q        -        -
+ Total:                    0.259     0.362    -0.062
+
+ io_cmd_o[3] (io_cmd_o[3])
+ Aggressors:
+ mem_resp_i[415]           0.007     0.189
+ mem_resp_i[180]           0.007     0.114
+ mem_resp_i[552]           0.007     0.081
+ io_resp_i[298]            0.006     0.069
+ io_resp_i[552]            0.007     0.051
+ io_resp_i[415]            0.006     0.038
+ io_resp_i[316]            0.006     0.033
+ Propagated:
+ U4169/ZN                      -         -
+ Total:                    0.007     0.542    -0.062
+
+ core/be/be_mem/dcache/U2289/IN2 (core/be/be_mem/dcache/data_mem_data_lo[76])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_0__data_mem/n816    0.124    0.061
+ core/be/be_mem/dcache/data_mem_data_lo[86]    0.137    0.012
+ core/be/be_mem/dcache/data_mem_data_lo[332]    0.087    0.105
+ core/be/be_mem/dcache/data_mem_5__data_mem/n128    0.119    0.038
+ core/be/be_mem/dcache/data_mem_data_lo[344]    0.074    0.049
+ core/be/be_mem/dcache/data_mem_data_lo[329]    0.081    0.050
+ core/be/be_mem/dcache/data_mem_data_lo[342]    0.083    0.041
+ core/be/be_mem/dcache/data_mem_2__data_mem/n337    0.119    0.015
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[12]        -        -
+ Total:                    0.095     0.360    -0.060
+
+ core/fe/mem/icache/data_set_select_mux/U364/IN4 (core/fe/mem/icache/ld_data_tv_r[382])
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n110    0.404    0.059
+ core/fe/mem/icache/data_mems_4__data_mem/n218    0.268    0.063
+ core/fe/mem/icache/data_mems_0__data_mem/n282    0.299    0.036
+ core/fe/mem/icache/data_set_select_mux/n145    0.319    0.034
+ core/fe/mem/icache/data_mems_5__data_mem/n323    0.308    0.032
+ core/fe/mem/icache/ld_data_tv_r[361]    0.463    0.022
+ core/fe/mem/icache/n1637    0.499    0.022
+ core/fe/mem/icache/data_mems_6__data_mem/n50    0.298    0.019
+ core/fe/mem/icache/ld_data_tv_r[362]    0.509    0.014
+ core/fe/mem/icache/data_mems_7__data_mem/n73    0.287    0.019
+ core/fe/mem/icache/data_set_select_mux/n47    0.521    0.014
+ core/fe/mem/icache/data_mems_4__data_mem/n48    0.313    0.016
+ core/fe/mem/icache/data_mems_4__data_mem/n167    0.265    0.017
+ core/fe/mem/icache/n439    0.507    0.010
+ core/fe/mem/icache/data_mem_data_li[199]    0.267    0.014
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__62_/Q        -        -
+ Total:                    0.359     0.360    -0.060
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U83/IN1 (core/be/be_mem/dcache/data_mem_data_lo[76])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_0__data_mem/n816    0.123    0.061
+ core/be/be_mem/dcache/data_mem_data_lo[86]    0.137    0.012
+ core/be/be_mem/dcache/data_mem_data_lo[332]    0.087    0.105
+ core/be/be_mem/dcache/data_mem_5__data_mem/n128    0.119    0.038
+ core/be/be_mem/dcache/data_mem_data_lo[344]    0.075    0.049
+ core/be/be_mem/dcache/data_mem_data_lo[329]    0.082    0.049
+ core/be/be_mem/dcache/data_mem_data_lo[342]    0.083    0.041
+ core/be/be_mem/dcache/data_mem_2__data_mem/n337    0.119    0.015
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[12]        -        -
+ Total:                    0.095     0.359    -0.059
+
+ core/be/be_checker/scheduler/int_regfile/U78/IN2 (SYNOPSYS_UNCONNECTED_68)
+ Aggressors:
+ core/be/be_checker/scheduler/int_regfile/rs2_reg_data[8]    0.006    0.134
+ core/be/be_checker/scheduler/int_regfile/rs2_reg_data[59]    0.006    0.116
+ SYNOPSYS_UNCONNECTED_49    0.007    0.013
+ SYNOPSYS_UNCONNECTED_55    0.007    0.026
+ SYNOPSYS_UNCONNECTED_71    0.009    0.039
+ SYNOPSYS_UNCONNECTED_95    0.007    0.021
+ SYNOPSYS_UNCONNECTED_83    0.009    0.022
+ SYNOPSYS_UNCONNECTED_70    0.006    0.003
+ Propagated:
+ core/be/be_checker/scheduler/int_regfile/rf/macro_mem0/O1[35]        -        -
+ Total:                    0.007     0.358    -0.058
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place75/INP (core/be/be_mem/dcache/n2630)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n291    0.269    0.074
+ core/be/be_mem/dcache/tag_mem_data_lo[14]    0.119    0.118
+ core/be/be_mem/dcache/tag_mem_data_lo[6]    0.168    0.052
+ core/be/be_mem/dcache/n1632    0.363    0.023
+ core/be/be_mem/dcache/n2644    0.327    0.022
+ core/be/be_mem/dcache/ld_data_way_picked[44]    0.317    0.020
+ core/be/be_mem/dcache/n2764    0.419    0.017
+ tag_mem_pkt_li[69]        0.422     0.017
+ core/be/be_mem/dcache/n2714    0.456    0.014
+ core/be/be_mem/dcache/N753    0.461    0.012
+ core/be/be_mem/dcache/tag_mem_data_li[12]    0.288    0.013
+ core/be/be_mem/dcache/tag_mem/n193    0.236    0.012
+ Propagated:
+ core/be/be_mem/dcache/U1772/Q        -        -
+ Total:                    0.239     0.358    -0.058
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U14/IN2 (core/be/be_mem/dcache/data_mem_data_lo[76])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_0__data_mem/n816    0.123    0.061
+ core/be/be_mem/dcache/data_mem_data_lo[86]    0.137    0.012
+ core/be/be_mem/dcache/data_mem_data_lo[332]    0.087    0.105
+ core/be/be_mem/dcache/data_mem_5__data_mem/n128    0.118    0.038
+ core/be/be_mem/dcache/data_mem_data_lo[344]    0.075    0.049
+ core/be/be_mem/dcache/data_mem_data_lo[329]    0.084    0.048
+ core/be/be_mem/dcache/data_mem_data_lo[342]    0.083    0.041
+ core/be/be_mem/dcache/data_mem_2__data_mem/n337    0.119    0.015
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[12]        -        -
+ Total:                    0.095     0.358    -0.058
+
+ core/be/be_mem/dcache/icc_place351/INP (core/be/be_mem/dcache/n893)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n332    0.157    0.097
+ core/be/be_mem/dcache/data_mem_5__data_mem/n212    0.147    0.074
+ core/be/be_mem/dcache/data_mem_data_lo[463]    0.115    0.069
+ core/be/be_mem/dcache/data_mem_data_lo[77]    0.198    0.026
+ core/be/be_mem/dcache/data_mem_data_lo[261]    0.121    0.035
+ core/be/be_mem/dcache/data_mem_data_lo[335]    0.115    0.021
+ core/be/be_mem/dcache/n1169    0.270    0.016
+ core/be/be_mem/dcache/data_mem_7__data_mem/n19    0.160    0.019
+ core/be/be_mem/dcache/n915    0.270    0.013
+ core/be/be_mem/dcache/data_mem_7__data_mem/n295    0.257    0.012
+ Propagated:
+ core/be/be_mem/dcache/icc_place172/Z        -        -
+ Total:                    0.149     0.357    -0.057
+
+ core/be/be_mem/dcache/icc_place297/INP (core/be/be_mem/dcache/n893)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n332    0.157    0.097
+ core/be/be_mem/dcache/data_mem_5__data_mem/n212    0.147    0.074
+ core/be/be_mem/dcache/data_mem_data_lo[463]    0.115    0.069
+ core/be/be_mem/dcache/data_mem_data_lo[77]    0.198    0.026
+ core/be/be_mem/dcache/data_mem_data_lo[261]    0.121    0.035
+ core/be/be_mem/dcache/data_mem_data_lo[335]    0.115    0.021
+ core/be/be_mem/dcache/n1169    0.269    0.016
+ core/be/be_mem/dcache/data_mem_7__data_mem/n19    0.160    0.019
+ core/be/be_mem/dcache/n915    0.270    0.013
+ core/be/be_mem/dcache/data_mem_7__data_mem/n295    0.256    0.012
+ Propagated:
+ core/be/be_mem/dcache/icc_place172/Z        -        -
+ Total:                    0.149     0.357    -0.057
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_place349/INP (core/fe/mem/icache/data_mems_2__data_mem/n388)
+ Aggressors:
+ core/fe/mem/icache/n1510    0.380    0.133
+ core/fe/mem/icache/n1717    0.381    0.086
+ core/fe/mem/icache/n1391    0.398    0.058
+ core/fe/mem/icache/n1533    0.434    0.047
+ core/fe/mem/icache/n472    0.357    0.033
+ core/fe/mem/icache/final_data_mux/n2    0.402    0.013
+ Propagated:
+ core/fe/mem/icache/data_mems_2__data_mem/icc_place91/ZN        -        -
+ Total:                    0.388     0.357    -0.057
+
+ core/be/be_mem/dcache/pe_load_hit/a/genblk1_scan/U11/IN2 (core/be/be_mem/dcache/load_hit_tv[6])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[157]    0.072    0.239
+ core/be/be_mem/dcache/n987    0.136    0.066
+ core/be/be_mem/dcache/n986    0.164    0.030
+ core/be/be_mem/dcache/data_mem_1__data_mem/n271    0.158    0.021
+ core/be/be_mem/dcache/store_hit_tv[6]    0.296    0.013
+ core/be/be_mem/dcache/store_hit_tv[7]    0.302    0.012
+ Propagated:
+ core/be/be_mem/dcache/U783/QN        -        -
+ Total:                    0.097     0.356    -0.056
+
+ core/be/be_mem/dcache/data_mem_2__data_mem/icc_place56/INP (core/be/be_mem/dcache/n2645)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_li[423]    0.235    0.146
+ core/be/be_mem/dcache/n1470    0.376    0.058
+ core/be/be_mem/dcache/data_mem_5__data_mem/n51    0.275    0.056
+ core/be/be_mem/dcache/n1580    0.254    0.026
+ core/be/be_mem/dcache/data_mem_data_lo[325]    0.190    0.027
+ core/be/be_mem/dcache/n2749    0.405    0.015
+ core/be/be_mem/dcache/data_mem_data_lo[400]    0.152    0.028
+ core/be/be_mem/dcache/data_mem_addr_li[1]    0.626    0.010
+ core/be/be_mem/dcache/lce_data_mem_write_data[68]    0.254    0.011
+ Propagated:
+ core/be/be_mem/dcache/U1668/Q        -        -
+ Total:                    0.263     0.356    -0.056
+
+ core/be/be_mem/dcache/tag_mem/icc_place148/INP (core/be/be_mem/dcache/tag_mem_data_li[12])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[14]    0.047    0.115
+ core/be/be_mem/dcache/tag_mem_data_lo[138]    0.046    0.098
+ core/be/be_mem/dcache/tag_mem_data_lo[171]    0.049    0.043
+ core/be/be_mem/dcache/tag_mem_data_lo[7]    0.045    0.034
+ core/be/be_mem/dcache/tag_mem_data_li[9]    0.159    0.019
+ core/be/be_mem/dcache/tag_mem_data_lo[15]    0.045    0.031
+ core/be/be_mem/dcache/tag_mem_data_lo[33]    0.043    0.015
+ Propagated:
+ core/be/be_mem/dcache/U1223/Q        -        -
+ Total:                    0.052     0.356    -0.056
+
+ mem_cmd_o[202] (mem_cmd_o[202])
+ Aggressors:
+ mem_resp_i[549]           0.008     0.244
+ mem_resp_i[365]           0.008     0.190
+ mem_resp_i[534]           0.008     0.068
+ io_resp_i[549]            0.008     0.033
+ Propagated:
+ U3433/ZN                      -         -
+ Total:                    0.008     0.535    -0.055
+
+ core/fe/mem/icache/data_mems_0__data_mem/icc_place84/INP (core/fe/mem/icache/n1637)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n5    0.265    0.179
+ core/fe/mem/icache/data_mems_6__data_mem/n50    0.243    0.106
+ core/fe/mem/icache/n452    0.468    0.027
+ core/fe/mem/icache/ld_data_tv_r[382]    0.597    0.020
+ core/fe/mem/icache/n1661    0.382    0.016
+ core/fe/mem/icache/data_mems_2__data_mem/n123    0.212    0.018
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U26/Q        -        -
+ Total:                    0.294     0.355    -0.055
+
+ core/be/be_mem/dcache/icc_place172/INP (core/be/be_mem/dcache/data_mem_addr_li[8])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[180]    0.322    0.045
+ core/be/be_mem/dcache/data_mem_data_lo[404]    0.121    0.165
+ core/be/be_mem/dcache/data_mem_addr_li[10]    0.642    0.039
+ core/be/be_mem/dcache/data_mem_0__data_mem/n10    0.342    0.046
+ core/be/be_mem/dcache/data_mem_data_li[441]    0.254    0.029
+ core/be/be_mem/dcache/data_mem_data_li[411]    0.255    0.017
+ core/be/be_mem/dcache/n1752    0.266    0.014
+ Propagated:
+ core/be/be_mem/dcache/U1867/Q        -        -
+ Total:                    0.255     0.355    -0.055
+
+ core/be/be_mem/dcache/icc_place404/INP (core/be/be_mem/dcache/n893)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n332    0.154    0.095
+ core/be/be_mem/dcache/data_mem_5__data_mem/n212    0.144    0.072
+ core/be/be_mem/dcache/data_mem_data_lo[463]    0.114    0.070
+ core/be/be_mem/dcache/data_mem_data_lo[77]    0.198    0.026
+ core/be/be_mem/dcache/data_mem_data_lo[261]    0.120    0.035
+ core/be/be_mem/dcache/data_mem_data_lo[335]    0.114    0.022
+ core/be/be_mem/dcache/n1169    0.267    0.015
+ core/be/be_mem/dcache/data_mem_7__data_mem/n19    0.157    0.019
+ core/be/be_mem/dcache/n915    0.267    0.012
+ core/be/be_mem/dcache/data_mem_7__data_mem/n295    0.253    0.011
+ Propagated:
+ core/be/be_mem/dcache/icc_place172/Z        -        -
+ Total:                    0.146     0.354    -0.054
+
+ core/be/be_mem/U314/IN2 (core/be/be_mem/dcache_data[13])
+ Aggressors:
+ core/be/be_mem/dcache_data[12]    0.769    0.156
+ core/be/be_mem/dcache_data[50]    0.528    0.059
+ core/be/be_mem/dcache_pkt[36]    0.505    0.041
+ core/be/be_mem/dcache_pkt[5]    0.502    0.028
+ mem_cmd_lo[70]            0.448     0.027
+ n2533                     0.546     0.022
+ core/be/be_mem/dcache_pkt_v    0.432    0.023
+ mem_cmd_lo[61]            0.401     0.017
+ Propagated:
+ core/be/be_mem/dcache/U1926/QN        -        -
+ Total:                    0.617     0.353    -0.053
+
+ core/be/be_mem/ptw/dcache_data_reg/U6/IN1 (core/be/be_mem/dcache_data[13])
+ Aggressors:
+ core/be/be_mem/dcache_data[12]    0.769    0.156
+ core/be/be_mem/dcache_data[50]    0.528    0.059
+ core/be/be_mem/dcache_pkt[36]    0.505    0.041
+ core/be/be_mem/dcache_pkt[5]    0.502    0.028
+ mem_cmd_lo[70]            0.448     0.027
+ n2533                     0.546     0.022
+ core/be/be_mem/dcache_pkt_v    0.432    0.023
+ mem_cmd_lo[61]            0.401     0.017
+ Propagated:
+ core/be/be_mem/dcache/U1926/QN        -        -
+ Total:                    0.617     0.353    -0.053
+
+ core/be/be_mem/dcache/U1982/IN2 (core/be/be_mem/dcache_pkt[60])
+ Aggressors:
+ core/be/be_mem/csr/add_x_7/n174    0.248    0.081
+ core/be/be_mem/dcache_pkt[2]    0.324    0.062
+ core/be/be_mem/dcache_pkt[23]    0.307    0.060
+ core/be/be_mem/dcache_pkt[3]    0.278    0.061
+ core/be/mmu_cmd[47]       0.170     0.051
+ core/be/be_mem/ptw/ppn_n[16]    0.188    0.021
+ core/be/be_mem/dcache_pkt[14]    0.330    0.016
+ core/be/be_mem/dcache_data[21]    0.715    0.009
+ Propagated:
+ core/be/be_mem/U236/Q         -         -
+ Total:                    0.266     0.353    -0.053
+
+ core/be/be_mem/dcache/tag_mem/icc_place27/INP (core/be/be_mem/dcache/tag_mem_data_li[12])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[14]    0.046    0.111
+ core/be/be_mem/dcache/tag_mem_data_lo[138]    0.045    0.092
+ core/be/be_mem/dcache/tag_mem_data_lo[171]    0.051    0.035
+ core/be/be_mem/dcache/tag_mem_data_lo[7]    0.033    0.051
+ core/be/be_mem/dcache/tag_mem_data_li[9]    0.159    0.019
+ core/be/be_mem/dcache/tag_mem_data_lo[15]    0.044    0.030
+ core/be/be_mem/dcache/tag_mem_data_lo[33]    0.042    0.014
+ Propagated:
+ core/be/be_mem/dcache/U1223/Q        -        -
+ Total:                    0.050     0.352    -0.052
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place32/INP (core/be/be_mem/dcache/n1629)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[5]    0.331    0.174
+ core/be/be_mem/dcache/n2536    0.388    0.092
+ core/be/be_mem/dcache/data_mem_data_lo[267]    0.210    0.070
+ core/be/be_mem/dcache/ld_data_way_picked[2]    0.368    0.014
+ core/be/be_mem/dcache/n2551    0.304    0.015
+ Propagated:
+ core/be/be_mem/dcache/U1327/Q        -        -
+ Total:                    0.321     0.351    -0.051
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place86/INP (core/be/be_mem/dcache/n2566)
+ Aggressors:
+ core/be/be_mem/dcache/n1484    0.444    0.110
+ core/be/be_mem/dcache/data_mem_data_lo[130]    0.243    0.090
+ core/be/be_mem/dcache/data_mem_data_lo[460]    0.203    0.080
+ core/be/be_mem/dcache/n2568    0.488    0.035
+ core/be/be_mem/dcache/n2533    0.407    0.036
+ Propagated:
+ core/be/be_mem/dcache/U1555/Q        -        -
+ Total:                    0.338     0.351    -0.051
+
+ core/fe/mem/icache/data_mems_0__data_mem/icc_place45/INP (core/fe/mem/icache/n452)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n5    0.275    0.166
+ core/fe/mem/icache/n457    0.373    0.113
+ core/fe/mem/icache/n1661    0.395    0.044
+ core/fe/mem/icache/n1637    0.454    0.028
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U19/Q        -        -
+ Total:                    0.335     0.350    -0.050
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place33/INP (core/be/be_mem/dcache/n2687)
+ Aggressors:
+ SYNOPSYS_UNCONNECTED_65    0.139    0.172
+ core/be/mem_resp[5]       0.394     0.036
+ cache_req_lo[124]         0.455     0.031
+ SYNOPSYS_UNCONNECTED_91    0.238    0.055
+ core/be/be_mem/dcache_pkt[49]    0.534    0.017
+ core/be/be_mem/dcache/double_op_tl_r    0.381    0.020
+ cache_req_lo[109]         0.478     0.017
+ core/be/be_calculator/pipe_mem_data_lo[44]    0.360    0.018
+ core/be/be_mem/dcache/final_data[51]    0.451    0.012
+ uce_1__uce/dirty_tag_r[5]    0.476    0.011
+ SYNOPSYS_UNCONNECTED_74    0.132    0.046
+ Propagated:
+ core/be/be_mem/dcache/U1755/Q        -        -
+ Total:                    0.215     0.350    -0.050
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U847/IN4 (core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3836)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1444]    0.339    0.148
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[525]    0.305    0.086
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3832    0.323    0.076
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1559    0.329    0.029
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[774]    0.257    0.014
+ Propagated:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U846/QN        -        -
+ Total:                    0.324     0.350    -0.050
+
+ mem_cmd_o[244] (mem_cmd_o[244])
+ Aggressors:
+ io_resp_i[428]            0.007     0.310
+ mem_resp_i[532]           0.007     0.179
+ io_resp_i[532]            0.007     0.039
+ Propagated:
+ U3517/ZN                      -         -
+ Total:                    0.007     0.529    -0.049
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place15/INP (core/be/be_mem/dcache/data_mem_7__data_mem/n102)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n115    0.225    0.135
+ core/be/be_mem/dcache/data_mem_data_lo[449]    0.131    0.111
+ core/be/be_mem/dcache/data_mem_7__data_mem/n120    0.225    0.038
+ core/be/be_mem/dcache/data_mem_5__data_mem/n63    0.176    0.042
+ core/be/be_mem/dcache/data_mem_7__data_mem/n132    0.199    0.022
+ Propagated:
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place49/Z        -        -
+ Total:                    0.187     0.348    -0.048
+
+ io_cmd_o[550] (io_cmd_o[550])
+ Aggressors:
+ io_resp_i[190]            0.007     0.248
+ io_resp_i[241]            0.007     0.217
+ mem_resp_i[190]           0.007     0.062
+ Propagated:
+ U5041/ZN                      -         -
+ Total:                    0.007     0.527    -0.047
+
+ core/be/be_mem/ptw/dcache_data_reg/U65/IN1 (core/be/be_mem/dcache_data[7])
+ Aggressors:
+ core/be/be_mem/dcache_data[45]    0.581    0.188
+ tag_mem_pkt_li[52]        0.633     0.047
+ core/be/mem_resp[9]       0.441     0.042
+ core/be/be_mem/dcache_data[41]    0.565    0.026
+ uce_1__uce/n97            0.621     0.027
+ mem_resp_li[585]          0.825     0.015
+ mem_cmd_lo[80]            0.460     0.016
+ Propagated:
+ core/be/be_mem/dcache/U1902/QN        -        -
+ Total:                    0.568     0.347    -0.047
+
+ core/be/be_mem/U307/IN2 (core/be/be_mem/dcache_data[7])
+ Aggressors:
+ core/be/be_mem/dcache_data[45]    0.581    0.188
+ tag_mem_pkt_li[52]        0.633     0.047
+ core/be/mem_resp[9]       0.441     0.042
+ core/be/be_mem/dcache_data[41]    0.565    0.026
+ uce_1__uce/n97            0.621     0.027
+ mem_resp_li[585]          0.825     0.015
+ mem_cmd_lo[80]            0.460     0.016
+ Propagated:
+ core/be/be_mem/dcache/U1902/QN        -        -
+ Total:                    0.568     0.347    -0.047
+
+ core/be/be_mem/dcache/data_mem_2__data_mem/icc_place9/INP (core/be/be_mem/dcache/n2611)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_2__data_mem/n377    0.241    0.128
+ core/be/be_mem/dcache/data_mem_data_li[412]    0.198    0.102
+ core/be/be_mem/dcache/data_mem_data_li[436]    0.191    0.067
+ core/be/be_mem/dcache/data_mem_2__data_mem/n26    0.241    0.030
+ core/be/be_mem/dcache/n2653    0.419    0.020
+ Propagated:
+ core/be/be_mem/dcache/U1647/Q        -        -
+ Total:                    0.229     0.346    -0.046
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_place121/INP (core/fe/mem/icache/n1374)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n8    0.263    0.127
+ core/fe/mem/icache/data_mem_data_li[391]    0.368    0.084
+ core/fe/mem/icache/data_mems_7__data_mem/n39    0.220    0.095
+ core/fe/mem/icache/n477    0.470    0.040
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U150/Q        -        -
+ Total:                    0.301     0.346    -0.046
+
+ core/fe/mem/icache/data_mems_6__data_mem/icc_place52/INP (core/fe/mem/icache/n1539)
+ Aggressors:
+ core/fe/mem/icache/n464    0.319    0.138
+ core/fe/mem/icache/data_mem_data_lo[102]    0.220    0.055
+ core/fe/mem/icache/data_mem_data_lo[395]    0.186    0.060
+ core/fe/mem/icache/n470    0.307    0.048
+ core/fe/mem/icache/final_data[11]    0.216    0.031
+ data_mem_pkt_li[17]       0.612     0.014
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U450/Q        -        -
+ Total:                    0.281     0.346    -0.046
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place215/INP (core/be/be_mem/dcache/n2593)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[134]    0.179    0.103
+ core/be/be_mem/dcache/data_mem_4__data_mem/n111    0.211    0.076
+ core/be/be_mem/dcache/data_mem_5__data_mem/n105    0.183    0.078
+ core/be/be_mem/dcache/n2715    0.265    0.054
+ core/be/be_mem/dcache/n1613    0.325    0.034
+ Propagated:
+ core/be/be_mem/dcache/U1712/Q        -        -
+ Total:                    0.215     0.345    -0.045
+
+ core/be/be_mem/U318/IN2 (core/be/be_mem/dcache_data[17])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[34]    0.488    0.141
+ mem_cmd_lo[74]            0.392     0.064
+ core/be/be_mem/dcache_pkt[40]    0.446    0.047
+ mem_cmd_lo[73]            0.399     0.046
+ core/be/be_mem/csr/n875    0.825    0.027
+ fifo_1__mem_fifo/n6       0.732     0.020
+ core/be/be_mem/dcache_ptag[0]    0.467    0.018
+ fifo_lo[68]               0.382     0.018
+ Propagated:
+ core/be/be_mem/dcache/U330/QN        -        -
+ Total:                    0.491     0.345    -0.045
+
+ core/be/be_mem/ptw/dcache_data_reg/U59/IN1 (core/be/be_mem/dcache_data[17])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[34]    0.488    0.141
+ mem_cmd_lo[74]            0.392     0.064
+ core/be/be_mem/dcache_pkt[40]    0.446    0.047
+ mem_cmd_lo[73]            0.399     0.046
+ core/be/be_mem/csr/n875    0.825    0.027
+ fifo_1__mem_fifo/n6       0.732     0.020
+ core/be/be_mem/dcache_ptag[0]    0.467    0.018
+ fifo_lo[68]               0.382     0.018
+ Propagated:
+ core/be/be_mem/dcache/U330/QN        -        -
+ Total:                    0.491     0.345    -0.045
+
+ io_cmd_o[249] (io_cmd_o[249])
+ Aggressors:
+ mem_resp_i[266]           0.007     0.235
+ io_resp_i[326]            0.007     0.234
+ mem_resp_i[332]           0.007     0.056
+ mem_resp_i[165]           0.007     0.033
+ Propagated:
+ U4439/ZN                      -         -
+ Total:                    0.007     0.525    -0.045
+
+ core/fe/mem/icache/data_mems_5__data_mem/icc_clock13/INP (core/fe/mem/icache/data_mems_5__data_mem/n263)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n68    0.223    0.180
+ core/fe/mem/icache/data_mem_data_lo[80]    0.163    0.036
+ core/fe/mem/icache/data_mems_3__data_mem/n7    0.148    0.038
+ core/fe/mem/icache/data_mems_5__data_mem/n326    0.193    0.031
+ core/fe/mem/icache/n474    0.391    0.018
+ core/fe/mem/icache/data_mems_5__data_mem/n57    0.206    0.021
+ core/fe/mem/icache/data_mems_5__data_mem/n65    0.228    0.020
+ Propagated:
+ core/fe/mem/icache/data_mems_5__data_mem/icc_place188/ZN        -        -
+ Total:                    0.214     0.345    -0.045
+
+ core/fe/mem/icache/U1177/IN1 (core/fe/mem/icache/ld_data_tv_r[372])
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n92    0.250    0.122
+ core/fe/mem/icache/ld_data_tv_r[339]    0.573    0.037
+ core/fe/mem/icache/data_set_select_mux/n312    0.237    0.057
+ core/fe/mem/icache/n1499    0.408    0.033
+ core/fe/mem/icache/data_mems_5__data_mem/n39    0.277    0.024
+ core/fe/mem/icache/data_mems_5__data_mem/n65    0.301    0.023
+ core/fe/mem/icache/n1673    0.415    0.016
+ core/fe/mem/icache/data_mems_4__data_mem/n265    0.223    0.019
+ core/fe/mem/icache/data_mems_4__data_mem/n284    0.221    0.018
+ core/fe/mem/icache/n1456    0.359    0.011
+ core/fe/mem/icache/data_mem_data_li[204]    0.219    0.015
+ core/fe/mem/icache/data_set_select_mux/n67    0.397    0.011
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__52_/Q        -        -
+ Total:                    0.291     0.344    -0.044
+
+ core/fe/mem/icache/data_mems_6__data_mem/icc_place14/INP (core/fe/mem/icache/n1716)
+ Aggressors:
+ core/fe/mem/icache/n1724    0.349    0.137
+ core/fe/mem/icache/final_data[1]    0.209    0.099
+ core/fe/mem/icache/n1505    0.344    0.040
+ core/fe/mem/icache/data_mems_0__data_mem/n285    0.216    0.029
+ core/fe/mem/icache/n1664    0.419    0.020
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__117_    0.223    0.017
+ core/fe/mem/icache/n1464    0.596    0.010
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U471/Q        -        -
+ Total:                    0.294     0.344    -0.044
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place103/INP (core/be/be_mem/dcache/data_mem_4__data_mem/n95)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[262]    0.074    0.137
+ core/be/be_mem/dcache/data_mem_data_lo[327]    0.059    0.155
+ core/be/be_mem/dcache/n1596    0.243    0.019
+ core/be/be_mem/dcache/data_mem_5__data_mem/n89    0.140    0.017
+ core/be/be_mem/dcache/data_mem_5__data_mem/n47    0.131    0.016
+ Propagated:
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place45/Z        -        -
+ Total:                    0.082     0.344    -0.044
+
+ core/fe/mem/icache/data_mems_5__data_mem/icc_place64/INP (core/fe/mem/icache/n1494)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n282    0.169    0.097
+ core/fe/mem/icache/data_mem_data_li[199]    0.173    0.095
+ core/fe/mem/icache/n1522    0.330    0.039
+ core/fe/mem/icache/n1542    0.199    0.034
+ core/fe/mem/icache/data_mems_4__data_mem/n18    0.214    0.030
+ core/fe/mem/icache/ld_data_tv_r[352]    0.426    0.019
+ core/fe/mem/icache/data_mems_4__data_mem/n58    0.205    0.025
+ core/fe/mem/icache/ld_data_tv_r[354]    0.319    0.015
+ core/fe/mem/icache/n1509    0.198    0.016
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U395/Q        -        -
+ Total:                    0.206     0.343    -0.043
+
+ core/fe/mem/icache/data_mems_1__data_mem/icc_place90/INP (core/fe/mem/icache/n1464)
+ Aggressors:
+ core/fe/mem/icache/n459    0.699    0.101
+ core/fe/mem/icache/n448    0.494    0.037
+ core/fe/mem/icache/tag_mem/n38    0.356    0.037
+ core/fe/mem/icache/n1573    0.537    0.024
+ core/fe/mem/icache/n471    0.569    0.020
+ core/fe/mem/icache/n1505    0.478    0.018
+ core/fe/mem/icache/n1467    0.541    0.016
+ core/fe/mem/icache/data_mems_0__data_mem/n20    0.436    0.017
+ core/fe/mem/icache/n1716    0.524    0.013
+ core/fe/mem/icache/data_mems_6__data_mem/n311    0.304    0.018
+ core/fe/mem/icache/tag_mem/n4    0.354    0.015
+ core/fe/mem/icache/final_data[1]    0.349    0.014
+ core/fe/mem/icache/data_mems_6__data_mem/n106    0.355    0.013
+ core/fe/mem/icache/n1628    0.507    0.010
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U142/Q        -        -
+ Total:                    0.520     0.342    -0.042
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_place25/INP (core/fe/mem/icache/n461)
+ Aggressors:
+ core/fe/mem/icache/data_mem_addr_li[2]    0.419    0.071
+ core/fe/mem/icache/read_mux_butterfly/data_stage_2__238_    0.287    0.041
+ core/fe/mem/icache/n488    0.398    0.035
+ core/fe/mem/icache/n1695    0.344    0.037
+ core/fe/mem/icache/data_set_select_mux/n234    0.288    0.038
+ core/fe/mem/icache/data_mems_1__data_mem/n60    0.314    0.026
+ core/fe/mem/icache/ld_data_way_picked[48]    0.306    0.022
+ core/fe/mem/icache/n48    0.275     0.023
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__397_    0.293    0.020
+ core/fe/mem/icache/data_mems_1__data_mem/n355    0.452    0.014
+ core/fe/mem/icache/n1636    0.306    0.013
+ core/fe/mem/icache/n1514    0.255    0.013
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U143/Q        -        -
+ Total:                    0.341     0.341    -0.041
+
+ core/be/be_checker/director/U257/IN1 (core/be/be_checker/director/n157)
+ Aggressors:
+ core/be/be_checker/director/npc_n[11]    0.225    0.154
+ core/be/be_mem/csr/n202    0.279    0.061
+ core/be/be_mem/csr/n540    0.272    0.057
+ core/be/be_checker/director/ret_mux_o[33]    0.243    0.031
+ core/be/be_checker/director/n218    0.455    0.020
+ core/be/n188              0.808     0.017
+ Propagated:
+ core/be/be_checker/director/U255/QN        -        -
+ Total:                    0.288     0.340    -0.040
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_clock75/INP (core/fe/mem/icache/data_mems_2__data_mem/n55)
+ Aggressors:
+ core/fe/mem/icache/tag_mem/n84    0.211    0.063
+ core/fe/mem/icache/data_mems_1__data_mem/n16    0.290    0.040
+ core/fe/mem/icache/tag_mem/n120    0.213    0.043
+ core/fe/mem/icache/tag_mem/n111    0.215    0.042
+ core/fe/mem/icache/n1403    0.553    0.025
+ core/fe/mem/icache/tag_mem/n72    0.209    0.036
+ core/fe/mem/icache/tag_mem/n118    0.210    0.032
+ core/fe/mem/icache/tag_mem/n92    0.213    0.031
+ core/fe/mem/icache/tag_mem/n105    0.216    0.029
+ Propagated:
+ core/fe/mem/icache/data_mems_2__data_mem/icc_clock28/ZN        -        -
+ Total:                    0.246     0.339    -0.039
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_place117/INP (core/fe/mem/icache/n492)
+ Aggressors:
+ core/fe/mem/icache/n1521    0.389    0.155
+ core/fe/mem/icache/data_mem_data_lo[101]    0.249    0.060
+ core/fe/mem/icache/n455    0.375    0.036
+ core/fe/mem/icache/clk_i_G1B4I40    0.216    0.041
+ core/fe/mem/icache/n1429    0.365    0.022
+ core/fe/mem/icache/data_mems_2__data_mem/n517    0.210    0.019
+ core/fe/mem/icache/n482    0.295    0.015
+ core/fe/mem/icache/data_mems_2__data_mem/n514    0.192    0.018
+ core/fe/mem/icache/data_set_select_mux/n214    0.260    0.014
+ core/fe/mem/icache/ld_data_way_picked[46]    0.266    0.012
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U161/Q        -        -
+ Total:                    0.331     0.339    -0.039
+
+ core/fe/mem/icache/data_mems_5__data_mem/icc_place83/INP (core/fe/mem/icache/n1689)
+ Aggressors:
+ core/fe/mem/icache/data_mems_5__data_mem/n292    0.186    0.085
+ core/fe/clk_i_G1B3I8      0.271     0.072
+ core/fe/mem/icache/data_set_select_mux/n123    0.380    0.040
+ core/fe/mem/icache/data_mem_data_li[193]    0.192    0.048
+ core/fe/mem/icache/n1570    0.393    0.031
+ core/fe/mem/icache/data_mem_data_lo[321]    0.134    0.044
+ core/fe/mem/icache/data_mem_data_lo[322]    0.108    0.049
+ core/fe/mem/icache/data_mem_data_lo[266]    0.157    0.022
+ core/fe/mem/icache/n1537    0.435    0.012
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__216_    0.236    0.013
+ core/fe/mem/icache/data_mem_data_lo[324]    0.127    0.019
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U403/Q        -        -
+ Total:                    0.206     0.338    -0.038
+
+ core/be/be_mem/U364/IN2 (core/be/be_mem/dcache_data[60])
+ Aggressors:
+ core/be/be_mem/dcache_data[58]    0.346    0.146
+ core/be/be_mem/dcache_data[47]    0.317    0.091
+ core/be/be_mem/dcache_data[55]    0.306    0.037
+ core/be/be_mem/dcache_data[57]    0.312    0.034
+ core/be/be_mem/dcache_pkt[79]    0.304    0.016
+ core/be/be_mem/dcache_data[34]    0.284    0.013
+ Propagated:
+ core/be/be_mem/dcache/U1971/Q        -        -
+ Total:                    0.326     0.337    -0.037
+
+ core/fe/mem/icache/data_mems_5__data_mem/icc_place72/INP (core/fe/mem/icache/n1570)
+ Aggressors:
+ core/fe/mem/icache/data_mem_data_li[194]    0.191    0.075
+ core/fe/mem/icache/data_mem_data_li[193]    0.191    0.073
+ core/fe/mem/icache/n1689    0.391    0.030
+ core/fe/mem/icache/data_mems_5__data_mem/n35    0.273    0.032
+ core/fe/mem/icache/data_mems_4__data_mem/n287    0.186    0.033
+ core/fe/mem/icache/data_mems_5__data_mem/n45    0.254    0.028
+ core/fe/mem/icache/data_mems_5__data_mem/n11    0.246    0.025
+ core/fe/mem/icache/data_mems_5__data_mem/n49    0.220    0.020
+ core/fe/mem/icache/data_mems_5__data_mem/n292    0.182    0.020
+ core/fe/mem/icache/data_mems_4__data_mem/n86    0.217    0.016
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U410/Q        -        -
+ Total:                    0.227     0.336    -0.036
+
+ uce_1__uce/dirty_tag_reg/dff/U24/IN2 (tag_mem_lo[35])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[4]    0.039    0.158
+ core/be/be_mem/dcache/tag_mem_data_lo[5]    0.038    0.109
+ tag_mem_lo[44]            0.148     0.018
+ core/be/be_mem/dcache/tag_mem_data_lo[54]    0.039    0.030
+ tag_mem_lo[32]            0.136     0.010
+ core/be/be_mem/dcache/tag_mem_data_lo[70]    0.037    0.020
+ Propagated:
+ core/be/be_mem/dcache/U2869/Q        -        -
+ Total:                    0.044     0.335    -0.035
+
+ uce_1__uce/dirty_tag_reg/U9/IN2 (tag_mem_lo[35])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[4]    0.039    0.158
+ core/be/be_mem/dcache/tag_mem_data_lo[5]    0.038    0.109
+ tag_mem_lo[44]            0.148     0.018
+ core/be/be_mem/dcache/tag_mem_data_lo[54]    0.039    0.030
+ tag_mem_lo[32]            0.136     0.010
+ core/be/be_mem/dcache/tag_mem_data_lo[70]    0.037    0.020
+ Propagated:
+ core/be/be_mem/dcache/U2869/Q        -        -
+ Total:                    0.044     0.335    -0.035
+
+ core/be/be_mem/dcache/dp_ipo88/IN3 (core/be/be_mem/dcache/n501)
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[3]    0.047    0.200
+ core/be/be_mem/dcache/tag_mem_data_lo[25]    0.042    0.095
+ core/be/be_mem/dcache/tag_mem_data_lo[11]    0.046    0.040
+ Propagated:
+ core/be/be_mem/dcache/U664/ZN        -        -
+ Total:                    0.046     0.335    -0.035
+
+ core/fe/mem/icache/data_set_select_mux/U339/IN4 (core/fe/mem/icache/ld_data_tv_r[377])
+ Aggressors:
+ core/fe/mem/icache/n1495    0.508    0.070
+ core/fe/mem/icache/data_mems_5__data_mem/n73    0.318    0.074
+ core/fe/mem/icache/data_mems_5__data_mem/n51    0.347    0.056
+ core/fe/mem/icache/data_mem_data_lo[381]    0.328    0.025
+ core/fe/mem/icache/data_mems_5__data_mem/n121    0.310    0.027
+ core/fe/mem/icache/data_mems_7__data_mem/n79    0.282    0.028
+ core/fe/mem/icache/n1552    0.544    0.018
+ core/fe/mem/icache/data_mems_5__data_mem/n1    0.325    0.021
+ core/fe/mem/icache/n435    0.498    0.015
+ core/fe/mem/icache/ld_data_tv_r[355]    0.525    0.012
+ core/fe/mem/icache/n1726    0.494    0.011
+ core/fe/mem/icache/data_mems_5__data_mem/n63    0.332    0.010
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__57_/Q        -        -
+ Total:                    0.380     0.335    -0.035
+
+ uce_0__uce/U378/IN2 (mem_resp_li[264])
+ Aggressors:
+ mem_resp_li[437]          0.400     0.049
+ data_mem_pkt_li[734]      0.296     0.048
+ data_mem_pkt_li[870]      0.284     0.048
+ mem_resp_li[1078]         0.334     0.038
+ mem_resp_li[258]          0.499     0.029
+ mem_resp_li[736]          0.271     0.037
+ mem_resp_li[949]          0.334     0.031
+ mem_resp_li[91]           0.510     0.022
+ mem_resp_li[104]          0.483     0.019
+ mem_resp_li[1004]         0.373     0.013
+ mem_resp_li[569]          0.362     0.013
+ Propagated:
+ U2786/Q                       -         -
+ Total:                    0.360     0.335    -0.035
+
+ core/fe/pc_gen/icc_place134/INP (core/n88)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1019    0.394    0.152
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1025    0.395    0.142
+ core/n23                  0.696     0.020
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[871]    0.368    0.021
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n5557    0.553    0.016
+ Propagated:
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/U322/QN        -        -
+ Total:                    0.411     0.334    -0.034
+
+ io_cmd_o[526] (io_cmd_o[526])
+ Aggressors:
+ mem_resp_i[130]           0.008     0.348
+ io_resp_i[130]            0.008     0.167
+ Propagated:
+ U4993/ZN                      -         -
+ Total:                    0.008     0.514    -0.034
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U26/IN1 (core/be/be_mem/dcache/data_mem_data_lo[23])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[11]    0.147    0.110
+ core/be/be_mem/dcache/data_mem_data_lo[472]    0.129    0.202
+ core/be/be_mem/dcache/data_mem_data_lo[54]    0.155    0.010
+ core/be/be_mem/dcache/data_mem_data_lo[17]    0.179    0.022
+ core/be/be_mem/dcache/data_mem_data_lo[493]    0.109    0.004
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[23]        -        -
+ Total:                    0.138     0.334    -0.034
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U95/IN2 (core/be/be_mem/dcache/data_mem_data_lo[23])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[11]    0.147    0.110
+ core/be/be_mem/dcache/data_mem_data_lo[472]    0.129    0.202
+ core/be/be_mem/dcache/data_mem_data_lo[54]    0.155    0.010
+ core/be/be_mem/dcache/data_mem_data_lo[17]    0.179    0.022
+ core/be/be_mem/dcache/data_mem_data_lo[493]    0.109    0.004
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[23]        -        -
+ Total:                    0.138     0.334    -0.034
+
+ core/be/be_mem/dcache/U2231/IN2 (core/be/be_mem/dcache/data_mem_data_lo[23])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[11]    0.147    0.110
+ core/be/be_mem/dcache/data_mem_data_lo[472]    0.129    0.202
+ core/be/be_mem/dcache/data_mem_data_lo[54]    0.155    0.010
+ core/be/be_mem/dcache/data_mem_data_lo[17]    0.179    0.022
+ core/be/be_mem/dcache/data_mem_data_lo[493]    0.109    0.004
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[23]        -        -
+ Total:                    0.138     0.334    -0.034
+
+ core/fe/mem/icache/data_set_select_mux/U297/IN4 (core/fe/mem/icache/ld_data_tv_r[369])
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n301    0.257    0.066
+ core/fe/mem/icache/data_mems_5__data_mem/n35    0.335    0.051
+ core/fe/mem/icache/data_mems_4__data_mem/n72    0.288    0.053
+ core/fe/mem/icache/data_mems_5__data_mem/n33    0.340    0.042
+ core/fe/mem/icache/data_mems_4__data_mem/n289    0.243    0.034
+ core/fe/mem/icache/ld_data_tv_r[364]    0.514    0.021
+ core/fe/mem/icache/n1529    0.427    0.018
+ core/fe/mem/icache/ld_data_tv_r[375]    0.525    0.013
+ core/fe/mem/icache/n1497    0.452    0.014
+ core/fe/mem/icache/ld_data_tv_r[339]    0.590    0.011
+ core/fe/mem/icache/n1666    0.436    0.013
+ core/fe/mem/icache/n1846    0.247    0.017
+ core/fe/mem/icache/data_mems_7__data_mem/n22    0.257    0.014
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__49_/Q        -        -
+ Total:                    0.328     0.333    -0.033
+
+ core/fe/mem/icache/data_set_select_mux/U73/IN2 (core/fe/mem/icache/data_set_select_mux/n47)
+ Aggressors:
+ core/fe/mem/icache/ld_data_tv_r[383]    0.574    0.085
+ core/fe/mem/icache/data_mems_4__data_mem/n288    0.211    0.061
+ core/fe/mem/icache/data_set_select_mux/n48    0.294    0.052
+ core/fe/mem/icache/data_mems_7__data_mem/n16    0.214    0.059
+ core/fe/mem/icache/n1697    0.327    0.045
+ core/fe/mem/icache/data_mems_4__data_mem/n162    0.212    0.039
+ core/fe/mem/icache/data_mems_4__data_mem/n167    0.212    0.023
+ core/fe/mem/icache/ld_data_tv_r[382]    0.601    0.013
+ Propagated:
+ core/fe/mem/icache/data_set_select_mux/U70/Q        -        -
+ Total:                    0.290     0.332    -0.032
+
+ core/be/be_mem/dcache/U2013/IN2 (core/be/be_mem/dcache_pkt[31])
+ Aggressors:
+ core/be/be_mem/dcache_data[58]    0.358    0.114
+ core/be/be_mem/dcache_pkt[65]    0.284    0.092
+ core/be/be_mem/dcache_pkt[16]    0.341    0.037
+ fifo_lo[97]               0.295     0.029
+ core/be/be_mem/dcache_data[55]    0.320    0.029
+ core/be/be_mem/dcache_pkt[42]    0.323    0.028
+ mem_resp_li[597]          0.491     0.017
+ tag_mem_pkt_li[44]        0.356     0.015
+ Propagated:
+ core/be/be_mem/U207/Q         -         -
+ Total:                    0.336     0.331    -0.031
+
+ core/be/be_mem/dcache/data_mem_3__data_mem/icc_place69/INP (core/be/be_mem/dcache/n2716)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_li[433]    0.221    0.178
+ core/be/be_mem/dcache/data_mem_data_li[418]    0.210    0.051
+ core/be/be_mem/dcache/data_mem_6__data_mem/n19    0.213    0.037
+ core/be/be_mem/dcache/data_mem_data_lo[148]    0.233    0.023
+ core/be/be_mem/dcache/data_mem_data_lo[214]    0.224    0.023
+ core/be/be_mem/dcache/data_mem_3__data_mem/n177    0.311    0.020
+ Propagated:
+ core/be/be_mem/dcache/U1583/Q        -        -
+ Total:                    0.224     0.331    -0.031
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U59/IN1 (core/be/be_mem/dcache/data_mem_data_lo[54])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n355    0.143    0.096
+ core/be/be_mem/dcache/data_mem_data_lo[23]    0.126    0.050
+ core/be/be_mem/dcache/data_mem_data_lo[17]    0.141    0.066
+ core/be/be_mem/dcache/data_mem_data_lo[118]    0.206    0.045
+ core/be/be_mem/dcache/data_mem_data_lo[246]    0.156    0.052
+ core/be/be_mem/dcache/data_mem_data_lo[119]    0.187    0.023
+ core/be/be_mem/dcache/n2637    0.386    0.009
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[54]        -        -
+ Total:                    0.154     0.331    -0.031
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U128/IN2 (core/be/be_mem/dcache/data_mem_data_lo[54])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n355    0.143    0.096
+ core/be/be_mem/dcache/data_mem_data_lo[23]    0.126    0.050
+ core/be/be_mem/dcache/data_mem_data_lo[17]    0.141    0.066
+ core/be/be_mem/dcache/data_mem_data_lo[118]    0.206    0.045
+ core/be/be_mem/dcache/data_mem_data_lo[246]    0.156    0.052
+ core/be/be_mem/dcache/data_mem_data_lo[119]    0.187    0.023
+ core/be/be_mem/dcache/n2637    0.386    0.009
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[54]        -        -
+ Total:                    0.154     0.331    -0.031
+
+ core/fe/mem/icache/data_mems_6__data_mem/icc_place28/INP (core/fe/mem/icache/n1483)
+ Aggressors:
+ core/fe/mem/icache/n1630    0.372    0.072
+ core/fe/mem/icache/n467    0.361    0.053
+ core/fe/mem/icache/n1657    0.338    0.054
+ core/fe/mem/icache/data_mem_data_lo[499]    0.115    0.109
+ core/fe/mem/icache/data_mems_5__data_mem/n327    0.219    0.025
+ core/fe/mem/icache/n1417    0.316    0.019
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U441/Q        -        -
+ Total:                    0.266     0.330    -0.030
+
+ core/be/be_mem/dcache/U871/IN2 (core/be/be_mem/dcache/tag_mem_data_lo[245])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[187]    0.009    0.137
+ core/be/be_mem/dcache/tag_mem_data_lo[222]    0.008    0.110
+ core/be/be_mem/dcache/tag_mem_data_lo[246]    0.007    0.082
+ core/be/be_mem/dcache/tag_mem_data_lo[247]    0.009    0.013
+ Propagated:
+ core/be/be_mem/dcache/tag_mem/macro_mem/O1[245]        -        -
+ Total:                    0.008     0.330    -0.030
+
+ core/be/be_mem/dcache/U2265/IN2 (core/be/be_mem/dcache/data_mem_data_lo[54])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n355    0.143    0.096
+ core/be/be_mem/dcache/data_mem_data_lo[23]    0.127    0.050
+ core/be/be_mem/dcache/data_mem_data_lo[17]    0.141    0.066
+ core/be/be_mem/dcache/data_mem_data_lo[118]    0.206    0.044
+ core/be/be_mem/dcache/data_mem_data_lo[246]    0.156    0.052
+ core/be/be_mem/dcache/data_mem_data_lo[119]    0.187    0.023
+ core/be/be_mem/dcache/n2637    0.386    0.009
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[54]        -        -
+ Total:                    0.154     0.330    -0.030
+
+ core/be/be_mem/ptw/dcache_data_reg/U11/IN1 (core/be/be_mem/dcache_data[22])
+ Aggressors:
+ core/be/be_mem/dcache_data[61]    0.534    0.158
+ core/be/be_mem/dcache_pkt[53]    0.505    0.117
+ mem_cmd_lo[82]            0.432     0.032
+ mem_cmd_lo[63]            0.419     0.023
+ Propagated:
+ core/be/be_mem/dcache/U407/QN        -        -
+ Total:                    0.506     0.329    -0.029
+
+ core/be/be_mem/U324/IN2 (core/be/be_mem/dcache_data[22])
+ Aggressors:
+ core/be/be_mem/dcache_data[61]    0.534    0.158
+ core/be/be_mem/dcache_pkt[53]    0.505    0.117
+ mem_cmd_lo[82]            0.432     0.032
+ mem_cmd_lo[63]            0.419     0.023
+ Propagated:
+ core/be/be_mem/dcache/U407/QN        -        -
+ Total:                    0.506     0.329    -0.029
+
+ core/fe/mem/icache/data_set_select_mux/U171/IN2 (core/fe/mem/icache/data_set_select_mux/n127)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n261    0.178    0.113
+ core/fe/mem/icache/data_mems_3__data_mem/n135    0.175    0.054
+ core/fe/mem/icache/data_mems_4__data_mem/n264    0.183    0.050
+ core/fe/mem/icache/data_set_select_mux/n87    0.341    0.032
+ core/fe/mem/icache/data_mem_data_lo[89]    0.186    0.031
+ core/fe/mem/icache/data_mem_data_lo[263]    0.134    0.029
+ core/fe/mem/icache/data_mem_data_lo[85]    0.179    0.020
+ Propagated:
+ core/fe/mem/icache/data_set_select_mux/U168/Q        -        -
+ Total:                    0.191     0.329    -0.029
+
+ core/fe/mem/icache/U1519/IN1 (data_mem_pkt_li[42])
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1658]    0.442    0.058
+ data_mem_pkt_li[93]       0.681     0.048
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2371    0.429    0.047
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__443_    0.397    0.048
+ data_mem_pkt_li[44]       0.799     0.027
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1861]    0.447    0.028
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2572    0.381    0.021
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2919]    0.459    0.016
+ core/fe/mem/icache/uncached_load_data_r[24]    0.385    0.016
+ core/fe/mem/icache/n453    0.472    0.014
+ core/fe/mem/icache/n465    0.478    0.014
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1828    0.446    0.010
+ Propagated:
+ uce_0__uce/U198/Q             -         -
+ Total:                    0.506     0.329    -0.029
+
+ core/be/be_mem/dcache/icc_place184/INP (core/be/be_mem/dcache/data_mem_addr_li[3])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_li[414]    0.327    0.072
+ core/be/be_mem/dcache/data_mem_7__data_mem/n358    0.425    0.059
+ core/be/be_mem/dcache/data_mem_7__data_mem/n132    0.383    0.049
+ core/be/be_mem/dcache/data_mem_data_lo[143]    0.406    0.034
+ core/be/be_mem/dcache/data_mem_mask_li[3]    0.658    0.021
+ core/be/be_mem/dcache/n2746    0.559    0.023
+ core/be/be_mem/dcache/data_mem_7__data_mem/n134    0.369    0.022
+ core/be/be_mem/dcache/n846    0.738    0.014
+ core/be/be_mem/dcache/data_mem_4__data_mem/n115    0.401    0.018
+ core/be/be_mem/dcache/data_mem_4__data_mem/n295    0.322    0.016
+ core/be/be_mem/dcache/n2532    0.571    0.010
+ core/be/be_mem/dcache/data_mem_2__data_mem/n378    0.373    0.013
+ core/be/be_mem/dcache/data_mem_4__data_mem/n117    0.378    0.013
+ core/be/be_mem/dcache/data_mem_7__data_mem/n130    0.377    0.012
+ core/be/be_mem/dcache/read_mux_butterfly/data_stage_1__368_    0.360    0.012
+ Propagated:
+ core/be/be_mem/dcache/U1862/Q        -        -
+ Total:                    0.423     0.329    -0.029
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U113/IN2 (core/be/be_mem/dcache/data_mem_data_lo[40])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[492]    0.164    0.204
+ core/be/be_mem/dcache/data_mem_data_lo[56]    0.206    0.036
+ core/be/be_mem/dcache/data_mem_data_lo[39]    0.160    0.027
+ core/be/be_mem/dcache/data_mem_data_lo[2]    0.132    0.025
+ core/be/be_mem/dcache/data_mem_data_lo[364]    0.129    0.036
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[40]        -        -
+ Total:                    0.162     0.328    -0.028
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U44/IN1 (core/be/be_mem/dcache/data_mem_data_lo[40])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[492]    0.164    0.204
+ core/be/be_mem/dcache/data_mem_data_lo[56]    0.206    0.036
+ core/be/be_mem/dcache/data_mem_data_lo[39]    0.160    0.027
+ core/be/be_mem/dcache/data_mem_data_lo[2]    0.132    0.025
+ core/be/be_mem/dcache/data_mem_data_lo[364]    0.129    0.036
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[40]        -        -
+ Total:                    0.162     0.328    -0.028
+
+ core/be/be_mem/dcache/U2249/IN2 (core/be/be_mem/dcache/data_mem_data_lo[40])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[492]    0.164    0.204
+ core/be/be_mem/dcache/data_mem_data_lo[56]    0.206    0.036
+ core/be/be_mem/dcache/data_mem_data_lo[39]    0.160    0.027
+ core/be/be_mem/dcache/data_mem_data_lo[2]    0.132    0.025
+ core/be/be_mem/dcache/data_mem_data_lo[364]    0.129    0.036
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[40]        -        -
+ Total:                    0.162     0.328    -0.028
+
+ core/fe/mem/icache/U1184/IN1 (core/fe/mem/icache/ld_data_tv_r[365])
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n259    0.235    0.150
+ core/fe/mem/icache/data_mems_3__data_mem/n191    0.236    0.061
+ core/fe/mem/icache/data_mems_4__data_mem/n254    0.281    0.041
+ core/fe/mem/icache/data_mem_data_lo[333]    0.113    0.075
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__45_/Q        -        -
+ Total:                    0.213     0.327    -0.027
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U114/IN2 (data_mem_pkt_li[42])
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1658]    0.439    0.058
+ data_mem_pkt_li[93]       0.679     0.048
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2371    0.426    0.047
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__443_    0.395    0.048
+ data_mem_pkt_li[44]       0.797     0.027
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1861]    0.444    0.028
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2572    0.379    0.021
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2919]    0.456    0.015
+ core/fe/mem/icache/uncached_load_data_r[24]    0.382    0.016
+ core/fe/mem/icache/n453    0.469    0.014
+ core/fe/mem/icache/n465    0.475    0.014
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1828    0.443    0.010
+ Propagated:
+ uce_0__uce/U198/Q             -         -
+ Total:                    0.503     0.327    -0.027
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U45/IN1 (data_mem_pkt_li[42])
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1658]    0.439    0.058
+ data_mem_pkt_li[93]       0.678     0.048
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2371    0.425    0.047
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__443_    0.394    0.048
+ data_mem_pkt_li[44]       0.796     0.027
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1861]    0.444    0.028
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2572    0.378    0.021
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2919]    0.456    0.015
+ core/fe/mem/icache/uncached_load_data_r[24]    0.382    0.016
+ core/fe/mem/icache/n453    0.469    0.014
+ core/fe/mem/icache/n465    0.475    0.014
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1828    0.442    0.010
+ Propagated:
+ uce_0__uce/U198/Q             -         -
+ Total:                    0.503     0.327    -0.027
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U113/IN1 (core/be/be_mem/dcache/data_mem_data_lo[104])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[290]    0.094    0.126
+ core/be/be_mem/dcache/data_mem_data_lo[360]    0.092    0.142
+ core/be/be_mem/dcache/data_mem_data_lo[115]    0.162    0.031
+ core/be/be_mem/dcache/data_mem_data_lo[82]    0.143    0.028
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[40]        -        -
+ Total:                    0.104     0.327    -0.027
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U44/IN2 (core/be/be_mem/dcache/data_mem_data_lo[104])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[290]    0.094    0.126
+ core/be/be_mem/dcache/data_mem_data_lo[360]    0.092    0.142
+ core/be/be_mem/dcache/data_mem_data_lo[115]    0.162    0.031
+ core/be/be_mem/dcache/data_mem_data_lo[82]    0.143    0.028
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[40]        -        -
+ Total:                    0.104     0.327    -0.027
+
+ io_cmd_o[552] (io_cmd_o[552])
+ Aggressors:
+ io_resp_i[291]            0.010     0.185
+ mem_resp_i[432]           0.009     0.188
+ io_resp_i[437]            0.009     0.134
+ io_resp_i[375]            0.009     0.034
+ Propagated:
+ U5045/ZN                      -         -
+ Total:                    0.010     0.507    -0.027
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place161/INP (core/be/be_mem/dcache/data_mem_4__data_mem/n27)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[451]    0.103    0.121
+ core/be/be_mem/dcache/data_mem_data_lo[458]    0.099    0.084
+ core/be/be_mem/dcache/data_mem_5__data_mem/n73    0.150    0.038
+ core/be/be_mem/dcache/ld_data_set_select_mux/n58    0.133    0.034
+ core/be/be_mem/dcache/data_mem_data_lo[70]    0.169    0.018
+ core/be/be_mem/dcache/data_mem_5__data_mem/n47    0.147    0.017
+ core/be/be_mem/dcache/data_mem_7__data_mem/n128    0.175    0.013
+ Propagated:
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place11/Z        -        -
+ Total:                    0.120     0.326    -0.026
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U2/IN1 (core/be/be_mem/dcache/data_mem_data_lo[0])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[2]    0.176    0.072
+ core/be/be_mem/dcache/data_mem_data_lo[24]    0.188    0.044
+ core/be/be_mem/dcache/data_mem_data_lo[271]    0.117    0.175
+ core/be/be_mem/dcache/data_mem_4__data_mem/n303    0.131    0.017
+ core/be/be_mem/dcache/data_mem_data_lo[462]    0.121    0.019
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[0]        -        -
+ Total:                    0.141     0.326    -0.026
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U70/IN2 (core/be/be_mem/dcache/data_mem_data_lo[0])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[2]    0.176    0.072
+ core/be/be_mem/dcache/data_mem_data_lo[24]    0.188    0.044
+ core/be/be_mem/dcache/data_mem_data_lo[271]    0.117    0.175
+ core/be/be_mem/dcache/data_mem_4__data_mem/n303    0.131    0.017
+ core/be/be_mem/dcache/data_mem_data_lo[462]    0.121    0.019
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[0]        -        -
+ Total:                    0.141     0.326    -0.026
+
+ core/be/be_mem/dcache/U2207/IN2 (core/be/be_mem/dcache/data_mem_data_lo[0])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[2]    0.176    0.072
+ core/be/be_mem/dcache/data_mem_data_lo[24]    0.188    0.044
+ core/be/be_mem/dcache/data_mem_data_lo[271]    0.117    0.175
+ core/be/be_mem/dcache/data_mem_4__data_mem/n303    0.131    0.017
+ core/be/be_mem/dcache/data_mem_data_lo[462]    0.121    0.019
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[0]        -        -
+ Total:                    0.141     0.326    -0.026
+
+ core/be/be_mem/dcache/U2320/IN2 (core/be/be_mem/dcache/data_mem_data_lo[104])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[290]    0.094    0.126
+ core/be/be_mem/dcache/data_mem_data_lo[360]    0.092    0.142
+ core/be/be_mem/dcache/data_mem_data_lo[115]    0.162    0.031
+ core/be/be_mem/dcache/data_mem_data_lo[82]    0.143    0.028
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[40]        -        -
+ Total:                    0.104     0.326    -0.026
+
+ core/be/be_mem/dcache/data_mem_0__data_mem/icc_clock24/INP (core/be/be_mem/dcache/n2774)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_li[445]    0.255    0.175
+ core/be/be_mem/dcache/n2621    0.508    0.095
+ core/be/be_mem/dcache/wbuf_entry_out[24]    0.374    0.025
+ core/be/be_mem/dcache/n2732    0.467    0.016
+ core/be/be_mem/dcache/data_mem_data_li[37]    0.515    0.014
+ core/be/be_mem/dcache/ld_data_way_picked[63]    0.408    0.012
+ Propagated:
+ core/be/be_mem/dcache/U1814/Q        -        -
+ Total:                    0.360     0.326    -0.026
+
+ core/be/be_mem/dcache/icc_place207/INP (core/be/be_mem/dcache/data_mem_addr_li[1])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[457]    0.319    0.072
+ core/be/be_mem/dcache/data_mem_0__data_mem/n9    0.363    0.039
+ core/be/be_mem/dcache/data_mem_data_lo[434]    0.297    0.036
+ core/be/be_mem/dcache/data_mem_data_lo[258]    0.249    0.042
+ core/be/be_mem/dcache/n2749    0.519    0.023
+ core/be/be_mem/dcache/data_mem_data_lo[260]    0.289    0.035
+ core/be/be_mem/dcache/n903    0.412    0.025
+ core/be/be_mem/dcache/data_mem_data_lo[308]    0.329    0.020
+ core/be/be_mem/dcache/data_mem_w_li    0.557    0.018
+ core/be/be_mem/dcache/data_mem_mask_li[6]    0.618    0.016
+ core/be/be_mem/dcache/n2609    0.511    0.012
+ core/be/be_mem/dcache/n2645    0.591    0.011
+ core/be/be_mem/dcache/n_15_net__1_    0.458    0.011
+ Propagated:
+ core/be/be_mem/dcache/U1859/Q        -        -
+ Total:                    0.358     0.326    -0.026
+
+ core/fe/mem/icache/data_mems_6__data_mem/icc_place2/INP (core/fe/mem/icache/n1581)
+ Aggressors:
+ core/fe/mem/icache/data_mems_2__data_mem/n43    0.328    0.089
+ core/fe/mem/icache/n459    0.634    0.053
+ core/fe/mem/icache/data_mems_6__data_mem/n283    0.254    0.076
+ tag_mem_pkt_li[9]         0.450     0.031
+ core/fe/mem/icache/n430    0.426    0.031
+ core/fe/mem/icache/n1579    0.502    0.014
+ core/fe/mem/icache/n49    0.359     0.016
+ core/fe/mem/icache/tag_mem_data_li[12]    0.340    0.016
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U488/Q        -        -
+ Total:                    0.391     0.325    -0.025
+
+ io_cmd_o[334] (io_cmd_o[334])
+ Aggressors:
+ io_resp_i[234]            0.012     0.334
+ io_resp_i[171]            0.011     0.119
+ mem_resp_i[212]           0.012     0.052
+ Propagated:
+ U4609/ZN                      -         -
+ Total:                    0.011     0.505    -0.025
+
+ core/fe/mem/icache/data_set_select_mux/U138/IN4 (core/fe/mem/icache/ld_data_tv_r[340])
+ Aggressors:
+ core/fe/mem/icache/data_mems_3__data_mem/n189    0.232    0.123
+ core/fe/mem/icache/data_mems_5__data_mem/n79    0.294    0.090
+ core/fe/mem/icache/data_mem_data_li[207]    0.227    0.051
+ core/fe/mem/icache/data_set_select_mux/n26    0.294    0.025
+ core/fe/mem/icache/n1758    0.305    0.022
+ core/fe/mem/icache/ld_data_tv_r[451]    0.250    0.019
+ core/fe/mem/icache/n428    0.961    0.008
+ core/fe/mem/icache/data_mems_4__data_mem/n56    0.247    0.013
+ core/fe/mem/icache/n1777    0.254    0.011
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__20_/Q        -        -
+ Total:                    0.259     0.325    -0.025
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U847/IN3 (core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3837)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n479    0.314    0.113
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n382    0.289    0.085
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n262    0.327    0.056
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1628    0.324    0.034
+ core/fe/pc_gen/n330       0.486     0.024
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1456]    0.308    0.021
+ Propagated:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U841/QN        -        -
+ Total:                    0.332     0.324    -0.024
+
+ core/fe/mem/icache/data_mems_5__data_mem/icc_place71/INP (core/fe/mem/icache/n1522)
+ Aggressors:
+ core/fe/mem/icache/data_mems_5__data_mem/n85    0.261    0.148
+ core/fe/mem/icache/n1494    0.326    0.040
+ core/fe/mem/icache/data_mems_4__data_mem/n174    0.176    0.042
+ core/fe/mem/icache/data_set_select_mux/n151    0.347    0.030
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__238_    0.226    0.024
+ core/fe/mem/icache/data_mem_data_li[199]    0.176    0.024
+ core/fe/mem/icache/n1537    0.423    0.016
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U388/Q        -        -
+ Total:                    0.266     0.324    -0.024
+
+ core/fe/mem/icache/data_mems_6__data_mem/icc_place26/INP (core/fe/mem/icache/data_mem_data_li[404])
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n112    0.271    0.137
+ core/fe/mem/icache/n484    0.367    0.037
+ core/fe/mem/icache/data_mem_data_li[511]    0.203    0.043
+ core/fe/mem/icache/data_mem_data_lo[437]    0.195    0.029
+ core/fe/mem/icache/data_mems_3__data_mem/n137    0.228    0.027
+ core/fe/mem/icache/data_mems_6__data_mem/n20    0.213    0.020
+ core/fe/mem/icache/data_mem_data_lo[500]    0.124    0.030
+ core/fe/mem/icache/data_set_select_mux/n306    0.231    0.013
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U444/Q        -        -
+ Total:                    0.245     0.323    -0.023
+
+ core/be/be_mem/dcache/data_mem_2__data_mem/icc_place51/INP (core/be/be_mem/dcache/n2619)
+ Aggressors:
+ core/be/be_mem/dcache/n2635    0.384    0.080
+ core/be/be_mem/dcache/data_mem_1__data_mem/n546    0.313    0.077
+ core/be/be_mem/dcache/uncached_load_data_r[38]    0.358    0.059
+ tag_mem_lo[52]            0.309     0.039
+ core/be/be_mem/dcache/data_mem_1__data_mem/n623    0.507    0.021
+ core/be/be_mem/dcache/uncached_load_data_r[34]    0.349    0.018
+ core/be/be_mem/dcache/n2711    0.472    0.014
+ tag_mem_pkt_li[40]        0.508     0.014
+ core/be/be_mem/dcache/tag_mem_data_lo[93]    0.149    0.033
+ tag_mem_lo[48]            0.328     0.013
+ core/be/be_mem/dcache/tag_mem_data_lo[57]    0.143    0.027
+ core/be/be_mem/dcache/n1565    0.288    0.013
+ core/be/be_mem/dcache/data_mem_1__data_mem/n547    0.246    0.013
+ Propagated:
+ core/be/be_mem/dcache/U1696/Q        -        -
+ Total:                    0.343     0.323    -0.023
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U94/IN2 (data_mem_pkt_li[151])
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n4648    0.404    0.130
+ data_mem_pkt_li[501]      0.577     0.049
+ data_mem_pkt_li[463]      0.573     0.044
+ data_mem_pkt_li[175]      0.576     0.029
+ data_mem_pkt_li[147]      0.527     0.023
+ core/fe/pc_gen/n372       0.874     0.016
+ data_mem_pkt_li[162]      0.582     0.016
+ data_mem_pkt_li[64]       0.766     0.014
+ Propagated:
+ uce_0__uce/U316/Q             -         -
+ Total:                    0.526     0.322    -0.022
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U25/IN1 (data_mem_pkt_li[151])
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n4648    0.404    0.130
+ data_mem_pkt_li[501]      0.577     0.049
+ data_mem_pkt_li[463]      0.573     0.044
+ data_mem_pkt_li[175]      0.576     0.029
+ data_mem_pkt_li[147]      0.527     0.023
+ core/fe/pc_gen/n372       0.874     0.016
+ data_mem_pkt_li[162]      0.582     0.016
+ data_mem_pkt_li[64]       0.766     0.014
+ Propagated:
+ uce_0__uce/U316/Q             -         -
+ Total:                    0.526     0.322    -0.022
+
+ core/be/be_mem/csr/U3324/IN3 (core/be/be_mem/csr/n2276)
+ Aggressors:
+ core/be/be_mem/fault_reg/n31    0.356    0.115
+ core/be/be_mem/csr/n403    0.293    0.084
+ core/be/be_mem/csr/n1266    0.520    0.037
+ core/be/be_mem/csr/n601    0.297    0.038
+ core/be/be_mem/csr/n2281    0.584    0.024
+ core/be/be_mem/fault_reg/n19    0.336    0.024
+ Propagated:
+ core/be/be_mem/csr/U3322/QN        -        -
+ Total:                    0.367     0.322    -0.022
+
+ core/fe/mem/icache/data_mems_5__data_mem/icc_place67/INP (core/fe/mem/icache/n1513)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n52    0.223    0.109
+ core/fe/mem/icache/data_set_select_mux/n111    0.424    0.081
+ core/fe/mem/icache/n1509    0.229    0.048
+ core/fe/mem/icache/n1677    0.228    0.037
+ core/fe/mem/icache/data_mems_4__data_mem/n24    0.241    0.031
+ core/fe/mem/icache/ld_data_tv_r[323]    0.253    0.027
+ core/fe/mem/icache/data_set_select_mux/n302    0.190    0.013
+ core/fe/mem/icache/n1416    0.257    0.010
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U391/Q        -        -
+ Total:                    0.282     0.321    -0.021
+
+ core/be/be_mem/dcache/pe_store_hit/a/genblk1_scan/U11/IN2 (core/be/be_mem/dcache/store_hit_tv[6])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[157]    0.088    0.262
+ core/be/be_mem/dcache/store_hit_tv[7]    0.321    0.016
+ core/be/be_mem/dcache/load_hit_tv[6]    0.270    0.015
+ core/be/be_mem/dcache/tag_mem_data_lo[220]    0.102    0.023
+ core/be/be_mem/dcache/n1020    0.147    0.019
+ Propagated:
+ core/be/be_mem/dcache/U960/QN        -        -
+ Total:                    0.104     0.320    -0.020
+
+ uce_1__uce/dirty_tag_reg/U18/IN2 (tag_mem_lo[44])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[13]    0.038    0.159
+ core/be/be_mem/dcache/tag_mem_data_lo[5]    0.040    0.099
+ core/be/be_mem/dcache/n996    0.099    0.023
+ tag_mem_lo[35]            0.147     0.018
+ core/be/be_mem/dcache/tag_mem_data_lo[70]    0.038    0.022
+ Propagated:
+ core/be/be_mem/dcache/U2917/Q        -        -
+ Total:                    0.049     0.320    -0.020
+
+ uce_1__uce/dirty_tag_reg/dff/U14/IN2 (tag_mem_lo[44])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[13]    0.038    0.159
+ core/be/be_mem/dcache/tag_mem_data_lo[5]    0.040    0.099
+ core/be/be_mem/dcache/n996    0.099    0.023
+ tag_mem_lo[35]            0.147     0.018
+ core/be/be_mem/dcache/tag_mem_data_lo[70]    0.038    0.022
+ Propagated:
+ core/be/be_mem/dcache/U2917/Q        -        -
+ Total:                    0.049     0.320    -0.020
+
+ core/fe/mem/icache/data_mems_1__data_mem/icc_place34/INP (core/fe/mem/icache/n1544)
+ Aggressors:
+ core/fe/mem/icache/data_mems_6__data_mem/n64    0.264    0.174
+ core/fe/mem/icache/n1373    0.411    0.033
+ core/fe/mem/icache/data_mems_2__data_mem/n564    0.251    0.036
+ core/fe/mem/icache/data_mems_7__data_mem/n39    0.220    0.038
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__94_    0.255    0.019
+ core/fe/mem/icache/data_mems_7__data_mem/n85    0.218    0.020
+ core/fe/mem/icache/data_set_select_mux/n222    0.292    0.012
+ core/fe/mem/icache/data_set_select_mux/n21    0.277    0.012
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U106/Q        -        -
+ Total:                    0.269     0.320    -0.020
+
+ core/be/be_checker/scheduler/int_regfile/U90/IN2 (SYNOPSYS_UNCONNECTED_78)
+ Aggressors:
+ SYNOPSYS_UNCONNECTED_79    0.010    0.232
+ core/be/be_checker/scheduler/int_regfile/rs2_reg_data[55]    0.005    0.068
+ SYNOPSYS_UNCONNECTED_75    0.007    0.020
+ Propagated:
+ core/be/be_checker/scheduler/int_regfile/rf/macro_mem0/O1[25]        -        -
+ Total:                    0.009     0.320    -0.020
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst/U22/IN1 (data_mem_pkt_li[404])
+ Aggressors:
+ data_mem_pkt_li[412]      0.653     0.070
+ data_mem_pkt_li[355]      0.704     0.058
+ data_mem_pkt_li[488]      0.666     0.058
+ data_mem_pkt_li[418]      0.647     0.034
+ data_mem_pkt_li[425]      0.656     0.033
+ data_mem_pkt_li[468]      0.652     0.033
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n4818    0.556    0.017
+ data_mem_pkt_li[397]      0.570     0.015
+ Propagated:
+ uce_0__uce/U591/Q             -         -
+ Total:                    0.655     0.319    -0.019
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst/U90/IN2 (data_mem_pkt_li[404])
+ Aggressors:
+ data_mem_pkt_li[412]      0.653     0.070
+ data_mem_pkt_li[355]      0.704     0.058
+ data_mem_pkt_li[488]      0.666     0.058
+ data_mem_pkt_li[418]      0.647     0.034
+ data_mem_pkt_li[425]      0.656     0.033
+ data_mem_pkt_li[468]      0.652     0.033
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n4818    0.556    0.017
+ data_mem_pkt_li[397]      0.570     0.015
+ Propagated:
+ uce_0__uce/U591/Q             -         -
+ Total:                    0.655     0.319    -0.019
+
+ core/fe/mem/icache/icc_place89/INP (core/fe/mem/icache/n1871)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n170    0.275    0.132
+ core/fe/mem/icache/data_mems_3__data_mem/n189    0.169    0.046
+ core/fe/mem/icache/n1841    0.171    0.042
+ core/fe/mem/icache/data_mems_1__data_mem/n592    0.267    0.033
+ core/fe/mem/icache/n1733    0.364    0.028
+ core/fe/mem/icache/data_mems_7__data_mem/n15    0.162    0.032
+ core/fe/mem/icache/data_mems_7__data_mem/n25    0.169    0.021
+ core/fe/mem/icache/ld_data_tv_r[350]    0.498    0.010
+ core/fe/mem/icache/data_mems_5__data_mem/n33    0.254    0.014
+ Propagated:
+ core/fe/mem/icache/icc_place60/Z        -        -
+ Total:                    0.226     0.319    -0.019
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U632/IN2 (core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3628)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[527]    0.291    0.092
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[455]    0.298    0.077
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1462]    0.274    0.067
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1297]    0.262    0.043
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1207]    0.271    0.040
+ core/fe/pc_gen/n351       0.643     0.013
+ Propagated:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U621/QN        -        -
+ Total:                    0.283     0.319    -0.019
+
+ core/be/be_mem/U310/IN2 (core/be/be_mem/dcache_data[9])
+ Aggressors:
+ core/be/be_mem/dcache_data[38]    0.334    0.066
+ n2542                     0.377     0.052
+ mem_cmd_lo[80]            0.287     0.044
+ core/be/be_mem/dcache_data[59]    0.348    0.037
+ mem_resp_yumi_lo[1]       0.568     0.025
+ mem_cmd_lo[83]            0.306     0.032
+ n2527                     0.367     0.025
+ core/be/be_mem/dcache_data[8]    0.409    0.021
+ core/be/be_mem/dcache/n304    0.256    0.024
+ core/be/be_mem/dcache_data[49]    0.388    0.018
+ Propagated:
+ core/be/be_mem/dcache/U1910/QN        -        -
+ Total:                    0.383     0.319    -0.019
+
+ core/fe/mem/icache/data_mems_5__data_mem/icc_place11/INP (core/fe/mem/icache/n1406)
+ Aggressors:
+ core/fe/mem/icache/data_mems_5__data_mem/n11    0.233    0.166
+ core/fe/mem/icache/data_mems_4__data_mem/n50    0.206    0.077
+ core/fe/mem/icache/data_mem_data_li[193]    0.168    0.037
+ core/fe/mem/icache/n1393    0.175    0.020
+ core/fe/mem/icache/write_mux_butterfly/data_stage_2__21_    0.181    0.019
+ core/fe/mem/icache/n1512    0.178    0.018
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U399/Q        -        -
+ Total:                    0.212     0.319    -0.019
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U100/IN1 (data_mem_pkt_li[221])
+ Aggressors:
+ data_mem_pkt_li[499]      0.665     0.161
+ data_mem_pkt_li[328]      0.645     0.078
+ data_mem_pkt_li[450]      0.626     0.036
+ data_mem_pkt_li[428]      0.774     0.030
+ data_mem_pkt_li[387]      0.619     0.014
+ data_mem_pkt_li[385]      0.660     0.012
+ Propagated:
+ uce_0__uce/U393/Q             -         -
+ Total:                    0.664     0.319    -0.019
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U32/IN2 (data_mem_pkt_li[221])
+ Aggressors:
+ data_mem_pkt_li[499]      0.665     0.161
+ data_mem_pkt_li[328]      0.645     0.078
+ data_mem_pkt_li[450]      0.626     0.036
+ data_mem_pkt_li[428]      0.774     0.030
+ data_mem_pkt_li[387]      0.619     0.014
+ data_mem_pkt_li[385]      0.660     0.012
+ Propagated:
+ uce_0__uce/U393/Q             -         -
+ Total:                    0.664     0.319    -0.019
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U696/IN4 (core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3688)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2159    0.315    0.188
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2245    0.317    0.109
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2963]    0.314    0.022
+ Propagated:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U695/QN        -        -
+ Total:                    0.316     0.318    -0.018
+
+ core/be/be_checker/scheduler/int_regfile/U80/IN2 (SYNOPSYS_UNCONNECTED_70)
+ Aggressors:
+ SYNOPSYS_UNCONNECTED_94    0.005    0.087
+ SYNOPSYS_UNCONNECTED_66    0.006    0.018
+ core/be/be_checker/scheduler/int_regfile/rs2_reg_data[63]    0.004    0.134
+ core/be/be_checker/scheduler/int_regfile/rs2_reg_data[26]    0.005    0.048
+ SYNOPSYS_UNCONNECTED_64    0.006    0.031
+ SYNOPSYS_UNCONNECTED_68    0.004    0.005
+ Propagated:
+ core/be/be_checker/scheduler/int_regfile/rf/macro_mem0/O1[33]        -        -
+ Total:                    0.005     0.318    -0.018
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U115/IN1 (core/be/be_mem/dcache/data_mem_data_lo[106])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[364]    0.098    0.185
+ core/be/be_mem/dcache/data_mem_1__data_mem/n560    0.114    0.062
+ core/be/be_mem/dcache/data_mem_1__data_mem/n565    0.121    0.056
+ core/be/be_mem/dcache/data_mem_1__data_mem/n39    0.118    0.015
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[42]        -        -
+ Total:                    0.106     0.318    -0.018
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U47/IN2 (core/be/be_mem/dcache/data_mem_data_lo[106])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[364]    0.098    0.185
+ core/be/be_mem/dcache/data_mem_1__data_mem/n560    0.114    0.062
+ core/be/be_mem/dcache/data_mem_1__data_mem/n565    0.121    0.056
+ core/be/be_mem/dcache/data_mem_1__data_mem/n39    0.118    0.015
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[42]        -        -
+ Total:                    0.106     0.318    -0.018
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_2__swap_inst/U12/IN1 (data_mem_pkt_li[267])
+ Aggressors:
+ data_mem_pkt_li[361]      0.698     0.139
+ data_mem_pkt_li[409]      0.783     0.087
+ data_mem_pkt_li[335]      0.613     0.024
+ data_mem_pkt_li[101]      0.667     0.020
+ data_mem_pkt_li[429]      0.710     0.018
+ data_mem_pkt_li[414]      0.600     0.014
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1692]    0.413    0.015
+ Propagated:
+ uce_0__uce/U443/Q             -         -
+ Total:                    0.696     0.318    -0.018
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_2__swap_inst/U81/IN2 (data_mem_pkt_li[267])
+ Aggressors:
+ data_mem_pkt_li[361]      0.698     0.139
+ data_mem_pkt_li[409]      0.783     0.087
+ data_mem_pkt_li[335]      0.613     0.024
+ data_mem_pkt_li[101]      0.667     0.020
+ data_mem_pkt_li[429]      0.710     0.018
+ data_mem_pkt_li[414]      0.600     0.014
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1692]    0.413    0.015
+ Propagated:
+ uce_0__uce/U443/Q             -         -
+ Total:                    0.696     0.318    -0.018
+
+ core/be/be_mem/dcache/U2322/IN2 (core/be/be_mem/dcache/data_mem_data_lo[106])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[364]    0.098    0.185
+ core/be/be_mem/dcache/data_mem_1__data_mem/n560    0.114    0.062
+ core/be/be_mem/dcache/data_mem_1__data_mem/n565    0.121    0.055
+ core/be/be_mem/dcache/data_mem_1__data_mem/n39    0.118    0.015
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[42]        -        -
+ Total:                    0.106     0.318    -0.018
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U94/IN1 (data_mem_pkt_li[87])
+ Aggressors:
+ data_mem_pkt_li[96]       0.665     0.049
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2199    0.345    0.062
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1535]    0.433    0.051
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2324]    0.365    0.037
+ data_mem_pkt_li[107]      0.568     0.031
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1371    0.385    0.034
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1393    0.358    0.029
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[49]    0.421    0.024
+ Propagated:
+ uce_0__uce/U247/Q             -         -
+ Total:                    0.443     0.317    -0.017
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U25/IN2 (data_mem_pkt_li[87])
+ Aggressors:
+ data_mem_pkt_li[96]       0.665     0.049
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2199    0.345    0.062
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1535]    0.433    0.051
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2324]    0.365    0.037
+ data_mem_pkt_li[107]      0.568     0.031
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1371    0.385    0.034
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1393    0.358    0.029
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[49]    0.421    0.024
+ Propagated:
+ uce_0__uce/U247/Q             -         -
+ Total:                    0.443     0.317    -0.017
+
+ core/be/be_mem/dcache/U1998/IN2 (core/be/be_mem/dcache_pkt[45])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[9]    0.313    0.153
+ core/be/be_mem/dcache_pkt[16]    0.330    0.143
+ core/be/be_mem/dcache_pkt[42]    0.304    0.021
+ Propagated:
+ core/be/be_mem/U221/Q         -         -
+ Total:                    0.320     0.317    -0.017
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U320/IN4 (core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3320)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[3012]    0.366    0.116
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3001    0.357    0.087
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n5089    0.350    0.052
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2254    0.310    0.039
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n5551    0.420    0.025
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n5144    0.483    0.022
+ Propagated:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U319/QN        -        -
+ Total:                    0.362     0.317    -0.017
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U15/IN2 (data_mem_pkt_li[78])
+ Aggressors:
+ data_mem_pkt_li[194]      0.675     0.097
+ data_mem_pkt_li[426]      0.649     0.075
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3270    0.451    0.027
+ data_mem_pkt_li[489]      0.618     0.023
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1842]    0.390    0.027
+ data_mem_pkt_li[318]      0.609     0.021
+ data_mem_pkt_li[440]      0.667     0.018
+ data_mem_pkt_li[23]       0.719     0.014
+ data_mem_pkt_li[7]        0.703     0.012
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1864    0.461    0.013
+ Propagated:
+ uce_0__uce/U237/Q             -         -
+ Total:                    0.609     0.316    -0.016
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U84/IN1 (data_mem_pkt_li[78])
+ Aggressors:
+ data_mem_pkt_li[194]      0.675     0.097
+ data_mem_pkt_li[426]      0.649     0.075
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3270    0.451    0.027
+ data_mem_pkt_li[489]      0.618     0.023
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1842]    0.390    0.027
+ data_mem_pkt_li[318]      0.609     0.021
+ data_mem_pkt_li[440]      0.667     0.018
+ data_mem_pkt_li[23]       0.719     0.014
+ data_mem_pkt_li[7]        0.703     0.012
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1864    0.461    0.013
+ Propagated:
+ uce_0__uce/U237/Q             -         -
+ Total:                    0.609     0.316    -0.016
+
+ core/be/be_mem/dcache/icc_place186/INP (core/be/be_mem/dcache/data_mem_addr_li[1])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[457]    0.349    0.051
+ core/be/be_mem/dcache/data_mem_0__data_mem/n9    0.337    0.038
+ core/be/be_mem/dcache/data_mem_data_lo[434]    0.170    0.074
+ core/be/be_mem/dcache/data_mem_data_lo[258]    0.307    0.027
+ core/be/be_mem/dcache/n2749    0.491    0.022
+ core/be/be_mem/dcache/data_mem_data_lo[260]    0.317    0.026
+ core/be/be_mem/dcache/n903    0.386    0.024
+ core/be/be_mem/dcache/data_mem_data_lo[308]    0.294    0.023
+ core/be/be_mem/dcache/data_mem_w_li    0.531    0.017
+ core/be/be_mem/dcache/data_mem_mask_li[6]    0.593    0.015
+ core/be/be_mem/dcache/n2609    0.483    0.011
+ core/be/be_mem/dcache/n2645    0.566    0.010
+ core/be/be_mem/dcache/n_15_net__1_    0.430    0.010
+ Propagated:
+ core/be/be_mem/dcache/U1859/Q        -        -
+ Total:                    0.329     0.316    -0.016
+
+ mem_cmd_o[561] (mem_cmd_o[561])
+ Aggressors:
+ mem_resp_i[430]           0.007     0.277
+ mem_resp_i[562]           0.008     0.155
+ io_resp_i[126]            0.007     0.063
+ mem_resp_i[163]           0.007     0.030
+ Propagated:
+ U4151/ZN                      -         -
+ Total:                    0.007     0.495    -0.015
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place65/INP (core/be/be_mem/dcache/n2699)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n292    0.243    0.141
+ core/be/be_mem/dcache/data_mem_1__data_mem/n500    0.279    0.066
+ core/be/be_mem/dcache/uncached_load_data_r[39]    0.293    0.016
+ core/be/be_mem/dcache/n2767    0.414    0.014
+ uce_1__uce/dirty_tag_r[15]    0.291    0.015
+ uce_1__uce/dirty_tag_r[7]    0.284    0.015
+ core/be/be_mem/dcache/tag_mem_data_lo[8]    0.098    0.037
+ uce_1__uce/dirty_tag_r[18]    0.275    0.012
+ core/be/be_mem/dcache/n1640    0.255    0.012
+ core/be/be_mem/dcache/tag_mem_data_lo[16]    0.103    0.026
+ Propagated:
+ core/be/be_mem/dcache/U1759/Q        -        -
+ Total:                    0.234     0.313    -0.013
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_clock77/INP (core/fe/mem/icache/data_mems_2__data_mem/n49)
+ Aggressors:
+ core/fe/mem/icache/data_mems_2__data_mem/n45    0.798    0.117
+ core/fe/mem/icache/tag_mem/n122    0.297    0.063
+ core/fe/mem/icache/tag_mem/n80    0.285    0.030
+ core/fe/mem/icache/tag_mem/n65    0.289    0.029
+ core/fe/mem/icache/tag_mem/n62    0.284    0.025
+ core/fe/mem/icache/tag_mem/n82    0.287    0.018
+ core/fe/mem/icache/tag_mem/n78    0.288    0.016
+ core/fe/mem/icache/tag_mem/n134    0.283    0.015
+ core/fe/mem/icache/tag_mem/n7    0.294    0.012
+ core/fe/mem/icache/tag_mem/n66    0.286    0.012
+ Propagated:
+ core/fe/mem/icache/data_mems_2__data_mem/icc_clock27/ZN        -        -
+ Total:                    0.479     0.313    -0.013
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U84/IN2 (data_mem_pkt_li[142])
+ Aggressors:
+ data_mem_pkt_li[299]      0.634     0.180
+ data_mem_pkt_li[320]      0.550     0.048
+ core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gselect_bp/n2205    0.310    0.030
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2019    0.393    0.018
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1475]    0.358    0.018
+ core/fe/mem/icache/write_mux_butterfly/data_stage_1__479_    0.329    0.018
+ Propagated:
+ uce_0__uce/U307/Q             -         -
+ Total:                    0.542     0.313    -0.013
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U15/IN1 (data_mem_pkt_li[142])
+ Aggressors:
+ data_mem_pkt_li[299]      0.634     0.180
+ data_mem_pkt_li[320]      0.550     0.048
+ core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_gselect_bp/n2205    0.310    0.030
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2019    0.393    0.018
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1475]    0.358    0.018
+ core/fe/mem/icache/write_mux_butterfly/data_stage_1__479_    0.329    0.018
+ Propagated:
+ uce_0__uce/U307/Q             -         -
+ Total:                    0.542     0.313    -0.013
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U111/IN1 (core/be/be_mem/dcache/data_mem_data_lo[102])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[295]    0.129    0.188
+ core/be/be_mem/dcache/data_mem_data_lo[64]    0.154    0.064
+ core/be/be_mem/dcache/data_mem_data_lo[96]    0.162    0.021
+ core/be/be_mem/dcache/data_mem_data_lo[95]    0.175    0.040
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[38]        -        -
+ Total:                    0.142     0.313    -0.013
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U42/IN2 (core/be/be_mem/dcache/data_mem_data_lo[102])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[295]    0.129    0.188
+ core/be/be_mem/dcache/data_mem_data_lo[64]    0.154    0.064
+ core/be/be_mem/dcache/data_mem_data_lo[96]    0.162    0.021
+ core/be/be_mem/dcache/data_mem_data_lo[95]    0.175    0.040
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[38]        -        -
+ Total:                    0.142     0.313    -0.013
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_place32/INP (core/fe/mem/icache/n488)
+ Aggressors:
+ core/fe/mem/icache/n1636    0.216    0.078
+ core/fe/mem/icache/n1657    0.297    0.058
+ core/fe/mem/icache/data_mems_6__data_mem/n278    0.153    0.056
+ core/fe/mem/icache/n461    0.470    0.029
+ core/fe/mem/icache/n1611    0.308    0.031
+ core/fe/mem/icache/n1607    0.361    0.023
+ core/fe/mem/icache/ld_data_way_picked[48]    0.213    0.023
+ core/fe/mem/icache/n1452    0.364    0.014
+ core/fe/mem/icache/n435    0.388    0.009
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U163/Q        -        -
+ Total:                    0.269     0.312    -0.012
+
+ core/be/be_mem/dcache/U2318/IN2 (core/be/be_mem/dcache/data_mem_data_lo[102])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[295]    0.129    0.188
+ core/be/be_mem/dcache/data_mem_data_lo[64]    0.154    0.064
+ core/be/be_mem/dcache/data_mem_data_lo[96]    0.162    0.021
+ core/be/be_mem/dcache/data_mem_data_lo[95]    0.174    0.040
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/macro_mem/O1[38]        -        -
+ Total:                    0.143     0.312    -0.012
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_clock18/INP (core/be/be_mem/dcache/data_mem_7__data_mem/n295)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[261]    0.126    0.202
+ core/be/be_mem/dcache/data_mem_4__data_mem/n73    0.248    0.085
+ core/be/be_mem/dcache/n897    0.250    0.025
+ core/be/be_mem/dcache/n1620    0.433    0.010
+ core/be/be_mem/dcache/n893    0.266    0.011
+ Propagated:
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place11/Z        -        -
+ Total:                    0.169     0.311    -0.011
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U133/IN2 (core/be/be_mem/dcache/data_mem_data_lo[59])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[28]    0.239    0.055
+ core/be/be_mem/dcache/data_mem_0__data_mem/n853    0.160    0.058
+ core/be/be_mem/dcache/data_mem_data_lo[20]    0.180    0.023
+ core/be/be_mem/dcache/data_mem_data_lo[22]    0.174    0.023
+ core/be/be_mem/dcache/data_mem_0__data_mem/n12    0.157    0.033
+ core/be/be_mem/dcache/data_mem_data_lo[9]    0.200    0.024
+ core/be/be_mem/dcache/n1353    0.157    0.022
+ core/be/be_mem/dcache/data_mem_0__data_mem/n122    0.154    0.020
+ core/be/be_mem/dcache/n1359    0.157    0.020
+ core/be/be_mem/dcache/data_mem_data_lo[14]    0.187    0.016
+ core/be/be_mem/dcache/n3287    0.160    0.016
+ core/be/be_mem/dcache/tag_mem/n56    0.232    0.007
+ core/be/be_mem/dcache/tag_mem/n7    0.165    0.008
+ core/be/be_mem/dcache/tag_mem/n11    0.155    0.009
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[59]        -        -
+ Total:                    0.180     0.311    -0.011
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U65/IN1 (core/be/be_mem/dcache/data_mem_data_lo[59])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[28]    0.239    0.055
+ core/be/be_mem/dcache/data_mem_0__data_mem/n853    0.160    0.058
+ core/be/be_mem/dcache/data_mem_data_lo[20]    0.180    0.023
+ core/be/be_mem/dcache/data_mem_data_lo[22]    0.174    0.023
+ core/be/be_mem/dcache/data_mem_0__data_mem/n12    0.157    0.033
+ core/be/be_mem/dcache/data_mem_data_lo[9]    0.200    0.024
+ core/be/be_mem/dcache/n1353    0.157    0.022
+ core/be/be_mem/dcache/data_mem_0__data_mem/n122    0.154    0.020
+ core/be/be_mem/dcache/n1359    0.157    0.020
+ core/be/be_mem/dcache/data_mem_data_lo[14]    0.187    0.016
+ core/be/be_mem/dcache/n3287    0.159    0.016
+ core/be/be_mem/dcache/tag_mem/n56    0.232    0.007
+ core/be/be_mem/dcache/tag_mem/n7    0.165    0.008
+ core/be/be_mem/dcache/tag_mem/n11    0.155    0.009
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[59]        -        -
+ Total:                    0.180     0.311    -0.011
+
+ core/be/be_mem/U328/IN2 (core/be/be_mem/dcache_data[26])
+ Aggressors:
+ core/be/be_mem/dcache_data[27]    0.860    0.151
+ core/be/be_mem/n158       0.348     0.064
+ core/be/be_mem/dcache_data[56]    0.515    0.051
+ core/be/be_mem/dcache_pkt[54]    0.453    0.026
+ core/be/be_mem/dcache_pkt[21]    0.465    0.020
+ Propagated:
+ core/be/be_mem/dcache/U313/QN        -        -
+ Total:                    0.640     0.311    -0.011
+
+ core/be/be_mem/ptw/dcache_data_reg/U53/IN1 (core/be/be_mem/dcache_data[26])
+ Aggressors:
+ core/be/be_mem/dcache_data[27]    0.860    0.151
+ core/be/be_mem/n158       0.348     0.064
+ core/be/be_mem/dcache_data[56]    0.515    0.051
+ core/be/be_mem/dcache_pkt[54]    0.453    0.026
+ core/be/be_mem/dcache_pkt[21]    0.465    0.020
+ Propagated:
+ core/be/be_mem/dcache/U313/QN        -        -
+ Total:                    0.640     0.311    -0.011
+
+ core/be/be_mem/dcache/U1986/IN2 (core/be/be_mem/dcache_pkt[56])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[61]    0.393    0.092
+ core/be/be_mem/dcache_pkt[17]    0.349    0.070
+ core/be/be_mem/dcache_pkt[5]    0.319    0.062
+ core/be/be_mem/dcache_data[51]    0.327    0.027
+ core/be/be_mem/dcache_data[50]    0.336    0.019
+ core/be/be_mem/dcache_pkt[32]    0.335    0.018
+ n2538                     0.516     0.016
+ core/be/mmu_cmd[32]       0.185     0.021
+ Propagated:
+ core/be/be_mem/U232/Q         -         -
+ Total:                    0.344     0.311    -0.011
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U825/IN4 (core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3814)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3768    0.312    0.119
+ core/fe/pc_gen/n334       0.809     0.055
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3771    0.288    0.072
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3113    0.345    0.035
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2212    0.309    0.027
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2963]    0.324    0.021
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3966    0.842    0.011
+ Propagated:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U824/QN        -        -
+ Total:                    0.417     0.311    -0.011
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place102/INP (core/be/be_mem/dcache/data_mem_7__data_mem/n358)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_li[427]    0.153    0.107
+ core/be/be_mem/dcache/data_mem_4__data_mem/n19    0.251    0.034
+ core/be/be_mem/dcache/data_mem_addr_li[3]    0.650    0.022
+ core/be/be_mem/dcache/data_mem_3__data_mem/n281    0.143    0.038
+ core/be/be_mem/dcache/data_mem_0__data_mem/n787    0.140    0.032
+ core/be/be_mem/dcache/data_mem_data_lo[470]    0.144    0.019
+ core/be/be_mem/dcache/data_mem_data_li[389]    0.148    0.023
+ core/be/be_mem/dcache/data_mem_2__data_mem/n378    0.196    0.020
+ core/be/be_mem/dcache/data_mem_3__data_mem/n346    0.198    0.015
+ Propagated:
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place16/Z        -        -
+ Total:                    0.200     0.310    -0.010
+
+ core/be/be_mem/dcache/U2271/IN2 (core/be/be_mem/dcache/data_mem_data_lo[59])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[28]    0.239    0.055
+ core/be/be_mem/dcache/data_mem_0__data_mem/n853    0.158    0.058
+ core/be/be_mem/dcache/data_mem_data_lo[20]    0.180    0.023
+ core/be/be_mem/dcache/data_mem_data_lo[22]    0.175    0.023
+ core/be/be_mem/dcache/data_mem_0__data_mem/n12    0.156    0.033
+ core/be/be_mem/dcache/data_mem_data_lo[9]    0.200    0.024
+ core/be/be_mem/dcache/n1353    0.155    0.022
+ core/be/be_mem/dcache/data_mem_0__data_mem/n122    0.153    0.020
+ core/be/be_mem/dcache/n1359    0.155    0.020
+ core/be/be_mem/dcache/data_mem_data_lo[14]    0.187    0.016
+ core/be/be_mem/dcache/n3287    0.158    0.016
+ core/be/be_mem/dcache/tag_mem/n56    0.231    0.007
+ core/be/be_mem/dcache/tag_mem/n7    0.164    0.008
+ core/be/be_mem/dcache/tag_mem/n11    0.153    0.009
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[59]        -        -
+ Total:                    0.179     0.310    -0.010
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U58/IN1 (core/be/be_mem/dcache/data_mem_data_lo[53])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[100]    0.191    0.109
+ core/be/be_mem/dcache/data_mem_data_lo[309]    0.128    0.091
+ core/be/be_mem/dcache/data_mem_data_lo[185]    0.175    0.030
+ core/be/be_mem/dcache/data_mem_data_lo[116]    0.206    0.031
+ core/be/be_mem/dcache/data_mem_data_lo[501]    0.146    0.049
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[53]        -        -
+ Total:                    0.166     0.310    -0.010
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U127/IN2 (core/be/be_mem/dcache/data_mem_data_lo[53])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[100]    0.191    0.109
+ core/be/be_mem/dcache/data_mem_data_lo[309]    0.128    0.091
+ core/be/be_mem/dcache/data_mem_data_lo[185]    0.175    0.030
+ core/be/be_mem/dcache/data_mem_data_lo[116]    0.206    0.031
+ core/be/be_mem/dcache/data_mem_data_lo[501]    0.146    0.049
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[53]        -        -
+ Total:                    0.166     0.310    -0.010
+
+ core/be/be_mem/dcache/U2264/IN2 (core/be/be_mem/dcache/data_mem_data_lo[53])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[100]    0.191    0.109
+ core/be/be_mem/dcache/data_mem_data_lo[309]    0.128    0.091
+ core/be/be_mem/dcache/data_mem_data_lo[185]    0.174    0.030
+ core/be/be_mem/dcache/data_mem_data_lo[116]    0.206    0.031
+ core/be/be_mem/dcache/data_mem_data_lo[501]    0.146    0.049
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[53]        -        -
+ Total:                    0.166     0.309    -0.009
+
+ core/fe/mem/icache/data_set_select_mux/U151/IN2 (core/fe/mem/icache/data_set_select_mux/n111)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n22    0.270    0.133
+ core/fe/mem/icache/n1513    0.418    0.083
+ core/fe/mem/icache/n1497    0.412    0.036
+ core/fe/mem/icache/n1624    0.484    0.025
+ core/fe/mem/icache/data_mem_data_li[195]    0.213    0.018
+ core/fe/mem/icache/data_mem_data_li[390]    0.303    0.014
+ core/fe/mem/icache/n1767    0.245    0.012
+ Propagated:
+ core/fe/mem/icache/data_set_select_mux/U148/Q        -        -
+ Total:                    0.341     0.309    -0.009
+
+ core/be/be_mem/dcache/U2029/IN2 (core/be/be_mem/dcache_pkt[16])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[45]    0.331    0.146
+ core/be/be_mem/dcache_data[55]    0.326    0.072
+ core/be/be_mem/dcache_pkt[31]    0.349    0.036
+ core/be/be_mem/dcache_pkt[42]    0.325    0.028
+ core/be/be_mem/dcache_pkt[9]    0.326    0.027
+ Propagated:
+ core/be/be_mem/U191/Q         -         -
+ Total:                    0.331     0.308    -0.008
+
+ core/fe/mem/icache/icc_place90/INP (core/fe/mem/icache/n1871)
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n170    0.270    0.127
+ core/fe/mem/icache/data_mems_3__data_mem/n189    0.162    0.045
+ core/fe/mem/icache/n1841    0.164    0.041
+ core/fe/mem/icache/data_mems_1__data_mem/n592    0.261    0.031
+ core/fe/mem/icache/n1733    0.359    0.027
+ core/fe/mem/icache/data_mems_7__data_mem/n15    0.155    0.031
+ core/fe/mem/icache/data_mems_7__data_mem/n25    0.162    0.020
+ core/fe/mem/icache/ld_data_tv_r[350]    0.494    0.009
+ core/fe/mem/icache/data_mems_5__data_mem/n33    0.248    0.013
+ Propagated:
+ core/fe/mem/icache/icc_place60/Z        -        -
+ Total:                    0.220     0.308    -0.008
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst/U48/IN1 (data_mem_pkt_li[428])
+ Aggressors:
+ data_mem_pkt_li[332]      0.764     0.147
+ data_mem_pkt_li[328]      0.664     0.070
+ data_mem_pkt_li[450]      0.650     0.060
+ data_mem_pkt_li[221]      0.777     0.030
+ Propagated:
+ uce_0__uce/U617/Q             -         -
+ Total:                    0.720     0.308    -0.008
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst/U116/IN2 (data_mem_pkt_li[428])
+ Aggressors:
+ data_mem_pkt_li[332]      0.764     0.147
+ data_mem_pkt_li[328]      0.664     0.070
+ data_mem_pkt_li[450]      0.650     0.060
+ data_mem_pkt_li[221]      0.777     0.030
+ Propagated:
+ uce_0__uce/U617/Q             -         -
+ Total:                    0.720     0.308    -0.008
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U2028/IN1 (core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n5059)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2127]    0.292    0.090
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2355    0.250    0.087
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3685    0.236    0.069
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n4373    0.265    0.023
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[2179]    0.217    0.025
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n2144    0.266    0.015
+ core/fe/clk_i_G1B4I38     0.357     0.011
+ Propagated:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/U2012/QN        -        -
+ Total:                    0.258     0.308    -0.008
+
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/U16/IN1 (core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/n6)
+ Aggressors:
+ uce_0__uce/cache_req_reg/n80    0.310    0.101
+ core/fe_queue_fifo/fifo_mem/synth/n824    0.324    0.069
+ core/fe_queue_fifo/fifo_mem/synth/mem[281]    0.307    0.051
+ core/fe_queue_fifo/fifo_mem/synth/n822    0.311    0.041
+ core/fe/mem/itlb/r_entry[11]    0.267    0.025
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/n42    0.314    0.020
+ Propagated:
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/U4/QN        -        -
+ Total:                    0.310     0.308    -0.008
+
+ core/be/be_mem/dcache/data_mem_3__data_mem/icc_place54/INP (core/be/be_mem/dcache/n2735)
+ Aggressors:
+ core/be/be_mem/dcache/n2790    0.400    0.064
+ core/be/be_mem/dcache/data_mem_data_lo[175]    0.245    0.059
+ core/be/be_mem/dcache/n2745    0.381    0.055
+ core/be/be_mem/dcache/data_mem_data_lo[499]    0.208    0.067
+ core/be/be_mem/dcache/n2616    0.412    0.043
+ core/be/be_mem/dcache/data_mem_data_li[181]    0.371    0.020
+ core/be/be_mem/dcache/n1532    0.302    0.017
+ Propagated:
+ core/be/be_mem/dcache/U1597/Q        -        -
+ Total:                    0.325     0.308    -0.008
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_clock20/INP (core/be/be_mem/dcache/data_mem_1__data_mem/n414)
+ Aggressors:
+ core/be/be_mem/dcache/n2752    0.606    0.162
+ tag_mem_lo[29]            0.334     0.072
+ core/be/be_mem/dcache/n969    0.315    0.057
+ cache_req_metadata_lo[3]    0.392    0.016
+ Propagated:
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place365/ZN        -        -
+ Total:                    0.478     0.307    -0.007
+
+ core/fe/mem/icache/U1171/IN1 (core/fe/mem/icache/ld_data_tv_r[377])
+ Aggressors:
+ core/fe/mem/icache/n1495    0.455    0.062
+ core/fe/mem/icache/data_mems_5__data_mem/n73    0.270    0.069
+ core/fe/mem/icache/data_mems_5__data_mem/n51    0.301    0.051
+ core/fe/mem/icache/data_mem_data_lo[381]    0.301    0.025
+ core/fe/mem/icache/data_mems_5__data_mem/n121    0.262    0.025
+ core/fe/mem/icache/data_mems_7__data_mem/n79    0.237    0.026
+ core/fe/mem/icache/n1552    0.501    0.015
+ core/fe/mem/icache/data_mems_5__data_mem/n1    0.277    0.019
+ core/fe/mem/icache/n435    0.454    0.013
+ core/fe/mem/icache/ld_data_tv_r[355]    0.472    0.011
+ core/fe/mem/icache/n1726    0.449    0.009
+ core/fe/mem/icache/data_mems_5__data_mem/n63    0.284    0.010
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__57_/Q        -        -
+ Total:                    0.332     0.306    -0.006
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst/U99/IN1 (core/be/be_mem/dcache/data_mem_data_lo[475])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[466]    0.054    0.233
+ core/be/be_mem/dcache/data_mem_data_lo[464]    0.053    0.074
+ core/be/be_mem/dcache/data_mem_7__data_mem/n322    0.082    0.010
+ Propagated:
+ core/be/be_mem/dcache/data_mem_7__data_mem/macro_mem/O1[27]        -        -
+ Total:                    0.054     0.306    -0.006
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst/U117/IN2 (data_mem_pkt_li[429])
+ Aggressors:
+ data_mem_pkt_li[409]      0.765     0.079
+ data_mem_pkt_li[349]      0.657     0.080
+ data_mem_pkt_li[431]      0.623     0.047
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1692]    0.396    0.038
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1845    0.394    0.028
+ data_mem_pkt_li[267]      0.711     0.017
+ data_mem_pkt_li[414]      0.583     0.016
+ data_mem_pkt_li[288]      0.578     0.015
+ Propagated:
+ uce_0__uce/U619/Q             -         -
+ Total:                    0.623     0.306    -0.006
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst/U49/IN1 (data_mem_pkt_li[429])
+ Aggressors:
+ data_mem_pkt_li[409]      0.765     0.079
+ data_mem_pkt_li[349]      0.657     0.080
+ data_mem_pkt_li[431]      0.623     0.047
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[1692]    0.396    0.038
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1845    0.394    0.028
+ data_mem_pkt_li[267]      0.711     0.017
+ data_mem_pkt_li[414]      0.583     0.016
+ data_mem_pkt_li[288]      0.578     0.015
+ Propagated:
+ uce_0__uce/U619/Q             -         -
+ Total:                    0.623     0.306    -0.006
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place77/INP (core/be/be_mem/dcache/data_mem_4__data_mem/n55)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n86    0.181    0.152
+ core/be/be_mem/dcache/n1613    0.309    0.052
+ core/be/be_mem/dcache/data_mem_7__data_mem/n110    0.180    0.029
+ core/be/be_mem/dcache/data_mem_data_lo[264]    0.103    0.024
+ core/be/be_mem/dcache/data_mem_data_lo[328]    0.080    0.027
+ core/be/be_mem/dcache/data_mem_5__data_mem/n69    0.163    0.023
+ Propagated:
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place25/Z        -        -
+ Total:                    0.187     0.306    -0.006
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst/U30/IN2 (core/be/be_mem/dcache/data_mem_data_lo[475])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[466]    0.054    0.233
+ core/be/be_mem/dcache/data_mem_data_lo[464]    0.053    0.074
+ core/be/be_mem/dcache/data_mem_7__data_mem/n322    0.082    0.010
+ Propagated:
+ core/be/be_mem/dcache/data_mem_7__data_mem/macro_mem/O1[27]        -        -
+ Total:                    0.054     0.306    -0.006
+
+ core/fe/mem/icache/U1241/IN2 (core/fe/mem/icache/data_mem_data_lo[297])
+ Aggressors:
+ core/fe/mem/icache/data_mem_data_lo[233]    0.024    0.174
+ core/fe/mem/icache/data_mem_data_lo[299]    0.030    0.046
+ core/fe/mem/icache/data_mem_data_lo[489]    0.016    0.085
+ core/fe/mem/icache/data_mem_data_lo[298]    0.027    0.010
+ core/fe/mem/icache/data_mem_data_lo[107]    0.086    0.009
+ Propagated:
+ core/fe/mem/icache/data_mems_4__data_mem/macro_mem/O1[41]        -        -
+ Total:                    0.023     0.306    -0.006
+
+ core/fe/mem/icache/data_mems_6__data_mem/icc_place32/INP (core/fe/mem/icache/n1489)
+ Aggressors:
+ core/fe/mem/icache/data_mem_data_li[317]    0.362    0.090
+ core/fe/mem/icache/n487    0.413    0.032
+ core/fe/mem/icache/data_mems_3__data_mem/n42    0.241    0.039
+ core/fe/mem/icache/data_mems_3__data_mem/n54    0.263    0.034
+ core/fe/mem/icache/data_mems_1__data_mem/n214    0.205    0.031
+ core/fe/mem/icache/ld_data_way_picked[51]    0.274    0.024
+ core/fe/mem/icache/data_mem_data_li[486]    0.258    0.022
+ core/fe/mem/icache/n964    0.212    0.020
+ core/fe/mem/icache/n1099    0.214    0.013
+ core/fe/mem/icache/ld_data_tv_r[308]    0.216    0.011
+ core/fe/mem/icache/data_set_select_mux/n295    0.240    0.011
+ core/fe/mem/icache/data_mems_1__data_mem/n447    0.391    0.008
+ Propagated:
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst/U448/Q        -        -
+ Total:                    0.294     0.306    -0.006
+
+ core/fe/mem/icache/read_mux_butterfly/mux_stage_0__mux_swap_2__swap_inst/U106/INP (core/fe/mem/icache/data_mem_data_lo[297])
+ Aggressors:
+ core/fe/mem/icache/data_mem_data_lo[233]    0.024    0.174
+ core/fe/mem/icache/data_mem_data_lo[299]    0.030    0.046
+ core/fe/mem/icache/data_mem_data_lo[489]    0.016    0.085
+ core/fe/mem/icache/data_mem_data_lo[298]    0.027    0.010
+ core/fe/mem/icache/data_mem_data_lo[107]    0.086    0.009
+ Propagated:
+ core/fe/mem/icache/data_mems_4__data_mem/macro_mem/O1[41]        -        -
+ Total:                    0.023     0.305    -0.005
+
+ core/be/be_mem/dcache/U2726/IN2 (core/be/be_mem/dcache/data_mem_data_lo[475])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[466]    0.054    0.233
+ core/be/be_mem/dcache/data_mem_data_lo[464]    0.053    0.074
+ core/be/be_mem/dcache/data_mem_7__data_mem/n322    0.081    0.010
+ Propagated:
+ core/be/be_mem/dcache/data_mem_7__data_mem/macro_mem/O1[27]        -        -
+ Total:                    0.054     0.305    -0.005
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U6/IN2 (data_mem_pkt_li[197])
+ Aggressors:
+ data_mem_pkt_li[157]      0.736     0.109
+ data_mem_pkt_li[174]      0.640     0.082
+ data_mem_pkt_li[240]      0.702     0.032
+ data_mem_pkt_li[146]      0.583     0.023
+ data_mem_pkt_li[27]       0.766     0.020
+ data_mem_pkt_li[19]       0.697     0.019
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1855    0.407    0.019
+ Propagated:
+ uce_0__uce/U367/Q             -         -
+ Total:                    0.674     0.305    -0.005
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U74/IN1 (data_mem_pkt_li[197])
+ Aggressors:
+ data_mem_pkt_li[157]      0.736     0.109
+ data_mem_pkt_li[174]      0.640     0.082
+ data_mem_pkt_li[240]      0.702     0.032
+ data_mem_pkt_li[146]      0.583     0.023
+ data_mem_pkt_li[27]       0.766     0.020
+ data_mem_pkt_li[19]       0.697     0.019
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1855    0.407    0.019
+ Propagated:
+ uce_0__uce/U367/Q             -         -
+ Total:                    0.674     0.305    -0.005
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U138/IN2 (core/be/be_mem/dcache/data_mem_data_lo[63])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[191]    0.219    0.082
+ core/be/be_mem/dcache/data_mem_0__data_mem/n84    0.116    0.092
+ core/be/be_mem/dcache/data_mem_data_lo[127]    0.216    0.016
+ core/be/be_mem/dcache/data_mem_0__data_mem/n82    0.131    0.026
+ core/be/be_mem/dcache/data_mem_data_lo[62]    0.260    0.011
+ core/be/be_mem/dcache/data_mem_data_lo[156]    0.181    0.025
+ core/be/be_mem/dcache/data_mem_data_lo[22]    0.250    0.020
+ core/be/be_mem/dcache/data_mem_data_lo[382]    0.123    0.043
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[63]        -        -
+ Total:                    0.165     0.305    -0.005
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst/U69/IN1 (core/be/be_mem/dcache/data_mem_data_lo[63])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[191]    0.219    0.082
+ core/be/be_mem/dcache/data_mem_0__data_mem/n84    0.116    0.092
+ core/be/be_mem/dcache/data_mem_data_lo[127]    0.216    0.016
+ core/be/be_mem/dcache/data_mem_0__data_mem/n82    0.130    0.026
+ core/be/be_mem/dcache/data_mem_data_lo[62]    0.260    0.011
+ core/be/be_mem/dcache/data_mem_data_lo[156]    0.181    0.025
+ core/be/be_mem/dcache/data_mem_data_lo[22]    0.250    0.020
+ core/be/be_mem/dcache/data_mem_data_lo[382]    0.123    0.043
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[63]        -        -
+ Total:                    0.165     0.305    -0.005
+
+ core/be/be_mem/dcache/tag_mem/icc_place124/INP (core/be/be_mem/dcache/tag_mem_data_li[0])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[26]    0.069    0.235
+ tag_mem_lo[43]            0.184     0.027
+ core/be/be_mem/dcache/tag_mem_data_li[3]    0.167    0.016
+ core/be/be_mem/dcache/tag_mem_data_lo[61]    0.060    0.027
+ core/be/be_mem/dcache/tag_mem_data_li[8]    0.172    0.013
+ Propagated:
+ core/be/be_mem/dcache/U1211/Q        -        -
+ Total:                    0.083     0.305    -0.005
+
+ core/be/be_mem/dcache/data_mem_7__data_mem/icc_place21/INP (core/be/be_mem/dcache/n1622)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n126    0.278    0.104
+ core/be/be_mem/dcache/n2663    0.409    0.065
+ core/be/be_mem/dcache/n1596    0.350    0.065
+ core/be/be_mem/dcache/data_mem_5__data_mem/n89    0.243    0.053
+ core/be/be_mem/dcache/n2517    0.440    0.018
+ Propagated:
+ core/be/be_mem/dcache/U1314/Q        -        -
+ Total:                    0.325     0.305    -0.005
+
+ core/be/be_mem/U347/IN2 (core/be/be_mem/dcache_data[44])
+ Aggressors:
+ core/be/be_mem/dcache_data[42]    0.308    0.143
+ core/be/be_mem/dcache_pkt[32]    0.305    0.117
+ core/be/be_mem/dcache_pkt[61]    0.360    0.023
+ core/be/be_mem/dcache_data[31]    0.260    0.022
+ n2536                     0.317     0.014
+ Propagated:
+ core/be/be_mem/dcache/U1953/Q        -        -
+ Total:                    0.307     0.305    -0.005
+
+ core/be/be_mem/dcache/U2023/IN2 (core/be/be_mem/dcache_pkt[22])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[44]    0.310    0.146
+ core/be/be_mem/dcache_data[57]    0.337    0.135
+ core/be/be_mem/dcache_data[47]    0.330    0.023
+ Propagated:
+ core/be/be_mem/U197/Q         -         -
+ Total:                    0.323     0.304    -0.004
+
+ core/be/be_checker/scheduler/int_regfile/U77/IN2 (SYNOPSYS_UNCONNECTED_67)
+ Aggressors:
+ SYNOPSYS_UNCONNECTED_63    0.005    0.189
+ core/be/be_checker/scheduler/int_regfile/rs2_reg_data[62]    0.004    0.078
+ SYNOPSYS_UNCONNECTED_66    0.006    0.038
+ Propagated:
+ core/be/be_checker/scheduler/int_regfile/rf/macro_mem0/O1[36]        -        -
+ Total:                    0.005     0.304    -0.004
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U52/IN2 (data_mem_pkt_li[240])
+ Aggressors:
+ data_mem_pkt_li[157]      0.737     0.123
+ data_mem_pkt_li[300]      0.661     0.062
+ data_mem_pkt_li[439]      0.582     0.055
+ data_mem_pkt_li[197]      0.699     0.032
+ data_mem_pkt_li[385]      0.642     0.032
+ Propagated:
+ uce_0__uce/U414/Q             -         -
+ Total:                    0.679     0.304    -0.004
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U120/IN1 (data_mem_pkt_li[240])
+ Aggressors:
+ data_mem_pkt_li[157]      0.737     0.123
+ data_mem_pkt_li[300]      0.661     0.062
+ data_mem_pkt_li[439]      0.582     0.055
+ data_mem_pkt_li[197]      0.699     0.032
+ data_mem_pkt_li[385]      0.642     0.032
+ Propagated:
+ uce_0__uce/U414/Q             -         -
+ Total:                    0.679     0.304    -0.004
+
+ core/be/be_calculator/int_bypass/bypass_rs1_crossbar/genblk1_0__mux_one_hot/U162/IN2 (core/be/be_calculator/int_bypass/bypass_rs1_crossbar/genblk1_0__mux_one_hot/n121)
+ Aggressors:
+ core/be/be_calculator/comp_stage_n[66]    0.135    0.173
+ core/be/be_calculator/comp_stage_r_1__2_    0.146    0.131
+ Propagated:
+ core/be/be_calculator/int_bypass/bypass_rs1_crossbar/genblk1_0__mux_one_hot/U161/QN        -        -
+ Total:                    0.140     0.304    -0.004
+
+ core/be/be_mem/ptw/dcache_data_reg/U52/IN1 (core/be/be_mem/dcache_data[27])
+ Aggressors:
+ core/be/be_mem/dcache_data[26]    0.863    0.150
+ core/be/be_mem/dcache_pkt[19]    0.466    0.098
+ core/be/be_mem/dcache_data[56]    0.499    0.056
+ Propagated:
+ core/be/be_mem/dcache/U319/QN        -        -
+ Total:                    0.667     0.304    -0.004
+
+ core/be/be_mem/U329/IN2 (core/be/be_mem/dcache_data[27])
+ Aggressors:
+ core/be/be_mem/dcache_data[26]    0.863    0.150
+ core/be/be_mem/dcache_pkt[19]    0.466    0.098
+ core/be/be_mem/dcache_data[56]    0.499    0.056
+ Propagated:
+ core/be/be_mem/dcache/U319/QN        -        -
+ Total:                    0.667     0.304    -0.004
+
+ core/be/be_mem/dcache/tag_mem/icc_place123/INP (core/be/be_mem/dcache/tag_mem_data_li[0])
+ Aggressors:
+ core/be/be_mem/dcache/tag_mem_data_lo[26]    0.069    0.235
+ tag_mem_lo[43]            0.184     0.027
+ core/be/be_mem/dcache/tag_mem_data_li[3]    0.167    0.016
+ core/be/be_mem/dcache/tag_mem_data_lo[61]    0.060    0.027
+ core/be/be_mem/dcache/tag_mem_data_li[8]    0.172    0.013
+ Propagated:
+ core/be/be_mem/dcache/U1211/Q        -        -
+ Total:                    0.083     0.304    -0.004
+
+ core/fe/mem/icache/data_mems_2__data_mem/icc_place15/INP (core/fe/mem/icache/data_mems_2__data_mem/n401)
+ Aggressors:
+ core/fe/mem/icache/read_mux_butterfly/data_stage_2__238_    0.265    0.070
+ core/fe/mem/icache/tag_mem/n83    0.222    0.052
+ core/fe/mem/icache/data_mems_0__data_mem/n3    0.336    0.043
+ core/fe/mem/icache/n1448    0.529    0.022
+ core/fe/mem/icache/tag_mem/n128    0.221    0.024
+ core/fe/mem/icache/tag_mem/n74    0.223    0.021
+ core/fe/mem/icache/tag_mem/n106    0.227    0.020
+ core/fe/mem/icache/tag_mem/n64    0.220    0.020
+ core/fe/mem/icache/tag_mem/n17    0.227    0.017
+ core/fe/mem/icache/tag_mem/n71    0.221    0.015
+ core/fe/mem/icache/tag_mem/n72    0.220    0.011
+ core/fe/mem/icache/data_mems_1__data_mem/n483    0.516    0.007
+ Propagated:
+ core/fe/mem/icache/data_mems_2__data_mem/icc_place84/ZN        -        -
+ Total:                    0.270     0.304    -0.004
+
+ core/be/be_mem/dcache/data_mem_1__data_mem/icc_place220/INP (core/be/be_mem/dcache/n2596)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_4__data_mem/n25    0.214    0.133
+ core/be/be_mem/dcache/data_mem_4__data_mem/n47    0.199    0.061
+ core/be/be_mem/dcache/data_mem_4__data_mem/n23    0.185    0.054
+ core/be/be_mem/dcache/data_mem_5__data_mem/n49    0.161    0.056
+ clk_i_G1B4I58             0.188     0.016
+ Propagated:
+ core/be/be_mem/dcache/U1718/Q        -        -
+ Total:                    0.196     0.304    -0.004
+
+ core/fe/mem/icache/data_set_select_mux/U276/IN4 (core/fe/mem/icache/ld_data_tv_r[366])
+ Aggressors:
+ core/fe/mem/icache/data_mems_4__data_mem/n218    0.219    0.060
+ core/fe/mem/icache/data_mems_4__data_mem/n18    0.270    0.048
+ core/fe/mem/icache/data_mem_data_li[199]    0.221    0.048
+ core/fe/mem/icache/data_mems_1__data_mem/n591    0.258    0.041
+ core/fe/mem/icache/data_set_select_mux/n70    0.287    0.038
+ core/fe/mem/icache/data_mem_data_lo[488]    0.094    0.054
+ core/fe/mem/icache/data_set_select_mux/n55    0.387    0.012
+ core/fe/mem/icache/data_mems_2__data_mem/n524    0.220    0.014
+ core/fe/mem/icache/data_set_select_mux/n56    0.292    0.011
+ core/fe/mem/icache/n1697    0.330    0.009
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__46_/Q        -        -
+ Total:                    0.219     0.303    -0.003
+
+ core/be/be_mem/csr/U3329/IN1 (core/be/be_mem/csr/n2283)
+ Aggressors:
+ core/be/be_mem/fault_reg/n31    0.367    0.129
+ core/be/be_mem/csr/n319    0.312    0.107
+ core/be/be_mem/csr/dpc_reg/n59    0.353    0.036
+ core/be/be_mem/csr/n2185    0.583    0.030
+ Propagated:
+ core/be/be_mem/csr/U3325/QN        -        -
+ Total:                    0.367     0.303    -0.003
+
+ core/be/be_mem/dcache/U2036/IN2 (core/be/be_mem/dcache_pkt[9])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[45]    0.316    0.153
+ core/be/be_mem/dcache_data[46]    0.316    0.091
+ core/be/be_mem/dcache_pkt[42]    0.311    0.033
+ core/be/be_mem/dcache_pkt[16]    0.328    0.026
+ Propagated:
+ core/be/be_mem/U183/Q         -         -
+ Total:                    0.317     0.303    -0.003
+
+ core/be/be_mem/dcache/U2275/IN2 (core/be/be_mem/dcache/data_mem_data_lo[63])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[191]    0.219    0.082
+ core/be/be_mem/dcache/data_mem_0__data_mem/n84    0.115    0.092
+ core/be/be_mem/dcache/data_mem_data_lo[127]    0.220    0.015
+ core/be/be_mem/dcache/data_mem_0__data_mem/n82    0.130    0.026
+ core/be/be_mem/dcache/data_mem_data_lo[62]    0.260    0.011
+ core/be/be_mem/dcache/data_mem_data_lo[156]    0.181    0.025
+ core/be/be_mem/dcache/data_mem_data_lo[22]    0.250    0.020
+ core/be/be_mem/dcache/data_mem_data_lo[382]    0.124    0.042
+ Propagated:
+ core/be/be_mem/dcache/data_mem_0__data_mem/macro_mem/O1[63]        -        -
+ Total:                    0.166     0.303    -0.003
+
+ core/be/be_mem/dcache/data_mem_3__data_mem/icc_place58/INP (core/be/be_mem/dcache/data_mem_data_li[241])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_li[443]    0.216    0.201
+ core/be/be_mem/dcache/n1685    0.260    0.042
+ core/be/be_mem/dcache/n2805    0.517    0.018
+ core/be/be_mem/dcache/data_mem_data_li[421]    0.214    0.024
+ core/be/be_mem/dcache/n1635    0.308    0.017
+ Propagated:
+ core/be/be_mem/dcache/U1618/Q        -        -
+ Total:                    0.245     0.303    -0.003
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U51/IN2 (core/be/be_mem/dcache/data_mem_data_lo[238])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_3__data_mem/n16    0.093    0.096
+ core/be/be_mem/dcache/data_mem_data_lo[199]    0.085    0.066
+ core/be/be_mem/dcache/data_mem_data_lo[494]    0.097    0.108
+ core/be/be_mem/dcache/data_mem_data_lo[111]    0.143    0.019
+ core/be/be_mem/dcache/data_mem_3__data_mem/n9    0.103    0.015
+ core/be/be_mem/dcache/data_mem_3__data_mem/n287    0.113    0.011
+ Propagated:
+ core/be/be_mem/dcache/data_mem_3__data_mem/macro_mem/O1[46]        -        -
+ Total:                    0.097     0.302    -0.002
+
+ core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst/U119/IN1 (core/be/be_mem/dcache/data_mem_data_lo[238])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_3__data_mem/n16    0.093    0.096
+ core/be/be_mem/dcache/data_mem_data_lo[199]    0.085    0.066
+ core/be/be_mem/dcache/data_mem_data_lo[494]    0.097    0.108
+ core/be/be_mem/dcache/data_mem_data_lo[111]    0.143    0.019
+ core/be/be_mem/dcache/data_mem_3__data_mem/n9    0.103    0.015
+ core/be/be_mem/dcache/data_mem_3__data_mem/n287    0.113    0.011
+ Propagated:
+ core/be/be_mem/dcache/data_mem_3__data_mem/macro_mem/O1[46]        -        -
+ Total:                    0.096     0.302    -0.002
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst/U19/IN2 (data_mem_pkt_li[465])
+ Aggressors:
+ data_mem_pkt_li[396]      0.621     0.094
+ data_mem_pkt_li[285]      0.652     0.039
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n5619    0.459    0.039
+ data_mem_pkt_li[9]        0.719     0.030
+ data_mem_pkt_li[401]      0.618     0.030
+ data_mem_pkt_li[297]      0.570     0.025
+ data_mem_pkt_li[418]      0.631     0.023
+ data_mem_pkt_li[476]      0.620     0.023
+ Propagated:
+ uce_0__uce/U658/Q             -         -
+ Total:                    0.610     0.302    -0.002
+
+ core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst/U87/IN1 (data_mem_pkt_li[465])
+ Aggressors:
+ data_mem_pkt_li[396]      0.621     0.094
+ data_mem_pkt_li[285]      0.652     0.039
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n5619    0.459    0.039
+ data_mem_pkt_li[9]        0.719     0.030
+ data_mem_pkt_li[401]      0.618     0.030
+ data_mem_pkt_li[297]      0.570     0.025
+ data_mem_pkt_li[418]      0.631     0.023
+ data_mem_pkt_li[476]      0.620     0.023
+ Propagated:
+ uce_0__uce/U658/Q             -         -
+ Total:                    0.610     0.302    -0.002
+
+ core/be/be_mem/dcache/U2467/IN2 (core/be/be_mem/dcache/data_mem_data_lo[238])
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_3__data_mem/n16    0.093    0.096
+ core/be/be_mem/dcache/data_mem_data_lo[199]    0.085    0.066
+ core/be/be_mem/dcache/data_mem_data_lo[494]    0.097    0.108
+ core/be/be_mem/dcache/data_mem_data_lo[111]    0.143    0.019
+ core/be/be_mem/dcache/data_mem_3__data_mem/n9    0.103    0.015
+ core/be/be_mem/dcache/data_mem_3__data_mem/n287    0.113    0.010
+ Propagated:
+ core/be/be_mem/dcache/data_mem_3__data_mem/macro_mem/O1[46]        -        -
+ Total:                    0.096     0.302    -0.002
+
+ core/be/be_mem/U361/IN2 (core/be/be_mem/dcache_data[57])
+ Aggressors:
+ core/be/be_mem/dcache_pkt[22]    0.325    0.131
+ core/be/be_mem/dcache_data[55]    0.300    0.067
+ core/be/be_mem/dcache_data[60]    0.320    0.033
+ core/be/be_mem/dcache_data[53]    0.322    0.028
+ core/be/be_mem/dcache_data[47]    0.303    0.023
+ core/be/be_mem/dcache_pkt[44]    0.276    0.020
+ Propagated:
+ core/be/be_mem/dcache/U1968/Q        -        -
+ Total:                    0.314     0.302    -0.002
+
+ core/be/be_mem/dcache/data_mem_2__data_mem/icc_place26/INP (core/be/be_mem/dcache/n2711)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_data_lo[378]    0.177    0.088
+ core/be/be_mem/dcache/data_mem_data_lo[314]    0.199    0.052
+ core/be/be_mem/dcache/n2727    0.359    0.032
+ core/be/be_mem/dcache/data_mem_data_li[51]    0.283    0.026
+ core/be/be_mem/dcache/data_mem_addr_li[2]    0.384    0.022
+ core/be/be_mem/dcache/ld_data_way_picked[48]    0.347    0.021
+ core/be/be_mem/dcache/data_mem_1__data_mem/n623    0.474    0.018
+ core/be/be_mem/dcache/n2619    0.505    0.013
+ core/be/be_mem/dcache/n2535    0.352    0.015
+ uce_1__uce/dirty_data_reg/dff/n890    0.221    0.015
+ core/be/be_mem/dcache/uncached_load_data_r[40]    0.266    0.010
+ Propagated:
+ core/be/be_mem/dcache/U1685/Q        -        -
+ Total:                    0.279     0.302    -0.002
+
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/U390/IN1 (core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/n623)
+ Aggressors:
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/n118    0.352    0.132
+ uce_0__uce/cache_req_r[19]    0.351    0.082
+ uce_0__uce/cache_req_r[32]    0.354    0.031
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/mem[238]    0.341    0.030
+ uce_0__uce/cache_req_reg/n50    0.321    0.026
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/mem[237]    0.331    0.021
+ Propagated:
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/U386/QN        -        -
+ Total:                    0.348     0.301    -0.001
+
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place83/INP (core/be/be_mem/dcache/data_mem_4__data_mem/n115)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_7__data_mem/n102    0.230    0.126
+ core/be/be_mem/dcache/data_mem_5__data_mem/n91    0.160    0.125
+ core/be/be_mem/dcache/data_mem_5__data_mem/n63    0.162    0.036
+ core/be/be_mem/dcache/data_mem_4__data_mem/n59    0.186    0.014
+ Propagated:
+ core/be/be_mem/dcache/data_mem_4__data_mem/icc_place55/Z        -        -
+ Total:                    0.191     0.301    -0.001
+
+ core/fe/mem/icache/U1166/IN1 (core/fe/mem/icache/ld_data_tv_r[382])
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n110    0.365    0.054
+ core/fe/mem/icache/data_mems_4__data_mem/n218    0.233    0.059
+ core/fe/mem/icache/data_mems_0__data_mem/n282    0.262    0.034
+ core/fe/mem/icache/data_set_select_mux/n145    0.284    0.032
+ core/fe/mem/icache/data_mems_5__data_mem/n323    0.273    0.030
+ core/fe/mem/icache/ld_data_tv_r[361]    0.423    0.020
+ core/fe/mem/icache/n1637    0.466    0.019
+ core/fe/mem/icache/data_mems_6__data_mem/n50    0.263    0.018
+ core/fe/mem/icache/ld_data_tv_r[362]    0.477    0.012
+ core/fe/mem/icache/data_mems_7__data_mem/n73    0.251    0.018
+ core/fe/mem/icache/data_set_select_mux/n47    0.489    0.012
+ core/fe/mem/icache/data_mems_4__data_mem/n48    0.276    0.015
+ core/fe/mem/icache/data_mems_4__data_mem/n167    0.230    0.016
+ core/fe/mem/icache/n439    0.474    0.009
+ core/fe/mem/icache/data_mem_data_li[199]    0.233    0.013
+ Propagated:
+ core/fe/mem/icache/ld_data_tv_r_reg_5__62_/Q        -        -
+ Total:                    0.306     0.301    -0.001
+
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/icc_place212/INP (core/n22)
+ Aggressors:
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1166    0.522    0.075
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n4387    0.832    0.040
+ core/fe_cmd_lo[3]         0.599     0.040
+ core/be/be_mem/csr/pmpaddr3_reg/n11    0.492    0.038
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[826]    0.535    0.030
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n3651    0.807    0.023
+ core/fe/pc_gen/n365       0.736     0.018
+ core/n16                  0.516     0.018
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/n1111    0.507    0.016
+ core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth/mem[798]    0.503    0.015
+ Propagated:
+ core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth/U268/QN        -        -
+ Total:                    0.623     0.301    -0.001
+
+ core/be/be_mem/dcache/data_mem_0__data_mem/icc_clock2/INP (core/be/be_mem/dcache/n2787)
+ Aggressors:
+ core/be/be_mem/dcache/data_mem_1__data_mem/n369    0.318    0.189
+ core/be/be_mem/dcache_pkt[72]    0.510    0.068
+ core/be/be_mem/dcache/ld_data_way_picked[49]    0.365    0.017
+ core/be/be_mem/dcache/n722    0.597    0.013
+ core/be/be_mem/dcache/wbuf/n49    0.535    0.012
+ tag_mem_pkt_li[77]        0.254     0.013
+ Propagated:
+ core/be/be_mem/dcache/U1850/Q        -        -
+ Total:                    0.373     0.300    -0.000
+
+ core/fe/mem/icache/data_set_select_mux/U83/IN2 (core/fe/mem/icache/data_set_select_mux/n55)
+ Aggressors:
+ core/fe/mem/icache/data_set_select_mux/n131    0.317    0.057
+ core/fe/mem/icache/data_mems_4__data_mem/n284    0.169    0.063
+ core/fe/mem/icache/data_set_select_mux/n67    0.337    0.046
+ core/fe/mem/icache/data_mems_5__data_mem/n39    0.224    0.045
+ core/fe/mem/icache/data_mem_data_li[201]    0.164    0.047
+ core/fe/mem/icache/data_set_select_mux/n220    0.186    0.025
+ core/fe/mem/icache/n1633    0.246    0.017
+ Propagated:
+ core/fe/mem/icache/data_set_select_mux/U80/Q        -        -
+ Total:                    0.236     0.300    -0.000
+
+
+1

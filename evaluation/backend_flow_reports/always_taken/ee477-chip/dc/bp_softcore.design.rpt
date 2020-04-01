@@ -1,0 +1,71 @@
+report_design -nosplit                           
+ 
+****************************************
+Report : design
+Design : bp_softcore
+Version: O-2018.06-SP4
+Date   : Fri Mar 13 10:41:21 2020
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    saed90nm_typ (File: /home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/stdview/stdcells.db)
+    saed90_16x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_16x64_1P_bit/saed90_16x64_1P_bit.db)
+    saed90_64x512_1P_BM (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_64x512_1P_BM/saed90_64x512_1P_BM.db)
+    saed90_248x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_248x64_1P_bit/saed90_248x64_1P_bit.db)
+    saed90_64x32_2P (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_64x32_2P/saed90_64x32_2P.db)
+    saed90_8x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_8x64_1P_bit/saed90_8x64_1P_bit.db)
+
+Local Link Library:
+
+    {/home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/stdview/stdcells.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : TYPICAL
+    Library : saed90nm_typ
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   1.20
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    No wire loading used.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    DesignWare
+
+Design Parameters:
+
+    bp_params_p => 2
+
+

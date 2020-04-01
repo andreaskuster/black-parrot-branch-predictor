@@ -1,0 +1,26 @@
+****************************************
+Report : clock_skew
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 11:32:50 2020
+****************************************
+
+
+****************************************
+Report : clock
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 11:32:50 2020
+****************************************
+
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    I - Inactive   clock
+
+Clock          Period   Waveform            Attrs     Sources
+-------------------------------------------------------------------------------
+core_clk        7.000   {0 3.5}                       {clk_i}
+
+1

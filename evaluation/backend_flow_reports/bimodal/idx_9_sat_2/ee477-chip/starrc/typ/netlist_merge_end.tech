@@ -1,0 +1,11 @@
+-stage_id 5
+-output_form 3
+-dp_suffix _assembly
+-skip_xtract_pp xout_split
+-num_parts 1
+-bidirectional
+-i .TMP
+-o .TMP
+-merge_non_netlist_files
+-dp_merge_netlist .TMP
+-xout_offset_file xout_offset

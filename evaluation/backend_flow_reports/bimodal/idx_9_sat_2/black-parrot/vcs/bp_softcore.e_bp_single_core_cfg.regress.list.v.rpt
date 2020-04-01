@@ -1,0 +1,66 @@
+bs
+==========
+[CORE0 FSH] PASS
+All cores finished! Terminating...
+$finish called from file "/home/jlewis24/final_project/black-parrot/bp_top/test/common/bp_nonsynth_host.v", line 138.
+$finish at simulation time             13010000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 13010000 ps
+CPU Time:      5.140 seconds;       Data structure size:  27.9Mb
+Thu Mar 12 14:23:37 2020
+
+fibcall
+==========
+[CORE0 FSH] PASS
+All cores finished! Terminating...
+$finish called from file "/home/jlewis24/final_project/black-parrot/bp_top/test/common/bp_nonsynth_host.v", line 138.
+$finish at simulation time             27230000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 27230000 ps
+CPU Time:     10.030 seconds;       Data structure size:  27.9Mb
+Thu Mar 12 14:23:49 2020
+
+median
+==========
+[CORE0 FSH] PASS
+All cores finished! Terminating...
+$finish called from file "/home/jlewis24/final_project/black-parrot/bp_top/test/common/bp_nonsynth_host.v", line 138.
+$finish at simulation time            248950000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 248950000 ps
+CPU Time:     87.850 seconds;       Data structure size:  27.9Mb
+Thu Mar 12 14:25:20 2020
+
+rv64ui-p-blt
+==========
+[CORE0 FSH] PASS
+All cores finished! Terminating...
+$finish called from file "/home/jlewis24/final_project/black-parrot/bp_top/test/common/bp_nonsynth_host.v", line 138.
+$finish at simulation time             10750000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 10750000 ps
+CPU Time:      4.600 seconds;       Data structure size:  27.9Mb
+Thu Mar 12 14:25:29 2020
+
+towers
+==========
+[CORE0 FSH] PASS
+All cores finished! Terminating...
+$finish called from file "/home/jlewis24/final_project/black-parrot/bp_top/test/common/bp_nonsynth_host.v", line 138.
+$finish at simulation time            168310000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 168310000 ps
+CPU Time:     66.840 seconds;       Data structure size:  27.9Mb
+Thu Mar 12 14:26:39 2020
+
+vvadd
+==========
+[CORE0 FSH] PASS
+All cores finished! Terminating...
+$finish called from file "/home/jlewis24/final_project/black-parrot/bp_top/test/common/bp_nonsynth_host.v", line 138.
+$finish at simulation time            110860000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 110860000 ps
+CPU Time:     43.560 seconds;       Data structure size:  27.9Mb
+Thu Mar 12 14:27:25 2020
+

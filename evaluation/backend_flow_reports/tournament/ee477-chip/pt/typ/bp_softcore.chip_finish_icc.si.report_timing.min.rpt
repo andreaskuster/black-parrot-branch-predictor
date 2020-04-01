@@ -1,0 +1,495 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-input_pins
+	-nets
+	-nworst 10
+	-slack_lesser_than 1000000.000
+	-max_paths 10
+	-crosstalk_delta
+	-sort_by slack
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sat Mar 14 15:36:47 2020
+****************************************
+
+Report timing status: Started...
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                   Fanout  Delta     Incr       Path
+  --------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (ideal)                                              0.000      0.000
+  input external delay                                                     0.100      0.100 f
+  reset_i (in)                                                             0.000 &    0.100 f
+  reset_i (net)                                            24 
+  core/be/be_mem/csr/priv_mode_reg/U3/IN2 (OR2X1)                 0.000    0.058 &    0.158 f
+  core/be/be_mem/csr/priv_mode_reg/U3/Q (OR2X1)                            0.059 &    0.218 f
+  core/be/be_mem/csr/priv_mode_reg/n1 (net)                 1 
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/D (DFFX1)        0.000    0.000 &    0.218 f
+  data arrival time                                                                   0.218
+
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.356      0.356
+  clock reconvergence pessimism                                            0.000      0.356
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/CLK (DFFX1)                          0.356 r
+  library hold time                                                        0.021      0.377
+  data required time                                                                  0.377
+  --------------------------------------------------------------------------------------------
+  data required time                                                                  0.377
+  data arrival time                                                                  -0.218
+  --------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                   -0.159
+
+
+  Startpoint: reset_i (input port clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: REGIN
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                   Fanout  Delta     Incr       Path
+  --------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (ideal)                                              0.000      0.000
+  input external delay                                                     0.100      0.100 r
+  reset_i (in)                                                             0.000 &    0.100 r
+  reset_i (net)                                            24 
+  core/be/be_mem/csr/priv_mode_reg/U3/IN2 (OR2X1)                 0.000    0.060 &    0.160 r
+  core/be/be_mem/csr/priv_mode_reg/U3/Q (OR2X1)                            0.084 &    0.243 r
+  core/be/be_mem/csr/priv_mode_reg/n1 (net)                 1 
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/D (DFFX1)        0.000    0.000 &    0.243 r
+  data arrival time                                                                   0.243
+
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.356      0.356
+  clock reconvergence pessimism                                            0.000      0.356
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/CLK (DFFX1)                          0.356 r
+  library hold time                                                       -0.026      0.330
+  data required time                                                                  0.330
+  --------------------------------------------------------------------------------------------
+  data required time                                                                  0.330
+  data arrival time                                                                  -0.243
+  --------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                   -0.087
+
+
+  Startpoint: core/be/be_mem/csr/mstatus_reg/data_r_reg_4_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B4I2/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                   Fanout  Delta     Incr       Path
+  --------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.247      0.247
+  core/be/be_mem/csr/mstatus_reg/data_r_reg_4_/CLK (DFFX1)                 0.000      0.247 r
+  core/be/be_mem/csr/mstatus_reg/data_r_reg_4_/Q (DFFX1)                   0.212 &    0.459 f
+  core/be/be_mem/csr/mstatus_reg/data_o[4] (net)            3 
+  core/be/be_mem/csr/U1343/IN2 (NAND2X0)                          0.000    0.000 &    0.459 f
+  core/be/be_mem/csr/U1343/QN (NAND2X0)                                    0.040 &    0.499 r
+  core/be/be_mem/csr/n1030 (net)                            1 
+  core/be/be_mem/csr/U1344/IN4 (NAND4X0)                         -0.000   -0.000 &    0.499 r
+  core/be/be_mem/csr/U1344/QN (NAND4X0)                                    0.036 &    0.534 f
+  core/be/be_mem/csr/n1033 (net)                            1 
+  core/be/be_mem/csr/U1345/IN4 (AOI22X1)                          0.000    0.000 &    0.534 f
+  core/be/be_mem/csr/U1345/QN (AOI22X1)                                    0.096 &    0.630 r
+  core/be/be_mem/csr/n1035 (net)                            1 
+  core/be/be_mem/csr/U1346/IN1 (NAND2X0)                          0.000    0.000 &    0.630 r
+  core/be/be_mem/csr/U1346/QN (NAND2X0)                                    0.100 &    0.730 f
+  core/be/be_mem/csr/trap_pkt_o[6] (net)                    4 
+  core/be/be_mem/csr/priv_mode_reg/U3/IN1 (OR2X1)                -0.015   -0.015 &    0.716 f
+  core/be/be_mem/csr/priv_mode_reg/U3/Q (OR2X1)                            0.065 &    0.780 f
+  core/be/be_mem/csr/priv_mode_reg/n1 (net)                 1 
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/D (DFFX1)        0.000    0.000 &    0.780 f
+  data arrival time                                                                   0.780
+
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.356      0.356
+  clock reconvergence pessimism                                           -0.009      0.346
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/CLK (DFFX1)                          0.346 r
+  library hold time                                                        0.021      0.367
+  data required time                                                                  0.367
+  --------------------------------------------------------------------------------------------
+  data required time                                                                  0.367
+  data arrival time                                                                  -0.780
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                         0.413
+
+
+  Startpoint: core/be/be_mem/csr/dcsr_reg/data_r_reg_1_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                   Fanout  Delta     Incr       Path
+  --------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.276      0.276
+  core/be/be_mem/csr/dcsr_reg/data_r_reg_1_/CLK (DFFX1)                    0.000      0.276 r
+  core/be/be_mem/csr/dcsr_reg/data_r_reg_1_/Q (DFFX1)                      0.213 &    0.490 f
+  core/be/be_mem/csr/dcsr_reg/data_o[1] (net)               3 
+  core/be/be_mem/csr/U1341/IN2 (NAND2X0)                          0.000    0.000 &    0.490 f
+  core/be/be_mem/csr/U1341/QN (NAND2X0)                                    0.037 &    0.527 r
+  core/be/be_mem/csr/n1031 (net)                            1 
+  core/be/be_mem/csr/U1344/IN3 (NAND4X0)                          0.000    0.000 &    0.527 r
+  core/be/be_mem/csr/U1344/QN (NAND4X0)                                    0.035 &    0.561 f
+  core/be/be_mem/csr/n1033 (net)                            1 
+  core/be/be_mem/csr/U1345/IN4 (AOI22X1)                          0.000    0.000 &    0.561 f
+  core/be/be_mem/csr/U1345/QN (AOI22X1)                                    0.096 &    0.658 r
+  core/be/be_mem/csr/n1035 (net)                            1 
+  core/be/be_mem/csr/U1346/IN1 (NAND2X0)                          0.000    0.000 &    0.658 r
+  core/be/be_mem/csr/U1346/QN (NAND2X0)                                    0.100 &    0.758 f
+  core/be/be_mem/csr/trap_pkt_o[6] (net)                    4 
+  core/be/be_mem/csr/priv_mode_reg/U3/IN1 (OR2X1)                -0.015   -0.015 &    0.743 f
+  core/be/be_mem/csr/priv_mode_reg/U3/Q (OR2X1)                            0.065 &    0.807 f
+  core/be/be_mem/csr/priv_mode_reg/n1 (net)                 1 
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/D (DFFX1)        0.000    0.000 &    0.808 f
+  data arrival time                                                                   0.808
+
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.356      0.356
+  clock reconvergence pessimism                                           -0.000      0.356
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/CLK (DFFX1)                          0.356 r
+  library hold time                                                        0.021      0.377
+  data required time                                                                  0.377
+  --------------------------------------------------------------------------------------------
+  data required time                                                                  0.377
+  data arrival time                                                                  -0.808
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                         0.431
+
+
+  Startpoint: core/be/be_mem/csr/mstatus_reg/data_r_reg_4_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B4I2/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                   Fanout  Delta     Incr       Path
+  --------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.247      0.247
+  core/be/be_mem/csr/mstatus_reg/data_r_reg_4_/CLK (DFFX1)                 0.000      0.247 r
+  core/be/be_mem/csr/mstatus_reg/data_r_reg_4_/Q (DFFX1)                   0.196 &    0.442 r
+  core/be/be_mem/csr/mstatus_reg/data_o[4] (net)            3 
+  core/be/be_mem/csr/U1343/IN2 (NAND2X0)                          0.000    0.000 &    0.442 r
+  core/be/be_mem/csr/U1343/QN (NAND2X0)                                    0.039 &    0.481 f
+  core/be/be_mem/csr/n1030 (net)                            1 
+  core/be/be_mem/csr/U1344/IN4 (NAND4X0)                         -0.000   -0.000 &    0.480 f
+  core/be/be_mem/csr/U1344/QN (NAND4X0)                                    0.032 &    0.513 r
+  core/be/be_mem/csr/n1033 (net)                            1 
+  core/be/be_mem/csr/U1345/IN4 (AOI22X1)                          0.000    0.000 &    0.513 r
+  core/be/be_mem/csr/U1345/QN (AOI22X1)                                    0.089 &    0.602 f
+  core/be/be_mem/csr/n1035 (net)                            1 
+  core/be/be_mem/csr/U1346/IN1 (NAND2X0)                          0.000    0.000 &    0.602 f
+  core/be/be_mem/csr/U1346/QN (NAND2X0)                                    0.094 &    0.696 r
+  core/be/be_mem/csr/trap_pkt_o[6] (net)                    4 
+  core/be/be_mem/csr/priv_mode_reg/U3/IN1 (OR2X1)                -0.015   -0.015 &    0.680 r
+  core/be/be_mem/csr/priv_mode_reg/U3/Q (OR2X1)                            0.074 &    0.754 r
+  core/be/be_mem/csr/priv_mode_reg/n1 (net)                 1 
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/D (DFFX1)        0.000    0.000 &    0.754 r
+  data arrival time                                                                   0.754
+
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.356      0.356
+  clock reconvergence pessimism                                           -0.009      0.346
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/CLK (DFFX1)                          0.346 r
+  library hold time                                                       -0.026      0.321
+  data required time                                                                  0.321
+  --------------------------------------------------------------------------------------------
+  data required time                                                                  0.321
+  data arrival time                                                                  -0.754
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                         0.434
+
+
+  Startpoint: core/be/be_mem/csr/dcsr_reg/data_r_reg_1_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: clk_i
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                   Fanout  Delta     Incr       Path
+  --------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.276      0.276
+  core/be/be_mem/csr/dcsr_reg/data_r_reg_1_/CLK (DFFX1)                    0.000      0.276 r
+  core/be/be_mem/csr/dcsr_reg/data_r_reg_1_/Q (DFFX1)                      0.196 &    0.473 r
+  core/be/be_mem/csr/dcsr_reg/data_o[1] (net)               3 
+  core/be/be_mem/csr/U1341/IN2 (NAND2X0)                          0.000    0.000 &    0.473 r
+  core/be/be_mem/csr/U1341/QN (NAND2X0)                                    0.036 &    0.509 f
+  core/be/be_mem/csr/n1031 (net)                            1 
+  core/be/be_mem/csr/U1344/IN3 (NAND4X0)                          0.000    0.000 &    0.509 f
+  core/be/be_mem/csr/U1344/QN (NAND4X0)                                    0.035 &    0.544 r
+  core/be/be_mem/csr/n1033 (net)                            1 
+  core/be/be_mem/csr/U1345/IN4 (AOI22X1)                          0.000    0.000 &    0.544 r
+  core/be/be_mem/csr/U1345/QN (AOI22X1)                                    0.089 &    0.633 f
+  core/be/be_mem/csr/n1035 (net)                            1 
+  core/be/be_mem/csr/U1346/IN1 (NAND2X0)                          0.000    0.000 &    0.633 f
+  core/be/be_mem/csr/U1346/QN (NAND2X0)                                    0.094 &    0.727 r
+  core/be/be_mem/csr/trap_pkt_o[6] (net)                    4 
+  core/be/be_mem/csr/priv_mode_reg/U3/IN1 (OR2X1)                -0.015   -0.015 &    0.711 r
+  core/be/be_mem/csr/priv_mode_reg/U3/Q (OR2X1)                            0.074 &    0.785 r
+  core/be/be_mem/csr/priv_mode_reg/n1 (net)                 1 
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/D (DFFX1)        0.000    0.000 &    0.785 r
+  data arrival time                                                                   0.785
+
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.356      0.356
+  clock reconvergence pessimism                                           -0.000      0.356
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/CLK (DFFX1)                          0.356 r
+  library hold time                                                       -0.026      0.330
+  data required time                                                                  0.330
+  --------------------------------------------------------------------------------------------
+  data required time                                                                  0.330
+  data arrival time                                                                  -0.785
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                         0.455
+
+
+  Startpoint: core/be/be_mem/csr/mstatus_reg/data_r_reg_5_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX16_G1B2I13/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                   Fanout  Delta     Incr       Path
+  --------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.270      0.270
+  core/be/be_mem/csr/mstatus_reg/data_r_reg_5_/CLK (DFFX1)                 0.000      0.270 r
+  core/be/be_mem/csr/mstatus_reg/data_r_reg_5_/Q (DFFX1)                   0.218 &    0.487 f
+  core/be/be_mem/csr/mstatus_reg/data_o[5] (net)            5 
+  core/be/be_mem/csr/U1340/IN2 (NAND2X0)                          0.000    0.000 &    0.487 f
+  core/be/be_mem/csr/U1340/QN (NAND2X0)                                    0.051 &    0.538 r
+  core/be/be_mem/csr/n1032 (net)                            1 
+  core/be/be_mem/csr/U1344/IN2 (NAND4X0)                         -0.010   -0.010 &    0.528 r
+  core/be/be_mem/csr/U1344/QN (NAND4X0)                                    0.034 &    0.563 f
+  core/be/be_mem/csr/n1033 (net)                            1 
+  core/be/be_mem/csr/U1345/IN4 (AOI22X1)                          0.000    0.000 &    0.563 f
+  core/be/be_mem/csr/U1345/QN (AOI22X1)                                    0.096 &    0.659 r
+  core/be/be_mem/csr/n1035 (net)                            1 
+  core/be/be_mem/csr/U1346/IN1 (NAND2X0)                          0.000    0.000 &    0.659 r
+  core/be/be_mem/csr/U1346/QN (NAND2X0)                                    0.100 &    0.759 f
+  core/be/be_mem/csr/trap_pkt_o[6] (net)                    4 
+  core/be/be_mem/csr/priv_mode_reg/U3/IN1 (OR2X1)                -0.015   -0.015 &    0.744 f
+  core/be/be_mem/csr/priv_mode_reg/U3/Q (OR2X1)                            0.065 &    0.809 f
+  core/be/be_mem/csr/priv_mode_reg/n1 (net)                 1 
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/D (DFFX1)        0.000    0.000 &    0.809 f
+  data arrival time                                                                   0.809
+
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.356      0.356
+  clock reconvergence pessimism                                           -0.040      0.316
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/CLK (DFFX1)                          0.316 r
+  library hold time                                                        0.021      0.337
+  data required time                                                                  0.337
+  --------------------------------------------------------------------------------------------
+  data required time                                                                  0.337
+  data arrival time                                                                  -0.809
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                         0.472
+
+
+  Startpoint: core/be/be_calculator/exc_stage_reg/data_r_reg_11_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B4I2/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                         Fanout  Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock network delay (propagated)                                               0.245      0.245
+  core/be/be_calculator/exc_stage_reg/data_r_reg_11_/CLK (DFFX1)                 0.000      0.245 r
+  core/be/be_calculator/exc_stage_reg/data_r_reg_11_/Q (DFFX1)                   0.199 &    0.444 r
+  core/be/be_calculator/exc_stage_reg/data_o[11] (net)            3 
+  core/be/be_calculator/pipe_mem/U137/IN1 (NOR2X0)                      0.000    0.000 &    0.444 r
+  core/be/be_calculator/pipe_mem/U137/QN (NOR2X0)                                0.106 &    0.550 f
+  core/be/be_calculator/pipe_mem/csr_cmd_v_o (net)                1 
+  core/be/be_mem/icc_place22/INP (NBUFFX2)                             -0.046   -0.046 &    0.505 f
+  core/be/be_mem/icc_place22/Z (NBUFFX2)                                         0.102 &    0.606 f
+  core/be/be_mem/n153 (net)                                      16 
+  core/be/be_mem/csr/U1345/IN3 (AOI22X1)                                0.000    0.001 &    0.607 f
+  core/be/be_mem/csr/U1345/QN (AOI22X1)                                          0.099 &    0.706 r
+  core/be/be_mem/csr/n1035 (net)                                  1 
+  core/be/be_mem/csr/U1346/IN1 (NAND2X0)                                0.000    0.000 &    0.706 r
+  core/be/be_mem/csr/U1346/QN (NAND2X0)                                          0.100 &    0.806 f
+  core/be/be_mem/csr/trap_pkt_o[6] (net)                          4 
+  core/be/be_mem/csr/priv_mode_reg/U3/IN1 (OR2X1)                      -0.015   -0.015 &    0.791 f
+  core/be/be_mem/csr/priv_mode_reg/U3/Q (OR2X1)                                  0.065 &    0.856 f
+  core/be/be_mem/csr/priv_mode_reg/n1 (net)                       1 
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/D (DFFX1)              0.000    0.000 &    0.856 f
+  data arrival time                                                                         0.856
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock network delay (propagated)                                               0.356      0.356
+  clock reconvergence pessimism                                                 -0.009      0.346
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/CLK (DFFX1)                                0.346 r
+  library hold time                                                              0.021      0.367
+  data required time                                                                        0.367
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                        0.367
+  data arrival time                                                                        -0.856
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.488
+
+
+  Startpoint: core/be/be_mem/csr/mstatus_reg/data_r_reg_5_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX16_G1B2I13/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                   Fanout  Delta     Incr       Path
+  --------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.270      0.270
+  core/be/be_mem/csr/mstatus_reg/data_r_reg_5_/CLK (DFFX1)                 0.000      0.270 r
+  core/be/be_mem/csr/mstatus_reg/data_r_reg_5_/Q (DFFX1)                   0.200 &    0.470 r
+  core/be/be_mem/csr/mstatus_reg/data_o[5] (net)            5 
+  core/be/be_mem/csr/U1340/IN2 (NAND2X0)                          0.000    0.000 &    0.470 r
+  core/be/be_mem/csr/U1340/QN (NAND2X0)                                    0.050 &    0.520 f
+  core/be/be_mem/csr/n1032 (net)                            1 
+  core/be/be_mem/csr/U1344/IN2 (NAND4X0)                         -0.009   -0.009 &    0.511 f
+  core/be/be_mem/csr/U1344/QN (NAND4X0)                                    0.039 &    0.550 r
+  core/be/be_mem/csr/n1033 (net)                            1 
+  core/be/be_mem/csr/U1345/IN4 (AOI22X1)                          0.000    0.000 &    0.550 r
+  core/be/be_mem/csr/U1345/QN (AOI22X1)                                    0.089 &    0.639 f
+  core/be/be_mem/csr/n1035 (net)                            1 
+  core/be/be_mem/csr/U1346/IN1 (NAND2X0)                          0.000    0.000 &    0.639 f
+  core/be/be_mem/csr/U1346/QN (NAND2X0)                                    0.094 &    0.733 r
+  core/be/be_mem/csr/trap_pkt_o[6] (net)                    4 
+  core/be/be_mem/csr/priv_mode_reg/U3/IN1 (OR2X1)                -0.015   -0.015 &    0.717 r
+  core/be/be_mem/csr/priv_mode_reg/U3/Q (OR2X1)                            0.074 &    0.791 r
+  core/be/be_mem/csr/priv_mode_reg/n1 (net)                 1 
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/D (DFFX1)        0.000    0.000 &    0.791 r
+  data arrival time                                                                   0.791
+
+  clock core_clk (rise edge)                                               0.000      0.000
+  clock network delay (propagated)                                         0.356      0.356
+  clock reconvergence pessimism                                           -0.040      0.316
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/CLK (DFFX1)                          0.316 r
+  library hold time                                                       -0.026      0.290
+  data required time                                                                  0.290
+  --------------------------------------------------------------------------------------------
+  data required time                                                                  0.290
+  data arrival time                                                                  -0.791
+  --------------------------------------------------------------------------------------------
+  slack (MET)                                                                         0.501
+
+
+  Startpoint: core/be/be_calculator/exc_stage_reg/data_r_reg_11_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Endpoint: core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_
+               (rising edge-triggered flip-flop clocked by core_clk)
+  Last common pin: CTSINVX8_G1B4I2/ZN
+  Path Group: core_clk
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.990
+  Min Clock Paths Derating Factor : 0.990
+  Max Clock Paths Derating Factor : 1.010
+
+  Point                                                         Fanout  Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock network delay (propagated)                                               0.245      0.245
+  core/be/be_calculator/exc_stage_reg/data_r_reg_11_/CLK (DFFX1)                 0.000      0.245 r
+  core/be/be_calculator/exc_stage_reg/data_r_reg_11_/Q (DFFX1)                   0.199 &    0.444 r
+  core/be/be_calculator/exc_stage_reg/data_o[11] (net)            3 
+  core/be/be_calculator/U20/IN1 (NOR2X0)                                0.000    0.000 &    0.444 r
+  core/be/be_calculator/U20/QN (NOR2X0)                                          0.057 &    0.501 f
+  core/be/be_calculator/commit_pkt_o[114] (net)                   2 
+  core/be/be_mem/U11/INP (INVX0)                                       -0.008   -0.007 &    0.494 f
+  core/be/be_mem/U11/ZN (INVX0)                                                  0.057 &    0.551 r
+  core/be/be_mem/n4 (net)                                         1 
+  core/be/be_mem/U12/IN2 (NAND2X0)                                     -0.016   -0.015 &    0.536 r
+  core/be/be_mem/U12/QN (NAND2X0)                                                0.115 &    0.651 f
+  core/be/be_mem/exception_v_li (net)                             2 
+  core/be/be_mem/csr/U1249/IN2 (NAND3X0)                               -0.029   -0.029 &    0.622 f
+  core/be/be_mem/csr/U1249/QN (NAND3X0)                                          0.089 &    0.711 r
+  core/be/be_mem/csr/n1115 (net)                                  4 
+  core/be/be_mem/csr/U1346/IN2 (NAND2X0)                                0.000    0.000 &    0.711 r
+  core/be/be_mem/csr/U1346/QN (NAND2X0)                                          0.110 &    0.821 f
+  core/be/be_mem/csr/trap_pkt_o[6] (net)                          4 
+  core/be/be_mem/csr/priv_mode_reg/U3/IN1 (OR2X1)                      -0.015   -0.015 &    0.806 f
+  core/be/be_mem/csr/priv_mode_reg/U3/Q (OR2X1)                                  0.065 &    0.871 f
+  core/be/be_mem/csr/priv_mode_reg/n1 (net)                       1 
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/D (DFFX1)              0.000    0.000 &    0.871 f
+  data arrival time                                                                         0.871
+
+  clock core_clk (rise edge)                                                     0.000      0.000
+  clock network delay (propagated)                                               0.356      0.356
+  clock reconvergence pessimism                                                 -0.009      0.346
+  core/be/be_mem/csr/priv_mode_reg/data_r_reg_0_/CLK (DFFX1)                                0.346 r
+  library hold time                                                              0.021      0.367
+  data required time                                                                        0.367
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                        0.367
+  data arrival time                                                                        -0.871
+  --------------------------------------------------------------------------------------------------
+  slack (MET)                                                                               0.504
+
+Report timing status: (total endpoints 16479)...10% done.
+Report timing status: (total endpoints 16479)...20% done.
+Report timing status: (total endpoints 16479)...30% done.
+Report timing status: (total endpoints 16479)...40% done.
+Report timing status: (total endpoints 16479)...50% done.
+Report timing status: (total endpoints 16479)...60% done.
+Report timing status: (total endpoints 16479)...70% done.
+Report timing status: (total endpoints 16479)...80% done.
+Report timing status: (total endpoints 16479)...90% done.
+Warning: report_timing has satisfied the max_paths criteria. There are 16478 further endpoints which have paths of interest with slack less than 1000000.000 that were not considered when generating this report. (UITE-502)
+
+Report timing status: Completed...
+1

@@ -1,0 +1,1646 @@
+****************************************
+Report : Averaged Power
+	-verbose
+Design : bp_softcore
+Version: K-2015.12-SP3-2
+Date   : Sun Mar 15 20:24:46 2020
+****************************************
+
+Library(s) Used:
+
+    saed90nm_typ (File: /home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/pkgs/SAED_EDK90nm_01252011/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_typ.db)
+    saed90_8x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_8x64_1P_bit/saed90_8x64_1P_bit.db)
+    saed90_64x32_2P (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_64x32_2P/saed90_64x32_2P.db)
+    saed90_64x512_1P_BM (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_64x512_1P_BM/saed90_64x512_1P_BM.db)
+    saed90_248x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_248x64_1P_bit/saed90_248x64_1P_bit.db)
+    saed90_16x64_1P_bit (File: /home/jlewis24/final_project/ee477-chip/memories/saed90_16x64_1P_bit/saed90_16x64_1P_bit.db)
+    saed90nm_typ_cg (File: /home/projects/vlsi/common/ee477/kits/wi18/saed-90nm/pkgs/SAED_EDK90nm_01252011/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/clock_gating/saed90nm_typ_cg.db)
+
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ
+Wire Load Model Mode: enclosed
+
+Cell               Design       Wire_model  Library       Selection_type
+--------------------------------------------------------------------------------
+                   bp_softcore  4000000     saed90nm_typ  automatic-by-area
+fifo_0__mem_fifo   bsg_one_fifo_width_p570_2
+                                8000        saed90nm_typ  automatic-by-area
+fifo_0__mem_fifo/dff_full
+                   bsg_dff_reset_width_p1_11
+                                ForQA       saed90nm_typ  automatic-by-area
+fifo_0__mem_fifo/dff
+                   bsg_dff_en_width_p570_harden_p0_2
+                                8000        saed90nm_typ  automatic-by-area
+mem_arbiter        bsg_arb_fixed_inputs_p2_lo_to_hi_p0_0
+                                ForQA       saed90nm_typ  automatic-by-area
+mem_arbiter/enc    bsg_priority_encode_one_hot_out_width_p2_lo_to_hi_p0_0
+                                ForQA       saed90nm_typ  automatic-by-area
+mem_arbiter/enc/genblk1_scan
+                   bsg_scan_width_p2_or_p1_lo_to_hi_p0_0
+                                ForQA       saed90nm_typ  automatic-by-area
+fifo_1__mem_fifo   bsg_one_fifo_width_p570_3
+                                8000        saed90nm_typ  automatic-by-area
+fifo_1__mem_fifo/dff_full
+                   bsg_dff_reset_width_p1_21
+                                ForQA       saed90nm_typ  automatic-by-area
+fifo_1__mem_fifo/dff
+                   bsg_dff_en_width_p570_harden_p0_3
+                                8000        saed90nm_typ  automatic-by-area
+uce_0__uce         bp_uce_02_2  8000        saed90nm_typ  automatic-by-area
+uce_0__uce/metadata_reg
+                   bsg_dff_en_bypass_width_p4_2
+                                ForQA       saed90nm_typ  automatic-by-area
+uce_0__uce/metadata_reg/dff
+                   bsg_dff_en_width_p4_harden_p0_strength_p0_2
+                                ForQA       saed90nm_typ  automatic-by-area
+uce_0__uce/metadata_v_reg
+                   bsg_dff_en_bypass_width_p1_2
+                                ForQA       saed90nm_typ  automatic-by-area
+uce_0__uce/metadata_v_reg/dff
+                   bsg_dff_en_width_p1_harden_p0_strength_p0_2
+                                ForQA       saed90nm_typ  automatic-by-area
+uce_0__uce/cache_req_reg
+                   bsg_dff_reset_en_width_p110_2
+                                8000        saed90nm_typ  automatic-by-area
+uce_0__uce/index_counter
+                   bsg_counter_set_down_width_p6_2
+                                8000        saed90nm_typ  automatic-by-area
+core               bp_core_minimal_02_0
+                                4000000     saed90nm_typ  automatic-by-area
+core/fe_cmd_fifo   bsg_fifo_1r1w_small_width_p78_els_p4_ready_THEN_valid_p1_0
+                                16000       saed90nm_typ  automatic-by-area
+core/fe_cmd_fifo/unhardened_fifo
+                   bsg_fifo_1r1w_small_unhardened_width_p78_els_p4_ready_THEN_valid_p1_0
+                                16000       saed90nm_typ  automatic-by-area
+core/fe_cmd_fifo/unhardened_fifo/mem_1r1w
+                   bsg_mem_1r1w_width_p78_els_p4_read_write_same_addr_p0_0
+                                16000       saed90nm_typ  automatic-by-area
+core/fe_cmd_fifo/unhardened_fifo/mem_1r1w/synth
+                   bsg_mem_1r1w_synth_width_p78_els_p4_read_write_same_addr_p0_harden_p0_0
+                                16000       saed90nm_typ  automatic-by-area
+core/fe_cmd_fifo/unhardened_fifo/ft
+                   bsg_fifo_tracker_els_p4_0
+                                8000        saed90nm_typ  automatic-by-area
+core/fe_cmd_fifo/unhardened_fifo/ft/rptr
+                   bsg_circular_ptr_slots_p4_max_add_p1_2
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe_cmd_fifo/unhardened_fifo/ft/wptr
+                   bsg_circular_ptr_slots_p4_max_add_p1_3
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be            bp_be_top_02_0
+                                2000000     saed90nm_typ  automatic-by-area
+core/be/be_checker bp_be_checker_top_02_0
+                                70000       saed90nm_typ  automatic-by-area
+core/be/be_checker/scheduler
+                   bp_be_scheduler_02_0
+                                70000       saed90nm_typ  automatic-by-area
+core/be/be_checker/scheduler/issue_pkt_reg
+                   bsg_dff_reset_en_width_p173_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/scheduler/issue_status_reg
+                   bsg_dff_reset_en_width_p1_10
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_checker/scheduler/instr_decoder
+                   bp_be_instr_decoder_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/scheduler/int_regfile
+                   bp_be_regfile_02_0
+                                35000       saed90nm_typ  automatic-by-area
+core/be/be_checker/scheduler/int_regfile/rw_fwd_reg
+                   bsg_dff_width_p68_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/scheduler/int_regfile/rs_addr_reg
+                   bsg_dff_reset_en_width_p10_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/scheduler/int_regfile/rf
+                   bsg_mem_2r1w_sync_width_p64_els_p32_0
+                                35000       saed90nm_typ  automatic-by-area
+core/be/be_checker/detector
+                   bp_be_detector_02_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/director
+                   bp_be_director_02_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/director/exception_mux
+                   bsg_mux_width_p39_els_p2_7
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/director/init_mux
+                   bsg_mux_width_p39_els_p2_4
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/director/ret_mux
+                   bsg_mux_width_p39_els_p2_5
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/director/roll_mux
+                   bsg_mux_width_p39_els_p2_6
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/director/npc
+                   bsg_dff_reset_en_39_80000000_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_checker/director/attaboy_pending_reg
+                   bsg_dff_reset_en_width_p1_11
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem     bp_be_mem_top_02_0
+                                2000000     saed90nm_typ  automatic-by-area
+core/be/be_mem/ptw bp_be_ptw_02_64_3_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/ptw/tlb_sel_reg
+                   bsg_dff_reset_en_width_p1_9
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/ptw/dcache_data_reg
+                   bsg_dff_reset_width_p65_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/ptw/vpn_reg
+                   bsg_dff_reset_en_width_p27_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/ptw/cmd_sel_reg
+                   bsg_dff_reset_en_width_p1_8
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/ptw/ppn_reg
+                   bsg_dff_reset_en_width_p28_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb
+                   bp_tlb_02_8_3
+                                35000       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/r_v_reg
+                   bsg_dff_reset_width_p1_15
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/miss_vtag_reg
+                   bsg_dff_reset_width_p27_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam
+                   bsg_cam_1r1w_els_p8_width_p27_multiple_entries_p0_find_empty_entry_p1_3
+                                16000       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe
+                   bsg_priority_encode_width_p8_lo_to_hi_p1_8
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/a
+                   bsg_priority_encode_one_hot_out_width_p8_lo_to_hi_p1_8
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/a/genblk1_scan
+                   bsg_scan_width_p8_or_p1_lo_to_hi_p1_8
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b
+                   bsg_encode_one_hot_width_p8_lo_to_hi_p1_11
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_left
+                   bsg_encode_one_hot_width_p4_33
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_65
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_127
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_126
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_64
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_125
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_124
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_right
+                   bsg_encode_one_hot_width_p4_32
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_63
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_123
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_122
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_62
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_121
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi5_epe/b/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_120
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe
+                   bsg_encode_one_hot_width_p8_lo_to_hi_p1_16
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_left
+                   bsg_encode_one_hot_width_p4_55
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_109
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_213
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_212
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_108
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_211
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_210
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_right
+                   bsg_encode_one_hot_width_p4_54
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_107
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_209
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_208
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_106
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_207
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/vtag_cam/fi4_ohe/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_206
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/entry_ram
+                   bsg_mem_1rw_sync_width_p34_els_p8_3
+                                16000       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/entry_ram/z_s1r1w_mem
+                   bsg_mem_1r1w_width_p34_els_p8_read_write_same_addr_p0_3
+                                16000       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/entry_ram/z_s1r1w_mem/synth
+                   bsg_mem_1r1w_synth_width_p34_els_p8_read_write_same_addr_p0_harden_p0_3
+                                16000       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/plru
+                   bp_tlb_replacement_ways_p8_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/plru/encoder
+                   bsg_lru_pseudo_tree_encode_ways_p8_5
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/plru/encoder/rank_1__nz_mux
+                   bsg_mux_width_p1_els_p2_5
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/plru/encoder/rank_2__nz_mux
+                   bsg_mux_width_p1_els_p4_5
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/plru/decoder
+                   bsg_lru_pseudo_tree_decode_ways_p8_5
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dtlb/miss_v_reg
+                   bsg_dff_reset_width_p1_14
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/fault_reg
+                   bsg_dff_en_width_p78_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/pma bp_pma_02_3  ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache
+                   bp_be_dcache_02_0_0
+                                1000000     saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/wbuf_data_mem_v_decode
+                   bsg_decode_num_out_p8_7
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/data_mem_5__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_19
+                                140000      saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/lce_tag_mem_way_decode
+                   bsg_decode_num_out_p8_6
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/data_mem_7__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_17
+                                140000      saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/ld_data_set_select_mux
+                   bsg_mux_width_p64_els_p8_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/data_mem_6__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_18
+                                140000      saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/cache_miss_detect
+                   bsg_edge_detect_falling_not_rising_p1_0
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/cache_miss_detect/sig_reg
+                   bsg_dff_reset_width_p1_12
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/stat_mem
+                   bsg_mem_1rw_sync_mask_write_bit_width_p15_els_p64_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/tag_mem
+                   bsg_mem_1rw_sync_mask_write_bit_width_p248_els_p64_3
+                                280000      saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/write_mux_butterfly
+                   bsg_mux_butterfly_width_p64_els_p8_7
+                                35000       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/write_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst
+                   bsg_swap_width_p64_24
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/write_mux_butterfly/mux_stage_1__mux_swap_1__swap_inst
+                   bsg_swap_width_p128_11
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst
+                   bsg_swap_width_p64_23
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/write_mux_butterfly/mux_stage_0__mux_swap_2__swap_inst
+                   bsg_swap_width_p64_22
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/write_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst
+                   bsg_swap_width_p64_21
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst
+                   bsg_swap_width_p256_6
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/write_mux_butterfly/mux_stage_1__mux_swap_0__swap_inst
+                   bsg_swap_width_p128_12
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/wbuf
+                   bp_be_dcache_wbuf_data_width_p64_paddr_width_p40_ways_p8_sets_p64_0
+                                35000       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/wbuf/wbq
+                   bp_be_dcache_wbuf_queue_width_p115_0
+                                16000       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/wbuf/mux_segmented_merge0
+                   bsg_mux_segmented_segments_p8_segment_width_p8_5
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/wbuf/mux_segmented_merge1
+                   bsg_mux_segmented_segments_p8_segment_width_p8_4
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/lock_counter
+                   bsg_counter_clear_up_max_val_p8_init_val_p0_disable_overflow_warning_p1_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit
+                   bsg_priority_encode_width_p8_lo_to_hi_p1_12
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/a
+                   bsg_priority_encode_one_hot_out_width_p8_lo_to_hi_p1_12
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/a/genblk1_scan
+                   bsg_scan_width_p8_or_p1_lo_to_hi_p1_12
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b
+                   bsg_encode_one_hot_width_p8_lo_to_hi_p1_15
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_left
+                   bsg_encode_one_hot_width_p4_53
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_105
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_205
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_204
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_104
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_203
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_202
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_right
+                   bsg_encode_one_hot_width_p4_52
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_103
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_201
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_200
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_102
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_199
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_load_hit/b/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_198
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/dirty_mask_decode
+                   bsg_decode_with_v_num_out_p8_0
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/dirty_mask_decode/bd
+                   bsg_decode_num_out_p8_5
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/output64_byte_mux
+                   bsg_mux_width_p8_els_p8_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid
+                   bsg_priority_encode_width_p8_lo_to_hi_p1_10
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/a
+                   bsg_priority_encode_one_hot_out_width_p8_lo_to_hi_p1_10
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/a/genblk1_scan
+                   bsg_scan_width_p8_or_p1_lo_to_hi_p1_10
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b
+                   bsg_encode_one_hot_width_p8_lo_to_hi_p1_13
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_left
+                   bsg_encode_one_hot_width_p4_49
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_97
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_189
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_188
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_96
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_187
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_186
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_right
+                   bsg_encode_one_hot_width_p4_48
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_95
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_185
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_184
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_94
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_183
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_invalid/b/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_182
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/cache_miss_tracker
+                   bsg_dff_reset_en_width_p1_reset_val_p0_3
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/output64_word_mux
+                   bsg_mux_width_p32_els_p2_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/final_data_mux
+                   bsg_mux_width_p64_els_p2_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/lru_encoder
+                   bsg_lru_pseudo_tree_encode_ways_p8_7
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/lru_encoder/rank_1__nz_mux
+                   bsg_mux_width_p1_els_p2_7
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/lru_encoder/rank_2__nz_mux
+                   bsg_mux_width_p1_els_p4_7
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/data_mem_0__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_24
+                                140000      saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/read_mux_butterfly
+                   bsg_mux_butterfly_width_p64_els_p8_6
+                                35000       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst
+                   bsg_swap_width_p64_20
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/read_mux_butterfly/mux_stage_1__mux_swap_1__swap_inst
+                   bsg_swap_width_p128_9
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst
+                   bsg_swap_width_p64_19
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_2__swap_inst
+                   bsg_swap_width_p64_18
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/read_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst
+                   bsg_swap_width_p64_17
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/read_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst
+                   bsg_swap_width_p256_5
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/read_mux_butterfly/mux_stage_1__mux_swap_0__swap_inst
+                   bsg_swap_width_p128_10
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/data_mem_2__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_22
+                                140000      saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/data_mem_1__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_23
+                                140000      saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/lru_decode
+                   bsg_lru_pseudo_tree_decode_ways_p8_7
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/cache_req_v_reg
+                   bsg_dff_reset_width_p1_13
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/bypass_mux_segmented
+                   bsg_mux_segmented_segments_p8_segment_width_p8_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/data_mem_4__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_20
+                                140000      saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/output64_half_mux
+                   bsg_mux_width_p16_els_p4_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit
+                   bsg_priority_encode_width_p8_lo_to_hi_p1_11
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/a
+                   bsg_priority_encode_one_hot_out_width_p8_lo_to_hi_p1_11
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/a/genblk1_scan
+                   bsg_scan_width_p8_or_p1_lo_to_hi_p1_11
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b
+                   bsg_encode_one_hot_width_p8_lo_to_hi_p1_14
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_left
+                   bsg_encode_one_hot_width_p4_51
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_101
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_197
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_196
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_100
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_195
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_194
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_right
+                   bsg_encode_one_hot_width_p4_50
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_99
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_193
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_192
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_98
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_191
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/pe_store_hit/b/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_190
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/dcache/data_mem_3__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_21
+                                140000      saed90nm_typ  automatic-by-area
+core/be/be_mem/csr bp_be_csr_02_0
+                                70000       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/sepc_reg
+                   bsg_dff_reset_width_p41_5
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/translation_en_reg
+                   bsg_dff_reset_width_p1_16
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/scause_reg
+                   bsg_dff_reset_width_p5_2
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/pmpcfg0_reg
+                   bsg_dff_reset_width_p32_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/pmpaddr3_reg
+                   bsg_dff_reset_width_p38_5
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/add_x_7
+                   bp_be_csr_02_DW01_inc_J1_0_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/add_x_8
+                   bp_be_csr_02_DW01_add_J39_0_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/dpc_reg
+                   bsg_dff_reset_width_p41_6
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcountinhibit_reg
+                   bsg_dff_reset_width_p2_4
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/medeleg_reg
+                   bsg_dff_reset_width_p13_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcounteren_reg
+                   bsg_dff_reset_width_p2_5
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/pmpaddr2_reg
+                   bsg_dff_reset_width_p38_6
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mscratch_reg
+                   bsg_dff_reset_width_p64_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mtvec_reg
+                   bsg_dff_reset_width_p39_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/dcsr_reg
+                   bsg_dff_reset_width_p11_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/sscratch_reg
+                   bsg_dff_reset_width_p64_2
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/priv_mode_reg
+                   bsg_dff_reset_2_3_0
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/stval_reg
+                   bsg_dff_reset_width_p41_9
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/pmpaddr1_reg
+                   bsg_dff_reset_width_p38_7
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mstatus_reg
+                   bsg_dff_reset_width_p15_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc
+                   bsg_priority_encode_width_p16_lo_to_hi_p1_4
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/a
+                   bsg_priority_encode_one_hot_out_width_p16_lo_to_hi_p1_4
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/a/genblk1_scan
+                   bsg_scan_width_p16_or_p1_lo_to_hi_p1_4
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b
+                   bsg_encode_one_hot_width_p16_lo_to_hi_p1_4
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left
+                   bsg_encode_one_hot_width_p8_8
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p4_37
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_72
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_141
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_140
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p4_36
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_71
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_139
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_138
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_70
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_137
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_left/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_136
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right
+                   bsg_encode_one_hot_width_p8_7
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p4_35
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_69
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_135
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_134
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_68
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_133
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_132
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p4_34
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_67
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_131
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_130
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_66
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_129
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/s_interrupt_enc/b/aligned_right/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_128
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mepc_reg
+                   bsg_dff_reset_width_p41_8
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/satp_reg
+                   bsg_dff_reset_width_p29_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/pmpaddr0_reg
+                   bsg_dff_reset_width_p38_4
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/scounteren_reg
+                   bsg_dff_reset_width_p2_3
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mip_reg
+                   bsg_dff_reset_width_p6_3
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/minstret_reg
+                   bsg_dff_reset_width_p48_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mtval_reg
+                   bsg_dff_reset_width_p41_7
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mideleg_reg
+                   bsg_dff_reset_width_p3_0
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcycle_reg
+                   bsg_dff_reset_width_p48_2
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_reg
+                   bsg_dff_reset_width_p5_3
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mie_reg
+                   bsg_dff_reset_width_p6_2
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/debug_mode_reg
+                   bsg_dff_reset_width_p1_17
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc
+                   bsg_priority_encode_width_p16_lo_to_hi_p1_5
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/a
+                   bsg_priority_encode_one_hot_out_width_p16_lo_to_hi_p1_5
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/a/genblk1_scan
+                   bsg_scan_width_p16_or_p1_lo_to_hi_p1_5
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b
+                   bsg_encode_one_hot_width_p16_lo_to_hi_p1_5
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left
+                   bsg_encode_one_hot_width_p8_10
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p4_41
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_81
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_157
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_80
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_156
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_155
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p4_40
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_79
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_154
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_153
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_78
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_152
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_left/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_151
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right
+                   bsg_encode_one_hot_width_p8_9
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p4_39
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_77
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_150
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_149
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_76
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_148
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_147
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p4_38
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_75
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_146
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_145
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_74
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_144
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/m_interrupt_enc/b/aligned_right/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_143
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc
+                   bsg_priority_encode_width_p16_lo_to_hi_p1_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/a
+                   bsg_priority_encode_one_hot_out_width_p16_lo_to_hi_p1_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/a/genblk1_scan
+                   bsg_scan_width_p16_or_p1_lo_to_hi_p1_3
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b
+                   bsg_encode_one_hot_width_p16_lo_to_hi_p1_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left
+                   bsg_encode_one_hot_width_p8_6
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p4_45
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_89
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_173
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_172
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_88
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_171
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_170
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p4_44
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_87
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_169
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_168
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_86
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_167
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_left/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_166
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right
+                   bsg_encode_one_hot_width_p8_11
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p4_43
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_85
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_165
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_164
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_84
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_163
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_162
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p4_42
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_83
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_161
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_160
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_82
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_159
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/mcause_exception_enc/b/aligned_right/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_158
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_mem/csr/stvec_reg
+                   bsg_dff_reset_width_p39_2
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/vaddr_pipe
+                   bsg_dff_chain_width_p39_num_stages_p2_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/vaddr_pipe/chained_genblk1_1__ch_reg
+                   bsg_dff_width_p39_2
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_mem/vaddr_pipe/chained_genblk1_2__ch_reg
+                   bsg_dff_width_p39_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator
+                   bp_be_calculator_top_02_0
+                                140000      saed90nm_typ  automatic-by-area
+core/be/be_calculator/comp_stage_reg
+                   bsg_dff_width_p320_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/calc_stage_reg
+                   bsg_dff_width_p415_0
+                                16000       saed90nm_typ  automatic-by-area
+core/be/be_calculator/comp_stage_mux
+                   bsg_mux_segmented_segments_p5_segment_width_p64_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/int_bypass
+                   bp_be_bypass_fwd_els_p4_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/int_bypass/bypass_rs1_crossbar
+                   bsg_crossbar_o_by_i_i_els_p5_o_els_p1_width_p64_2
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/int_bypass/bypass_rs1_crossbar/genblk1_0__mux_one_hot
+                   bsg_mux_one_hot_width_p64_els_p5_2
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/int_bypass/bypass_rs2_crossbar
+                   bsg_crossbar_o_by_i_i_els_p5_o_els_p1_width_p64_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/int_bypass/bypass_rs2_crossbar/genblk1_0__mux_one_hot
+                   bsg_mux_one_hot_width_p64_els_p5_3
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/int_bypass/bypass_match_one_hot_rs1
+                   bsg_priority_encode_one_hot_out_width_p5_lo_to_hi_p1_2
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_calculator/int_bypass/bypass_match_one_hot_rs1/genblk1_scan
+                   bsg_scan_width_p5_or_p1_lo_to_hi_p1_2
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_calculator/int_bypass/bypass_match_one_hot_rs2
+                   bsg_priority_encode_one_hot_out_width_p5_lo_to_hi_p1_3
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_calculator/int_bypass/bypass_match_one_hot_rs2/genblk1_scan
+                   bsg_scan_width_p5_or_p1_lo_to_hi_p1_3
+                                ForQA       saed90nm_typ  automatic-by-area
+core/be/be_calculator/exc_stage_reg
+                   bsg_dff_width_p25_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_mem
+                   bp_be_pipe_mem_02_0
+                                16000       saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_mem/csr_shift_reg
+                   bsg_shift_reg_width_p81_stages_p2_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_mem/add_x_2
+                   bp_be_pipe_mem_02_DW01_add_J32_0_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/reservation_reg
+                   bsg_dff_width_p295_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_int
+                   bp_be_pipe_int_vaddr_width_p39_0
+                                35000       saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_int/add_x_1
+                   bp_be_pipe_int_vaddr_width_p39_DW01_add_J12_1_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_int/add_x_6
+                   bp_be_pipe_int_vaddr_width_p39_DW01_add_1_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_int/alu
+                   bp_be_int_alu_0
+                                35000       saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_int/alu/gte_x_8
+                   bp_be_int_alu_DW_cmp_J31_2_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_int/alu/DP_OP_41J31_125_155
+                   bp_be_int_alu_DP_OP_41J31_125_155_J31_0_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_int/alu/DP_OP_38_134_1409
+                   bp_be_int_alu_DP_OP_38_134_1409_2_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_int/alu/lt_x_7
+                   bp_be_int_alu_DW_cmp_J31_3_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_int/alu/gte_x_12
+                   bp_be_int_alu_DW_cmp_J31_0_0
+                                8000        saed90nm_typ  automatic-by-area
+core/be/be_calculator/pipe_int/alu/lt_x_11
+                   bp_be_int_alu_DW_cmp_J31_1_0
+                                8000        saed90nm_typ  automatic-by-area
+core/fe_queue_fifo bsg_fifo_1r1w_rolly_width_p101_els_p8_ready_THEN_valid_p1_0
+                                70000       saed90nm_typ  automatic-by-area
+core/fe_queue_fifo/cptr
+                   bsg_circular_ptr_slots_p16_max_add_p1_0
+                                8000        saed90nm_typ  automatic-by-area
+core/fe_queue_fifo/fifo_mem
+                   bsg_mem_1r1w_width_p101_els_p8_0
+                                35000       saed90nm_typ  automatic-by-area
+core/fe_queue_fifo/fifo_mem/synth
+                   bsg_mem_1r1w_synth_width_p101_els_p8_read_write_same_addr_p0_harden_p0_0
+                                35000       saed90nm_typ  automatic-by-area
+core/fe_queue_fifo/wptr
+                   bsg_circular_ptr_slots_p16_max_add_p15_2
+                                8000        saed90nm_typ  automatic-by-area
+core/fe_queue_fifo/rptr_circ_ptr
+                   bsg_circular_ptr_slots_p16_max_add_p15_3
+                                8000        saed90nm_typ  automatic-by-area
+core/fe            bp_fe_top_02_0
+                                2000000     saed90nm_typ  automatic-by-area
+core/fe/mem        bp_fe_mem_02_0
+                                1000000     saed90nm_typ  automatic-by-area
+core/fe/mem/icache bp_fe_icache_02_0
+                                1000000     saed90nm_typ  automatic-by-area
+core/fe/mem/icache/tag_mem_way_decode
+                   bsg_decode_num_out_p8_4
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/data_mems_7__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_25
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/mem/icache/stat_mem
+                   bsg_mem_1rw_sync_mask_write_bit_width_p7_els_p64_0
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/tag_mem
+                   bsg_mem_1rw_sync_mask_write_bit_width_p248_els_p64_2
+                                280000      saed90nm_typ  automatic-by-area
+core/fe/mem/icache/write_mux_butterfly
+                   bsg_mux_butterfly_width_p64_els_p8_5
+                                35000       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst
+                   bsg_swap_width_p64_16
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/write_mux_butterfly/mux_stage_1__mux_swap_1__swap_inst
+                   bsg_swap_width_p128_15
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst
+                   bsg_swap_width_p64_31
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_2__swap_inst
+                   bsg_swap_width_p64_30
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/write_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst
+                   bsg_swap_width_p64_29
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/write_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst
+                   bsg_swap_width_p256_4
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/write_mux_butterfly/mux_stage_1__mux_swap_0__swap_inst
+                   bsg_swap_width_p128_8
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/data_mems_0__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_16
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit
+                   bsg_priority_encode_width_p8_lo_to_hi_p1_7
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/a
+                   bsg_priority_encode_one_hot_out_width_p8_lo_to_hi_p1_7
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/a/genblk1_scan
+                   bsg_scan_width_p8_or_p1_lo_to_hi_p1_7
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b
+                   bsg_encode_one_hot_width_p8_lo_to_hi_p1_9
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_left
+                   bsg_encode_one_hot_width_p4_59
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_117
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_229
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_228
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_116
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_227
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_226
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_right
+                   bsg_encode_one_hot_width_p4_58
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_115
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_225
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_224
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_114
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_223
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_load_hit/b/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_222
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/data_set_select_mux
+                   bsg_mux_width_p64_els_p8_2
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid
+                   bsg_priority_encode_width_p8_lo_to_hi_p1_13
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/a
+                   bsg_priority_encode_one_hot_out_width_p8_lo_to_hi_p1_13
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/a/genblk1_scan
+                   bsg_scan_width_p8_or_p1_lo_to_hi_p1_13
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b
+                   bsg_encode_one_hot_width_p8_lo_to_hi_p1_17
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_left
+                   bsg_encode_one_hot_width_p4_57
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_113
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_221
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_220
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_112
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_219
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_218
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_right
+                   bsg_encode_one_hot_width_p4_56
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_111
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_217
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_216
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_110
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_215
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/pe_invalid/b/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_214
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/cache_miss_tracker
+                   bsg_dff_reset_en_width_p1_reset_val_p0_2
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/data_mems_1__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_31
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/mem/icache/final_data_mux
+                   bsg_mux_width_p64_els_p2_2
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/lru_encoder
+                   bsg_lru_pseudo_tree_encode_ways_p8_4
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/lru_encoder/rank_1__nz_mux
+                   bsg_mux_width_p1_els_p2_4
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/lru_encoder/rank_2__nz_mux
+                   bsg_mux_width_p1_els_p4_4
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/data_mems_3__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_29
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/mem/icache/data_mems_2__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_30
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/mem/icache/read_mux_butterfly
+                   bsg_mux_butterfly_width_p64_els_p8_4
+                                16000       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/read_mux_butterfly/mux_stage_0__mux_swap_3__swap_inst
+                   bsg_swap_width_p64_25
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/read_mux_butterfly/mux_stage_1__mux_swap_0__swap_inst
+                   bsg_swap_width_p128_14
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/read_mux_butterfly/mux_stage_0__mux_swap_2__swap_inst
+                   bsg_swap_width_p64_26
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/read_mux_butterfly/mux_stage_0__mux_swap_1__swap_inst
+                   bsg_swap_width_p64_27
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/read_mux_butterfly/mux_stage_2__mux_swap_0__swap_inst
+                   bsg_swap_width_p256_7
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/read_mux_butterfly/mux_stage_0__mux_swap_0__swap_inst
+                   bsg_swap_width_p64_28
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/read_mux_butterfly/mux_stage_1__mux_swap_1__swap_inst
+                   bsg_swap_width_p128_13
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/icache/data_mems_5__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_27
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/mem/icache/data_mems_4__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_28
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/mem/icache/lru_decode
+                   bsg_lru_pseudo_tree_decode_ways_p8_4
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/cache_req_v_reg
+                   bsg_dff_reset_width_p1_18
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/icache/data_mems_6__data_mem
+                   bsg_mem_1rw_sync_mask_write_byte_els_p512_data_width_p64_26
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/mem/itlb   bp_tlb_02_8_2
+                                35000       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/r_v_reg
+                   bsg_dff_reset_width_p1_20
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/miss_vtag_reg
+                   bsg_dff_reset_width_p27_2
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam
+                   bsg_cam_1r1w_els_p8_width_p27_multiple_entries_p0_find_empty_entry_p1_2
+                                16000       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe
+                   bsg_priority_encode_width_p8_lo_to_hi_p1_9
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/a
+                   bsg_priority_encode_one_hot_out_width_p8_lo_to_hi_p1_9
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/a/genblk1_scan
+                   bsg_scan_width_p8_or_p1_lo_to_hi_p1_9
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b
+                   bsg_encode_one_hot_width_p8_lo_to_hi_p1_12
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_left
+                   bsg_encode_one_hot_width_p4_47
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_93
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_181
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_180
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_92
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_179
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_178
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_right
+                   bsg_encode_one_hot_width_p4_46
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_91
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_177
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_176
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_90
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_175
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi5_epe/b/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_174
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe
+                   bsg_encode_one_hot_width_p8_lo_to_hi_p1_10
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_left
+                   bsg_encode_one_hot_width_p4_31
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p2_61
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_left/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_39
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_left/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_23
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p2_60
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_left/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_235
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_left/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_234
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_right
+                   bsg_encode_one_hot_width_p4_30
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p2_119
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_right/aligned_left/aligned_left
+                   bsg_encode_one_hot_width_p1_233
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_right/aligned_left/aligned_right
+                   bsg_encode_one_hot_width_p1_232
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p2_118
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_right/aligned_right/aligned_left
+                   bsg_encode_one_hot_width_p1_231
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/vtag_cam/fi4_ohe/aligned_right/aligned_right/aligned_right
+                   bsg_encode_one_hot_width_p1_230
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/entry_ram
+                   bsg_mem_1rw_sync_width_p34_els_p8_2
+                                16000       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem
+                   bsg_mem_1r1w_width_p34_els_p8_read_write_same_addr_p0_2
+                                16000       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/entry_ram/z_s1r1w_mem/synth
+                   bsg_mem_1r1w_synth_width_p34_els_p8_read_write_same_addr_p0_harden_p0_2
+                                16000       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/plru
+                   bp_tlb_replacement_ways_p8_2
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/plru/decoder
+                   bsg_lru_pseudo_tree_decode_ways_p8_6
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/plru/encoder
+                   bsg_lru_pseudo_tree_encode_ways_p8_6
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/plru/encoder/rank_1__nz_mux
+                   bsg_mux_width_p1_els_p2_6
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/plru/encoder/rank_2__nz_mux
+                   bsg_mux_width_p1_els_p4_6
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/itlb/miss_v_reg
+                   bsg_dff_reset_width_p1_19
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/mem/pma    bp_pma_02_2  ForQA       saed90nm_typ  automatic-by-area
+core/fe/pc_gen     bp_fe_pc_gen_02_0
+                                540000      saed90nm_typ  automatic-by-area
+core/fe/pc_gen/btb bp_fe_btb_vaddr_width_p39_btb_tag_width_p10_btb_idx_width_p6_0
+                                280000      saed90nm_typ  automatic-by-area
+core/fe/pc_gen/btb/tag_mem
+                   bsg_mem_1rw_sync_width_p49_els_p64_0
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem
+                   bsg_mem_1r1w_width_p49_els_p64_read_write_same_addr_p0_0
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/pc_gen/btb/tag_mem/z_s1r1w_mem/synth
+                   bsg_mem_1r1w_synth_width_p49_els_p64_read_write_same_addr_p0_harden_p0_0
+                                140000      saed90nm_typ  automatic-by-area
+core/fe/pc_gen/shadow_priv_reg
+                   bsg_dff_reset_en_width_p2_0
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/pc_gen/pc_gen_stage_reg
+                   bsg_dff_reset_width_p84_0
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/pc_gen/shadow_translation_en_reg
+                   bsg_dff_reset_en_width_p1_12
+                                ForQA       saed90nm_typ  automatic-by-area
+core/fe/pc_gen/bp_fe_bp
+                   bp_fe_bp_bht_idx_width_p9_bp_cnt_sat_bits_p2_0
+                                280000      saed90nm_typ  automatic-by-area
+core/fe/pc_gen/bp_fe_bp/branch_predictor_dynamic_two_level_local_bp
+                   bp_fe_bp_two_level_local_bht_idx_width_p9_bp_cnt_sat_bits_p2_bp_n_hist6_0
+                                280000      saed90nm_typ  automatic-by-area
+core/fe/pc_gen/pc_resume_reg
+                   bsg_dff_reset_en_width_p39_0
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/pc_gen/branch_metadata_fwd_reg
+                   bsg_dff_reset_en_width_p28_2
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/pc_gen/instr_scan
+                   bp_fe_instr_scan_02_0
+                                8000        saed90nm_typ  automatic-by-area
+core/fe/pc_gen/DP_OP_40_135_3917
+                   bp_fe_pc_gen_02_DP_OP_40_135_3917_3_0
+                                8000        saed90nm_typ  automatic-by-area
+clint              bp_clint_slice_buffered_02_0
+                                35000       saed90nm_typ  automatic-by-area
+clint/clint_slice  bp_clint_slice_02_0
+                                16000       saed90nm_typ  automatic-by-area
+clint/clint_slice/bsg_rtc_strobe
+                   bsg_strobe_width_p5_0
+                                8000        saed90nm_typ  automatic-by-area
+clint/clint_slice/bsg_rtc_strobe/strobe_buf_gate
+                   bsg_buf_width_p1_0
+                                ForQA       saed90nm_typ  automatic-by-area
+clint/clint_slice/bsg_rtc_strobe/S_reg
+                   bsg_dff_width_p5_harden_p0_strength_p4_0
+                                ForQA       saed90nm_typ  automatic-by-area
+clint/clint_slice/bsg_rtc_strobe/nand_C_n
+                   bsg_nand_width_p5_harden_p1_0
+                                ForQA       saed90nm_typ  automatic-by-area
+clint/clint_slice/bsg_rtc_strobe/xnor_S_n
+                   bsg_xnor_width_p5_harden_p1_0
+                                ForQA       saed90nm_typ  automatic-by-area
+clint/clint_slice/bsg_rtc_strobe/andr
+                   bsg_reduce_width_p5_and_p1_harden_p1_0
+                                ForQA       saed90nm_typ  automatic-by-area
+clint/clint_slice/bsg_rtc_strobe/nor3_C_n
+                   bsg_nor3_width_p4_harden_p1_0
+                                ForQA       saed90nm_typ  automatic-by-area
+clint/clint_slice/bsg_rtc_strobe/C_reg
+                   bsg_dff_width_p4_harden_p0_strength_p2_0
+                                ForQA       saed90nm_typ  automatic-by-area
+clint/clint_slice/bsg_rtc_strobe/muxi2_S_n
+                   bsg_muxi2_gatestack_width_p5_harden_p1_0
+                                ForQA       saed90nm_typ  automatic-by-area
+clint/clint_slice/mtime_counter
+                   bsg_counter_set_en_lg_max_val_lp64_reset_val_p0_0
+                                8000        saed90nm_typ  automatic-by-area
+clint/clint_slice/mtime_counter/add_x_1
+                   bsg_counter_set_en_lg_max_val_lp64_reset_val_p0_DW01_inc_J40_0_0
+                                8000        saed90nm_typ  automatic-by-area
+clint/clint_slice/plic_reg
+                   bsg_dff_reset_en_width_p1_13
+                                ForQA       saed90nm_typ  automatic-by-area
+clint/clint_slice/mtimecmp_reg
+                   bsg_dff_reset_en_width_p64_0
+                                8000        saed90nm_typ  automatic-by-area
+clint/clint_slice/gte_x_5
+                   bp_clint_slice_02_DW_cmp_J21_0_0
+                                8000        saed90nm_typ  automatic-by-area
+clint/clint_slice/mipi_reg
+                   bsg_dff_reset_en_width_p1_7
+                                ForQA       saed90nm_typ  automatic-by-area
+clint/cmd_buffer   bsg_two_fifo_width_p570_2
+                                16000       saed90nm_typ  automatic-by-area
+clint/cmd_buffer/mem_1r1w
+                   bsg_mem_1r1w_width_p570_els_p2_read_write_same_addr_p0_2
+                                16000       saed90nm_typ  automatic-by-area
+clint/cmd_buffer/mem_1r1w/synth
+                   bsg_mem_1r1w_synth_width_p570_els_p2_read_write_same_addr_p0_harden_p0_2
+                                16000       saed90nm_typ  automatic-by-area
+clint/resp_buffer  bsg_two_fifo_width_p570_3
+                                16000       saed90nm_typ  automatic-by-area
+clint/resp_buffer/mem_1r1w
+                   bsg_mem_1r1w_width_p570_els_p2_read_write_same_addr_p0_3
+                                16000       saed90nm_typ  automatic-by-area
+clint/resp_buffer/mem_1r1w/synth
+                   bsg_mem_1r1w_synth_width_p570_els_p2_read_write_same_addr_p0_harden_p0_3
+                                16000       saed90nm_typ  automatic-by-area
+uce_1__uce         bp_uce_02_3  35000       saed90nm_typ  automatic-by-area
+uce_1__uce/metadata_reg
+                   bsg_dff_en_bypass_width_p4_3
+                                ForQA       saed90nm_typ  automatic-by-area
+uce_1__uce/metadata_reg/dff
+                   bsg_dff_en_width_p4_harden_p0_strength_p0_3
+                                ForQA       saed90nm_typ  automatic-by-area
+uce_1__uce/dirty_data_reg
+                   bsg_dff_en_bypass_width_p512_1
+                                35000       saed90nm_typ  automatic-by-area
+uce_1__uce/dirty_data_reg/dff
+                   bsg_dff_en_width_p512_harden_p0_strength_p0_1
+                                35000       saed90nm_typ  automatic-by-area
+uce_1__uce/metadata_v_reg
+                   bsg_dff_en_bypass_width_p1_3
+                                ForQA       saed90nm_typ  automatic-by-area
+uce_1__uce/metadata_v_reg/dff
+                   bsg_dff_en_width_p1_harden_p0_strength_p0_3
+                                ForQA       saed90nm_typ  automatic-by-area
+uce_1__uce/cache_req_reg
+                   bsg_dff_reset_en_width_p110_3
+                                8000        saed90nm_typ  automatic-by-area
+uce_1__uce/dirty_tag_reg
+                   bsg_dff_en_bypass_width_p28_1
+                                8000        saed90nm_typ  automatic-by-area
+uce_1__uce/dirty_tag_reg/dff
+                   bsg_dff_en_width_p28_harden_p0_strength_p0_1
+                                8000        saed90nm_typ  automatic-by-area
+uce_1__uce/index_counter
+                   bsg_counter_set_down_width_p6_3
+                                8000        saed90nm_typ  automatic-by-area
+
+Power-specific unit information :
+    Voltage Units = 1 V
+    Capacitance Units = 1 pf
+    Time Units = 1 ns
+    Dynamic Power Units = 1 W
+    Leakage Power Units = 1 W
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network              0.0367 6.815e-03 6.605e-05    0.0436 (69.42%)  i
+register                -1.519e-05
+                                  1.809e-04 1.712e-03 1.878e-03 ( 2.99%)  
+combinational           2.727e-03 2.017e-03 3.686e-03 8.430e-03 (13.42%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box               6.970e-03 1.853e-04 1.743e-03 8.898e-03 (14.17%)  
+
+  Net Switching Power  = 9.199e-03   (14.65%)
+  Cell Internal Power  =    0.0464   (73.87%)
+  Cell Leakage Power   = 7.207e-03   (11.48%)
+                         ---------
+Total Power            =    0.0628  (100.00%)
+
+1

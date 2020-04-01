@@ -1,0 +1,28 @@
+
+
+                         StarRC (TM)
+             Copyright (c) 1999-2015 Synopsys, Inc.
+                      All Rights Reserved
+
+
+ExecName: /home/projects/vlsi/common/ee477/synopsys/starrc/J-2014.12-SP3-3/amd64_starrc/bin/StarXtract
+Version: J-2014.12-SP3-3
+Built on: Nov 19 2015 20:49:40
+Start Time: Thu Mar 12 14:09:32 2020
+
+Host ............ linuxsrv01.ece.uw.edu
+
+WARNING: Top library path
+         '/home/jlewis24/final_project/ee477-chip/reports/starrc/typ/bp_softcore_mwlib' in reference
+         library control file is inconsistent with current library path
+         '/home/jlewis24/final_project/ee477-chip/bp_softcore_mwlib'. (MW-212)
+  
+InitDB        Elp=00:00:01 Cpu=00:00:00 Usr=0.1    Sys=0.1    Mem=218.2 
+ReadHNdb      Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.0    Mem=238.2 
+NetSelect     Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=238.4 
+CellSelect    Elp=00:00:00 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=238.4 
+ImportCells   Elp=00:00:06 Cpu=00:00:05 Usr=5.6    Sys=0.3    Mem=281.1 
+ReadStdCells  Elp=00:00:01 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=281.1 
+Cells         Elp=00:00:01 Cpu=00:00:00 Usr=0.0    Sys=0.0    Mem=281.0 
+  
+Done          Elp=00:00:09 Cpu=00:00:06 Usr=5.9    Sys=0.5    Mem=281.1 

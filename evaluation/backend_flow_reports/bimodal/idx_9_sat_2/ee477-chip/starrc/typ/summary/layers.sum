@@ -1,0 +1,30 @@
+
+
+                         StarRC (TM)
+             Copyright (c) 1999-2015 Synopsys, Inc.
+                      All Rights Reserved
+
+
+ExecName: /home/projects/vlsi/common/ee477/synopsys/starrc/J-2014.12-SP3-3/amd64_starrc/bin/StarXtract
+Version: J-2014.12-SP3-3
+Built on: Nov 19 2015 20:49:40
+Start Time: Thu Mar 12 14:09:23 2020
+
+Host ............ linuxsrv01.ece.uw.edu
+
+WARNING: MAPPING_FILE layer "metal1_pin" is not a valid database layer and will be removed. (SX-1813)
+WARNING: MAPPING_FILE layer "metal2_pin" is not a valid database layer and will be removed. (SX-1813)
+WARNING: MAPPING_FILE layer "metal3_pin" is not a valid database layer and will be removed. (SX-1813)
+WARNING: MAPPING_FILE layer "metal4_pin" is not a valid database layer and will be removed. (SX-1813)
+WARNING: MAPPING_FILE layer "metal5_pin" is not a valid database layer and will be removed. (SX-1813)
+WARNING: MAPPING_FILE layer "metal6_pin" is not a valid database layer and will be removed. (SX-1813)
+WARNING: MAPPING_FILE layer "metal7_pin" is not a valid database layer and will be removed. (SX-1813)
+WARNING: MAPPING_FILE layer "metal8_pin" is not a valid database layer and will be removed. (SX-1813)
+WARNING: MAPPING_FILE layer "metal9_pin" is not a valid database layer and will be removed. (SX-1813)
+WARNING: Runset via layer CO connects down to DIFF[DIFF] that has a different picture level than
+         that of via's GRD from-layer POLY (SX-1822)
+  
+InitDB        Elp=00:00:00 Cpu=00:00:00 Usr=0.1    Sys=0.1    Mem=218.2 
+Layers        Elp=00:00:01 Cpu=00:00:00 Usr=0.5    Sys=0.0    Mem=218.4 
+  
+Done          Elp=00:00:01 Cpu=00:00:00 Usr=0.7    Sys=0.1    Mem=218.4 
