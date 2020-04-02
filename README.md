@@ -1,29 +1,31 @@
 # Black Parrot Branch Predictor [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Build Status](https://travis-ci.com/andreaskuster/black-parrot-branch-predictor.svg?branch=master)](https://travis-ci.com/andreaskuster/black-parrot-branch-predictor)
 
 ## Intro
-As part of our VLSI2 class at University of Washington, we seek to improve a part of the [BlackParrot](https://github.com/black-parrot/black-parrot) Open-Source RISC-V 
+As part of our *CSE567: Principles Of Digital Systems Design* class at University of Washington, we seek to improve a part of the [BlackParrot](https://github.com/black-parrot/black-parrot) Open-Source RISC-V 
 processor in terms of PPA (Power, Performance, Area) and/or simplicity. We decided to tackle the problem of improving the 
 [branch predictor](https://en.wikipedia.org/wiki/Branch_predictor), since a better predictor can easily improve the overall
 performance by reducing the number of misspredictions/revertions.
 
 The current implementation is a fixed-width (=2) saturating counter [one-level bimodal branch predictor](https://en.wikipedia.org/wiki/Branch_predictor#One-level_branch_prediction).
-In order to explore the whole design space, we generalized the existing implementation by imposing an adjustable saturating counter bit-width parameter on the one hand, and we implemented different branch predictors such as always-taken, gselect, gshare, two-level local and tournament. The major contribution is not only the RTL implementation of these predictors, but also a comprehensive study and comparison in terms of prediction performance and PPA between the designs.
+In order to explore the whole design space, we generalized the existing implementation by imposing an adjustable saturating counter bit-width parameter on the one hand, and we implemented different branch predictors such as always-taken, gselect, gshare, two-level local and tournament on the other hand. The major contribution is not only the RTL implementation of these predictors, but also a comprehensive study and comparison in terms of prediction performance and PPA between the designs.
+Furthermore, we seek to show that modern and good coding practices from high-level languages such as continuous-integration can be applied on hardware design too.
 
 ## Setup
 To gain the ability of comparison between the different implementations, we first started with the existing [test programs](https://github.com/black-parrot/black-parrot/tree/master/bp_common/test)
-of black parrot, which reports the number of cycles each of the program takes ([verilator](https://www.veripool.org/wiki/verilator)
+of black parrot, which reports the number of cycles for each test program execution ([verilator](https://www.veripool.org/wiki/verilator)
 simulation). This approach comes with a couple of downsides. 
 
 (1) Firstly, we are reporting cycles instead of accuracy (#correct predictions/#total branches).
 This is problematic in multiple ways, e.g. what if the program does not contain any branches/only very few? what if the 
-branches are only of a certain type?.
+branches are only of a certain type?
 
 (2) Secondly, some of the test programs finish execution in only a few thousand cycles, while only a fraction of these cycles 
 are spent on branch instructions. This drastically reduces the statistical relevance of our findings from these tests.
 
 (3) Last but not least, since malfunctioning branch predictors only decrease the performance, but not the correct code execution
-we have no notion of testing the correctness of our implementation. Recall: "Hardware is about 10x as hard to debug as 
-software.", Part of Taylor's VLSI Axiom #5. In the case of a branch predictor, with a large internal state, it is even
+we have no notion of testing the correctness of our implementation.
+Recall: *"Hardware is about 10x as hard to debug as 
+software."*, Part of Taylor's VLSI Axiom #5. In the case of a branch predictor, with a large internal state, it is even
 almost impossible to write good tests by hand.
 
 This reasoning above can be underlined well with one of our early cycle performance analysis. Even for larger tests such 
@@ -33,8 +35,8 @@ as the coremark benchmark, we even get slightly better performance (lower cycle 
 
 In order to overcome these limitations, we developed our own performance evaluation and testing system.
 
-After being given a hint by Professor Taylor, we started investigating the use of branch traces from the most recent
-[Championship Branch Prediction CBP-5](https://www.jilp.org/cbp2016). Since these files come in a complex encoding, we 
+After receiving a hint from Professor Taylor, we started investigating the use of branch traces from the most recent
+[Championship Branch Prediction CBP-5](https://www.jilp.org/cbp2016). Since these files come in a complex encoding scheme, we 
 used their branch predictor test backbone and built a conversion utility that translates these files to a simple "branch_address branch_taken newline" format. The implementation details can be found in [bt9_reader](./bt9_reader). For our evaluation and simulation, we used four of the training files from different categories (`short_mobile_1`, `long_mobile_1`, `short_server_1`, `long_server_1`), each consisting of several millions of branches. The converted files can be found in [traces](./traces).
 
 In order to solve the second issue of thoroughly test/simulate or design with a big amount of internal state, we decided 
@@ -42,7 +44,7 @@ to use [cocotb](https://github.com/cocotb/cocotb), which allows us to co-simulat
 and our model of the predictor written in python. Furthermore, we can use the traces from CBP-5, simulate them on both the
 RTL and python implementation and check if the output matches. This gives us high confidence of the correctness (considering 
 the trace sizes). In addition to that, we can measure the actual accuracy (#correctly predicted/#all predictions) and do not
-have to rely on the indirect measure of the number of cycles.
+have to rely on the indirect measure of the number of cycles. Furthermore, this process has been fully automated using travis-ci, such that after every push to the repo, the code is getting automatically re-tested (see [travis-ci black-parrot-branch-predictor](https://travis-ci.com/github/andreaskuster/black-parrot-branch-predictor))
 To get a better understanding of the working principle, we illustrated the functionality below:
 
 ![](./doc/co_simulation.png)
@@ -50,10 +52,10 @@ To get a better understanding of the working principle, we illustrated the funct
 
 ## Branch Predictor Implementations
 
-In this section, we will have a look at all branch predictor implementations, their functionality and their performance.
+In this section, we will have a look at all branch predictor implementations, their functionality and performance.
 
 ### Static Branch Predictors
-Static branch predictors are very simple predictors used mostly in the earliest designs. They do not rely on the branch history
+Static branch predictors are very simple predictors used mostly used in the earliest processor designs. They do not rely on the branch history
 at runtime, but rather predict on the bases of the branch type.
 
 ### Always Not Taken
