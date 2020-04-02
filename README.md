@@ -88,11 +88,11 @@ with `x=-4(%rbp)`
 
 You note that the conditional jump `jle` is going to be 'taken' 42 times and only once 'not taken'.
 
-__Predictions per Cycle__: Since there is no computation involved, the implementation should be able to run at almost every frequency.
+__Predictions per Cycle__: Since there is no computation involved, the implementation should never end up on the critical path.
 
-__Area__: The area usage should be almost zero.
+__Area__: The area usage should be close to zero.
 
-__Power__: The power usage should be almost zero.
+__Power__: The power usage should be close to zero.
 
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_always_taken/README.md)
@@ -107,7 +107,7 @@ reveals, it simply predicts all branches as 'taken'.
 #### Conjecture:
 
 __Accuracy__: We expect this branch predictor to perform worse than the dynamical branch predictors, but better than 
-its always taken counterpart.  The reasoning is that even if "if/else" branches might work in favour for either of them, most loops are implemented in 
+its always not taken counterpart.  The reasoning is that even if "if/else" branches might work in favour for either of them, most loops are implemented in 
 the following general loop scheme works strongly in favour of the 'always taken' predictor:
 
 C-Code:
@@ -131,37 +131,37 @@ with `x=-4(%rbp)`
 You note that the conditional jump `jle` is going to be 'taken' 42 times and only once 'not taken'.
 
 
-__Predictions per Cycle__: Since there is no computation involved, the implementation should be able to run at almost every frequency.
+__Predictions per Cycle__: Since there is no computation involved, the implementation should never end up on the critical path.
 
-__Area__: The area usage should be almost zero.
+__Area__: The area usage should be close to zero.
 
-__Power__: The power usage should be almost zero.
+__Power__: The power usage should be close to zero.
 
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_always_taken/README.md)
 - [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_02_always_taken/bp_fe/src/v/bp_fe_bp.v#L33)
 
 ### Dynamic Branch Predictors
-Dynamic branch predictors not only rely on the branch type, but also incorporate information about branch outcome at runtime.
+Dynamic branch predictors not only rely on the branch type, but also incorporate information about branch outcomes during program execution.
 
-Furthermore, the branch predictors we will see in this section can be generalised to consist of a branch history table 
-(saturating counters representing the likelyhood of taking/not taking the branch, with an update mechanism) and a hash
+Furthermore, the branch predictors we will see in this section can be generalized to consist of a branch history table 
+(saturating counters representing the likelihood of taking/not taking the branch, with an update mechanism) and a hash
 function determining which counter to use.
 
 ### Bimodal
-The bimodal branch predictor is a dynamic branch predictor and uses the lowest `bht_indx_width_p` bits as the hash function.
+The bimodal branch predictor is a dynamic branch predictor that uses the lowest `bht_indx_width_p` bits as the hash function.
 
 ![](./testbench_bp_bimodal/bp_bimodal.png) 
 
-__Accuracy__: Since the bimodal branch predictor solely relies on the address bits for the hash function, we expect this
+__Accuracy__: Since the bimodal branch predictor solely relies on the address bits for the hash, we expect this
 predictor to be good for workloads with very little correlation between sequential branches. For such workloads, this predictor
 should show better accuracy for smaller branch history table sizes, since this hash function does not spread very widely
-and therefore we expect less collisions.  
+(and therefore we expect less collisions).  
 
-__Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
+__Area__: Since the computational part of the module is rather small, we expect the area to grow linear with the 
 size of the branch history table.
 
-__Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
+__Power__: Since the computational part of the module is rather small, we expect the power to scale linear with the 
 size of the branch history table.
 
 More detailed evaluations and the integration into black-parrot can be found:
@@ -171,20 +171,20 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 ### Gshare
 
-The gshare branch predictor is a dynamic branch predictor and uses the lowest `bht_indx_width_p` bits of the branch address 
-and the branch history xored as the hash function.
+The gshare branch predictor is a dynamic branch predictor that uses the lowest `bht_indx_width_p` bits of the branch address 
+and the branch history xor-ed as its hash function.
 
 ![](./testbench_bp_gshare/bp_gshare.png) 
 
-__Accuracy__: Since applying biwise xor over all available input information (branch address and branch history) should spread
+__Accuracy__: Since applying bitwise xor over all available input information (branch address and branch history) should spread
 nicely over the whole hash image, we expect this predictor to perform very well on workloads with long branch correlation.
-Furthermore, because of the broad spread, we expect that this predictor can improve a lot over larger branch history table
+Furthermore, because of the wide spread, we expect that this predictor can improve a lot over larger branch history table
 sizes.
 
-__Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
+__Area__: Since the computational part of the module is rather small, we expect the area to grow linear with the 
 size of the branch history table plus the size of the branch history.
 
-__Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
+__Power__: Since the computational part of the module is rather small, we expect the power to scale linear with the 
 size of the branch history table plus the size of the branch history.
 
 __Performance__ (backend flow):
@@ -213,21 +213,21 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 ### Gselect
 
-The gselect branch predictor is a dynamic branch predictor and uses the lowest `bht_indx_width_p - bp_n_hist` bits of 
-the address, concatenated with `bp_n_hist`latest branch history bits as the hash function.
+The gselect branch predictor is a dynamic branch predictor that uses the lowest `bht_indx_width_p - bp_n_hist` bits of 
+the address, concatenated with the `bp_n_hist` latest branch history bits as its hash function.
 
 
 ![](./testbench_bp_gselect/bp_gselect.png) 
 
-__Accuracy__: The gselect branch predictor is a tradeoff between full spreading of the information (gshare) and only using
+__Accuracy__: The gselect branch predictor is a trade-off between full spreading of the information (gshare) and only using
 the branch address (bimodal). We therefore expect the result of this predictor to be somewhere between the two others. In
-theory, in these of a workload that fits very well the combination of history bits and address bits selected for this 
-implementation, it could also outperform the others.
+theory, in case of a workload that fits very well for the combination of history bits and address bits selected for this 
+implementation, it could also outperform the other two.
 
-__Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
+__Area__: Since the computational part of the module is rather small, we expect the area to grow linear with the 
 size of the branch history table plus the size of the branch history.
 
-__Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
+__Power__: Since the computational part of the module is rather small, we expect the power to scale linear with the 
 size of the branch history table plus the size of the branch history.
 
 __Performance__ (backend flow):
@@ -249,7 +249,6 @@ __Power__ (backend flow):
 
 Area (backend flow): 61044.9405 nm^2
 
-
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_gselect/README.md)
 - [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_05_gselect/bp_fe/src/v/bp_fe_bp.v#L76)
@@ -257,20 +256,20 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 ### Tournament
 
-The tournament branch predictor is a dynamic branch predictor and uses a hybrid approach. One branch predictor uses the
-branch address only as a hash function, while the second one uses the branch history shift register only. In order to 
+The tournament branch predictor is a dynamic branch predictor that uses a hybrid approach. One branch predictor uses the
+branch address only as a hash function, while the other one uses the branch history shift register only. In order to 
 choose which of both predictions we should use, there is an additional saturating counter, the selector, which gives trust
 to either of them, depending on the correctness of their previous predictions. 
 
 ![](./testbench_bp_tournament/bp_tournament.png) 
 
 __Accuracy__: While this branch prediction uses two branch predictors internally, it mostly gets the best result out of
-both words. We therefore expect this one to perform reasonably close to the maximum value of both internal branch predictors.
+both words. We therefore expect this one to perform reasonably close to the maximum prediction accuracy of both internal branch predictors.
 
-__Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
+__Area__: Since the computational part of the module is rather small, we expect the area to grow linear with the 
 size of the branch history tables plus the size of the branch history.
 
-__Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
+__Power__: Since the computational part of the module is rather small, we expect the power to scale linear with the 
 size of the branch history tables plus the size of the branch history.
 
 
@@ -294,7 +293,6 @@ __Power__ (backend flow):
 Area (backend flow): 117722.4186 nm^2
 
 
-
 More detailed evaluations and the integration into black-parrot can be found:
 - [Detailed evaluation](./testbench_bp_tournament/README.md)
 - [BlackParrot Integration](https://github.com/andreaskuster/black-parrot/blob/uw_ee477_pparrot_wi20_branch_predictor_06_tournament/bp_fe/src/v/bp_fe_bp.v#L95)
@@ -302,8 +300,8 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 ### Two-Level Local
 
-The two-level local branch predictor uses the indirection over a (huge) correlation table consisting of branch address 
-indexed branch histories. The history is later used as an index to the actual branch history table consisting of saturating
+The two-level local branch predictor uses the indirection over a (potentially huge) correlation table consisting of branch address 
+indexed branch histories. The history is then used as an index to the actual branch history table consisting of saturating
 counters.
 
 ![](./testbench_bp_two_level_local/bp_two_level_local.png) 
@@ -311,10 +309,10 @@ counters.
 __Accuracy__: Since this predictor basically stores all the information given to him (and uses it), it should outperform 
 all others (with the grain of salt for using a lot more area/power). 
 
-__Area__: Since the computational part of the module is rather small, we expect the area to grow almost linear with the 
+__Area__: Since the computational part of the module is rather small, we expect the area to grow linear with the 
 size of the correlation table plus the branch history table.
 
-__Power__: Since the computational part of the module is rather small, we expect the power to scale almost linear with the 
+__Power__: Since the computational part of the module is rather small, we expect the power to scale linear with the 
 size of the correlation table plus the branch history table.
 
 
@@ -343,7 +341,7 @@ More detailed evaluations and the integration into black-parrot can be found:
 
 
 ### Neural Branch Predictors
-Neural branch predictors found their way into modern high-performance/high missprediction penalty CPU designs (i.e. [AMD Ryzen](https://en.wikipedia.org/wiki/Ryzen), especially 
+Neural branch predictors found their way into modern high-performance/high miss-prediction penalty CPU designs (i.e. [AMD Ryzen](https://en.wikipedia.org/wiki/Ryzen), especially 
 because of their ability to remember long history information without the necessity of exponential scale. But still, they
 are resource hungry and we have to carefully balance and reduce unnecessary functionality in order to make them feasible 
 for the black-parrot RISC-V processor.
@@ -355,7 +353,7 @@ With limited latency and area/power budget, it is probably the most reasonable s
 
 In order to further minimize the footprint, the model currently supports the following features:
 
-- input: parameterized number of address index and branch history bits
+- input: parameterized number of address index and branch history bits (bits/binary instead of floats)
 - binary classification (branch taken/not taken)
 - integer only data type (no float)
 - single training round (aka single update of perceptron weights)
@@ -375,7 +373,7 @@ Generally, the problem of predicting the correct branch decision cannot be done 
 conditional branch statement (in the presence of I/O and random number generators). Furthermore, there is usually a tight
 bound on the latency and resources (power/area) that are available for the implementation of such a predictor. Therefore,
 all the predictors use heuristics and are greedy, which means that most likely there does not exist the best predictor, but
-it is rather a balance between different tradeoffs.
+it is rather a balance between different trade-offs.
 These plots below provide insight into __how much information__ each of the branch predictors is capable of storing, 
 given different amounts of input information (in the form of branch history, address bits). It is __important__ to note 
 that the area and power requirements of different implementations might diverge significantly. For more information about
@@ -396,7 +394,7 @@ __always taken / always not taken__:
 __bimodal__:
 3. We can see that the bimodal predictor has higher accuracy for small table sizes compared to gshare and gselect. 
 For some of the traces the break-even point is earlier than for others. We therefore assume (unfortunately we 
-cannot check this) that this is indeed due to the amount of correlation.
+cannot check this) that this is indeed due to the amount of correlation for the different test cases.
 
 __gshare__:
 4. We can see that the gshare predictor is worse for smaller table size, but because of its 'good spread', we see that it 
@@ -406,7 +404,7 @@ __gselect__:
 5. Depending on the trace, the accuracy is usually in between or close to the one from gshare and/or bimodal.
 
 __tournament__:
-6. Some traces show pretty nicely what we expected (i.e. long_mobile_1) and for others, the accuracy is closeby or a little
+6. Some traces show pretty nicely what we expected (i.e. long_mobile_1) and for others, the accuracy is close-by or slightly
 lower.
 
 __two-level local__:
@@ -417,9 +415,9 @@ Last but not least, a not so obvious conjecture was that the initial testing met
 With our own evaluation setup, we can e.g. distinguish quite clearly between the always taken and bimodal predictor performance,
 which was not possible before.
 
-Furthermore, running traces with over 10M branch instruction we did not prove, but we know with high certainty, that either
+Furthermore, by running traces with over 10M branch instruction, we did not prove, but we know with high certainty, that either
 both RTL and the python model implementations are both correct or both wrong. But even if they would be wrong, according 
-to Taylor's axiom, we are at least 10x faster in finding the bug! :)
+to __Taylor's axiom__, we are at least 10x faster in finding the bug! :)
 
 ## Proposal
 
@@ -432,15 +430,16 @@ allows to (mostly) get the best of both words (see graph below: tournament vs bi
 
 [](./evaluation/plots/comparison_short_mobile_1.png)
 
-In my opinion, we should use the tournament branch predictor, since this approach scales performance very well (upon
+In my opinion, we should use the tournament branch predictor, since this approach scales very well (upon
 changes of parameter bht_idx_width_p) with size, which is an important characteristic for the flexibility and re-usability
-approach of black-parrot.
+approach of black-parrot (choosing the right parameters depending on the available power/area budget).
 
 
 ## Theoretical Power/Area Estimate
 
 For this simplified power estimate model, we assume that the predictors power and area usage scales with its RAM size. 
-We think that his is reasonable, since the remaining part of the predictors above has either a 
+We think that his is a reasonable assumption, since the remaining part of the predictors above has either a constant overhead 
+or at least scales slower than the RAM.
 
 Below you can see a table with logarithmic size axis that show how the branch history table scales.
 
@@ -498,7 +497,7 @@ Unoptimized assembly code can be generated from C using: `gcc -S CODE.c -O0`. We
 
 ## Testing
 
-More information about the traces can be fourn on their [official homepage](https://www.jilp.org/cbp2016/). Our traces 
+More information about the traces can be found on their [official homepage](https://www.jilp.org/cbp2016/). Our traces 
 are part of a large collection of training cases, which we converted using or modified [bt9 reader](./bt9_reader) to simple
 traces of the form: `branch_address taken \n`. They can be found downloaded from [here](http://hpca23.cse.tamu.edu/cbp2016).
 
