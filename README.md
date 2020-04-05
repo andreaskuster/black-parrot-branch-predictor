@@ -509,6 +509,18 @@ We used the following four traces for the evaluation with test file sizes (#bran
 - short_server_1.trace: 230'692'528
 - long_server_1.trace: 149'246'445
 
+## Modification in the backend flow
+
+file: `ee477-designs/toplevels/bp_single_softcore/tcl/filelist.tcl`
+
+replace `"$BP_FE_DIR/src/v/bp_fe_bht.v"` on line 163 with:
+
+```
+$BP_FE_DIR/src/v/bp_fe_bp.v
+$BP_FE_DIR/src/v/bp_fe_bp_bimodal.v
+$BP_FE_DIR/src/v/bp_fe_bp_gshare.v
+$BP_FE_DIR/src/v/bp_fe_bp_gselect.v
+```
 
 ## Roadmap
 
